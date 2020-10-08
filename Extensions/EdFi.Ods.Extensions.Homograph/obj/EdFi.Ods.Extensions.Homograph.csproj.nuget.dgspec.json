@@ -1,0 +1,1570 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\Application\\EdFi.Ods.Extensions.Homograph\\EdFi.Ods.Extensions.Homograph.csproj": {}
+  },
+  "projects": {
+    "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\Application\\EdFi.Ods.Extensions.Homograph\\EdFi.Ods.Extensions.Homograph.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\Application\\EdFi.Ods.Extensions.Homograph\\EdFi.Ods.Extensions.Homograph.csproj",
+        "projectName": "EdFi.Ods.Extensions.Homograph",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\Application\\EdFi.Ods.Extensions.Homograph\\EdFi.Ods.Extensions.Homograph.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\Application\\EdFi.Ods.Extensions.Homograph\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS-Implementation\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj"
+              }
+            }
+          },
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "net48": {
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj",
+        "projectName": "EdFi.Admin.DataAccess",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj",
+        "projectName": "EdFi.Common",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          },
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj",
+        "projectName": "EdFi.Ods.Api",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj"
+              }
+            }
+          },
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Antlr3.Runtime": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Iesi.Collections": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "Remotion.Linq": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Remotion.Linq.EagerFetching": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "net48": {
+          "dependencies": {
+            "Antlr3.Runtime": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Iesi.Collections": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Owin": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Tracing": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.Owin": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Owin.Hosting": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "Remotion.Linq": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Remotion.Linq.EagerFetching": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.ComponentModel.Primitives": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Diagnostics.Contracts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Runtime.Caching": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj",
+        "projectName": "EdFi.Ods.Common",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj",
+        "projectName": "EdFi.Ods.Sandbox",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj",
+        "projectName": "EdFi.Ods.Security",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Admin.DataAccess\\EdFi.Admin.DataAccess.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Sandbox\\EdFi.Ods.Sandbox.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Antlr3.Runtime": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Iesi.Collections": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Remotion.Linq": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Remotion.Linq.EagerFetching": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Diagnostics.Contracts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "Antlr3.Runtime": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Iesi.Collections": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Remotion.Linq": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Remotion.Linq.EagerFetching": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Sandwych.QuickGraph.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Diagnostics.Contracts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj",
+        "projectName": "EdFi.Ods.Standard",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\EdFi.Ods.Standard.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Standard\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              }
+            }
+          },
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Api\\EdFi.Ods.Api.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Security\\EdFi.Ods.Security.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "net48": {
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj",
+        "projectName": "EdFi.Security.DataAccess",
+        "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\EdFi.Security.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\t.nunnery\\.nuget\\packages\\",
+        "outputPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Security.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\src-oss2\\Ed-Fi-ODS\\NuGet.Config",
+          "C:\\Users\\t.nunnery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.myget.org/F/ed-fi/": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "projectReferences": {
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Common\\EdFi.Common.csproj"
+              },
+              "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj": {
+                "projectPath": "D:\\src-oss2\\Ed-Fi-ODS\\Application\\EdFi.Ods.Common\\EdFi.Ods.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.3.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
