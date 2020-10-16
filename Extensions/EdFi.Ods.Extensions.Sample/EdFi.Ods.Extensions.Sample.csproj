@@ -16,12 +16,6 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
-    <PackageReference Include="Castle.Core" Version="4.4.0" />
-    <PackageReference Include="Castle.Windsor" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
-  </ItemGroup>
   <ItemGroup>
     <Content Include="Artifacts\**\Metadata\*.xml">
       <AutoGen>True</AutoGen>
