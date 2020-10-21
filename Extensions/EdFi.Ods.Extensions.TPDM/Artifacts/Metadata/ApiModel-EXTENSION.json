@@ -3525,7 +3525,7 @@
         }
       ],
       "isAbstract": false,
-      "description": "The general racial category which most clearly reflects the individual's\r\n                   recognition of his or her community or with which the individual most\r\n                   identifies. The data model allows for multiple entries so that each individual\r\n                   can specify all appropriate races.",
+      "description": "The general racial category which most clearly reflects the individual's\n                   recognition of his or her community or with which the individual most\n                   identifies. The data model allows for multiple entries so that each individual\n                   can specify all appropriate races.",
       "tableNames": {
         "sqlServer": "AnonymizedStudentRace",
         "postgreSql": "AnonymizedStudentRace"
@@ -4120,7 +4120,7 @@
             "scale": 0,
             "isNullable": true
           },
-          "description": "The name of the county, parish, borough, or comparable unit (within a state) in\r\n                      'which an address is located.",
+          "description": "The name of the county, parish, borough, or comparable unit (within a state) in\n                      'which an address is located.",
           "isIdentifying": false,
           "isServerAssigned": false,
           "columnNames": {
@@ -4586,7 +4586,7 @@
         }
       ],
       "isAbstract": false,
-      "description": "Reflects important characteristics of the applicant's home situation:\r\n      Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth.",
+      "description": "Reflects important characteristics of the applicant's home situation:\n      Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth.",
       "tableNames": {
         "sqlServer": "ApplicantCharacteristic",
         "postgreSql": "ApplicantCharacteristic"
@@ -19055,7 +19055,7 @@
             "scale": 0,
             "isNullable": true
           },
-          "description": "The name of the county, parish, borough, or comparable unit (within a state) in\r\n                      'which an address is located.",
+          "description": "The name of the county, parish, borough, or comparable unit (within a state) in\n                      'which an address is located.",
           "isIdentifying": false,
           "isServerAssigned": false,
           "columnNames": {
@@ -19520,7 +19520,7 @@
         }
       ],
       "isAbstract": false,
-      "description": "Reflects important characteristics of the teacher candidate's home situation:\r\n      Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth.",
+      "description": "Reflects important characteristics of the teacher candidate's home situation:\n      Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth.",
       "tableNames": {
         "sqlServer": "TeacherCandidateCharacteristic",
         "postgreSql": "TeacherCandidateCharacteristic"
@@ -27211,7 +27211,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The general racial category which most clearly reflects the individual's\r\n                   recognition of his or her community or with which the individual most\r\n                   identifies. The data model allows for multiple entries so that each individual\r\n                   can specify all appropriate races.",
+          "description": "The general racial category which most clearly reflects the individual's\n                   recognition of his or her community or with which the individual most\n                   identifies. The data model allows for multiple entries so that each individual\n                   can specify all appropriate races.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -49914,7 +49914,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "A code describing the attendance event, for example:\r\n       Present\r\n       Unexcused absence\r\n       Excused absence\r\n       Tardy.",
+          "description": "A code describing the attendance event, for example:\n       Present\n       Unexcused absence\n       Excused absence\n       Tardy.",
           "isIdentifying": false,
           "isServerAssigned": false,
           "columnNames": {
@@ -60770,7 +60770,7 @@
             "scale": 0,
             "isNullable": true
           },
-          "description": "Previous definition of Ethnicity combining Hispanic/Latino and race:\r\n      1 - American Indian or Alaskan Native\r\n      2 - Asian or Pacific Islander\r\n      3 - Black, not of Hispanic origin\r\n      4 - Hispanic\r\n      5 - White, not of Hispanic origin.",
+          "description": "Previous definition of Ethnicity combining Hispanic/Latino and race:\n      1 - American Indian or Alaskan Native\n      2 - Asian or Pacific Islander\n      3 - Black, not of Hispanic origin\n      4 - Hispanic\n      5 - White, not of Hispanic origin.",
           "isIdentifying": false,
           "isServerAssigned": false,
           "columnNames": {
@@ -62306,7 +62306,7 @@
             "scale": 0,
             "isNullable": true
           },
-          "description": "The level of diploma/credential that is awarded to a student in recognition of his/her completion of the curricular requirements.\r\n        Minimum high school program\r\n        Recommended high school program\r\n        Distinguished Achievement Program.",
+          "description": "The level of diploma/credential that is awarded to a student in recognition of his/her completion of the curricular requirements.\n        Minimum high school program\n        Recommended high school program\n        Distinguished Achievement Program.",
           "isIdentifying": false,
           "isServerAssigned": false,
           "columnNames": {
@@ -64291,7 +64291,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The result from the student's attempt to take the course, for example:\r\n        Pass\r\n        Fail\r\n        Incomplete\r\n        Withdrawn.",
+          "description": "The result from the student's attempt to take the course, for example:\n        Pass\n        Fail\n        Incomplete\n        Withdrawn.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -64901,7 +64901,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The result from the student's attempt to take the course, for example:\r\n        Pass\r\n        Fail\r\n        Incomplete\r\n        Withdrawn.",
+          "description": "The result from the student's attempt to take the course, for example:\n        Pass\n        Fail\n        Incomplete\n        Withdrawn.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -65026,7 +65026,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The result from the student's attempt to take the course, for example:\r\n        Pass\r\n        Fail\r\n        Incomplete\r\n        Withdrawn.",
+          "description": "The result from the student's attempt to take the course, for example:\n        Pass\n        Fail\n        Incomplete\n        Withdrawn.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
