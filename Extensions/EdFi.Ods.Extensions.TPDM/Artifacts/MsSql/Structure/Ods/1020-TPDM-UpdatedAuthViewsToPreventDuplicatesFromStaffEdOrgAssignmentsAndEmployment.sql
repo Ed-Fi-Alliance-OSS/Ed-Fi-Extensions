@@ -4,6 +4,7 @@
 -- See the LICENSE and NOTICES files in the project root for more information.
 
 PRINT N'Altering [auth].[StaffUSIToTeacherPreparationProviderId]...';
+GO
 
 ALTER VIEW [auth].[StaffUSIToTeacherPreparationProviderId]
 AS
@@ -25,6 +26,7 @@ AS
 GO
 
 PRINT N'Altering [auth].[StaffUSIToUniversityId]...';
+GO
 
 ALTER VIEW [auth].[StaffUSIToUniversityId]
 AS
