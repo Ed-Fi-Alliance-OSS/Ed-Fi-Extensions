@@ -4878,7 +4878,7 @@ BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
             INSERT INTO dbo.ResourceClaims(DisplayName, ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
-            VALUES ('ePPProgramPathwayDescriptor', 'ePPProgramPathwayDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/tPPProgramPathwayDescriptor', @parentResourceClaimId, @applicationId)
+            VALUES ('ePPProgramPathwayDescriptor', 'ePPProgramPathwayDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/ePPProgramPathwayDescriptor', @parentResourceClaimId, @applicationId)
 
             SET @claimId = SCOPE_IDENTITY()
         END
