@@ -3206,7 +3206,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EXTENSION-SurveyResponseCandidateTargetAssociation">
+  <xs:complexType name="EXTENSION-SurveyResponsePersonTargetAssociation">
     <xs:annotation>
       <xs:documentation>The association provides information about the survey being taken and who the survey is about.</xs:documentation>
       <xs:appinfo>
@@ -4562,9 +4562,9 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EXTENSION-SurveyResponseCandidateTargetAssociationIdentityType">
+  <xs:complexType name="EXTENSION-SurveyResponsePersonTargetAssociationIdentityType">
     <xs:annotation>
-      <xs:documentation>Identity of a SurveyResponseCandidateTargetAssociation.</xs:documentation>
+      <xs:documentation>Identity of a SurveyResponsePersonTargetAssociation.</xs:documentation>
       <xs:appinfo>
         <ann:TypeGroup>Identity</ann:TypeGroup>
       </xs:appinfo>
@@ -4582,9 +4582,9 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="EXTENSION-SurveyResponseCandidateTargetAssociationReferenceType">
+  <xs:complexType name="EXTENSION-SurveyResponsePersonTargetAssociationReferenceType">
     <xs:annotation>
-      <xs:documentation>Provides alternative references for a SurveyResponseCandidateTargetAssociation. Use XML IDREF to reference a record that is included in the interchange. Use the identity type to look up a record that was loaded previously.</xs:documentation>
+      <xs:documentation>Provides alternative references for a SurveyResponsePersonTargetAssociation. Use XML IDREF to reference a record that is included in the interchange. Use the identity type to look up a record that was loaded previously.</xs:documentation>
       <xs:appinfo>
         <ann:TypeGroup>Extended Reference</ann:TypeGroup>
       </xs:appinfo>
@@ -4592,9 +4592,9 @@
     <xs:complexContent>
       <xs:extension base="ReferenceType">
         <xs:sequence>
-          <xs:element name="SurveyResponseCandidateTargetAssociationIdentity" type="EXTENSION-SurveyResponseCandidateTargetAssociationIdentityType" minOccurs="0">
+          <xs:element name="SurveyResponsePersonTargetAssociationIdentity" type="EXTENSION-SurveyResponsePersonTargetAssociationIdentityType" minOccurs="0">
             <xs:annotation>
-              <xs:documentation>Identity of a SurveyResponseCandidateTargetAssociation.</xs:documentation>
+              <xs:documentation>Identity of a SurveyResponsePersonTargetAssociation.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>

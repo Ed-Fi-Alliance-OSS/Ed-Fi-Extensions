@@ -326,8 +326,8 @@
   <Aggregate root="StaffToCandidateRelationshipDescriptor">
     <Entity table="StaffToCandidateRelationshipDescriptor" isA="Descriptor" schema="tpdm"/>
   </Aggregate>
-  <Aggregate root="SurveyResponseCandidateTargetAssociation">
-    <Entity table="SurveyResponseCandidateTargetAssociation" schema="tpdm"/>
+  <Aggregate root="SurveyResponsePersonTargetAssociation">
+    <Entity table="SurveyResponsePersonTargetAssociation" schema="tpdm"/>
   </Aggregate>
   <Aggregate root="SurveySectionAggregateResponse">
     <Entity table="SurveySectionAggregateResponse" schema="tpdm"/>

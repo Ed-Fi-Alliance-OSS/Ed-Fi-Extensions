@@ -91,7 +91,7 @@ CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON tpdm.RubricDimension
 CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON tpdm.StaffEducatorPreparationProgramAssociation
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 
-CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON tpdm.SurveyResponseCandidateTargetAssociation
+CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON tpdm.SurveyResponsePersonTargetAssociation
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 
 CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON tpdm.SurveySectionAggregateResponse

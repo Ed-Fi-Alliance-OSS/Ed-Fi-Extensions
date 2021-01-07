@@ -2543,20 +2543,6 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 ;
 
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation ADD CONSTRAINT FK_8d52f3_Person FOREIGN KEY (PersonId, SourceSystemDescriptorId)
-REFERENCES edfi.Person (PersonId, SourceSystemDescriptorId)
-;
-
-CREATE INDEX FK_8d52f3_Person
-ON tpdm.SurveyResponseCandidateTargetAssociation (PersonId ASC, SourceSystemDescriptorId ASC);
-
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation ADD CONSTRAINT FK_8d52f3_SurveyResponse FOREIGN KEY (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
-REFERENCES edfi.SurveyResponse (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
-;
-
-CREATE INDEX FK_8d52f3_SurveyResponse
-ON tpdm.SurveyResponseCandidateTargetAssociation (Namespace ASC, SurveyIdentifier ASC, SurveyResponseIdentifier ASC);
-
 ALTER TABLE tpdm.SurveyResponseExtension ADD CONSTRAINT FK_fa906d_Person FOREIGN KEY (PersonId, SourceSystemDescriptorId)
 REFERENCES edfi.Person (PersonId, SourceSystemDescriptorId)
 ;
@@ -2568,6 +2554,20 @@ ALTER TABLE tpdm.SurveyResponseExtension ADD CONSTRAINT FK_fa906d_SurveyResponse
 REFERENCES edfi.SurveyResponse (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
 ON DELETE CASCADE
 ;
+
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation ADD CONSTRAINT FK_520027_Person FOREIGN KEY (PersonId, SourceSystemDescriptorId)
+REFERENCES edfi.Person (PersonId, SourceSystemDescriptorId)
+;
+
+CREATE INDEX FK_520027_Person
+ON tpdm.SurveyResponsePersonTargetAssociation (PersonId ASC, SourceSystemDescriptorId ASC);
+
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation ADD CONSTRAINT FK_520027_SurveyResponse FOREIGN KEY (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
+REFERENCES edfi.SurveyResponse (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
+;
+
+CREATE INDEX FK_520027_SurveyResponse
+ON tpdm.SurveyResponsePersonTargetAssociation (Namespace ASC, SurveyIdentifier ASC, SurveyResponseIdentifier ASC);
 
 ALTER TABLE tpdm.SurveySectionAggregateResponse ADD CONSTRAINT FK_f37ae9_EvaluationElementRating FOREIGN KEY (EducationOrganizationId, EvaluationDate, EvaluationElementTitle, EvaluationObjectiveTitle, EvaluationPeriodDescriptorId, EvaluationTitle, PerformanceEvaluationTitle, PerformanceEvaluationTypeDescriptorId, PersonId, SchoolYear, SourceSystemDescriptorId, TermDescriptorId)
 REFERENCES tpdm.EvaluationElementRating (EducationOrganizationId, EvaluationDate, EvaluationElementTitle, EvaluationObjectiveTitle, EvaluationPeriodDescriptorId, EvaluationTitle, PerformanceEvaluationTitle, PerformanceEvaluationTypeDescriptorId, PersonId, SchoolYear, SourceSystemDescriptorId, TermDescriptorId)

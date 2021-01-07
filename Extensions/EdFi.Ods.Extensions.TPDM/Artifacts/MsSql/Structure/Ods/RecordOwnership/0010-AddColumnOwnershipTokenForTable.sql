@@ -6,7 +6,7 @@ ALTER TABLE [tpdm].[FieldworkExperienceSectionAssociation] ADD [CreatedByOwnersh
 
 ALTER TABLE [tpdm].[StaffEducatorPreparationProgramAssociation] ADD [CreatedByOwnershipTokenId] SMALLINT NULL;
 
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] ADD [CreatedByOwnershipTokenId] SMALLINT NULL;
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] ADD [CreatedByOwnershipTokenId] SMALLINT NULL;
 
 ALTER TABLE [tpdm].[SurveySectionResponsePersonTargetAssociation] ADD [CreatedByOwnershipTokenId] SMALLINT NULL;
 

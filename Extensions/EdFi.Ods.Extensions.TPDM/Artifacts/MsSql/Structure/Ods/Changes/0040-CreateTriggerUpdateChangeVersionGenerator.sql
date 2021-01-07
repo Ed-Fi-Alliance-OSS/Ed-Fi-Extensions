@@ -308,12 +308,12 @@ BEGIN
 END	
 GO
 
-CREATE TRIGGER [tpdm].[tpdm_SurveyResponseCandidateTargetAssociation_TR_UpdateChangeVersion] ON [tpdm].[SurveyResponseCandidateTargetAssociation] AFTER UPDATE AS
+CREATE TRIGGER [tpdm].[tpdm_SurveyResponsePersonTargetAssociation_TR_UpdateChangeVersion] ON [tpdm].[SurveyResponsePersonTargetAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE [tpdm].[SurveyResponseCandidateTargetAssociation]
+    UPDATE [tpdm].[SurveyResponsePersonTargetAssociation]
     SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
-    FROM [tpdm].[SurveyResponseCandidateTargetAssociation] u
+    FROM [tpdm].[SurveyResponsePersonTargetAssociation] u
     WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO

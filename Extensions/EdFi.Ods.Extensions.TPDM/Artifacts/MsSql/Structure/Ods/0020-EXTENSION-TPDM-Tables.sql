@@ -3503,33 +3503,6 @@ GO
 ALTER TABLE [tpdm].[StudentGradebookEntryExtension] ADD CONSTRAINT [StudentGradebookEntryExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [tpdm].[SurveyResponseCandidateTargetAssociation] --
-CREATE TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] (
-    [Namespace] [NVARCHAR](255) NOT NULL,
-    [PersonId] [NVARCHAR](32) NOT NULL,
-    [SourceSystemDescriptorId] [INT] NOT NULL,
-    [SurveyIdentifier] [NVARCHAR](60) NOT NULL,
-    [SurveyResponseIdentifier] [NVARCHAR](60) NOT NULL,
-    [Discriminator] [NVARCHAR](128) NULL,
-    [CreateDate] [DATETIME2] NOT NULL,
-    [LastModifiedDate] [DATETIME2] NOT NULL,
-    [Id] [UNIQUEIDENTIFIER] NOT NULL,
-    CONSTRAINT [SurveyResponseCandidateTargetAssociation_PK] PRIMARY KEY CLUSTERED (
-        [Namespace] ASC,
-        [PersonId] ASC,
-        [SourceSystemDescriptorId] ASC,
-        [SurveyIdentifier] ASC,
-        [SurveyResponseIdentifier] ASC
-    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] ADD CONSTRAINT [SurveyResponseCandidateTargetAssociation_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
-GO
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] ADD CONSTRAINT [SurveyResponseCandidateTargetAssociation_DF_Id] DEFAULT (newid()) FOR [Id]
-GO
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] ADD CONSTRAINT [SurveyResponseCandidateTargetAssociation_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
-GO
-
 -- Table [tpdm].[SurveyResponseExtension] --
 CREATE TABLE [tpdm].[SurveyResponseExtension] (
     [Namespace] [NVARCHAR](255) NOT NULL,
@@ -3546,6 +3519,33 @@ CREATE TABLE [tpdm].[SurveyResponseExtension] (
 ) ON [PRIMARY]
 GO
 ALTER TABLE [tpdm].[SurveyResponseExtension] ADD CONSTRAINT [SurveyResponseExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+GO
+
+-- Table [tpdm].[SurveyResponsePersonTargetAssociation] --
+CREATE TABLE [tpdm].[SurveyResponsePersonTargetAssociation] (
+    [Namespace] [NVARCHAR](255) NOT NULL,
+    [PersonId] [NVARCHAR](32) NOT NULL,
+    [SourceSystemDescriptorId] [INT] NOT NULL,
+    [SurveyIdentifier] [NVARCHAR](60) NOT NULL,
+    [SurveyResponseIdentifier] [NVARCHAR](60) NOT NULL,
+    [Discriminator] [NVARCHAR](128) NULL,
+    [CreateDate] [DATETIME2] NOT NULL,
+    [LastModifiedDate] [DATETIME2] NOT NULL,
+    [Id] [UNIQUEIDENTIFIER] NOT NULL,
+    CONSTRAINT [SurveyResponsePersonTargetAssociation_PK] PRIMARY KEY CLUSTERED (
+        [Namespace] ASC,
+        [PersonId] ASC,
+        [SourceSystemDescriptorId] ASC,
+        [SurveyIdentifier] ASC,
+        [SurveyResponseIdentifier] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] ADD CONSTRAINT [SurveyResponsePersonTargetAssociation_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] ADD CONSTRAINT [SurveyResponsePersonTargetAssociation_DF_Id] DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] ADD CONSTRAINT [SurveyResponsePersonTargetAssociation_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
 -- Table [tpdm].[SurveySectionAggregateResponse] --

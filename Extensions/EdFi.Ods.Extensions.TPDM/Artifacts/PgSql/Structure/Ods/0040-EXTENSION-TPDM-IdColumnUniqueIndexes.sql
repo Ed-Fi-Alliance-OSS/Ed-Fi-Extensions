@@ -60,7 +60,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS UX_643c81_Id ON tpdm.RubricDimension(Id);
 
 CREATE UNIQUE INDEX IF NOT EXISTS UX_2c9294_Id ON tpdm.StaffEducatorPreparationProgramAssociation(Id);
 
-CREATE UNIQUE INDEX IF NOT EXISTS UX_8d52f3_Id ON tpdm.SurveyResponseCandidateTargetAssociation(Id);
+CREATE UNIQUE INDEX IF NOT EXISTS UX_520027_Id ON tpdm.SurveyResponsePersonTargetAssociation(Id);
 
 CREATE UNIQUE INDEX IF NOT EXISTS UX_f37ae9_Id ON tpdm.SurveySectionAggregateResponse(Id);
 

@@ -216,8 +216,8 @@ BEGIN TRANSACTION
 COMMIT
 
 BEGIN TRANSACTION
-    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'tpdm.SurveyResponseCandidateTargetAssociation') AND name = N'UX_SurveyResponseCandidateTargetAssociation_Id')
-    CREATE UNIQUE NONCLUSTERED INDEX UX_SurveyResponseCandidateTargetAssociation_Id ON [tpdm].[SurveyResponseCandidateTargetAssociation]
+    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'tpdm.SurveyResponsePersonTargetAssociation') AND name = N'UX_SurveyResponsePersonTargetAssociation_Id')
+    CREATE UNIQUE NONCLUSTERED INDEX UX_SurveyResponsePersonTargetAssociation_Id ON [tpdm].[SurveyResponsePersonTargetAssociation]
     (Id) WITH (PAD_INDEX = ON, FILLFACTOR = 75, STATISTICS_NORECOMPUTE = OFF) ON [PRIMARY]
     GO
 COMMIT

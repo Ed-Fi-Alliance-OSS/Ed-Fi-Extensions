@@ -814,7 +814,7 @@ CREATE TABLE tracked_deletes_tpdm.StaffToCandidateRelationshipDescriptor
        CONSTRAINT StaffToCandidateRelationshipDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_tpdm.SurveyResponseCandidateTargetAssociation
+CREATE TABLE tracked_deletes_tpdm.SurveyResponsePersonTargetAssociation
 (
        Namespace VARCHAR(255) NOT NULL,
        PersonId VARCHAR(32) NOT NULL,
@@ -823,7 +823,7 @@ CREATE TABLE tracked_deletes_tpdm.SurveyResponseCandidateTargetAssociation
        SurveyResponseIdentifier VARCHAR(60) NOT NULL,
        Id UUID NOT NULL,
        ChangeVersion BIGINT NOT NULL,
-       CONSTRAINT SurveyResponseCandidateTargetAssociation_PK PRIMARY KEY (ChangeVersion)
+       CONSTRAINT SurveyResponsePersonTargetAssociation_PK PRIMARY KEY (ChangeVersion)
 );
 
 CREATE TABLE tracked_deletes_tpdm.SurveySectionAggregateResponse
