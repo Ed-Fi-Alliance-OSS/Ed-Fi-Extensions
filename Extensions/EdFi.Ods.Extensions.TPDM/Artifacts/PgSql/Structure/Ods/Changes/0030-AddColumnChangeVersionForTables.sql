@@ -91,7 +91,7 @@ ADD ChangeVersion BIGINT DEFAULT nextval('changes.ChangeVersionSequence') NOT NU
 ALTER TABLE tpdm.StaffEducatorPreparationProgramAssociation
 ADD ChangeVersion BIGINT DEFAULT nextval('changes.ChangeVersionSequence') NOT NULL;
 
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation
 ADD ChangeVersion BIGINT DEFAULT nextval('changes.ChangeVersionSequence') NOT NULL;
 
 ALTER TABLE tpdm.SurveySectionAggregateResponse

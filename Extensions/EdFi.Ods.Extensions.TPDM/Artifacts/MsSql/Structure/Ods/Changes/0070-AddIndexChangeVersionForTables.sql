@@ -185,8 +185,8 @@ BEGIN TRANSACTION
 COMMIT
 
 BEGIN TRANSACTION
-    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'tpdm.SurveyResponseCandidateTargetAssociation') AND name = N'UX_SurveyResponseCandidateTargetAssociation_ChangeVersion')
-    CREATE INDEX [UX_SurveyResponseCandidateTargetAssociation_ChangeVersion] ON [tpdm].[SurveyResponseCandidateTargetAssociation] ([ChangeVersion] ASC)
+    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'tpdm.SurveyResponsePersonTargetAssociation') AND name = N'UX_SurveyResponsePersonTargetAssociation_ChangeVersion')
+    CREATE INDEX [UX_SurveyResponsePersonTargetAssociation_ChangeVersion] ON [tpdm].[SurveyResponsePersonTargetAssociation] ([ChangeVersion] ASC)
     GO
 COMMIT
 

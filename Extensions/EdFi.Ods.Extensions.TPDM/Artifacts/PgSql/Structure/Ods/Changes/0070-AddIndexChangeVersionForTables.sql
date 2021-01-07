@@ -60,7 +60,7 @@ CREATE INDEX IF NOT EXISTS UX_643c81_ChangeVersion ON tpdm.RubricDimension(Chang
 
 CREATE INDEX IF NOT EXISTS UX_2c9294_ChangeVersion ON tpdm.StaffEducatorPreparationProgramAssociation(ChangeVersion);
 
-CREATE INDEX IF NOT EXISTS UX_8d52f3_ChangeVersion ON tpdm.SurveyResponseCandidateTargetAssociation(ChangeVersion);
+CREATE INDEX IF NOT EXISTS UX_520027_ChangeVersion ON tpdm.SurveyResponsePersonTargetAssociation(ChangeVersion);
 
 CREATE INDEX IF NOT EXISTS UX_f37ae9_ChangeVersion ON tpdm.SurveySectionAggregateResponse(ChangeVersion);
 

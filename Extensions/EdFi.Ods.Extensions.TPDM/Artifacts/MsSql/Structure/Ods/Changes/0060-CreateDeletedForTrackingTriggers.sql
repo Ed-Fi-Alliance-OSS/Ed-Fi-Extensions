@@ -1479,20 +1479,20 @@ ALTER TABLE [tpdm].[StaffToCandidateRelationshipDescriptor] ENABLE TRIGGER [tpdm
 GO
 
 
-CREATE TRIGGER [tpdm].[tpdm_SurveyResponseCandidateTargetAssociation_TR_DeleteTracking] ON [tpdm].[SurveyResponseCandidateTargetAssociation] AFTER DELETE AS
+CREATE TRIGGER [tpdm].[tpdm_SurveyResponsePersonTargetAssociation_TR_DeleteTracking] ON [tpdm].[SurveyResponsePersonTargetAssociation] AFTER DELETE AS
 BEGIN
     IF @@rowcount = 0 
         RETURN
 
     SET NOCOUNT ON
 
-    INSERT INTO [tracked_deletes_tpdm].[SurveyResponseCandidateTargetAssociation](Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier, Id, ChangeVersion)
+    INSERT INTO [tracked_deletes_tpdm].[SurveyResponsePersonTargetAssociation](Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier, Id, ChangeVersion)
     SELECT  Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier, Id, (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM    deleted d
 END
 GO
 
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] ENABLE TRIGGER [tpdm_SurveyResponseCandidateTargetAssociation_TR_DeleteTracking]
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] ENABLE TRIGGER [tpdm_SurveyResponsePersonTargetAssociation_TR_DeleteTracking]
 GO
 
 

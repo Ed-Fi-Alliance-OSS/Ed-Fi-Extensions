@@ -814,7 +814,7 @@ CREATE TABLE [tracked_deletes_tpdm].[StaffToCandidateRelationshipDescriptor]
        CONSTRAINT PK_StaffToCandidateRelationshipDescriptor PRIMARY KEY CLUSTERED (ChangeVersion)
 )
 
-CREATE TABLE [tracked_deletes_tpdm].[SurveyResponseCandidateTargetAssociation]
+CREATE TABLE [tracked_deletes_tpdm].[SurveyResponsePersonTargetAssociation]
 (
        Namespace [NVARCHAR](255) NOT NULL,
        PersonId [NVARCHAR](32) NOT NULL,
@@ -823,7 +823,7 @@ CREATE TABLE [tracked_deletes_tpdm].[SurveyResponseCandidateTargetAssociation]
        SurveyResponseIdentifier [NVARCHAR](60) NOT NULL,
        Id uniqueidentifier NOT NULL,
        ChangeVersion bigint NOT NULL,
-       CONSTRAINT PK_SurveyResponseCandidateTargetAssociation PRIMARY KEY CLUSTERED (ChangeVersion)
+       CONSTRAINT PK_SurveyResponsePersonTargetAssociation PRIMARY KEY CLUSTERED (ChangeVersion)
 )
 
 CREATE TABLE [tracked_deletes_tpdm].[SurveySectionAggregateResponse]

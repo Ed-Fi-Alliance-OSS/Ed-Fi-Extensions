@@ -2327,23 +2327,6 @@ CREATE TABLE tpdm.StudentGradebookEntryExtension (
 ); 
 ALTER TABLE tpdm.StudentGradebookEntryExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table tpdm.SurveyResponseCandidateTargetAssociation --
-CREATE TABLE tpdm.SurveyResponseCandidateTargetAssociation (
-    Namespace VARCHAR(255) NOT NULL,
-    PersonId VARCHAR(32) NOT NULL,
-    SourceSystemDescriptorId INT NOT NULL,
-    SurveyIdentifier VARCHAR(60) NOT NULL,
-    SurveyResponseIdentifier VARCHAR(60) NOT NULL,
-    Discriminator VARCHAR(128) NULL,
-    CreateDate TIMESTAMP NOT NULL,
-    LastModifiedDate TIMESTAMP NOT NULL,
-    Id UUID NOT NULL,
-    CONSTRAINT SurveyResponseCandidateTargetAssociation_PK PRIMARY KEY (Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier)
-); 
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation ALTER COLUMN Id SET DEFAULT gen_random_uuid();
-ALTER TABLE tpdm.SurveyResponseCandidateTargetAssociation ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
-
 -- Table tpdm.SurveyResponseExtension --
 CREATE TABLE tpdm.SurveyResponseExtension (
     Namespace VARCHAR(255) NOT NULL,
@@ -2355,6 +2338,23 @@ CREATE TABLE tpdm.SurveyResponseExtension (
     CONSTRAINT SurveyResponseExtension_PK PRIMARY KEY (Namespace, SurveyIdentifier, SurveyResponseIdentifier)
 ); 
 ALTER TABLE tpdm.SurveyResponseExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+
+-- Table tpdm.SurveyResponsePersonTargetAssociation --
+CREATE TABLE tpdm.SurveyResponsePersonTargetAssociation (
+    Namespace VARCHAR(255) NOT NULL,
+    PersonId VARCHAR(32) NOT NULL,
+    SourceSystemDescriptorId INT NOT NULL,
+    SurveyIdentifier VARCHAR(60) NOT NULL,
+    SurveyResponseIdentifier VARCHAR(60) NOT NULL,
+    Discriminator VARCHAR(128) NULL,
+    CreateDate TIMESTAMP NOT NULL,
+    LastModifiedDate TIMESTAMP NOT NULL,
+    Id UUID NOT NULL,
+    CONSTRAINT SurveyResponsePersonTargetAssociation_PK PRIMARY KEY (Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier)
+); 
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation ALTER COLUMN Id SET DEFAULT gen_random_uuid();
+ALTER TABLE tpdm.SurveyResponsePersonTargetAssociation ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
 -- Table tpdm.SurveySectionAggregateResponse --
 CREATE TABLE tpdm.SurveySectionAggregateResponse (

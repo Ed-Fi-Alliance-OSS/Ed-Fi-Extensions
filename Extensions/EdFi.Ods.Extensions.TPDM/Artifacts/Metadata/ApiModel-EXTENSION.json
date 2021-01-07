@@ -1313,12 +1313,12 @@
     {
       "aggregateRootEntityName": {
         "schema": "tpdm",
-        "name": "SurveyResponseCandidateTargetAssociation"
+        "name": "SurveyResponsePersonTargetAssociation"
       },
       "aggregateEntityNames": [
         {
           "schema": "tpdm",
-          "name": "SurveyResponseCandidateTargetAssociation"
+          "name": "SurveyResponsePersonTargetAssociation"
         }
       ]
     },
@@ -15699,7 +15699,52 @@
     },
     {
       "schema": "tpdm",
-      "name": "SurveyResponseCandidateTargetAssociation",
+      "name": "SurveyResponseExtension",
+      "locallyDefinedProperties": [
+        {
+          "propertyName": "CreateDate",
+          "propertyType": {
+            "dbType": "DateTime2",
+            "maxLength": 0,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "",
+          "isIdentifying": false,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "CreateDate",
+            "postgreSql": "CreateDate"
+          }
+        }
+      ],
+      "identifiers": [
+        {
+          "identifierName": "SurveyResponseExtension_PK",
+          "identifyingPropertyNames": [
+            "Namespace",
+            "SurveyIdentifier",
+            "SurveyResponseIdentifier"
+          ],
+          "isPrimary": true,
+          "isUpdatable": false,
+          "constraintNames": {
+            "sqlServer": "SurveyResponseExtension_PK",
+            "postgreSql": "SurveyResponseExtension_PK"
+          }
+        }
+      ],
+      "isAbstract": false,
+      "description": "",
+      "tableNames": {
+        "sqlServer": "SurveyResponseExtension",
+        "postgreSql": "SurveyResponseExtension"
+      }
+    },
+    {
+      "schema": "tpdm",
+      "name": "SurveyResponsePersonTargetAssociation",
       "locallyDefinedProperties": [
         {
           "propertyName": "CreateDate",
@@ -15755,7 +15800,7 @@
       ],
       "identifiers": [
         {
-          "identifierName": "SurveyResponseCandidateTargetAssociation_PK",
+          "identifierName": "SurveyResponsePersonTargetAssociation_PK",
           "identifyingPropertyNames": [
             "Namespace",
             "PersonId",
@@ -15766,73 +15811,28 @@
           "isPrimary": true,
           "isUpdatable": false,
           "constraintNames": {
-            "sqlServer": "SurveyResponseCandidateTargetAssociation_PK",
-            "postgreSql": "SurveyResponseCandidateTargetAssociation_PK"
+            "sqlServer": "SurveyResponsePersonTargetAssociation_PK",
+            "postgreSql": "SurveyResponsePersonTargetAssociation_PK"
           }
         },
         {
-          "identifierName": "UX_SurveyResponseCandidateTargetAssociation_Id",
+          "identifierName": "UX_SurveyResponsePersonTargetAssociation_Id",
           "identifyingPropertyNames": [
             "Id"
           ],
           "isPrimary": false,
           "isUpdatable": false,
           "constraintNames": {
-            "sqlServer": "UX_SurveyResponseCandidateTargetAssociation_Id",
-            "postgreSql": "UX_8d52f3_Id"
+            "sqlServer": "UX_SurveyResponsePersonTargetAssociation_Id",
+            "postgreSql": "UX_520027_Id"
           }
         }
       ],
       "isAbstract": false,
       "description": "The association provides information about the survey being taken and who the survey is about.",
       "tableNames": {
-        "sqlServer": "SurveyResponseCandidateTargetAssociation",
-        "postgreSql": "SurveyResponseCandidateTargetAssociation"
-      }
-    },
-    {
-      "schema": "tpdm",
-      "name": "SurveyResponseExtension",
-      "locallyDefinedProperties": [
-        {
-          "propertyName": "CreateDate",
-          "propertyType": {
-            "dbType": "DateTime2",
-            "maxLength": 0,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "",
-          "isIdentifying": false,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "CreateDate",
-            "postgreSql": "CreateDate"
-          }
-        }
-      ],
-      "identifiers": [
-        {
-          "identifierName": "SurveyResponseExtension_PK",
-          "identifyingPropertyNames": [
-            "Namespace",
-            "SurveyIdentifier",
-            "SurveyResponseIdentifier"
-          ],
-          "isPrimary": true,
-          "isUpdatable": false,
-          "constraintNames": {
-            "sqlServer": "SurveyResponseExtension_PK",
-            "postgreSql": "SurveyResponseExtension_PK"
-          }
-        }
-      ],
-      "isAbstract": false,
-      "description": "",
-      "tableNames": {
-        "sqlServer": "SurveyResponseExtension",
-        "postgreSql": "SurveyResponseExtension"
+        "sqlServer": "SurveyResponsePersonTargetAssociation",
+        "postgreSql": "SurveyResponsePersonTargetAssociation"
       }
     },
     {
@@ -50532,226 +50532,6 @@
     {
       "fullName": {
         "schema": "tpdm",
-        "name": "FK_SurveyResponseCandidateTargetAssociation_Person"
-      },
-      "cardinality": "OneToZeroOrMore",
-      "primaryEntityFullName": {
-        "schema": "edfi",
-        "name": "Person"
-      },
-      "primaryEntityProperties": [
-        {
-          "propertyName": "PersonId",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 32,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "A unique alphanumeric code assigned to a person.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "PersonId",
-            "postgreSql": "PersonId"
-          }
-        },
-        {
-          "propertyName": "SourceSystemDescriptorId",
-          "propertyType": {
-            "dbType": "Int32",
-            "maxLength": 0,
-            "precision": 10,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "This descriptor defines the originating record source system for the person.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SourceSystemDescriptorId",
-            "postgreSql": "SourceSystemDescriptorId"
-          }
-        }
-      ],
-      "secondaryEntityFullName": {
-        "schema": "tpdm",
-        "name": "SurveyResponseCandidateTargetAssociation"
-      },
-      "secondaryEntityProperties": [
-        {
-          "propertyName": "PersonId",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 32,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "A unique alphanumeric code assigned to a person.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "PersonId",
-            "postgreSql": "PersonId"
-          }
-        },
-        {
-          "propertyName": "SourceSystemDescriptorId",
-          "propertyType": {
-            "dbType": "Int32",
-            "maxLength": 0,
-            "precision": 10,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "This descriptor defines the originating record source system for the person.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SourceSystemDescriptorId",
-            "postgreSql": "SourceSystemDescriptorId"
-          }
-        }
-      ],
-      "isIdentifying": true,
-      "isRequired": true,
-      "constraintNames": {
-        "sqlServer": "FK_SurveyResponseCandidateTargetAssociation_Person",
-        "postgreSql": "FK_8d52f3_Person"
-      }
-    },
-    {
-      "fullName": {
-        "schema": "tpdm",
-        "name": "FK_SurveyResponseCandidateTargetAssociation_SurveyResponse"
-      },
-      "cardinality": "OneToZeroOrMore",
-      "primaryEntityFullName": {
-        "schema": "edfi",
-        "name": "SurveyResponse"
-      },
-      "primaryEntityProperties": [
-        {
-          "propertyName": "Namespace",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 255,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "Namespace for the Survey.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "Namespace",
-            "postgreSql": "Namespace"
-          }
-        },
-        {
-          "propertyName": "SurveyIdentifier",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 60,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "The unique survey identifier from the survey tool.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SurveyIdentifier",
-            "postgreSql": "SurveyIdentifier"
-          }
-        },
-        {
-          "propertyName": "SurveyResponseIdentifier",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 60,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "The identifier of the survey typically from the survey application.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SurveyResponseIdentifier",
-            "postgreSql": "SurveyResponseIdentifier"
-          }
-        }
-      ],
-      "secondaryEntityFullName": {
-        "schema": "tpdm",
-        "name": "SurveyResponseCandidateTargetAssociation"
-      },
-      "secondaryEntityProperties": [
-        {
-          "propertyName": "Namespace",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 255,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "Namespace for the Survey.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "Namespace",
-            "postgreSql": "Namespace"
-          }
-        },
-        {
-          "propertyName": "SurveyIdentifier",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 60,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "The unique survey identifier from the survey tool.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SurveyIdentifier",
-            "postgreSql": "SurveyIdentifier"
-          }
-        },
-        {
-          "propertyName": "SurveyResponseIdentifier",
-          "propertyType": {
-            "dbType": "String",
-            "maxLength": 60,
-            "precision": 0,
-            "scale": 0,
-            "isNullable": false
-          },
-          "description": "The identifier of the survey typically from the survey application.",
-          "isIdentifying": true,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "SurveyResponseIdentifier",
-            "postgreSql": "SurveyResponseIdentifier"
-          }
-        }
-      ],
-      "isIdentifying": true,
-      "isRequired": true,
-      "constraintNames": {
-        "sqlServer": "FK_SurveyResponseCandidateTargetAssociation_SurveyResponse",
-        "postgreSql": "FK_8d52f3_SurveyResponse"
-      }
-    },
-    {
-      "fullName": {
-        "schema": "tpdm",
         "name": "FK_SurveyResponseExtension_Person"
       },
       "cardinality": "OneToZeroOrMore",
@@ -50967,6 +50747,226 @@
       "constraintNames": {
         "sqlServer": "FK_SurveyResponseExtension_SurveyResponse",
         "postgreSql": "FK_fa906d_SurveyResponse"
+      }
+    },
+    {
+      "fullName": {
+        "schema": "tpdm",
+        "name": "FK_SurveyResponsePersonTargetAssociation_Person"
+      },
+      "cardinality": "OneToZeroOrMore",
+      "primaryEntityFullName": {
+        "schema": "edfi",
+        "name": "Person"
+      },
+      "primaryEntityProperties": [
+        {
+          "propertyName": "PersonId",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 32,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "A unique alphanumeric code assigned to a person.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "PersonId",
+            "postgreSql": "PersonId"
+          }
+        },
+        {
+          "propertyName": "SourceSystemDescriptorId",
+          "propertyType": {
+            "dbType": "Int32",
+            "maxLength": 0,
+            "precision": 10,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "This descriptor defines the originating record source system for the person.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SourceSystemDescriptorId",
+            "postgreSql": "SourceSystemDescriptorId"
+          }
+        }
+      ],
+      "secondaryEntityFullName": {
+        "schema": "tpdm",
+        "name": "SurveyResponsePersonTargetAssociation"
+      },
+      "secondaryEntityProperties": [
+        {
+          "propertyName": "PersonId",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 32,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "A unique alphanumeric code assigned to a person.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "PersonId",
+            "postgreSql": "PersonId"
+          }
+        },
+        {
+          "propertyName": "SourceSystemDescriptorId",
+          "propertyType": {
+            "dbType": "Int32",
+            "maxLength": 0,
+            "precision": 10,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "This descriptor defines the originating record source system for the person.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SourceSystemDescriptorId",
+            "postgreSql": "SourceSystemDescriptorId"
+          }
+        }
+      ],
+      "isIdentifying": true,
+      "isRequired": true,
+      "constraintNames": {
+        "sqlServer": "FK_SurveyResponsePersonTargetAssociation_Person",
+        "postgreSql": "FK_520027_Person"
+      }
+    },
+    {
+      "fullName": {
+        "schema": "tpdm",
+        "name": "FK_SurveyResponsePersonTargetAssociation_SurveyResponse"
+      },
+      "cardinality": "OneToZeroOrMore",
+      "primaryEntityFullName": {
+        "schema": "edfi",
+        "name": "SurveyResponse"
+      },
+      "primaryEntityProperties": [
+        {
+          "propertyName": "Namespace",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 255,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "Namespace for the Survey.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "Namespace",
+            "postgreSql": "Namespace"
+          }
+        },
+        {
+          "propertyName": "SurveyIdentifier",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 60,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "The unique survey identifier from the survey tool.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SurveyIdentifier",
+            "postgreSql": "SurveyIdentifier"
+          }
+        },
+        {
+          "propertyName": "SurveyResponseIdentifier",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 60,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "The identifier of the survey typically from the survey application.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SurveyResponseIdentifier",
+            "postgreSql": "SurveyResponseIdentifier"
+          }
+        }
+      ],
+      "secondaryEntityFullName": {
+        "schema": "tpdm",
+        "name": "SurveyResponsePersonTargetAssociation"
+      },
+      "secondaryEntityProperties": [
+        {
+          "propertyName": "Namespace",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 255,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "Namespace for the Survey.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "Namespace",
+            "postgreSql": "Namespace"
+          }
+        },
+        {
+          "propertyName": "SurveyIdentifier",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 60,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "The unique survey identifier from the survey tool.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SurveyIdentifier",
+            "postgreSql": "SurveyIdentifier"
+          }
+        },
+        {
+          "propertyName": "SurveyResponseIdentifier",
+          "propertyType": {
+            "dbType": "String",
+            "maxLength": 60,
+            "precision": 0,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "The identifier of the survey typically from the survey application.",
+          "isIdentifying": true,
+          "isServerAssigned": false,
+          "columnNames": {
+            "sqlServer": "SurveyResponseIdentifier",
+            "postgreSql": "SurveyResponseIdentifier"
+          }
+        }
+      ],
+      "isIdentifying": true,
+      "isRequired": true,
+      "constraintNames": {
+        "sqlServer": "FK_SurveyResponsePersonTargetAssociation_SurveyResponse",
+        "postgreSql": "FK_520027_SurveyResponse"
       }
     },
     {

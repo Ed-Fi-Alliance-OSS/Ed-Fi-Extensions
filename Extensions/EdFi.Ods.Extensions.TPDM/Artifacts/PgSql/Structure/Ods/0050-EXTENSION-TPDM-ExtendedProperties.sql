@@ -1601,14 +1601,6 @@ COMMENT ON COLUMN tpdm.StudentGradebookEntryExtension.StudentUSI IS 'A unique al
 COMMENT ON COLUMN tpdm.StudentGradebookEntryExtension.DateCompleted IS 'The date that the assignment was completed.';
 COMMENT ON COLUMN tpdm.StudentGradebookEntryExtension.AssignmentPassed IS 'Indication of whether the assignment was passed or not.';
 
--- Extended Properties [tpdm].[SurveyResponseCandidateTargetAssociation] --
-COMMENT ON TABLE tpdm.SurveyResponseCandidateTargetAssociation IS 'The association provides information about the survey being taken and who the survey is about.';
-COMMENT ON COLUMN tpdm.SurveyResponseCandidateTargetAssociation.Namespace IS 'Namespace for the Survey.';
-COMMENT ON COLUMN tpdm.SurveyResponseCandidateTargetAssociation.PersonId IS 'A unique alphanumeric code assigned to a person.';
-COMMENT ON COLUMN tpdm.SurveyResponseCandidateTargetAssociation.SourceSystemDescriptorId IS 'This descriptor defines the originating record source system for the person.';
-COMMENT ON COLUMN tpdm.SurveyResponseCandidateTargetAssociation.SurveyIdentifier IS 'The unique survey identifier from the survey tool.';
-COMMENT ON COLUMN tpdm.SurveyResponseCandidateTargetAssociation.SurveyResponseIdentifier IS 'The identifier of the survey typically from the survey application.';
-
 -- Extended Properties [tpdm].[SurveyResponseExtension] --
 COMMENT ON TABLE tpdm.SurveyResponseExtension IS '';
 COMMENT ON COLUMN tpdm.SurveyResponseExtension.Namespace IS 'Namespace for the Survey.';
@@ -1616,6 +1608,14 @@ COMMENT ON COLUMN tpdm.SurveyResponseExtension.SurveyIdentifier IS 'The unique s
 COMMENT ON COLUMN tpdm.SurveyResponseExtension.SurveyResponseIdentifier IS 'The identifier of the survey typically from the survey application.';
 COMMENT ON COLUMN tpdm.SurveyResponseExtension.PersonId IS 'A unique alphanumeric code assigned to a person.';
 COMMENT ON COLUMN tpdm.SurveyResponseExtension.SourceSystemDescriptorId IS 'This descriptor defines the originating record source system for the person.';
+
+-- Extended Properties [tpdm].[SurveyResponsePersonTargetAssociation] --
+COMMENT ON TABLE tpdm.SurveyResponsePersonTargetAssociation IS 'The association provides information about the survey being taken and who the survey is about.';
+COMMENT ON COLUMN tpdm.SurveyResponsePersonTargetAssociation.Namespace IS 'Namespace for the Survey.';
+COMMENT ON COLUMN tpdm.SurveyResponsePersonTargetAssociation.PersonId IS 'A unique alphanumeric code assigned to a person.';
+COMMENT ON COLUMN tpdm.SurveyResponsePersonTargetAssociation.SourceSystemDescriptorId IS 'This descriptor defines the originating record source system for the person.';
+COMMENT ON COLUMN tpdm.SurveyResponsePersonTargetAssociation.SurveyIdentifier IS 'The unique survey identifier from the survey tool.';
+COMMENT ON COLUMN tpdm.SurveyResponsePersonTargetAssociation.SurveyResponseIdentifier IS 'The identifier of the survey typically from the survey application.';
 
 -- Extended Properties [tpdm].[SurveySectionAggregateResponse] --
 COMMENT ON TABLE tpdm.SurveySectionAggregateResponse IS 'The aggregate or average score across the surveying population for a survey section being used for performance evaluation.';

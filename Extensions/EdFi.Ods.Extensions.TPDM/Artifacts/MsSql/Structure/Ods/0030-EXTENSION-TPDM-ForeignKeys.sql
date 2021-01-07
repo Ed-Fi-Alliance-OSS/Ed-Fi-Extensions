@@ -2843,22 +2843,6 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 GO
 
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] WITH CHECK ADD CONSTRAINT [FK_SurveyResponseCandidateTargetAssociation_Person] FOREIGN KEY ([PersonId], [SourceSystemDescriptorId])
-REFERENCES [edfi].[Person] ([PersonId], [SourceSystemDescriptorId])
-GO
-
-CREATE NONCLUSTERED INDEX [FK_SurveyResponseCandidateTargetAssociation_Person]
-ON [tpdm].[SurveyResponseCandidateTargetAssociation] ([PersonId] ASC, [SourceSystemDescriptorId] ASC)
-GO
-
-ALTER TABLE [tpdm].[SurveyResponseCandidateTargetAssociation] WITH CHECK ADD CONSTRAINT [FK_SurveyResponseCandidateTargetAssociation_SurveyResponse] FOREIGN KEY ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
-REFERENCES [edfi].[SurveyResponse] ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
-GO
-
-CREATE NONCLUSTERED INDEX [FK_SurveyResponseCandidateTargetAssociation_SurveyResponse]
-ON [tpdm].[SurveyResponseCandidateTargetAssociation] ([Namespace] ASC, [SurveyIdentifier] ASC, [SurveyResponseIdentifier] ASC)
-GO
-
 ALTER TABLE [tpdm].[SurveyResponseExtension] WITH CHECK ADD CONSTRAINT [FK_SurveyResponseExtension_Person] FOREIGN KEY ([PersonId], [SourceSystemDescriptorId])
 REFERENCES [edfi].[Person] ([PersonId], [SourceSystemDescriptorId])
 GO
@@ -2870,6 +2854,22 @@ GO
 ALTER TABLE [tpdm].[SurveyResponseExtension] WITH CHECK ADD CONSTRAINT [FK_SurveyResponseExtension_SurveyResponse] FOREIGN KEY ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
 REFERENCES [edfi].[SurveyResponse] ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
 ON DELETE CASCADE
+GO
+
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] WITH CHECK ADD CONSTRAINT [FK_SurveyResponsePersonTargetAssociation_Person] FOREIGN KEY ([PersonId], [SourceSystemDescriptorId])
+REFERENCES [edfi].[Person] ([PersonId], [SourceSystemDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_SurveyResponsePersonTargetAssociation_Person]
+ON [tpdm].[SurveyResponsePersonTargetAssociation] ([PersonId] ASC, [SourceSystemDescriptorId] ASC)
+GO
+
+ALTER TABLE [tpdm].[SurveyResponsePersonTargetAssociation] WITH CHECK ADD CONSTRAINT [FK_SurveyResponsePersonTargetAssociation_SurveyResponse] FOREIGN KEY ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
+REFERENCES [edfi].[SurveyResponse] ([Namespace], [SurveyIdentifier], [SurveyResponseIdentifier])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_SurveyResponsePersonTargetAssociation_SurveyResponse]
+ON [tpdm].[SurveyResponsePersonTargetAssociation] ([Namespace] ASC, [SurveyIdentifier] ASC, [SurveyResponseIdentifier] ASC)
 GO
 
 ALTER TABLE [tpdm].[SurveySectionAggregateResponse] WITH CHECK ADD CONSTRAINT [FK_SurveySectionAggregateResponse_EvaluationElementRating] FOREIGN KEY ([EducationOrganizationId], [EvaluationDate], [EvaluationElementTitle], [EvaluationObjectiveTitle], [EvaluationPeriodDescriptorId], [EvaluationTitle], [PerformanceEvaluationTitle], [PerformanceEvaluationTypeDescriptorId], [PersonId], [SchoolYear], [SourceSystemDescriptorId], [TermDescriptorId])

@@ -1143,18 +1143,18 @@ $BODY$ LANGUAGE plpgsql;
 CREATE TRIGGER TrackDeletes AFTER DELETE ON tpdm.StaffToCandidateRelationshipDescriptor 
     FOR EACH ROW EXECUTE PROCEDURE tracked_deletes_tpdm.StaffToCandidateRelationshipDescriptor_TR_DelTrkg();
 
-CREATE FUNCTION tracked_deletes_tpdm.SurveyResponseCandidateTargetAssociation_TR_DelTrkg()
+CREATE FUNCTION tracked_deletes_tpdm.SurveyResponsePersonTargetAssociation_TR_DelTrkg()
     RETURNS trigger AS
 $BODY$
 BEGIN
-    INSERT INTO tracked_deletes_tpdm.SurveyResponseCandidateTargetAssociation(Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier, Id, ChangeVersion)
+    INSERT INTO tracked_deletes_tpdm.SurveyResponsePersonTargetAssociation(Namespace, PersonId, SourceSystemDescriptorId, SurveyIdentifier, SurveyResponseIdentifier, Id, ChangeVersion)
     VALUES (OLD.Namespace, OLD.PersonId, OLD.SourceSystemDescriptorId, OLD.SurveyIdentifier, OLD.SurveyResponseIdentifier, OLD.Id, nextval('changes.ChangeVersionSequence'));
     RETURN NULL;
 END;
 $BODY$ LANGUAGE plpgsql;
 
-CREATE TRIGGER TrackDeletes AFTER DELETE ON tpdm.SurveyResponseCandidateTargetAssociation 
-    FOR EACH ROW EXECUTE PROCEDURE tracked_deletes_tpdm.SurveyResponseCandidateTargetAssociation_TR_DelTrkg();
+CREATE TRIGGER TrackDeletes AFTER DELETE ON tpdm.SurveyResponsePersonTargetAssociation 
+    FOR EACH ROW EXECUTE PROCEDURE tracked_deletes_tpdm.SurveyResponsePersonTargetAssociation_TR_DelTrkg();
 
 CREATE FUNCTION tracked_deletes_tpdm.SurveySectionAggregateResponse_TR_DelTrkg()
     RETURNS trigger AS
