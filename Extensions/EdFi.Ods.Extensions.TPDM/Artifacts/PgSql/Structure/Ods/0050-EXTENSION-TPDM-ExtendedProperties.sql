@@ -2,7 +2,7 @@
 -- Licensed to the Ed-Fi Alliance under one or more agreements.
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
-
+  
 -- Extended Properties [tpdm].[AccreditationStatusDescriptor] --
 COMMENT ON TABLE tpdm.AccreditationStatusDescriptor IS 'Accreditation Status for a Teacher Preparation Provider.';
 COMMENT ON COLUMN tpdm.AccreditationStatusDescriptor.AccreditationStatusDescriptorId IS 'A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.';
