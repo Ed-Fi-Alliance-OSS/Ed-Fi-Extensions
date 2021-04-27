@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AggregateExtensions logicalSchema="Ne" schema="ne">
+  <Aggregate root="CrisisDetails">
+    <Entity table="CrisisDetails" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="CrisisEventDescriptor">
+    <Entity table="CrisisEventDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="CrisisTypeDescriptor">
+    <Entity table="CrisisTypeDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="DualCreditDescriptor">
+    <Entity table="DualCreditDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="EarlyLearningSettingDescriptor">
+    <Entity table="EarlyLearningSettingDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="ImmigrantIndicatorDescriptor">
+    <Entity table="ImmigrantIndicatorDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="PlacementTypeDescriptor">
+    <Entity table="PlacementTypeDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="PositionTitleDescriptor">
+    <Entity table="PositionTitleDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="PostGraduateActivity">
+    <Entity table="PostGraduateActivity" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="PostGraduateActivityDescriptor">
+    <Entity table="PostGraduateActivityDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="PostGraduateActivityDeterminationDescriptor">
+    <Entity table="PostGraduateActivityDeterminationDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="SectionDeliveryDescriptor">
+    <Entity table="SectionDeliveryDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="SpecialEducationProgramDescriptor">
+    <Entity table="SpecialEducationProgramDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="StudentEarlyLearningProgramAssociation">
+    <Entity table="StudentEarlyLearningProgramAssociation" isA="GeneralStudentProgramAssociation" schema="ne"/>
+  </Aggregate>
+  <Aggregate root="UnilateralRemovalDescriptor">
+    <Entity table="UnilateralRemovalDescriptor" isA="Descriptor" schema="ne"/>
+  </Aggregate>
+  <AggregateExtension root="Section">
+    <Entity table="SectionDelivery" schema="ne"/>
+  </AggregateExtension>
+  <AggregateExtension root="StudentDisciplineIncidentAssociation">
+    <Entity table="StudentDisciplineIncidentAssociationWeapon" schema="ne"/>
+  </AggregateExtension>
+  <AggregateExtension root="StudentEducationOrganizationAssociation">
+    <Entity table="StudentEducationOrganizationAssociationStudentCrisisEvent" schema="ne"/>
+  </AggregateExtension>
+</AggregateExtensions>

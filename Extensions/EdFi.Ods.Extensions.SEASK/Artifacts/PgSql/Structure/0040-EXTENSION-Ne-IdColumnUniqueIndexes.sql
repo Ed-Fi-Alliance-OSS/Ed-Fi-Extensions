@@ -1,0 +1,4 @@
+CREATE UNIQUE INDEX IF NOT EXISTS UX_9e9b7e_Id ON ne.CrisisDetails(Id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS UX_bc1d0a_Id ON ne.PostGraduateActivity(Id);
+
