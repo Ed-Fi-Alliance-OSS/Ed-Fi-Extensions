@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AggregateExtensions logicalSchema="Sk" schema="sk">
+  <Aggregate root="SpecialEducationProgramDescriptor">
+    <Entity table="SpecialEducationProgramDescriptor" isA="Descriptor" schema="sk"/>
+  </Aggregate>
+</AggregateExtensions>

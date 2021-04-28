@@ -1,3 +1,12 @@
+-- Table [sk].[SpecialEducationProgramDescriptor] --
+CREATE TABLE [sk].[SpecialEducationProgramDescriptor] (
+    [SpecialEducationProgramDescriptorId] [INT] NOT NULL,
+    CONSTRAINT [SpecialEducationProgramDescriptor_PK] PRIMARY KEY CLUSTERED (
+        [SpecialEducationProgramDescriptorId] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 -- Table [sk].[StudentLanguageInstructionProgramAssociationExtension] --
 CREATE TABLE [sk].[StudentLanguageInstructionProgramAssociationExtension] (
     [BeginDate] [DATE] NOT NULL,

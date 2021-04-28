@@ -1,3 +1,7 @@
+-- Extended Properties [sk].[SpecialEducationProgramDescriptor] --
+COMMENT ON TABLE sk.SpecialEducationProgramDescriptor IS 'Type of program a Special Education student is in - Part B or Part C.';
+COMMENT ON COLUMN sk.SpecialEducationProgramDescriptor.SpecialEducationProgramDescriptorId IS 'A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.';
+
 -- Extended Properties [sk].[StudentLanguageInstructionProgramAssociationExtension] --
 COMMENT ON TABLE sk.StudentLanguageInstructionProgramAssociationExtension IS '';
 COMMENT ON COLUMN sk.StudentLanguageInstructionProgramAssociationExtension.BeginDate IS 'The earliest date the student is involved with the program. Typically, this is the date the student becomes eligible for the program.';

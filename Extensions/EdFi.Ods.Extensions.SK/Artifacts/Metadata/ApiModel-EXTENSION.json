@@ -5,9 +5,47 @@
     "physicalName": "sk",
     "version": "1.0.0"
   },
-  "aggregateDefinitions": [],
+  "aggregateDefinitions": [
+    {
+      "aggregateRootEntityName": {
+        "schema": "sk",
+        "name": "SpecialEducationProgramDescriptor"
+      },
+      "aggregateEntityNames": [
+        {
+          "schema": "sk",
+          "name": "SpecialEducationProgramDescriptor"
+        }
+      ]
+    }
+  ],
   "aggregateExtensionDefinitions": [],
   "entityDefinitions": [
+    {
+      "schema": "sk",
+      "name": "SpecialEducationProgramDescriptor",
+      "locallyDefinedProperties": [],
+      "identifiers": [
+        {
+          "identifierName": "SpecialEducationProgramDescriptor_PK",
+          "identifyingPropertyNames": [
+            "SpecialEducationProgramDescriptorId"
+          ],
+          "isPrimary": true,
+          "isUpdatable": false,
+          "constraintNames": {
+            "sqlServer": "SpecialEducationProgramDescriptor_PK",
+            "postgreSql": "SpecialEducationProgramDescriptor_PK"
+          }
+        }
+      ],
+      "isAbstract": false,
+      "description": "Type of program a Special Education student is in - Part B or Part C.",
+      "tableNames": {
+        "sqlServer": "SpecialEducationProgramDescriptor",
+        "postgreSql": "SpecialEducationProgramDescriptor"
+      }
+    },
     {
       "schema": "sk",
       "name": "StudentLanguageInstructionProgramAssociationExtension",
@@ -202,6 +240,66 @@
     }
   ],
   "associationDefinitions": [
+    {
+      "fullName": {
+        "schema": "sk",
+        "name": "FK_SpecialEducationProgramDescriptor_Descriptor"
+      },
+      "cardinality": "OneToOneInheritance",
+      "primaryEntityFullName": {
+        "schema": "edfi",
+        "name": "Descriptor"
+      },
+      "primaryEntityProperties": [
+        {
+          "propertyName": "DescriptorId",
+          "propertyType": {
+            "dbType": "Int32",
+            "maxLength": 0,
+            "precision": 10,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.",
+          "isIdentifying": true,
+          "isServerAssigned": true,
+          "columnNames": {
+            "sqlServer": "DescriptorId",
+            "postgreSql": "DescriptorId"
+          }
+        }
+      ],
+      "secondaryEntityFullName": {
+        "schema": "sk",
+        "name": "SpecialEducationProgramDescriptor"
+      },
+      "secondaryEntityProperties": [
+        {
+          "propertyName": "SpecialEducationProgramDescriptorId",
+          "propertyType": {
+            "dbType": "Int32",
+            "maxLength": 0,
+            "precision": 10,
+            "scale": 0,
+            "isNullable": false
+          },
+          "description": "A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.",
+          "isIdentifying": true,
+          "isServerAssigned": true,
+          "columnNames": {
+            "sqlServer": "SpecialEducationProgramDescriptorId",
+            "postgreSql": "SpecialEducationProgramDescriptorId"
+          }
+        }
+      ],
+      "isIdentifying": true,
+      "isRequired": true,
+      "constraintNames": {
+        "sqlServer": "FK_SpecialEducationProgramDescriptor_Descriptor",
+        "postgreSql": "FK_32084c_Descriptor"
+      },
+      "potentiallyLogical": false
+    },
     {
       "fullName": {
         "schema": "sk",

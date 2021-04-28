@@ -10,6 +10,17 @@
   <xs:annotation>
     <xs:documentation>===== Descriptors =====</xs:documentation>
   </xs:annotation>
+  <xs:complexType name="EXTENSION-SpecialEducationProgramDescriptor">
+    <xs:annotation>
+      <xs:documentation>Type of program a Special Education student is in - Part B or Part C.</xs:documentation>
+      <xs:appinfo>
+        <ann:TypeGroup>Descriptor</ann:TypeGroup>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DescriptorType" />
+    </xs:complexContent>
+  </xs:complexType>
   <xs:annotation>
     <xs:documentation>===== Associations =====</xs:documentation>
   </xs:annotation>
@@ -91,6 +102,15 @@
   <xs:annotation>
     <xs:documentation>===== Extended Descriptor Reference Types =====</xs:documentation>
   </xs:annotation>
+  <xs:simpleType name="EXTENSION-SpecialEducationProgramDescriptorReferenceType">
+    <xs:annotation>
+      <xs:documentation>Type of program a Special Education student is in - Part B or Part C.</xs:documentation>
+      <xs:appinfo>
+        <ann:TypeGroup>Extended Descriptor Reference</ann:TypeGroup>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="DescriptorReferenceType" />
+  </xs:simpleType>
   <xs:annotation>
     <xs:documentation>===== Common Types =====</xs:documentation>
   </xs:annotation>
@@ -100,18 +120,6 @@
   <xs:annotation>
     <xs:documentation>===== String Simple Types =====</xs:documentation>
   </xs:annotation>
-  <xs:simpleType name="EXTENSION-CourseStaffIdOverride">
-    <xs:annotation>
-      <xs:documentation>Staff Id of non district employee correspoinding to the teacher of the course.</xs:documentation>
-      <xs:appinfo>
-        <ann:TypeGroup>Simple</ann:TypeGroup>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:minLength value="10" />
-      <xs:maxLength value="10" />
-    </xs:restriction>
-  </xs:simpleType>
   <xs:annotation>
     <xs:documentation>===== Numeric Simple Types =====</xs:documentation>
   </xs:annotation>
