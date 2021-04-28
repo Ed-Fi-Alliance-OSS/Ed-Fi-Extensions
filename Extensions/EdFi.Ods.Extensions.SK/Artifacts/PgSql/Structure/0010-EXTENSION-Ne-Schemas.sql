@@ -1,1 +1,0 @@
-CREATE SCHEMA ne AUTHORIZATION postgres;

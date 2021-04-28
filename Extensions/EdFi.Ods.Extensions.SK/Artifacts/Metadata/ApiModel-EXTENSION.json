@@ -1,199 +1,199 @@
 {
   "odsApiVersion": "5.2",
   "schemaDefinition": {
-    "logicalName": "Ne",
-    "physicalName": "ne",
+    "logicalName": "Sk",
+    "physicalName": "sk",
     "version": "6.0.0"
   },
   "aggregateDefinitions": [
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "AssessmentAdministration"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "AssessmentAdministration"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisDetails"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "CrisisDetails"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisEventDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "CrisisEventDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisTypeDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "CrisisTypeDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DualCreditDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "DualCreditDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "EarlyLearningSettingDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "EarlyLearningSettingDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "ImmigrantIndicatorDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "ImmigrantIndicatorDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PlacementTypeDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "PlacementTypeDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PositionTitleDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "PositionTitleDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "PostGraduateActivity"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "PostGraduateActivityDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDeterminationDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "PostGraduateActivityDeterminationDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionDeliveryDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "SectionDeliveryDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SpecialEducationProgramDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "SpecialEducationProgramDescriptor"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEarlyLearningProgramAssociation"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "StudentEarlyLearningProgramAssociation"
         }
       ]
     },
     {
       "aggregateRootEntityName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "UnilateralRemovalDescriptor"
       },
       "aggregateEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "UnilateralRemovalDescriptor"
         }
       ]
@@ -207,7 +207,7 @@
       },
       "extensionEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "SectionDelivery"
         }
       ]
@@ -219,7 +219,7 @@
       },
       "extensionEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "StudentDisciplineIncidentAssociationWeapon"
         }
       ]
@@ -231,7 +231,7 @@
       },
       "extensionEntityNames": [
         {
-          "schema": "ne",
+          "schema": "sk",
           "name": "StudentEducationOrganizationAssociationStudentCrisisEvent"
         }
       ]
@@ -239,7 +239,7 @@
   ],
   "entityDefinitions": [
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "AssessmentAdministration",
       "locallyDefinedProperties": [
         {
@@ -330,7 +330,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "CalendarDateExtension",
       "locallyDefinedProperties": [
         {
@@ -393,7 +393,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "CrisisDetails",
       "locallyDefinedProperties": [
         {
@@ -516,7 +516,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "CrisisEventDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -541,7 +541,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "CrisisTypeDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -566,7 +566,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "DisciplineActionExtension",
       "locallyDefinedProperties": [
         {
@@ -628,7 +628,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "DisciplineIncidentExtension",
       "locallyDefinedProperties": [
         {
@@ -706,7 +706,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "DualCreditDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -731,7 +731,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "EarlyLearningSettingDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -756,7 +756,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "ImmigrantIndicatorDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -781,7 +781,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "PlacementTypeDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -806,7 +806,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "PositionTitleDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -831,7 +831,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "PostGraduateActivity",
       "locallyDefinedProperties": [
         {
@@ -922,7 +922,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "PostGraduateActivityDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -947,7 +947,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "PostGraduateActivityDeterminationDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -972,7 +972,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "SectionDelivery",
       "locallyDefinedProperties": [
         {
@@ -1020,7 +1020,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "SectionDeliveryDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -1045,7 +1045,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "SectionExtension",
       "locallyDefinedProperties": [
         {
@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "SpecialEducationProgramDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -1134,7 +1134,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentDisciplineIncidentAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1247,7 +1247,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentDisciplineIncidentAssociationWeapon",
       "locallyDefinedProperties": [
         {
@@ -1293,7 +1293,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentEarlyLearningProgramAssociation",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentEducationOrganizationAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1367,7 +1367,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentEducationOrganizationAssociationStudentCrisisEvent",
       "locallyDefinedProperties": [
         {
@@ -1429,7 +1429,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentLanguageInstructionProgramAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1494,7 +1494,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentSchoolAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1556,7 +1556,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentSectionAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1605,7 +1605,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "StudentSpecialEducationProgramAssociationExtension",
       "locallyDefinedProperties": [
         {
@@ -1687,7 +1687,7 @@
       }
     },
     {
-      "schema": "ne",
+      "schema": "sk",
       "name": "UnilateralRemovalDescriptor",
       "locallyDefinedProperties": [],
       "identifiers": [
@@ -1715,7 +1715,7 @@
   "associationDefinitions": [
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_AssessmentAdministration_Assessment"
       },
       "cardinality": "OneToZeroOrMore",
@@ -1760,7 +1760,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "AssessmentAdministration"
       },
       "secondaryEntityProperties": [
@@ -1809,7 +1809,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_AssessmentAdministration_EducationOrganization"
       },
       "cardinality": "OneToZeroOrMore",
@@ -1837,7 +1837,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "AssessmentAdministration"
       },
       "secondaryEntityProperties": [
@@ -1869,7 +1869,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_CalendarDateExtension_CalendarDate"
       },
       "cardinality": "OneToOneExtension",
@@ -1948,7 +1948,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CalendarDateExtension"
       },
       "secondaryEntityProperties": [
@@ -2030,12 +2030,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_CrisisDetails_CrisisEventDescriptor"
       },
       "cardinality": "OneToOne",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisEventDescriptor"
       },
       "primaryEntityProperties": [
@@ -2058,7 +2058,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisDetails"
       },
       "secondaryEntityProperties": [
@@ -2090,12 +2090,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_CrisisDetails_CrisisTypeDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisTypeDescriptor"
       },
       "primaryEntityProperties": [
@@ -2118,7 +2118,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisDetails"
       },
       "secondaryEntityProperties": [
@@ -2150,7 +2150,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_CrisisEventDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2178,7 +2178,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisEventDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2210,7 +2210,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_CrisisTypeDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2238,7 +2238,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisTypeDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2270,7 +2270,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_DisciplineActionExtension_DisciplineAction"
       },
       "cardinality": "OneToOneExtension",
@@ -2332,7 +2332,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DisciplineActionExtension"
       },
       "secondaryEntityProperties": [
@@ -2397,12 +2397,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_DisciplineActionExtension_UnilateralRemovalDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "UnilateralRemovalDescriptor"
       },
       "primaryEntityProperties": [
@@ -2425,7 +2425,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DisciplineActionExtension"
       },
       "secondaryEntityProperties": [
@@ -2457,7 +2457,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_DisciplineIncidentExtension_DisciplineIncident"
       },
       "cardinality": "OneToOneExtension",
@@ -2502,7 +2502,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DisciplineIncidentExtension"
       },
       "secondaryEntityProperties": [
@@ -2550,7 +2550,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_DualCreditDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2578,7 +2578,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DualCreditDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2610,7 +2610,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_EarlyLearningSettingDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2638,7 +2638,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "EarlyLearningSettingDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2670,7 +2670,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_ImmigrantIndicatorDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2698,7 +2698,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "ImmigrantIndicatorDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2730,7 +2730,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PlacementTypeDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2758,7 +2758,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PlacementTypeDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2790,7 +2790,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PositionTitleDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -2818,7 +2818,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PositionTitleDescriptor"
       },
       "secondaryEntityProperties": [
@@ -2850,7 +2850,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivity_LocalEducationAgency"
       },
       "cardinality": "OneToZeroOrMore",
@@ -2878,7 +2878,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "secondaryEntityProperties": [
@@ -2910,12 +2910,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivity_PostGraduateActivityDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDescriptor"
       },
       "primaryEntityProperties": [
@@ -2938,7 +2938,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "secondaryEntityProperties": [
@@ -2970,12 +2970,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivity_PostGraduateActivityDeterminationDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDeterminationDescriptor"
       },
       "primaryEntityProperties": [
@@ -2998,7 +2998,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "secondaryEntityProperties": [
@@ -3030,7 +3030,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivity_SchoolYearType"
       },
       "cardinality": "OneToZeroOrMore",
@@ -3058,7 +3058,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "secondaryEntityProperties": [
@@ -3090,7 +3090,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivity_Student"
       },
       "cardinality": "OneToZeroOrMore",
@@ -3118,7 +3118,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivity"
       },
       "secondaryEntityProperties": [
@@ -3150,7 +3150,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivityDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -3178,7 +3178,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDescriptor"
       },
       "secondaryEntityProperties": [
@@ -3210,7 +3210,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_PostGraduateActivityDeterminationDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -3238,7 +3238,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PostGraduateActivityDeterminationDescriptor"
       },
       "secondaryEntityProperties": [
@@ -3270,7 +3270,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_SectionDelivery_Section"
       },
       "cardinality": "OneToZeroOrMore",
@@ -3366,7 +3366,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionDelivery"
       },
       "secondaryEntityProperties": [
@@ -3466,12 +3466,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_SectionDelivery_SectionDeliveryDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionDeliveryDescriptor"
       },
       "primaryEntityProperties": [
@@ -3494,7 +3494,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionDelivery"
       },
       "secondaryEntityProperties": [
@@ -3526,7 +3526,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_SectionDeliveryDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -3554,7 +3554,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionDeliveryDescriptor"
       },
       "secondaryEntityProperties": [
@@ -3586,7 +3586,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_SectionExtension_Section"
       },
       "cardinality": "OneToOneExtension",
@@ -3682,7 +3682,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SectionExtension"
       },
       "secondaryEntityProperties": [
@@ -3781,7 +3781,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_SpecialEducationProgramDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -3809,7 +3809,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SpecialEducationProgramDescriptor"
       },
       "secondaryEntityProperties": [
@@ -3841,7 +3841,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentDisciplineIncidentAssociationExtension_StudentDisciplineIncidentAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -3903,7 +3903,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentDisciplineIncidentAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -3968,7 +3968,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentDisciplineIncidentAssociationWeapon_StudentDisciplineIncidentAssociation"
       },
       "cardinality": "OneToZeroOrMore",
@@ -4030,7 +4030,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentDisciplineIncidentAssociationWeapon"
       },
       "secondaryEntityProperties": [
@@ -4096,7 +4096,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentDisciplineIncidentAssociationWeapon_WeaponDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
@@ -4124,7 +4124,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentDisciplineIncidentAssociationWeapon"
       },
       "secondaryEntityProperties": [
@@ -4156,12 +4156,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEarlyLearningProgramAssociation_EarlyLearningSettingDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "EarlyLearningSettingDescriptor"
       },
       "primaryEntityProperties": [
@@ -4184,7 +4184,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEarlyLearningProgramAssociation"
       },
       "secondaryEntityProperties": [
@@ -4216,7 +4216,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEarlyLearningProgramAssociation_GeneralStudentProgramAssociation"
       },
       "cardinality": "OneToOneInheritance",
@@ -4329,7 +4329,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEarlyLearningProgramAssociation"
       },
       "secondaryEntityProperties": [
@@ -4445,12 +4445,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEducationOrganizationAssociationExtension_ImmigrantIndicatorDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "ImmigrantIndicatorDescriptor"
       },
       "primaryEntityProperties": [
@@ -4473,7 +4473,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEducationOrganizationAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -4505,7 +4505,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEducationOrganizationAssociationExtension_StudentEducationOrganizationAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -4550,7 +4550,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEducationOrganizationAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -4598,12 +4598,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEducationOrganizationAssociationStudentCrisisEvent_CrisisEventDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "CrisisEventDescriptor"
       },
       "primaryEntityProperties": [
@@ -4626,7 +4626,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEducationOrganizationAssociationStudentCrisisEvent"
       },
       "secondaryEntityProperties": [
@@ -4658,7 +4658,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentEducationOrganizationAssociationStudentCrisisEvent_StudentEducationOrganizationAssociation"
       },
       "cardinality": "OneToZeroOrMore",
@@ -4703,7 +4703,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentEducationOrganizationAssociationStudentCrisisEvent"
       },
       "secondaryEntityProperties": [
@@ -4752,7 +4752,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentLanguageInstructionProgramAssociationExtension_StudentLanguageInstructionProgramAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -4865,7 +4865,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentLanguageInstructionProgramAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -4981,7 +4981,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSchoolAssociationExtension_LocalEducationAgency"
       },
       "cardinality": "OneToZeroOrMore",
@@ -5009,7 +5009,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSchoolAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5041,7 +5041,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSchoolAssociationExtension_School"
       },
       "cardinality": "OneToZeroOrMore",
@@ -5069,7 +5069,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSchoolAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5101,7 +5101,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSchoolAssociationExtension_School1"
       },
       "cardinality": "OneToZeroOrMore",
@@ -5129,7 +5129,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSchoolAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5161,7 +5161,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSchoolAssociationExtension_StudentSchoolAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -5223,7 +5223,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSchoolAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5288,12 +5288,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSectionAssociationExtension_DualCreditDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "DualCreditDescriptor"
       },
       "primaryEntityProperties": [
@@ -5316,7 +5316,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSectionAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5348,7 +5348,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSectionAssociationExtension_StudentSectionAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -5478,7 +5478,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSectionAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5611,12 +5611,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSpecialEducationProgramAssociationExtension_PlacementTypeDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "PlacementTypeDescriptor"
       },
       "primaryEntityProperties": [
@@ -5639,7 +5639,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSpecialEducationProgramAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5671,12 +5671,12 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSpecialEducationProgramAssociationExtension_SpecialEducationProgramDescriptor"
       },
       "cardinality": "OneToZeroOrMore",
       "primaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "SpecialEducationProgramDescriptor"
       },
       "primaryEntityProperties": [
@@ -5699,7 +5699,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSpecialEducationProgramAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5731,7 +5731,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_StudentSpecialEducationProgramAssociationExtension_StudentSpecialEducationProgramAssociation"
       },
       "cardinality": "OneToOneExtension",
@@ -5844,7 +5844,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "StudentSpecialEducationProgramAssociationExtension"
       },
       "secondaryEntityProperties": [
@@ -5960,7 +5960,7 @@
     },
     {
       "fullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "FK_UnilateralRemovalDescriptor_Descriptor"
       },
       "cardinality": "OneToOneInheritance",
@@ -5988,7 +5988,7 @@
         }
       ],
       "secondaryEntityFullName": {
-        "schema": "ne",
+        "schema": "sk",
         "name": "UnilateralRemovalDescriptor"
       },
       "secondaryEntityProperties": [

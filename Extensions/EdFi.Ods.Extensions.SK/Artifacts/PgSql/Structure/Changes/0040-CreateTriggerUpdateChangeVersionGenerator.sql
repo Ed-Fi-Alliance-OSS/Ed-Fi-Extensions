@@ -1,9 +1,9 @@
-CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON ne.AssessmentAdministration
+CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON sk.AssessmentAdministration
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 
-CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON ne.CrisisDetails
+CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON sk.CrisisDetails
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 
-CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON ne.PostGraduateActivity
+CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON sk.PostGraduateActivity
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 

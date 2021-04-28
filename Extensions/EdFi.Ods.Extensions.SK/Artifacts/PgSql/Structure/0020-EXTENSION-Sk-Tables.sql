@@ -1,5 +1,5 @@
--- Table ne.AssessmentAdministration --
-CREATE TABLE ne.AssessmentAdministration (
+-- Table sk.AssessmentAdministration --
+CREATE TABLE sk.AssessmentAdministration (
     AssessmentIdentifier VARCHAR(60) NOT NULL,
     EducationOrganizationId INT NOT NULL,
     Namespace VARCHAR(255) NOT NULL,
@@ -9,12 +9,12 @@ CREATE TABLE ne.AssessmentAdministration (
     Id UUID NOT NULL,
     CONSTRAINT AssessmentAdministration_PK PRIMARY KEY (AssessmentIdentifier, EducationOrganizationId, Namespace)
 ); 
-ALTER TABLE ne.AssessmentAdministration ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-ALTER TABLE ne.AssessmentAdministration ALTER COLUMN Id SET DEFAULT gen_random_uuid();
-ALTER TABLE ne.AssessmentAdministration ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.AssessmentAdministration ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.AssessmentAdministration ALTER COLUMN Id SET DEFAULT gen_random_uuid();
+ALTER TABLE sk.AssessmentAdministration ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table ne.CalendarDateExtension --
-CREATE TABLE ne.CalendarDateExtension (
+-- Table sk.CalendarDateExtension --
+CREATE TABLE sk.CalendarDateExtension (
     CalendarCode VARCHAR(60) NOT NULL,
     Date DATE NOT NULL,
     SchoolId INT NOT NULL,
@@ -23,10 +23,10 @@ CREATE TABLE ne.CalendarDateExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT CalendarDateExtension_PK PRIMARY KEY (CalendarCode, Date, SchoolId, SchoolYear)
 ); 
-ALTER TABLE ne.CalendarDateExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.CalendarDateExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.CrisisDetails --
-CREATE TABLE ne.CrisisDetails (
+-- Table sk.CrisisDetails --
+CREATE TABLE sk.CrisisDetails (
     CrisisEventDescriptorId INT NOT NULL,
     CrisisTypeDescriptorId INT NOT NULL,
     CrisisStartDate DATE NOT NULL,
@@ -37,24 +37,24 @@ CREATE TABLE ne.CrisisDetails (
     Id UUID NOT NULL,
     CONSTRAINT CrisisDetails_PK PRIMARY KEY (CrisisEventDescriptorId)
 ); 
-ALTER TABLE ne.CrisisDetails ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-ALTER TABLE ne.CrisisDetails ALTER COLUMN Id SET DEFAULT gen_random_uuid();
-ALTER TABLE ne.CrisisDetails ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.CrisisDetails ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.CrisisDetails ALTER COLUMN Id SET DEFAULT gen_random_uuid();
+ALTER TABLE sk.CrisisDetails ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table ne.CrisisEventDescriptor --
-CREATE TABLE ne.CrisisEventDescriptor (
+-- Table sk.CrisisEventDescriptor --
+CREATE TABLE sk.CrisisEventDescriptor (
     CrisisEventDescriptorId INT NOT NULL,
     CONSTRAINT CrisisEventDescriptor_PK PRIMARY KEY (CrisisEventDescriptorId)
 ); 
 
--- Table ne.CrisisTypeDescriptor --
-CREATE TABLE ne.CrisisTypeDescriptor (
+-- Table sk.CrisisTypeDescriptor --
+CREATE TABLE sk.CrisisTypeDescriptor (
     CrisisTypeDescriptorId INT NOT NULL,
     CONSTRAINT CrisisTypeDescriptor_PK PRIMARY KEY (CrisisTypeDescriptorId)
 ); 
 
--- Table ne.DisciplineActionExtension --
-CREATE TABLE ne.DisciplineActionExtension (
+-- Table sk.DisciplineActionExtension --
+CREATE TABLE sk.DisciplineActionExtension (
     DisciplineActionIdentifier VARCHAR(20) NOT NULL,
     DisciplineDate DATE NOT NULL,
     StudentUSI INT NOT NULL,
@@ -63,10 +63,10 @@ CREATE TABLE ne.DisciplineActionExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT DisciplineActionExtension_PK PRIMARY KEY (DisciplineActionIdentifier, DisciplineDate, StudentUSI)
 ); 
-ALTER TABLE ne.DisciplineActionExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.DisciplineActionExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.DisciplineIncidentExtension --
-CREATE TABLE ne.DisciplineIncidentExtension (
+-- Table sk.DisciplineIncidentExtension --
+CREATE TABLE sk.DisciplineIncidentExtension (
     IncidentIdentifier VARCHAR(20) NOT NULL,
     SchoolId INT NOT NULL,
     HomicideIndicator BOOLEAN NULL,
@@ -74,40 +74,40 @@ CREATE TABLE ne.DisciplineIncidentExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT DisciplineIncidentExtension_PK PRIMARY KEY (IncidentIdentifier, SchoolId)
 ); 
-ALTER TABLE ne.DisciplineIncidentExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.DisciplineIncidentExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.DualCreditDescriptor --
-CREATE TABLE ne.DualCreditDescriptor (
+-- Table sk.DualCreditDescriptor --
+CREATE TABLE sk.DualCreditDescriptor (
     DualCreditDescriptorId INT NOT NULL,
     CONSTRAINT DualCreditDescriptor_PK PRIMARY KEY (DualCreditDescriptorId)
 ); 
 
--- Table ne.EarlyLearningSettingDescriptor --
-CREATE TABLE ne.EarlyLearningSettingDescriptor (
+-- Table sk.EarlyLearningSettingDescriptor --
+CREATE TABLE sk.EarlyLearningSettingDescriptor (
     EarlyLearningSettingDescriptorId INT NOT NULL,
     CONSTRAINT EarlyLearningSettingDescriptor_PK PRIMARY KEY (EarlyLearningSettingDescriptorId)
 ); 
 
--- Table ne.ImmigrantIndicatorDescriptor --
-CREATE TABLE ne.ImmigrantIndicatorDescriptor (
+-- Table sk.ImmigrantIndicatorDescriptor --
+CREATE TABLE sk.ImmigrantIndicatorDescriptor (
     ImmigrantIndicatorDescriptorId INT NOT NULL,
     CONSTRAINT ImmigrantIndicatorDescriptor_PK PRIMARY KEY (ImmigrantIndicatorDescriptorId)
 ); 
 
--- Table ne.PlacementTypeDescriptor --
-CREATE TABLE ne.PlacementTypeDescriptor (
+-- Table sk.PlacementTypeDescriptor --
+CREATE TABLE sk.PlacementTypeDescriptor (
     PlacementTypeDescriptorId INT NOT NULL,
     CONSTRAINT PlacementTypeDescriptor_PK PRIMARY KEY (PlacementTypeDescriptorId)
 ); 
 
--- Table ne.PositionTitleDescriptor --
-CREATE TABLE ne.PositionTitleDescriptor (
+-- Table sk.PositionTitleDescriptor --
+CREATE TABLE sk.PositionTitleDescriptor (
     PositionTitleDescriptorId INT NOT NULL,
     CONSTRAINT PositionTitleDescriptor_PK PRIMARY KEY (PositionTitleDescriptorId)
 ); 
 
--- Table ne.PostGraduateActivity --
-CREATE TABLE ne.PostGraduateActivity (
+-- Table sk.PostGraduateActivity --
+CREATE TABLE sk.PostGraduateActivity (
     LocalEducationAgencyId INT NOT NULL,
     SchoolYear SMALLINT NOT NULL,
     StudentUSI INT NOT NULL,
@@ -119,24 +119,24 @@ CREATE TABLE ne.PostGraduateActivity (
     Id UUID NOT NULL,
     CONSTRAINT PostGraduateActivity_PK PRIMARY KEY (LocalEducationAgencyId, SchoolYear, StudentUSI)
 ); 
-ALTER TABLE ne.PostGraduateActivity ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-ALTER TABLE ne.PostGraduateActivity ALTER COLUMN Id SET DEFAULT gen_random_uuid();
-ALTER TABLE ne.PostGraduateActivity ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.PostGraduateActivity ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.PostGraduateActivity ALTER COLUMN Id SET DEFAULT gen_random_uuid();
+ALTER TABLE sk.PostGraduateActivity ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table ne.PostGraduateActivityDescriptor --
-CREATE TABLE ne.PostGraduateActivityDescriptor (
+-- Table sk.PostGraduateActivityDescriptor --
+CREATE TABLE sk.PostGraduateActivityDescriptor (
     PostGraduateActivityDescriptorId INT NOT NULL,
     CONSTRAINT PostGraduateActivityDescriptor_PK PRIMARY KEY (PostGraduateActivityDescriptorId)
 ); 
 
--- Table ne.PostGraduateActivityDeterminationDescriptor --
-CREATE TABLE ne.PostGraduateActivityDeterminationDescriptor (
+-- Table sk.PostGraduateActivityDeterminationDescriptor --
+CREATE TABLE sk.PostGraduateActivityDeterminationDescriptor (
     PostGraduateActivityDeterminationDescriptorId INT NOT NULL,
     CONSTRAINT PostGraduateActivityDeterminationDescriptor_PK PRIMARY KEY (PostGraduateActivityDeterminationDescriptorId)
 ); 
 
--- Table ne.SectionDelivery --
-CREATE TABLE ne.SectionDelivery (
+-- Table sk.SectionDelivery --
+CREATE TABLE sk.SectionDelivery (
     LocalCourseCode VARCHAR(60) NOT NULL,
     SchoolId INT NOT NULL,
     SchoolYear SMALLINT NOT NULL,
@@ -146,16 +146,16 @@ CREATE TABLE ne.SectionDelivery (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT SectionDelivery_PK PRIMARY KEY (LocalCourseCode, SchoolId, SchoolYear, SectionDeliveryDescriptorId, SectionIdentifier, SessionName)
 ); 
-ALTER TABLE ne.SectionDelivery ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.SectionDelivery ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.SectionDeliveryDescriptor --
-CREATE TABLE ne.SectionDeliveryDescriptor (
+-- Table sk.SectionDeliveryDescriptor --
+CREATE TABLE sk.SectionDeliveryDescriptor (
     SectionDeliveryDescriptorId INT NOT NULL,
     CONSTRAINT SectionDeliveryDescriptor_PK PRIMARY KEY (SectionDeliveryDescriptorId)
 ); 
 
--- Table ne.SectionExtension --
-CREATE TABLE ne.SectionExtension (
+-- Table sk.SectionExtension --
+CREATE TABLE sk.SectionExtension (
     LocalCourseCode VARCHAR(60) NOT NULL,
     SchoolId INT NOT NULL,
     SchoolYear SMALLINT NOT NULL,
@@ -165,16 +165,16 @@ CREATE TABLE ne.SectionExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT SectionExtension_PK PRIMARY KEY (LocalCourseCode, SchoolId, SchoolYear, SectionIdentifier, SessionName)
 ); 
-ALTER TABLE ne.SectionExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.SectionExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.SpecialEducationProgramDescriptor --
-CREATE TABLE ne.SpecialEducationProgramDescriptor (
+-- Table sk.SpecialEducationProgramDescriptor --
+CREATE TABLE sk.SpecialEducationProgramDescriptor (
     SpecialEducationProgramDescriptorId INT NOT NULL,
     CONSTRAINT SpecialEducationProgramDescriptor_PK PRIMARY KEY (SpecialEducationProgramDescriptorId)
 ); 
 
--- Table ne.StudentDisciplineIncidentAssociationExtension --
-CREATE TABLE ne.StudentDisciplineIncidentAssociationExtension (
+-- Table sk.StudentDisciplineIncidentAssociationExtension --
+CREATE TABLE sk.StudentDisciplineIncidentAssociationExtension (
     IncidentIdentifier VARCHAR(20) NOT NULL,
     SchoolId INT NOT NULL,
     StudentUSI INT NOT NULL,
@@ -185,10 +185,10 @@ CREATE TABLE ne.StudentDisciplineIncidentAssociationExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentDisciplineIncidentAssociationExtension_PK PRIMARY KEY (IncidentIdentifier, SchoolId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentDisciplineIncidentAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentDisciplineIncidentAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentDisciplineIncidentAssociationWeapon --
-CREATE TABLE ne.StudentDisciplineIncidentAssociationWeapon (
+-- Table sk.StudentDisciplineIncidentAssociationWeapon --
+CREATE TABLE sk.StudentDisciplineIncidentAssociationWeapon (
     IncidentIdentifier VARCHAR(20) NOT NULL,
     SchoolId INT NOT NULL,
     StudentUSI INT NOT NULL,
@@ -196,10 +196,10 @@ CREATE TABLE ne.StudentDisciplineIncidentAssociationWeapon (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentDisciplineIncidentAssociationWeapon_PK PRIMARY KEY (IncidentIdentifier, SchoolId, StudentUSI, WeaponDescriptorId)
 ); 
-ALTER TABLE ne.StudentDisciplineIncidentAssociationWeapon ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentDisciplineIncidentAssociationWeapon ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentEarlyLearningProgramAssociation --
-CREATE TABLE ne.StudentEarlyLearningProgramAssociation (
+-- Table sk.StudentEarlyLearningProgramAssociation --
+CREATE TABLE sk.StudentEarlyLearningProgramAssociation (
     BeginDate DATE NOT NULL,
     EducationOrganizationId INT NOT NULL,
     ProgramEducationOrganizationId INT NOT NULL,
@@ -210,18 +210,18 @@ CREATE TABLE ne.StudentEarlyLearningProgramAssociation (
     CONSTRAINT StudentEarlyLearningProgramAssociation_PK PRIMARY KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ); 
 
--- Table ne.StudentEducationOrganizationAssociationExtension --
-CREATE TABLE ne.StudentEducationOrganizationAssociationExtension (
+-- Table sk.StudentEducationOrganizationAssociationExtension --
+CREATE TABLE sk.StudentEducationOrganizationAssociationExtension (
     EducationOrganizationId INT NOT NULL,
     StudentUSI INT NOT NULL,
     ImmigrantIndicatorDescriptorId INT NULL,
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentEducationOrganizationAssociationExtension_PK PRIMARY KEY (EducationOrganizationId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentEducationOrganizationAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentEducationOrganizationAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentEducationOrganizationAssociationStudentCrisisEvent --
-CREATE TABLE ne.StudentEducationOrganizationAssociationStudentCrisisEvent (
+-- Table sk.StudentEducationOrganizationAssociationStudentCrisisEvent --
+CREATE TABLE sk.StudentEducationOrganizationAssociationStudentCrisisEvent (
     CrisisEventDescriptorId INT NOT NULL,
     EducationOrganizationId INT NOT NULL,
     StudentUSI INT NOT NULL,
@@ -229,10 +229,10 @@ CREATE TABLE ne.StudentEducationOrganizationAssociationStudentCrisisEvent (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentEducationOrganizationAssociationStudentCrisisEvent_PK PRIMARY KEY (CrisisEventDescriptorId, EducationOrganizationId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentEducationOrganizationAssociationStudentCrisisEvent ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentEducationOrganizationAssociationStudentCrisisEvent ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentLanguageInstructionProgramAssociationExtension --
-CREATE TABLE ne.StudentLanguageInstructionProgramAssociationExtension (
+-- Table sk.StudentLanguageInstructionProgramAssociationExtension --
+CREATE TABLE sk.StudentLanguageInstructionProgramAssociationExtension (
     BeginDate DATE NOT NULL,
     EducationOrganizationId INT NOT NULL,
     ProgramEducationOrganizationId INT NOT NULL,
@@ -243,10 +243,10 @@ CREATE TABLE ne.StudentLanguageInstructionProgramAssociationExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentLanguageInstructionProgramAssociationExtension_PK PRIMARY KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentLanguageInstructionProgramAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentLanguageInstructionProgramAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentSchoolAssociationExtension --
-CREATE TABLE ne.StudentSchoolAssociationExtension (
+-- Table sk.StudentSchoolAssociationExtension --
+CREATE TABLE sk.StudentSchoolAssociationExtension (
     EntryDate DATE NOT NULL,
     SchoolId INT NOT NULL,
     StudentUSI INT NOT NULL,
@@ -257,10 +257,10 @@ CREATE TABLE ne.StudentSchoolAssociationExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentSchoolAssociationExtension_PK PRIMARY KEY (EntryDate, SchoolId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentSchoolAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentSchoolAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentSectionAssociationExtension --
-CREATE TABLE ne.StudentSectionAssociationExtension (
+-- Table sk.StudentSectionAssociationExtension --
+CREATE TABLE sk.StudentSectionAssociationExtension (
     BeginDate DATE NOT NULL,
     LocalCourseCode VARCHAR(60) NOT NULL,
     SchoolId INT NOT NULL,
@@ -272,10 +272,10 @@ CREATE TABLE ne.StudentSectionAssociationExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentSectionAssociationExtension_PK PRIMARY KEY (BeginDate, LocalCourseCode, SchoolId, SchoolYear, SectionIdentifier, SessionName, StudentUSI)
 ); 
-ALTER TABLE ne.StudentSectionAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentSectionAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.StudentSpecialEducationProgramAssociationExtension --
-CREATE TABLE ne.StudentSpecialEducationProgramAssociationExtension (
+-- Table sk.StudentSpecialEducationProgramAssociationExtension --
+CREATE TABLE sk.StudentSpecialEducationProgramAssociationExtension (
     BeginDate DATE NOT NULL,
     EducationOrganizationId INT NOT NULL,
     ProgramEducationOrganizationId INT NOT NULL,
@@ -289,10 +289,10 @@ CREATE TABLE ne.StudentSpecialEducationProgramAssociationExtension (
     CreateDate TIMESTAMP NOT NULL,
     CONSTRAINT StudentSpecialEducationProgramAssociationExtension_PK PRIMARY KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ); 
-ALTER TABLE ne.StudentSpecialEducationProgramAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE sk.StudentSpecialEducationProgramAssociationExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table ne.UnilateralRemovalDescriptor --
-CREATE TABLE ne.UnilateralRemovalDescriptor (
+-- Table sk.UnilateralRemovalDescriptor --
+CREATE TABLE sk.UnilateralRemovalDescriptor (
     UnilateralRemovalDescriptorId INT NOT NULL,
     CONSTRAINT UnilateralRemovalDescriptor_PK PRIMARY KEY (UnilateralRemovalDescriptorId)
 ); 

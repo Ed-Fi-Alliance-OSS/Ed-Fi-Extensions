@@ -1,5 +1,5 @@
--- Table [ne].[AssessmentAdministration] --
-CREATE TABLE [ne].[AssessmentAdministration] (
+-- Table [sk].[AssessmentAdministration] --
+CREATE TABLE [sk].[AssessmentAdministration] (
     [AssessmentIdentifier] [NVARCHAR](60) NOT NULL,
     [EducationOrganizationId] [INT] NOT NULL,
     [Namespace] [NVARCHAR](255) NOT NULL,
@@ -14,15 +14,15 @@ CREATE TABLE [ne].[AssessmentAdministration] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
-ALTER TABLE [ne].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_Id] DEFAULT (newid()) FOR [Id]
+ALTER TABLE [sk].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_Id] DEFAULT (newid()) FOR [Id]
 GO
-ALTER TABLE [ne].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
+ALTER TABLE [sk].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [ne].[CalendarDateExtension] --
-CREATE TABLE [ne].[CalendarDateExtension] (
+-- Table [sk].[CalendarDateExtension] --
+CREATE TABLE [sk].[CalendarDateExtension] (
     [CalendarCode] [NVARCHAR](60) NOT NULL,
     [Date] [DATE] NOT NULL,
     [SchoolId] [INT] NOT NULL,
@@ -37,11 +37,11 @@ CREATE TABLE [ne].[CalendarDateExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[CalendarDateExtension] ADD CONSTRAINT [CalendarDateExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[CalendarDateExtension] ADD CONSTRAINT [CalendarDateExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[CrisisDetails] --
-CREATE TABLE [ne].[CrisisDetails] (
+-- Table [sk].[CrisisDetails] --
+CREATE TABLE [sk].[CrisisDetails] (
     [CrisisEventDescriptorId] [INT] NOT NULL,
     [CrisisTypeDescriptorId] [INT] NOT NULL,
     [CrisisStartDate] [DATE] NOT NULL,
@@ -55,15 +55,15 @@ CREATE TABLE [ne].[CrisisDetails] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
-ALTER TABLE [ne].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_Id] DEFAULT (newid()) FOR [Id]
+ALTER TABLE [sk].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_Id] DEFAULT (newid()) FOR [Id]
 GO
-ALTER TABLE [ne].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
+ALTER TABLE [sk].[CrisisDetails] ADD CONSTRAINT [CrisisDetails_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [ne].[CrisisEventDescriptor] --
-CREATE TABLE [ne].[CrisisEventDescriptor] (
+-- Table [sk].[CrisisEventDescriptor] --
+CREATE TABLE [sk].[CrisisEventDescriptor] (
     [CrisisEventDescriptorId] [INT] NOT NULL,
     CONSTRAINT [CrisisEventDescriptor_PK] PRIMARY KEY CLUSTERED (
         [CrisisEventDescriptorId] ASC
@@ -71,8 +71,8 @@ CREATE TABLE [ne].[CrisisEventDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[CrisisTypeDescriptor] --
-CREATE TABLE [ne].[CrisisTypeDescriptor] (
+-- Table [sk].[CrisisTypeDescriptor] --
+CREATE TABLE [sk].[CrisisTypeDescriptor] (
     [CrisisTypeDescriptorId] [INT] NOT NULL,
     CONSTRAINT [CrisisTypeDescriptor_PK] PRIMARY KEY CLUSTERED (
         [CrisisTypeDescriptorId] ASC
@@ -80,8 +80,8 @@ CREATE TABLE [ne].[CrisisTypeDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[DisciplineActionExtension] --
-CREATE TABLE [ne].[DisciplineActionExtension] (
+-- Table [sk].[DisciplineActionExtension] --
+CREATE TABLE [sk].[DisciplineActionExtension] (
     [DisciplineActionIdentifier] [NVARCHAR](20) NOT NULL,
     [DisciplineDate] [DATE] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -95,11 +95,11 @@ CREATE TABLE [ne].[DisciplineActionExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[DisciplineActionExtension] ADD CONSTRAINT [DisciplineActionExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[DisciplineActionExtension] ADD CONSTRAINT [DisciplineActionExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[DisciplineIncidentExtension] --
-CREATE TABLE [ne].[DisciplineIncidentExtension] (
+-- Table [sk].[DisciplineIncidentExtension] --
+CREATE TABLE [sk].[DisciplineIncidentExtension] (
     [IncidentIdentifier] [NVARCHAR](20) NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [HomicideIndicator] [BIT] NULL,
@@ -111,11 +111,11 @@ CREATE TABLE [ne].[DisciplineIncidentExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[DisciplineIncidentExtension] ADD CONSTRAINT [DisciplineIncidentExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[DisciplineIncidentExtension] ADD CONSTRAINT [DisciplineIncidentExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[DualCreditDescriptor] --
-CREATE TABLE [ne].[DualCreditDescriptor] (
+-- Table [sk].[DualCreditDescriptor] --
+CREATE TABLE [sk].[DualCreditDescriptor] (
     [DualCreditDescriptorId] [INT] NOT NULL,
     CONSTRAINT [DualCreditDescriptor_PK] PRIMARY KEY CLUSTERED (
         [DualCreditDescriptorId] ASC
@@ -123,8 +123,8 @@ CREATE TABLE [ne].[DualCreditDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[EarlyLearningSettingDescriptor] --
-CREATE TABLE [ne].[EarlyLearningSettingDescriptor] (
+-- Table [sk].[EarlyLearningSettingDescriptor] --
+CREATE TABLE [sk].[EarlyLearningSettingDescriptor] (
     [EarlyLearningSettingDescriptorId] [INT] NOT NULL,
     CONSTRAINT [EarlyLearningSettingDescriptor_PK] PRIMARY KEY CLUSTERED (
         [EarlyLearningSettingDescriptorId] ASC
@@ -132,8 +132,8 @@ CREATE TABLE [ne].[EarlyLearningSettingDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[ImmigrantIndicatorDescriptor] --
-CREATE TABLE [ne].[ImmigrantIndicatorDescriptor] (
+-- Table [sk].[ImmigrantIndicatorDescriptor] --
+CREATE TABLE [sk].[ImmigrantIndicatorDescriptor] (
     [ImmigrantIndicatorDescriptorId] [INT] NOT NULL,
     CONSTRAINT [ImmigrantIndicatorDescriptor_PK] PRIMARY KEY CLUSTERED (
         [ImmigrantIndicatorDescriptorId] ASC
@@ -141,8 +141,8 @@ CREATE TABLE [ne].[ImmigrantIndicatorDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[PlacementTypeDescriptor] --
-CREATE TABLE [ne].[PlacementTypeDescriptor] (
+-- Table [sk].[PlacementTypeDescriptor] --
+CREATE TABLE [sk].[PlacementTypeDescriptor] (
     [PlacementTypeDescriptorId] [INT] NOT NULL,
     CONSTRAINT [PlacementTypeDescriptor_PK] PRIMARY KEY CLUSTERED (
         [PlacementTypeDescriptorId] ASC
@@ -150,8 +150,8 @@ CREATE TABLE [ne].[PlacementTypeDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[PositionTitleDescriptor] --
-CREATE TABLE [ne].[PositionTitleDescriptor] (
+-- Table [sk].[PositionTitleDescriptor] --
+CREATE TABLE [sk].[PositionTitleDescriptor] (
     [PositionTitleDescriptorId] [INT] NOT NULL,
     CONSTRAINT [PositionTitleDescriptor_PK] PRIMARY KEY CLUSTERED (
         [PositionTitleDescriptorId] ASC
@@ -159,8 +159,8 @@ CREATE TABLE [ne].[PositionTitleDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[PostGraduateActivity] --
-CREATE TABLE [ne].[PostGraduateActivity] (
+-- Table [sk].[PostGraduateActivity] --
+CREATE TABLE [sk].[PostGraduateActivity] (
     [LocalEducationAgencyId] [INT] NOT NULL,
     [SchoolYear] [SMALLINT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -177,15 +177,15 @@ CREATE TABLE [ne].[PostGraduateActivity] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
-ALTER TABLE [ne].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_Id] DEFAULT (newid()) FOR [Id]
+ALTER TABLE [sk].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_Id] DEFAULT (newid()) FOR [Id]
 GO
-ALTER TABLE [ne].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
+ALTER TABLE [sk].[PostGraduateActivity] ADD CONSTRAINT [PostGraduateActivity_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [ne].[PostGraduateActivityDescriptor] --
-CREATE TABLE [ne].[PostGraduateActivityDescriptor] (
+-- Table [sk].[PostGraduateActivityDescriptor] --
+CREATE TABLE [sk].[PostGraduateActivityDescriptor] (
     [PostGraduateActivityDescriptorId] [INT] NOT NULL,
     CONSTRAINT [PostGraduateActivityDescriptor_PK] PRIMARY KEY CLUSTERED (
         [PostGraduateActivityDescriptorId] ASC
@@ -193,8 +193,8 @@ CREATE TABLE [ne].[PostGraduateActivityDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[PostGraduateActivityDeterminationDescriptor] --
-CREATE TABLE [ne].[PostGraduateActivityDeterminationDescriptor] (
+-- Table [sk].[PostGraduateActivityDeterminationDescriptor] --
+CREATE TABLE [sk].[PostGraduateActivityDeterminationDescriptor] (
     [PostGraduateActivityDeterminationDescriptorId] [INT] NOT NULL,
     CONSTRAINT [PostGraduateActivityDeterminationDescriptor_PK] PRIMARY KEY CLUSTERED (
         [PostGraduateActivityDeterminationDescriptorId] ASC
@@ -202,8 +202,8 @@ CREATE TABLE [ne].[PostGraduateActivityDeterminationDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[SectionDelivery] --
-CREATE TABLE [ne].[SectionDelivery] (
+-- Table [sk].[SectionDelivery] --
+CREATE TABLE [sk].[SectionDelivery] (
     [LocalCourseCode] [NVARCHAR](60) NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [SchoolYear] [SMALLINT] NOT NULL,
@@ -221,11 +221,11 @@ CREATE TABLE [ne].[SectionDelivery] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[SectionDelivery] ADD CONSTRAINT [SectionDelivery_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[SectionDelivery] ADD CONSTRAINT [SectionDelivery_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[SectionDeliveryDescriptor] --
-CREATE TABLE [ne].[SectionDeliveryDescriptor] (
+-- Table [sk].[SectionDeliveryDescriptor] --
+CREATE TABLE [sk].[SectionDeliveryDescriptor] (
     [SectionDeliveryDescriptorId] [INT] NOT NULL,
     CONSTRAINT [SectionDeliveryDescriptor_PK] PRIMARY KEY CLUSTERED (
         [SectionDeliveryDescriptorId] ASC
@@ -233,8 +233,8 @@ CREATE TABLE [ne].[SectionDeliveryDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[SectionExtension] --
-CREATE TABLE [ne].[SectionExtension] (
+-- Table [sk].[SectionExtension] --
+CREATE TABLE [sk].[SectionExtension] (
     [LocalCourseCode] [NVARCHAR](60) NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [SchoolYear] [SMALLINT] NOT NULL,
@@ -251,11 +251,11 @@ CREATE TABLE [ne].[SectionExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[SectionExtension] ADD CONSTRAINT [SectionExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[SectionExtension] ADD CONSTRAINT [SectionExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[SpecialEducationProgramDescriptor] --
-CREATE TABLE [ne].[SpecialEducationProgramDescriptor] (
+-- Table [sk].[SpecialEducationProgramDescriptor] --
+CREATE TABLE [sk].[SpecialEducationProgramDescriptor] (
     [SpecialEducationProgramDescriptorId] [INT] NOT NULL,
     CONSTRAINT [SpecialEducationProgramDescriptor_PK] PRIMARY KEY CLUSTERED (
         [SpecialEducationProgramDescriptorId] ASC
@@ -263,8 +263,8 @@ CREATE TABLE [ne].[SpecialEducationProgramDescriptor] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[StudentDisciplineIncidentAssociationExtension] --
-CREATE TABLE [ne].[StudentDisciplineIncidentAssociationExtension] (
+-- Table [sk].[StudentDisciplineIncidentAssociationExtension] --
+CREATE TABLE [sk].[StudentDisciplineIncidentAssociationExtension] (
     [IncidentIdentifier] [NVARCHAR](20) NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -280,11 +280,11 @@ CREATE TABLE [ne].[StudentDisciplineIncidentAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentDisciplineIncidentAssociationExtension] ADD CONSTRAINT [StudentDisciplineIncidentAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentDisciplineIncidentAssociationExtension] ADD CONSTRAINT [StudentDisciplineIncidentAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentDisciplineIncidentAssociationWeapon] --
-CREATE TABLE [ne].[StudentDisciplineIncidentAssociationWeapon] (
+-- Table [sk].[StudentDisciplineIncidentAssociationWeapon] --
+CREATE TABLE [sk].[StudentDisciplineIncidentAssociationWeapon] (
     [IncidentIdentifier] [NVARCHAR](20) NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -298,11 +298,11 @@ CREATE TABLE [ne].[StudentDisciplineIncidentAssociationWeapon] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentDisciplineIncidentAssociationWeapon] ADD CONSTRAINT [StudentDisciplineIncidentAssociationWeapon_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentDisciplineIncidentAssociationWeapon] ADD CONSTRAINT [StudentDisciplineIncidentAssociationWeapon_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentEarlyLearningProgramAssociation] --
-CREATE TABLE [ne].[StudentEarlyLearningProgramAssociation] (
+-- Table [sk].[StudentEarlyLearningProgramAssociation] --
+CREATE TABLE [sk].[StudentEarlyLearningProgramAssociation] (
     [BeginDate] [DATE] NOT NULL,
     [EducationOrganizationId] [INT] NOT NULL,
     [ProgramEducationOrganizationId] [INT] NOT NULL,
@@ -321,8 +321,8 @@ CREATE TABLE [ne].[StudentEarlyLearningProgramAssociation] (
 ) ON [PRIMARY]
 GO
 
--- Table [ne].[StudentEducationOrganizationAssociationExtension] --
-CREATE TABLE [ne].[StudentEducationOrganizationAssociationExtension] (
+-- Table [sk].[StudentEducationOrganizationAssociationExtension] --
+CREATE TABLE [sk].[StudentEducationOrganizationAssociationExtension] (
     [EducationOrganizationId] [INT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
     [ImmigrantIndicatorDescriptorId] [INT] NULL,
@@ -333,11 +333,11 @@ CREATE TABLE [ne].[StudentEducationOrganizationAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentEducationOrganizationAssociationExtension] ADD CONSTRAINT [StudentEducationOrganizationAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentEducationOrganizationAssociationExtension] ADD CONSTRAINT [StudentEducationOrganizationAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentEducationOrganizationAssociationStudentCrisisEvent] --
-CREATE TABLE [ne].[StudentEducationOrganizationAssociationStudentCrisisEvent] (
+-- Table [sk].[StudentEducationOrganizationAssociationStudentCrisisEvent] --
+CREATE TABLE [sk].[StudentEducationOrganizationAssociationStudentCrisisEvent] (
     [CrisisEventDescriptorId] [INT] NOT NULL,
     [EducationOrganizationId] [INT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -350,11 +350,11 @@ CREATE TABLE [ne].[StudentEducationOrganizationAssociationStudentCrisisEvent] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentEducationOrganizationAssociationStudentCrisisEvent] ADD CONSTRAINT [StudentEducationOrganizationAssociationStudentCrisisEvent_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentEducationOrganizationAssociationStudentCrisisEvent] ADD CONSTRAINT [StudentEducationOrganizationAssociationStudentCrisisEvent_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentLanguageInstructionProgramAssociationExtension] --
-CREATE TABLE [ne].[StudentLanguageInstructionProgramAssociationExtension] (
+-- Table [sk].[StudentLanguageInstructionProgramAssociationExtension] --
+CREATE TABLE [sk].[StudentLanguageInstructionProgramAssociationExtension] (
     [BeginDate] [DATE] NOT NULL,
     [EducationOrganizationId] [INT] NOT NULL,
     [ProgramEducationOrganizationId] [INT] NOT NULL,
@@ -373,11 +373,11 @@ CREATE TABLE [ne].[StudentLanguageInstructionProgramAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentLanguageInstructionProgramAssociationExtension] ADD CONSTRAINT [StudentLanguageInstructionProgramAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentLanguageInstructionProgramAssociationExtension] ADD CONSTRAINT [StudentLanguageInstructionProgramAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentSchoolAssociationExtension] --
-CREATE TABLE [ne].[StudentSchoolAssociationExtension] (
+-- Table [sk].[StudentSchoolAssociationExtension] --
+CREATE TABLE [sk].[StudentSchoolAssociationExtension] (
     [EntryDate] [DATE] NOT NULL,
     [SchoolId] [INT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
@@ -393,11 +393,11 @@ CREATE TABLE [ne].[StudentSchoolAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentSchoolAssociationExtension] ADD CONSTRAINT [StudentSchoolAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentSchoolAssociationExtension] ADD CONSTRAINT [StudentSchoolAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentSectionAssociationExtension] --
-CREATE TABLE [ne].[StudentSectionAssociationExtension] (
+-- Table [sk].[StudentSectionAssociationExtension] --
+CREATE TABLE [sk].[StudentSectionAssociationExtension] (
     [BeginDate] [DATE] NOT NULL,
     [LocalCourseCode] [NVARCHAR](60) NOT NULL,
     [SchoolId] [INT] NOT NULL,
@@ -418,11 +418,11 @@ CREATE TABLE [ne].[StudentSectionAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentSectionAssociationExtension] ADD CONSTRAINT [StudentSectionAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentSectionAssociationExtension] ADD CONSTRAINT [StudentSectionAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[StudentSpecialEducationProgramAssociationExtension] --
-CREATE TABLE [ne].[StudentSpecialEducationProgramAssociationExtension] (
+-- Table [sk].[StudentSpecialEducationProgramAssociationExtension] --
+CREATE TABLE [sk].[StudentSpecialEducationProgramAssociationExtension] (
     [BeginDate] [DATE] NOT NULL,
     [EducationOrganizationId] [INT] NOT NULL,
     [ProgramEducationOrganizationId] [INT] NOT NULL,
@@ -444,11 +444,11 @@ CREATE TABLE [ne].[StudentSpecialEducationProgramAssociationExtension] (
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [ne].[StudentSpecialEducationProgramAssociationExtension] ADD CONSTRAINT [StudentSpecialEducationProgramAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [sk].[StudentSpecialEducationProgramAssociationExtension] ADD CONSTRAINT [StudentSpecialEducationProgramAssociationExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [ne].[UnilateralRemovalDescriptor] --
-CREATE TABLE [ne].[UnilateralRemovalDescriptor] (
+-- Table [sk].[UnilateralRemovalDescriptor] --
+CREATE TABLE [sk].[UnilateralRemovalDescriptor] (
     [UnilateralRemovalDescriptorId] [INT] NOT NULL,
     CONSTRAINT [UnilateralRemovalDescriptor_PK] PRIMARY KEY CLUSTERED (
         [UnilateralRemovalDescriptorId] ASC

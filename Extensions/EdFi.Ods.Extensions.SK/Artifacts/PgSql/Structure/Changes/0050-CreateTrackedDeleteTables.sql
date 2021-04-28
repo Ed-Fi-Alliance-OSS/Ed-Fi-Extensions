@@ -1,4 +1,4 @@
-CREATE TABLE tracked_deletes_ne.AssessmentAdministration
+CREATE TABLE tracked_deletes_sk.AssessmentAdministration
 (
        AssessmentIdentifier VARCHAR(60) NOT NULL,
        EducationOrganizationId INT NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE tracked_deletes_ne.AssessmentAdministration
        CONSTRAINT AssessmentAdministration_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.CrisisDetails
+CREATE TABLE tracked_deletes_sk.CrisisDetails
 (
        CrisisEventDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE tracked_deletes_ne.CrisisDetails
        CONSTRAINT CrisisDetails_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.CrisisEventDescriptor
+CREATE TABLE tracked_deletes_sk.CrisisEventDescriptor
 (
        CrisisEventDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE tracked_deletes_ne.CrisisEventDescriptor
        CONSTRAINT CrisisEventDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.CrisisTypeDescriptor
+CREATE TABLE tracked_deletes_sk.CrisisTypeDescriptor
 (
        CrisisTypeDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE tracked_deletes_ne.CrisisTypeDescriptor
        CONSTRAINT CrisisTypeDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.DualCreditDescriptor
+CREATE TABLE tracked_deletes_sk.DualCreditDescriptor
 (
        DualCreditDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE tracked_deletes_ne.DualCreditDescriptor
        CONSTRAINT DualCreditDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.EarlyLearningSettingDescriptor
+CREATE TABLE tracked_deletes_sk.EarlyLearningSettingDescriptor
 (
        EarlyLearningSettingDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE tracked_deletes_ne.EarlyLearningSettingDescriptor
        CONSTRAINT EarlyLearningSettingDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.ImmigrantIndicatorDescriptor
+CREATE TABLE tracked_deletes_sk.ImmigrantIndicatorDescriptor
 (
        ImmigrantIndicatorDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE tracked_deletes_ne.ImmigrantIndicatorDescriptor
        CONSTRAINT ImmigrantIndicatorDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.PlacementTypeDescriptor
+CREATE TABLE tracked_deletes_sk.PlacementTypeDescriptor
 (
        PlacementTypeDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE tracked_deletes_ne.PlacementTypeDescriptor
        CONSTRAINT PlacementTypeDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.PositionTitleDescriptor
+CREATE TABLE tracked_deletes_sk.PositionTitleDescriptor
 (
        PositionTitleDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE tracked_deletes_ne.PositionTitleDescriptor
        CONSTRAINT PositionTitleDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.PostGraduateActivity
+CREATE TABLE tracked_deletes_sk.PostGraduateActivity
 (
        LocalEducationAgencyId INT NOT NULL,
        SchoolYear SMALLINT NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE tracked_deletes_ne.PostGraduateActivity
        CONSTRAINT PostGraduateActivity_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.PostGraduateActivityDescriptor
+CREATE TABLE tracked_deletes_sk.PostGraduateActivityDescriptor
 (
        PostGraduateActivityDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE tracked_deletes_ne.PostGraduateActivityDescriptor
        CONSTRAINT PostGraduateActivityDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.PostGraduateActivityDeterminationDescriptor
+CREATE TABLE tracked_deletes_sk.PostGraduateActivityDeterminationDescriptor
 (
        PostGraduateActivityDeterminationDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE tracked_deletes_ne.PostGraduateActivityDeterminationDescriptor
        CONSTRAINT PostGraduateActivityDeterminationDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.SectionDeliveryDescriptor
+CREATE TABLE tracked_deletes_sk.SectionDeliveryDescriptor
 (
        SectionDeliveryDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE tracked_deletes_ne.SectionDeliveryDescriptor
        CONSTRAINT SectionDeliveryDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.SpecialEducationProgramDescriptor
+CREATE TABLE tracked_deletes_sk.SpecialEducationProgramDescriptor
 (
        SpecialEducationProgramDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE tracked_deletes_ne.SpecialEducationProgramDescriptor
        CONSTRAINT SpecialEducationProgramDescriptor_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.StudentEarlyLearningProgramAssociation
+CREATE TABLE tracked_deletes_sk.StudentEarlyLearningProgramAssociation
 (
        BeginDate DATE NOT NULL,
        EducationOrganizationId INT NOT NULL,
@@ -127,7 +127,7 @@ CREATE TABLE tracked_deletes_ne.StudentEarlyLearningProgramAssociation
        CONSTRAINT StudentEarlyLearningProgramAssociation_PK PRIMARY KEY (ChangeVersion)
 );
 
-CREATE TABLE tracked_deletes_ne.UnilateralRemovalDescriptor
+CREATE TABLE tracked_deletes_sk.UnilateralRemovalDescriptor
 (
        UnilateralRemovalDescriptorId INT NOT NULL,
        Id UUID NOT NULL,
