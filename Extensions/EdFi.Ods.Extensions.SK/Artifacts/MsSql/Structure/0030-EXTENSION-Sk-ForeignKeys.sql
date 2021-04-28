@@ -14,11 +14,6 @@ CREATE NONCLUSTERED INDEX [FK_AssessmentAdministration_EducationOrganization]
 ON [sk].[AssessmentAdministration] ([EducationOrganizationId] ASC)
 GO
 
-ALTER TABLE [sk].[CalendarDateExtension] WITH CHECK ADD CONSTRAINT [FK_CalendarDateExtension_CalendarDate] FOREIGN KEY ([CalendarCode], [Date], [SchoolId], [SchoolYear])
-REFERENCES [edfi].[CalendarDate] ([CalendarCode], [Date], [SchoolId], [SchoolYear])
-ON DELETE CASCADE
-GO
-
 ALTER TABLE [sk].[CrisisDetails] WITH CHECK ADD CONSTRAINT [FK_CrisisDetails_CrisisEventDescriptor] FOREIGN KEY ([CrisisEventDescriptorId])
 REFERENCES [sk].[CrisisEventDescriptor] ([CrisisEventDescriptorId])
 GO

@@ -12,11 +12,6 @@ REFERENCES edfi.EducationOrganization (EducationOrganizationId)
 CREATE INDEX FK_c64558_EducationOrganization
 ON sk.AssessmentAdministration (EducationOrganizationId ASC);
 
-ALTER TABLE sk.CalendarDateExtension ADD CONSTRAINT FK_1a442d_CalendarDate FOREIGN KEY (CalendarCode, Date, SchoolId, SchoolYear)
-REFERENCES edfi.CalendarDate (CalendarCode, Date, SchoolId, SchoolYear)
-ON DELETE CASCADE
-;
-
 ALTER TABLE sk.CrisisDetails ADD CONSTRAINT FK_9e9b7e_CrisisEventDescriptor FOREIGN KEY (CrisisEventDescriptorId)
 REFERENCES sk.CrisisEventDescriptor (CrisisEventDescriptorId)
 ;

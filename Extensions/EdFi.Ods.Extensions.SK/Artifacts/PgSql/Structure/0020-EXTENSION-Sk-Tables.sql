@@ -13,18 +13,6 @@ ALTER TABLE sk.AssessmentAdministration ALTER COLUMN CreateDate SET DEFAULT curr
 ALTER TABLE sk.AssessmentAdministration ALTER COLUMN Id SET DEFAULT gen_random_uuid();
 ALTER TABLE sk.AssessmentAdministration ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table sk.CalendarDateExtension --
-CREATE TABLE sk.CalendarDateExtension (
-    CalendarCode VARCHAR(60) NOT NULL,
-    Date DATE NOT NULL,
-    SchoolId INT NOT NULL,
-    SchoolYear SMALLINT NOT NULL,
-    InstructionalDuration DECIMAL(3, 2) NOT NULL,
-    CreateDate TIMESTAMP NOT NULL,
-    CONSTRAINT CalendarDateExtension_PK PRIMARY KEY (CalendarCode, Date, SchoolId, SchoolYear)
-); 
-ALTER TABLE sk.CalendarDateExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-
 -- Table sk.CrisisDetails --
 CREATE TABLE sk.CrisisDetails (
     CrisisEventDescriptorId INT NOT NULL,

@@ -21,25 +21,6 @@ GO
 ALTER TABLE [sk].[AssessmentAdministration] ADD CONSTRAINT [AssessmentAdministration_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [sk].[CalendarDateExtension] --
-CREATE TABLE [sk].[CalendarDateExtension] (
-    [CalendarCode] [NVARCHAR](60) NOT NULL,
-    [Date] [DATE] NOT NULL,
-    [SchoolId] [INT] NOT NULL,
-    [SchoolYear] [SMALLINT] NOT NULL,
-    [InstructionalDuration] [DECIMAL](3, 2) NOT NULL,
-    [CreateDate] [DATETIME2] NOT NULL,
-    CONSTRAINT [CalendarDateExtension_PK] PRIMARY KEY CLUSTERED (
-        [CalendarCode] ASC,
-        [Date] ASC,
-        [SchoolId] ASC,
-        [SchoolYear] ASC
-    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-ALTER TABLE [sk].[CalendarDateExtension] ADD CONSTRAINT [CalendarDateExtension_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
-GO
-
 -- Table [sk].[CrisisDetails] --
 CREATE TABLE [sk].[CrisisDetails] (
     [CrisisEventDescriptorId] [INT] NOT NULL,

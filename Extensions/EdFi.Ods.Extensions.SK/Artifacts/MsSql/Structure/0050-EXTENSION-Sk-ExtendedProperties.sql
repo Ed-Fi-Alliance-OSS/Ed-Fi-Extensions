@@ -8,20 +8,6 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Namespace for the Assessment.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'AssessmentAdministration', @level2type=N'COLUMN', @level2name=N'Namespace'
 GO
 
--- Extended Properties [sk].[CalendarDateExtension] --
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier for the Calendar.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension', @level2type=N'COLUMN', @level2name=N'CalendarCode'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The month, day, and year of the CalendarEvent.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension', @level2type=N'COLUMN', @level2name=N'Date'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier assigned to a school.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension', @level2type=N'COLUMN', @level2name=N'SchoolId'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier for the school year associated with the Calendar.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension', @level2type=N'COLUMN', @level2name=N'SchoolYear'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The portion of the day that instruction occurred.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CalendarDateExtension', @level2type=N'COLUMN', @level2name=N'InstructionalDuration'
-GO
-
 -- Extended Properties [sk].[CrisisDetails] --
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Information about the specific crisis that occurred.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'CrisisDetails'
 GO

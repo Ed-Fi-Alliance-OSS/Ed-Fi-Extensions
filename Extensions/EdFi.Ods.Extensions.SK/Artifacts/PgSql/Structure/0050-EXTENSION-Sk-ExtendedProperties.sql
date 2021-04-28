@@ -4,14 +4,6 @@ COMMENT ON COLUMN sk.AssessmentAdministration.AssessmentIdentifier IS 'A unique 
 COMMENT ON COLUMN sk.AssessmentAdministration.EducationOrganizationId IS 'The identifier assigned to an education organization.';
 COMMENT ON COLUMN sk.AssessmentAdministration.Namespace IS 'Namespace for the Assessment.';
 
--- Extended Properties [sk].[CalendarDateExtension] --
-COMMENT ON TABLE sk.CalendarDateExtension IS '';
-COMMENT ON COLUMN sk.CalendarDateExtension.CalendarCode IS 'The identifier for the Calendar.';
-COMMENT ON COLUMN sk.CalendarDateExtension.Date IS 'The month, day, and year of the CalendarEvent.';
-COMMENT ON COLUMN sk.CalendarDateExtension.SchoolId IS 'The identifier assigned to a school.';
-COMMENT ON COLUMN sk.CalendarDateExtension.SchoolYear IS 'The identifier for the school year associated with the Calendar.';
-COMMENT ON COLUMN sk.CalendarDateExtension.InstructionalDuration IS 'The portion of the day that instruction occurred.';
-
 -- Extended Properties [sk].[CrisisDetails] --
 COMMENT ON TABLE sk.CrisisDetails IS 'Information about the specific crisis that occurred.';
 COMMENT ON COLUMN sk.CrisisDetails.CrisisEventDescriptorId IS 'The specific event that occurred';
