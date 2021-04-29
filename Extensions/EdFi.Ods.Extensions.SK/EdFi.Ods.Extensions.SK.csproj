@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>EdFi.Ods.Extensions.SK</AssemblyName>
-    <RootNamespace>EdFi.Ods.Extensions.SK</RootNamespace>
+    <AssemblyName>EdFi.Ods.Extensions.Sk</AssemblyName>
+    <RootNamespace>EdFi.Ods.Extensions.Sk</RootNamespace>
     <RestorePackages>true</RestorePackages>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
@@ -11,7 +11,7 @@
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+  <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
@@ -35,15 +35,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EdFi.Ods.Extensions.SK.nuspec">
+    <Content Include="EdFi.Ods.Extensions.Sk.nuspec">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
-    <Content Include="Marker_EdFi_Ods_Extensions_SK.cs">
+    <Content Include="Marker_EdFi_Ods_Extensions_Sk.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
-    <EmbeddedResource Include="assemblyMetadata.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Artifacts\Metadata\**\ApiModel-EXTENSION.json">
@@ -56,10 +55,7 @@
       <DesignTime>True</DesignTime>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Artifacts\Metadata\ApiModel-EXTENSION.json" />
-    <None Remove="Artifacts\Metadata\DomainMetadata-EXTENSION.xml" />
+    <EmbeddedResource Include="assemblyMetadata.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Api\EdFi.Ods.Api.csproj" />
@@ -67,9 +63,4 @@
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Security\EdFi.Ods.Security.csproj" />
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Standard\EdFi.Ods.Standard.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Artifacts\MsSql\Structure\Ods\" />
-    <Folder Include="Artifacts\PgSql\Structure\Ods\" />
-  </ItemGroup>
-
 </Project>

@@ -1,9 +1,3 @@
--- Extended Properties [sk].[SpecialEducationProgramDescriptor] --
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Type of program a Special Education student is in - Part B or Part C.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'SpecialEducationProgramDescriptor'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'SpecialEducationProgramDescriptor', @level2type=N'COLUMN', @level2name=N'SpecialEducationProgramDescriptorId'
-GO
-
 -- Extended Properties [sk].[StudentLanguageInstructionProgramAssociationExtension] --
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'', @level0type=N'SCHEMA', @level0name=N'sk', @level1type=N'TABLE', @level1name=N'StudentLanguageInstructionProgramAssociationExtension'
 GO

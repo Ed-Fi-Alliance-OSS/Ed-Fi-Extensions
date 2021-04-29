@@ -1,9 +1,3 @@
--- Table sk.SpecialEducationProgramDescriptor --
-CREATE TABLE sk.SpecialEducationProgramDescriptor (
-    SpecialEducationProgramDescriptorId INT NOT NULL,
-    CONSTRAINT SpecialEducationProgramDescriptor_PK PRIMARY KEY (SpecialEducationProgramDescriptorId)
-); 
-
 -- Table sk.StudentLanguageInstructionProgramAssociationExtension --
 CREATE TABLE sk.StudentLanguageInstructionProgramAssociationExtension (
     BeginDate DATE NOT NULL,

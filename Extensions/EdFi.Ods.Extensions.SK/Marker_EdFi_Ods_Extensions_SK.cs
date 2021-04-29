@@ -1,6 +1,6 @@
 ﻿using EdFi.Ods.Common.Extensibility;
 
-namespace EdFi.Ods.Extensions.SK
+namespace EdFi.Ods.Extensions.Sk
 {
-    public interface Marker_EdFi_Ods_Extensions_SK : IPluginMarker { }
+    public interface Marker_EdFi_Ods_Extensions_Sk : IPluginMarker { }
 }
