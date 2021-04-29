@@ -23,7 +23,6 @@ CREATE TABLE sk.StudentSchoolAssociationExtension (
     EntryDate DATE NOT NULL,
     SchoolId INT NOT NULL,
     StudentUSI INT NOT NULL,
-    StudentDaysEnrolled DECIMAL(5, 2) NULL,
     ResidentLocalEducationAgencyId INT NOT NULL,
     ResidentSchoolId INT NULL,
     ReportingSchoolId INT NOT NULL,

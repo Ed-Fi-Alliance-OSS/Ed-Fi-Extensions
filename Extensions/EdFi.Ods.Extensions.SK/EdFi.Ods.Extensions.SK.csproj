@@ -11,7 +11,7 @@
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
@@ -58,10 +58,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Artifacts\Metadata\ApiModel-EXTENSION.json" />
+    <None Remove="Artifacts\Metadata\DomainMetadata-EXTENSION.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Api\EdFi.Ods.Api.csproj" />
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Common\EdFi.Ods.Common.csproj" />
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Security\EdFi.Ods.Security.csproj" />
     <ProjectReference Include="..\..\..\Ed-Fi-ODS\Application\EdFi.Ods.Standard\EdFi.Ods.Standard.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Artifacts\MsSql\Structure\Ods\" />
+    <Folder Include="Artifacts\PgSql\Structure\Ods\" />
   </ItemGroup>
 
 </Project>

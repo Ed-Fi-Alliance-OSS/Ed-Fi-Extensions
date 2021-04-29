@@ -53,11 +53,6 @@
     <xs:complexContent>
       <xs:extension base="StudentSchoolAssociation">
         <xs:sequence>
-          <xs:element name="StudentDaysEnrolled" type="EXTENSION-StudentDaysEnrolled" minOccurs="0">
-            <xs:annotation>
-              <xs:documentation>Override field to determine number of days the student was in membership for ADA and ADM calculation.  This field is optional, and records without a value will use the related calendar to determine days enrolled.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
           <xs:element name="ResidentLocalEducationAgencyReference" type="LocalEducationAgencyReferenceType">
             <xs:annotation>
               <xs:documentation>District where student resides. If student resides out of state, use district of enrollment.</xs:documentation>
@@ -123,16 +118,4 @@
   <xs:annotation>
     <xs:documentation>===== Numeric Simple Types =====</xs:documentation>
   </xs:annotation>
-  <xs:simpleType name="EXTENSION-StudentDaysEnrolled">
-    <xs:annotation>
-      <xs:documentation>Override field to determine number of days the student was in membership for ADA and ADM calculation.  This field is optional, and records without a value will use the related calendar to determine days enrolled.</xs:documentation>
-      <xs:appinfo>
-        <ann:TypeGroup>Simple</ann:TypeGroup>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:restriction base="xs:decimal">
-      <xs:totalDigits value="5" />
-      <xs:fractionDigits value="2" />
-    </xs:restriction>
-  </xs:simpleType>
 </xs:schema>

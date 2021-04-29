@@ -1,5 +1,5 @@
 {
-  "odsApiVersion": "5.2",
+  "odsApiVersion": "5.3",
   "schemaDefinition": {
     "logicalName": "Sk",
     "physicalName": "sk",
@@ -130,23 +130,6 @@
           "columnNames": {
             "sqlServer": "CreateDate",
             "postgreSql": "CreateDate"
-          }
-        },
-        {
-          "propertyName": "StudentDaysEnrolled",
-          "propertyType": {
-            "dbType": "Decimal",
-            "maxLength": 0,
-            "precision": 5,
-            "scale": 2,
-            "isNullable": true
-          },
-          "description": "Override field to determine number of days the student was in membership for ADA and ADM calculation.  This field is optional, and records without a value will use the related calendar to determine days enrolled.",
-          "isIdentifying": false,
-          "isServerAssigned": false,
-          "columnNames": {
-            "sqlServer": "StudentDaysEnrolled",
-            "postgreSql": "StudentDaysEnrolled"
           }
         }
       ],

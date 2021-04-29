@@ -17,7 +17,6 @@ COMMENT ON TABLE sk.StudentSchoolAssociationExtension IS '';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.EntryDate IS 'The month, day, and year on which an individual enters and begins to receive instructional services in a school.';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.SchoolId IS 'The identifier assigned to a school.';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.StudentUSI IS 'A unique alphanumeric code assigned to a student.';
-COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.StudentDaysEnrolled IS 'Override field to determine number of days the student was in membership for ADA and ADM calculation.  This field is optional, and records without a value will use the related calendar to determine days enrolled.';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.ResidentLocalEducationAgencyId IS 'The identifier assigned to a local education agency.';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.ResidentSchoolId IS 'The identifier assigned to a school.';
 COMMENT ON COLUMN sk.StudentSchoolAssociationExtension.ReportingSchoolId IS 'The identifier assigned to a school.';
