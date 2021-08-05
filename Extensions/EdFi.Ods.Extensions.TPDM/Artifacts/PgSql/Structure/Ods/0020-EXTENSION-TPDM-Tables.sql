@@ -1,8 +1,3 @@
--- SPDX-License-Identifier: Apache-2.0
--- Licensed to the Ed-Fi Alliance under one or more agreements.
--- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
--- See the LICENSE and NOTICES files in the project root for more information.
-
 -- Table tpdm.AccreditationStatusDescriptor --
 CREATE TABLE tpdm.AccreditationStatusDescriptor (
     AccreditationStatusDescriptorId INT NOT NULL,
@@ -1615,7 +1610,7 @@ CREATE TABLE tpdm.OpenStaffPositionExtension (
     EducationOrganizationId INT NOT NULL,
     RequisitionNumber VARCHAR(20) NOT NULL,
     SchoolYear SMALLINT NULL,
-    FullTimeEquivalency DECIMAL(3, 2) NULL,
+    FullTimeEquivalency DECIMAL(5, 4) NULL,
     OpenStaffPositionReasonDescriptorId INT NULL,
     IsActive BOOLEAN NULL,
     MaxSalary DECIMAL(9, 2) NULL,
