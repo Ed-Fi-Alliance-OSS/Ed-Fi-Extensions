@@ -33,6 +33,21 @@ VALUES (
     , systemDescriptorsResourceClaimId
     , appId
     );
+	
+INSERT INTO dbo.ResourceClaims (
+    DisplayName
+    ,ResourceName
+    ,ClaimName
+    ,ParentResourceClaimId
+    ,Application_ApplicationId
+    )
+VALUES (
+    'institutionLevelDescriptor'
+    , 'institutionLevelDescriptor'
+    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor'
+    , systemDescriptorsResourceClaimId
+    , appId
+    );
  
 INSERT INTO dbo.ResourceClaims (
     DisplayName
