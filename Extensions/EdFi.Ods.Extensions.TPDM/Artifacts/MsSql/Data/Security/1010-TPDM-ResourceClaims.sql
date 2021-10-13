@@ -1852,7 +1852,7 @@ BEGIN
 
     -- Processing children of http://ed-fi.org/ods/identity/claims/domains/people
     ----------------------------------------------------------------------------------------------------------------------------
-        -- Resource Claim: 'http://ed-fi.org/ods/identity/claims/tpdm/candidate'
+    -- Resource Claim: 'http://ed-fi.org/ods/identity/claims/tpdm/candidate'
     ----------------------------------------------------------------------------------------------------------------------------
     SET @claimName = 'http://ed-fi.org/ods/identity/claims/tpdm/candidate'
     SET @claimId = NULL
