@@ -25,7 +25,7 @@ CROSS JOIN dbo.Actions a
 WHERE ResourceClaimId = @resourceClaimId
 
 INSERT INTO dbo.ResourceClaimActionAuthorizationStrategies(ResourceClaimActionId, AuthorizationStrategyId)
-SELECT RCA.ResourceClaimActionId,@authorizationStrategyId,RCA.ResourceClaimId,RC.ResourceName FROM dbo.ResourceClaimActionS RCA 
+SELECT RCA.ResourceClaimActionId,@authorizationStrategyId FROM dbo.ResourceClaimActionS RCA 
 INNER JOIN dbo.ResourceClaims RC ON RCA.ResourceClaimId = RC.ResourceClaimId
 INNER JOIN dbo.Actions A ON RCA.ActionId = A.ActionId
 WHERE RCA.ResourceClaimId = @resourceClaimId

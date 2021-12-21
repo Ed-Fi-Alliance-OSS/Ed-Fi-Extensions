@@ -33,7 +33,7 @@ BEGIN
     WHERE ResourceClaimId = resource_claim_id;
 
     INSERT INTO dbo.ResourceClaimActionAuthorizationStrategies(ResourceClaimActionId, AuthorizationStrategyId)
-    SELECT RCA.ResourceClaimActionId,authorization_strategy_id,RCA.ResourceClaimId,RC.ResourceName FROM dbo.ResourceClaimActionS RCA 
+    SELECT RCA.ResourceClaimActionId,authorization_strategy_id FROM dbo.ResourceClaimActionS RCA 
     INNER JOIN dbo.ResourceClaims RC ON RCA.ResourceClaimId = RC.ResourceClaimId
     INNER JOIN dbo.Actions A ON RCA.ActionId = A.ActionId
     WHERE RCA.ResourceClaimId = resource_claim_id;
