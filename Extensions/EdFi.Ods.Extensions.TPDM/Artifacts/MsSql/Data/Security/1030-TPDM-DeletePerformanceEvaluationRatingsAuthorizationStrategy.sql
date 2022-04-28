@@ -5,19 +5,32 @@
 
 DECLARE 
 	@claimId AS INT,
-    @claimName AS nvarchar(max)
+    @parentResourceClaimId  AS INT,
+	@claimName AS nvarchar(max)	
 
 SET @claimName = 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating'
 
-SELECT @claimId = ResourceClaimId
+SELECT @claimId = ResourceClaimId,
+@parentResourceClaimId = ParentResourceClaimId
 FROM dbo.ResourceClaims 
 WHERE ClaimName = @claimName
 
--- Setting default authorization metadata
-PRINT 'Deleting default action authorizations for resource claim ''' + @claimName + ''' (claimId=' + CONVERT(nvarchar, @claimId) + ').'
-
-DELETE rcaas
-FROM dbo.ResourceClaims rc
-JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
-JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
-WHERE rc.ResourceClaimId = @claimId
+IF EXISTS (	SELECT 1 FROM dbo.ResourceClaims rc
+    INNER JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
+    INNER JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
+    WHERE rc.ResourceClaimId = @parentResourceClaimId)
+BEGIN
+	-- Setting default authorization metadata
+	IF EXISTS (	SELECT 1 FROM dbo.ResourceClaims rc
+    INNER JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
+    INNER JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
+    WHERE rc.ResourceClaimId = @claimId)
+	BEGIN
+		PRINT 'Deleting default action authorizations for resource claim ''' + @claimName + ''' (claimId=' + CONVERT(nvarchar, @claimId) + ').'
+		DELETE rcaas
+		FROM dbo.ResourceClaims rc
+		JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
+		JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
+		WHERE rc.ResourceClaimId = @claimId
+	END
+END
