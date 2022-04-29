@@ -13,7 +13,7 @@ BEGIN
     -- Resource Claim: 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating'
     ----------------------------------------------------------------------------------------------------------------------------
     claim_name := 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating';
-    claim_id := NULL;
+	claim_id := NULL;
 	parent_claim_id := NULL;
 	
     SELECT ResourceClaimId, ParentResourceClaimId INTO claim_id, parent_claim_id
