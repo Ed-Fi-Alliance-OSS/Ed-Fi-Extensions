@@ -5,9 +5,9 @@
 
 DO $$
 DECLARE
-    claim_id INTEGER;
+	claim_id INTEGER;
 	parent_claim_id INTEGER;
-    claim_name VARCHAR(2048);
+	claim_name VARCHAR(2048);
 BEGIN
     ----------------------------------------------------------------------------------------------------------------------------
     -- Resource Claim: 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating'
