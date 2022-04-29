@@ -5,7 +5,7 @@
 
 DECLARE 
 	@claimId AS INT,
-    @parentResourceClaimId  AS INT,
+	@parentResourceClaimId  AS INT,
 	@claimName AS nvarchar(max)	
 
 SET @claimName = 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating'
