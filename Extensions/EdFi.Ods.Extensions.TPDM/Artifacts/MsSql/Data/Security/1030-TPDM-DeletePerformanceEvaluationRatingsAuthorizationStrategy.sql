@@ -15,13 +15,13 @@ SELECT @claimId = ResourceClaimId,
 FROM dbo.ResourceClaims 
 WHERE ClaimName = @claimName
 
-IF EXISTS (	SELECT 1 FROM dbo.ResourceClaims rc
+IF EXISTS (SELECT 1 FROM dbo.ResourceClaims rc
     INNER JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
     INNER JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
     WHERE rc.ResourceClaimId = @parentResourceClaimId)
 BEGIN
 	-- Setting default authorization metadata
-	IF EXISTS (	SELECT 1 FROM dbo.ResourceClaims rc
+	IF EXISTS (SELECT 1 FROM dbo.ResourceClaims rc
     INNER JOIN dbo.ResourceClaimActions rca on rca.ResourceClaimId = rc.ResourceClaimId
     INNER JOIN dbo.ResourceClaimActionAuthorizationStrategies rcaas on rcaas.ResourceClaimActionId = rca.ResourceClaimActionId
     WHERE rc.ResourceClaimId = @claimId)
