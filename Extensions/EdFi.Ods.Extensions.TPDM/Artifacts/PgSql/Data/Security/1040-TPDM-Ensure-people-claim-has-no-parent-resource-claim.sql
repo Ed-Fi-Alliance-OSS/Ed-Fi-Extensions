@@ -8,10 +8,14 @@
 
 DO $$
 
-RAISE NOTICE USING MESSAGE = 'Ensuring that the ''people'' resource claim does not have a parent in the hierarchy.'
+IF EXISTS (SELECT 1 FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people' AND ParentResourceClaimId IS NOT NULL) THEN
 
-UPDATE  dbo.ResourceClaims
-SET     ParentResourceClaimId = NULL
-WHERE   ResourceClaimId = (SELECT ResourceClaimId FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people')
+    RAISE NOTICE USING MESSAGE = 'Moving ''people'' resource claim to top of the hierarchy...'
+
+    UPDATE  dbo.ResourceClaims
+    SET     ParentResourceClaimId = NULL
+    WHERE   ResourceClaimId = (SELECT ResourceClaimId FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people')
+
+END IF;
 
 END $$;

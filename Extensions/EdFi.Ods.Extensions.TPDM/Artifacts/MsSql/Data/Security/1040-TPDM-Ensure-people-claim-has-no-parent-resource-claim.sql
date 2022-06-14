@@ -6,8 +6,11 @@
 -- Note: This step undoes the parent resource claim assignment that resulted in people being placed under EducationOrganizations.
 -- This was previously (inadvertently) performed in 1010-TPDM-ResourceClaims.sql, starting at line 2044.
 
-PRINT 'Ensuring that the ''people'' resource claim does not have a parent in the hierarchy.'
+IF EXISTS (SELECT 1 FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people' AND ParentResourceClaimId IS NOT NULL)
+BEGIN
+    PRINT 'Moving ''people'' resource claim to top of the hierarchy...'
 
-UPDATE  dbo.ResourceClaims
-SET     ParentResourceClaimId = NULL
-WHERE   ResourceClaimId = (SELECT ResourceClaimId FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people')
+    UPDATE  dbo.ResourceClaims
+    SET     ParentResourceClaimId = NULL
+    WHERE   ResourceClaimId = (SELECT ResourceClaimId FROM dbo.ResourceClaims WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/people')
+END
