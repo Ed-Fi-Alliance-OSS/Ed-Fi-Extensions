@@ -24,7 +24,7 @@ insert @resourceClaimNames(resourceClaimName) values
 
 SELECT @claimSetId = ClaimSetId FROM ClaimSets WHERE ClaimSetName = @claimSetName
     
-IF (@claimSetName IS NULL)
+IF (@claimSetId IS NULL)
 BEGIN
     --Create Claimset
     INSERT INTO ClaimSets (ClaimSetName, Application_ApplicationId, IsEdfiPreset) VALUES(@claimSetName,1,1)
