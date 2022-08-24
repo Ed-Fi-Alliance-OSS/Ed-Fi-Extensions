@@ -23,14 +23,16 @@ BEGIN
 
     IF EXISTS (SELECT 1 FROM dbo.ResourceClaimActions WHERE ResourceClaimId = resource_claim_id) THEN
 
-    SELECT  RCAAS.ResourceClaimActionId INTO resource_claim_action_id
-    FROM dbo.ResourceClaimActionAuthorizationStrategies   RCAAS
-    INNER JOIN dbo.ClaimSetResourceClaimActions  CSRCA   ON RCAAS.ResourceClaimActionId = CSRCA.ClaimSetResourceClaimActionId
-    INNER JOIN dbo.ResourceClaims  RC   ON RC.ResourceClaimId = CSRCA.ResourceClaimId
-    WHERE   CSRCA.ResourceClaimId = resource_claim_id;
-
-    DELETE FROM dbo.ResourceClaimActionAuthorizationStrategies  WHERE ResourceClaimActionId = resource_claim_action_id;
-   
+    DELETE 
+    FROM dbo.ResourceClaimActionAuthorizationStrategies
+    WHERE ResourceClaimActionAuthorizationStrategyId IN (
+        SELECT RCAAS.ResourceClaimActionAuthorizationStrategyId
+        FROM dbo.ResourceClaimActionAuthorizationStrategies  RCAAS
+        INNER JOIN dbo.ResourceClaimActions  RCA   ON RCA.ResourceClaimActionId = RCAAS.ResourceClaimActionId
+        WHERE RCA.ResourceClaimId = resource_claim_id
+    );
+    
+    DELETE FROM dbo.ClaimSetResourceClaimActions   WHERE ResourceClaimId = resource_claim_id;
     DELETE FROM dbo.ResourceClaimActions   WHERE ResourceClaimId = resource_claim_id;
 
     END IF;
