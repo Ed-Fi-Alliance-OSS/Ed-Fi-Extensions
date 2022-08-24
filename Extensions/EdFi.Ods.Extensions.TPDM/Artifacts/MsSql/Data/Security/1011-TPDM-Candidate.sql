@@ -20,7 +20,7 @@ BEGIN
     WHERE ResourceClaimActionAuthorizationStrategyId IN (
         SELECT RCAAS.ResourceClaimActionAuthorizationStrategyId
         FROM dbo.ResourceClaimActionAuthorizationStrategies  RCAAS
-        INNER JOIN dbo.ResourceClaimActions  RCA   ON RCA.ResourceClaimActionId = RCA.ResourceClaimActionId
+        INNER JOIN dbo.ResourceClaimActions  RCA   ON RCA.ResourceClaimActionId = RCAAS.ResourceClaimActionId
         WHERE RCA.ResourceClaimId = @resourceClaimId
     );
 
