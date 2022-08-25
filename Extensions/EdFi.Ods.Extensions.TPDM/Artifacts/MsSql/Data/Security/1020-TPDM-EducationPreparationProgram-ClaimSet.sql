@@ -38,7 +38,7 @@ SELECT act.ActionId, @claimSetId, ResourceClaimId
 FROM dbo.ResourceClaims RC
 JOIN @resourceClaimNames RN ON RC.ClaimName = RN.resourceClaimName
 CROSS JOIN dbo.Actions act
-WHERE NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = act.ActionId AND ClaimSetId = claimSetId AND ResourceClaimId = RC.ResourceClaimID);
+WHERE NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = act.ActionId AND ClaimSetId = @claimSetId AND ResourceClaimId = RC.ResourceClaimID);
 --Create R action claim for systemDescriptors
 INSERT INTO dbo.ClaimSetResourceClaimActions (ActionId,ClaimSetId,ResourceClaimId)
 SELECT (SELECT ActionId FROM Actions WHERE ActionName = 'read'), @claimSetId, ResourceClaimId
