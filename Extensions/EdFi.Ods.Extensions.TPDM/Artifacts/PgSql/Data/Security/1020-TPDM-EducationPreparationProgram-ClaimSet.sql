@@ -35,7 +35,8 @@ BEGIN
         'http://ed-fi.org/ods/identity/claims/domains/tpdm/performanceEvaluation',
         'http://ed-fi.org/ods/identity/claims/domains/tpdm/survey',
         'http://ed-fi.org/ods/identity/claims/domains/surveyDomain',
-        'http://ed-fi.org/ods/identity/claims/domains/educationOrganizations'
+        'http://ed-fi.org/ods/identity/claims/domains/educationOrganizations',
+        'http://ed-fi.org/ods/identity/claims/tpdm/educatorPreparationProgram'
     )
     AND NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = act.ActionId AND ClaimSetId = claim_set_id AND ResourceClaimId = RC.ResourceClaimID);
 

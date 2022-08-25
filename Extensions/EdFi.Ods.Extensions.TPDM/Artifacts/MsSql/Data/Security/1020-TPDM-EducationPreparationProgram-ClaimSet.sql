@@ -19,7 +19,8 @@ insert @resourceClaimNames(resourceClaimName) values
     ('http://ed-fi.org/ods/identity/claims/domains/tpdm/performanceEvaluation'),
     ('http://ed-fi.org/ods/identity/claims/domains/tpdm/survey'),
     ('http://ed-fi.org/ods/identity/claims/domains/surveyDomain'),
-    ('http://ed-fi.org/ods/identity/claims/domains/educationOrganizations')
+    ('http://ed-fi.org/ods/identity/claims/domains/educationOrganizations'),
+    ('http://ed-fi.org/ods/identity/claims/tpdm/educatorPreparationProgram')
 
 
 SELECT @claimSetId = ClaimSetId FROM ClaimSets WHERE ClaimSetName = @claimSetName
