@@ -78,10 +78,12 @@ jobs:
           . $env:GITHUB_WORKSPACE/Ed-Fi-ODS-Implementation/Initialize-PowershellForDevelopment.ps1
           Invoke-CodeGen -Engine SQLServer -ExtensionPaths  $env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Sample
     - name: Build
+      working-directory: ./Ed-Fi-Extensions/
       run: |
         .\build.githubactions.ps1 build -Configuration ${{ env.CONFIGURATION }} -InformationalVersion ${{ env.INFORMATIONAL_VERSION}} -BuildCounter ${{ github.run_number }} -BuildIncrementer ${{env.BUILD_INCREMENTER}} -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Sample/EdFi.Ods.Extensions.Sample.csproj"
       shell: pwsh
     - name: Pack
+      working-directory: ./Ed-Fi-Extensions/
       run: |
         .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -Solution "Application/EdFi.Security.DataAccess/EdFi.Security.DataAccess.sln" -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Sample/EdFi.Ods.Extensions.Sample.csproj"
       shell: pwsh
