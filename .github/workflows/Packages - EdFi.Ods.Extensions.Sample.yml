@@ -85,5 +85,11 @@ jobs:
     - name: Pack
       working-directory: ./Ed-Fi-Extensions/
       run: |
-        .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -Solution "Application/EdFi.Security.DataAccess/EdFi.Security.DataAccess.sln" -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Sample/EdFi.Ods.Extensions.Sample.csproj"
+        .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Sample/EdFi.Ods.Extensions.Sample.csproj" -PackageName "EdFi.Suite3.Ods.Extensions.Sample"
       shell: pwsh
+    - name: Upload EdFi.Ods.Extensions.Sample Artifact
+      if: success()
+      uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
+      with:
+        name: EdFi.Ods.Extensions.Sample.Artifacts
+        path: ${{ github.workspace }}/Ed-Fi-Extensions/NugetPackages/*.*
