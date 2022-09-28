@@ -72,12 +72,12 @@ libs/
 libs.codegen/
 
 # Generated code
-*.generated.cs
+#*.generated.cs
 *.generated.txt
-*.generated.sql
+#*.generated.sql
 *.generated.resx
 *.generated.json
-*.hbm.xml
+#*.hbm.xml
 **/Metadata/types/*.json
 **/Metadata/resources/*.json
 **/Metadata/descriptors/*.json
