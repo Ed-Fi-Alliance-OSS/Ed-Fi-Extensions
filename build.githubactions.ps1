@@ -140,7 +140,7 @@ function Pack {
         Write-Host "NuspecFilePath flow semalai" $version 
         Write-Host "NuspecFilePath flow semalai" $PackageName 
         get-content $NuspecFilePath
-       nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=$Configuration"  -Properties "id=$PackageName" -NoPackageAnalysis -NoDefaultExcludes
+       nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties id=$PackageName -NoPackageAnalysis -NoDefaultExcludes
     }
     if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**"){   
         Invoke-Execute {
