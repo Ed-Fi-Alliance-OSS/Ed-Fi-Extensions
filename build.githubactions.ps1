@@ -136,6 +136,7 @@ function Pack {
         Invoke-Execute {
             dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123
         }
+    }
     if (($NuspecFilePath -Like "*.nuspec") -and ( $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**")){   
         nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=$Configuration"  -Properties "id=$PackageName" -NoPackageAnalysis -NoDefaultExcludes
     }
