@@ -90,7 +90,7 @@ jobs:
       working-directory: ./Ed-Fi-Extensions/   
       shell: pwsh
       run: |
-        .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -PackageName "EdFi.Suite3.Ods.Extensions.TPDM.Core.1.1.0" -NuspecFilePath "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.nuspec"
+        .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -PackageName "EdFi.Suite3.Ods.Extensions.TPDM.Core.1.1.0" -NuspecBasePath -NuspecFilePath "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/" "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.nuspec" -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.csproj"
     - name: Install-credential-handler
       run: iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
       shell: pwsh        
