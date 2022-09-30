@@ -59,5 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="../../LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="bin\release\net6.0\EdFi.Ods.Extensions.TPDM.dll" Pack="true" Target="."/>
+    <None Include="Artifacts/**/*.json" Pack="true" Target="."/>
+    <None Include="Artifacts/**/*.sql" Pack="true" Target="."/>
   </ItemGroup>
 </Project>
