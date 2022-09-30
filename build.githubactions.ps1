@@ -140,8 +140,8 @@ function Pack {
         }
     }
     if ($NuspecFilePath -Like "*.nuspec" -and $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**"){   
-       ## nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=$Configuration"  -Properties "id=$PackageName" -NoPackageAnalysis -NoDefaultExcludes
-       dotnet pack $ProjectFile -p:NuspecFile=$NuspecFilePath -p:NuspecBasePath=$NuspecBasePath
+       nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=$Configuration"  -Properties "id=$PackageName" -NoPackageAnalysis -NoDefaultExcludes
+       ##dotnet pack $ProjectFile -p:NuspecFile=$NuspecFilePath -p:NuspecBasePath=$NuspecBasePath
     }
     if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**"){   
         Invoke-Execute {
