@@ -86,17 +86,11 @@ jobs:
       uses: nuget/setup-nuget@b2bc17b761a1d88cab755a776c7922eb26eefbfa # v1
       with:
         nuget-version: '5.x'
-    - name: Create NuGet package
-      working-directory: ./Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM    
+    - name: pack using nuget nuspec file
+      working-directory: ./Ed-Fi-Extensions/   
       shell: pwsh
       run: |
-        [int]$BuildCounter =  "${{ github.run_number }}"
-        [int]$BuildIncrementer = "${{ env.BUILD_INCREMENTER }}"
-        [int]$newRevision =  $BuildCounter + $BuildIncrementer
-        [string]$version = "${{env.INFORMATIONAL_VERSION}}"+ "." + $newRevision.ToString()
-        $packageOutput = "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/NugetPackages"
-        $AdminNuspecFilePath = "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.nuspec"
-        nuget pack $AdminNuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=release"  -Properties "id=EdFi.Suite3.Ods.Extensions.TPDM.Core.1.1.0" -Properties "authors=Ed-Fi Alliance" -Properties "owners=Ed-Fi Alliance" -Properties "copyright=Copyright ©Ed-Fi Alliance, LLC. 2020" -NoPackageAnalysis -NoDefaultExcludes
+        .\build.githubactions.ps1 pack -Configuration ${{ env.CONFIGURATION }} -PackageName "EdFi.Suite3.Ods.Extensions.TPDM.Core.1.1.0" -NuspecFilePath "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.nuspec"
     - name: Upload EdFi.Ods.Extensions.TPDM Artifact
       if: success()
       uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
