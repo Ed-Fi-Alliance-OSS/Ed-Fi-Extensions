@@ -52,9 +52,6 @@ param(
     $NuspecFilePath,
     
     [string]
-    $NuspecBasePath,
-
-    [string]
     $TestFilter
 
 )
@@ -140,6 +137,7 @@ function Pack {
         }
     }
     if ($NuspecFilePath -Like "*.nuspec" -and $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**"){   
+        Write-Host "NuspecFilePath flow semalai" $version 
        nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties "configuration=$Configuration"  -Properties "id=$PackageName" -NoPackageAnalysis -NoDefaultExcludes
     }
     if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName  -Like "EdFi.Suite3.Ods.Extensions.**"){   
