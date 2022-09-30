@@ -87,6 +87,7 @@ jobs:
       with:
         nuget-version: '5.x'
     - name: Create NuGet package
+      working-directory: ./Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM    
       shell: pwsh
       run: |
         [int]$BuildCounter =  "${{ github.run_number }}"
