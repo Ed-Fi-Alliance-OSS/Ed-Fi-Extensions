@@ -6,17 +6,13 @@
 name: Packages - EdFi.Ods.Extensions.TPDM
 
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'
         required: true
         default: 'warning'
+        
 env:
   INFORMATIONAL_VERSION: "6.1"
   BUILD_INCREMENTER: "4"
