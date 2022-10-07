@@ -131,27 +131,21 @@ function Compile {
 }
 
 function Pack {
-    # if ([string]::IsNullOrWhiteSpace($PackageName) -and [string]::IsNullOrWhiteSpace($NuspecFilePath)){
-    #     Invoke-Execute {
-    #         dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123
-    #     }
-    # }
+    if ([string]::IsNullOrWhiteSpace($PackageName) -and [string]::IsNullOrWhiteSpace($NuspecFilePath)){
+        Invoke-Execute {
+            dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123
+        }
+    }
     if ($NuspecFilePath -Like "*.nuspec" -and $PackageName -ne $null){
-        Get-Location
-        Write-Host "before nugetRoot "
         $nugetRoot = Split-Path -Path $NuspecFilePath -Parent
-        Write-Host "nugetRoot" $nugetRoot
-        Set-Location -Path $nugetRoot -PassThru
-        Write-Host "after nugetRoot "
-        Get-Location
-
+        Set-Location -Path $nugetRoot
         nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties id=$PackageName -NoPackageAnalysis -NoDefaultExcludes
     }
-    # if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName -ne $null){
-    #     Invoke-Execute {
-    #         dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123 -p:PackageId=$PackageName
-    #     }
-    # }
+    if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName -ne $null){
+        Invoke-Execute {
+            dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123 -p:PackageId=$PackageName
+        }
+    }
 }
 
 function Publish {
