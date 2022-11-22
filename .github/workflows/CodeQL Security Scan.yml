@@ -14,8 +14,9 @@ on:
       - main
 env:
   CONFIGURATION: "Release"
-  CURRENT_BRANCH: ${{ GITHUB.HEAD_REF }}
-  is_pull_request_branch: False
+  HEAD_REF:  ${{ GITHUB.HEAD_REF }}
+  REF_NAME:  ${{ GITHUB.REF_NAME }}
+  REPOSITORY_DISPATCH_BRANCH: ${{ github.event.client_payload.branch }}
 
 jobs:
   analyze:
@@ -49,32 +50,19 @@ jobs:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation
             path: Ed-Fi-ODS-Implementation/
       - name: Is pull request branch exists in Ed-Fi-ODS-Implementation
-        working-directory: ./Ed-Fi-ODS-Implementation/
-        shell: pwsh
+        working-directory: ./Ed-Fi-Extensions/
+        shell: powershell
         run: |
-            $patternName = 'refs/heads/' +  '${{ env.CURRENT_BRANCH }}'
-            $is_pull_request_branch = 'False'
-            $is_pull_request_branch = git ls-remote --heads origin ${{ env.CURRENT_BRANCH }} | Select-String -Pattern $patternName -SimpleMatch -Quiet
-            if ($is_pull_request_branch -eq $true) {
-              git fetch origin ${{ env.CURRENT_BRANCH }}
-              git checkout ${{ env.CURRENT_BRANCH }}
-            }
-      - name: Checkout Ed-Fi-ODS
+          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS-Implementation"      - name: Checkout Ed-Fi-ODS
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
         with:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS
             path: Ed-Fi-ODS/
       - name: Is pull request branch exists in Ed-Fi-ODS
-        working-directory: ./Ed-Fi-ODS/
-        shell: pwsh
+        working-directory: ./Ed-Fi-Extensions/
+        shell: powershell
         run: |
-            $patternName = 'refs/heads/' +  '${{ env.CURRENT_BRANCH }}'
-            $is_pull_request_branch = 'False'
-            $is_pull_request_branch = git ls-remote --heads origin ${{ env.CURRENT_BRANCH }} | Select-String -Pattern $patternName -SimpleMatch -Quiet
-            if ($is_pull_request_branch -eq $true) {
-              git fetch origin ${{ env.CURRENT_BRANCH }}
-              git checkout ${{ env.CURRENT_BRANCH }}
-            }
+          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS"  
       - name: Checkout Ed-Fi-Extensions
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
         with:
@@ -82,15 +70,9 @@ jobs:
             path: Ed-Fi-Extensions/
       - name: Is pull request branch exists in Ed-Fi-Extensions
         working-directory: ./Ed-Fi-Extensions/
-        shell: pwsh
+        shell: powershell
         run: |
-            $patternName = 'refs/heads/' +  '${{ env.CURRENT_BRANCH }}'
-            $is_pull_request_branch = 'False'
-            $is_pull_request_branch = git ls-remote --heads origin ${{ env.CURRENT_BRANCH }} | Select-String -Pattern $patternName -SimpleMatch -Quiet
-            if ($is_pull_request_branch -eq $true) {
-              git fetch origin ${{ env.CURRENT_BRANCH }}
-              git checkout ${{ env.CURRENT_BRANCH }}
-            }
+          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "."              
       - name: restore
         shell: pwsh
         working-directory: ./Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Homograph/
