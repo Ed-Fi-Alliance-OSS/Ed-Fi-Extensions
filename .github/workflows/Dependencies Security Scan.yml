@@ -41,6 +41,6 @@ jobs:
         working-directory: ./Ed-Fi-Extensions/
         shell: pwsh
         run: |
-        .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "."  
+          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "." 
       - name: Dependency Review ("Dependabot on PR")
         uses: actions/dependency-review-action@a9c83d3af6b9031e20feba03b904645bb23d1dab  # v1.0.2
