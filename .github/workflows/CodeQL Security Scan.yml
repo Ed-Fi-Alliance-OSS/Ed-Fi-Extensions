@@ -53,7 +53,7 @@ jobs:
         working-directory: ./Ed-Fi-ODS-Implementation/
         shell: powershell
         run: |
-          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS-Implementation"      - name: Checkout Ed-Fi-ODS
+          .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS-Implementation"
       - name: Checkout Ed-Fi-ODS          
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
         with:
