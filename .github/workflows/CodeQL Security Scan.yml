@@ -44,14 +44,19 @@ jobs:
           languages: 'csharp'
       - name: Support longpaths
         run: git config --system core.longpaths true
+      - name: Checkout Ed-Fi-Extensions
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
+        with:
+            repository: Ed-Fi-Alliance-OSS/Ed-Fi-Extensions
+            path: Ed-Fi-Extensions/
       - name: Checkout Ed-Fi-ODS-Implementation
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
         with:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation
             path: Ed-Fi-ODS-Implementation/
       - name: Is pull request branch exists in Ed-Fi-ODS-Implementation
-        working-directory: ./Ed-Fi-ODS-Implementation/
-        shell: powershell
+        working-directory: ./Ed-Fi-Extensions/
+        shell: pwsh
         run: |
           .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS-Implementation"
       - name: Checkout Ed-Fi-ODS          
@@ -60,18 +65,13 @@ jobs:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS
             path: Ed-Fi-ODS/
       - name: Is pull request branch exists in Ed-Fi-ODS
-        working-directory: ./Ed-Fi-ODS-Implementation/
-        shell: powershell
+        working-directory: ./Ed-Fi-Extensions/
+        shell: pwsh
         run: |
           .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS"  
-      - name: Checkout Ed-Fi-Extensions
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
-        with:
-            repository: Ed-Fi-Alliance-OSS/Ed-Fi-Extensions
-            path: Ed-Fi-Extensions/
       - name: Is pull request branch exists in Ed-Fi-Extensions
-        working-directory: ./Ed-Fi-ODS-Implementation/
-        shell: powershell
+        working-directory: ./Ed-Fi-Extensions/
+        shell: pwsh
         run: |
           .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "."              
       - name: restore
