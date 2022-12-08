@@ -9,6 +9,8 @@
     <PackageType>DotnetTool</PackageType>
 	  <PackAsTool>true</PackAsTool>
     <ToolCommandName>EdFi.Ods.Extensions.Homograph</ToolCommandName>	
+	  <OutputType>Exe</OutputType>
+	  <PackageId>EdFi.Suite3.Ods.Extensions.Homograph</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
