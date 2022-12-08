@@ -10,7 +10,9 @@
     <description>EdFi.Ods.Extensions.Homograph</description>
     <releaseNotes></releaseNotes>
     <license type="file">LICENSE.txt</license>
-	  <PackageType>DotnetTool</PackageType>  
+	  <packageTypes>
+		  <packageType name="DotnetTool" />
+	  </packageTypes>
   </metadata>
   <files>
     <file src="../../LICENSE.txt" />
