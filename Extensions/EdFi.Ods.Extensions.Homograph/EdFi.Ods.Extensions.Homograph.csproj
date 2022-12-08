@@ -7,6 +7,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Copyright>Copyright © 2019 Ed-Fi Alliance, LLC and Contributors</Copyright>
     <PackageType>DotnetTool</PackageType>
+	  <PackAsTool>true</PackAsTool>
+    <ToolCommandName>EdFi.Ods.Extensions.Homograph</ToolCommandName>	
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
