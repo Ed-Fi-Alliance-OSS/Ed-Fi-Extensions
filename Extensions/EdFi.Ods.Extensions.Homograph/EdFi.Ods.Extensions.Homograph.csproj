@@ -1,15 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>EdFi.Ods.Extensions.Homograph</RootNamespace>
+    <AssemblyVersion>0.0.0</AssemblyVersion>
     <AssemblyName>EdFi.Ods.Extensions.Homograph</AssemblyName>
+    <FileVersion>0.0.0</FileVersion>
+    <Authors>Ed-Fi Alliance</Authors>
+    <Company>Ed-Fi Alliance</Company>
+    <Product>EdFi.Ods.Extensions.Homograph</Product>
+    <ProductVersion>0.0.0</ProductVersion>
+    <Description>Code generation for the Ed-Fi ODS/API solution.</Description>
+    <PackageId>EdFi.Ods.CodeGen</PackageId>
+    <PackageProjectUrl>https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS/tree/master/Utilities/CodeGeneration</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <PackageType>DotnetTool</PackageType>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>EdFi.Ods.Extensions.Homograph</ToolCommandName>
     <RestorePackages>true</RestorePackages>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Copyright>Copyright © 2019 Ed-Fi Alliance, LLC and Contributors</Copyright>
-    <PackageType>DotnetTool</PackageType>
-	  <PackAsTool>true</PackAsTool>
-    <ToolCommandName>EdFi.Ods.Extensions.Homograph</ToolCommandName>	
-	  <PackageId>EdFi.Ods.Extensions.Homograph</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
