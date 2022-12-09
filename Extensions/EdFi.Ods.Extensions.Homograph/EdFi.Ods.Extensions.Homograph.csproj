@@ -9,9 +9,9 @@
     <Company>Ed-Fi Alliance</Company>
     <Product>EdFi.Ods.Extensions.Homograph</Product>
     <ProductVersion>0.0.0</ProductVersion>
-    <Description>Code generation for the Ed-Fi ODS/API solution.</Description>
-    <PackageId>EdFi.Ods.CodeGen</PackageId>
-    <PackageProjectUrl>https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS/tree/master/Utilities/CodeGeneration</PackageProjectUrl>
+    <Description>EdFi.Ods.Extensions.Homograph.</Description>
+    <PackageId>EdFi.Ods.Extensions.Homograph</PackageId>
+    <PackageProjectUrl>https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
     <PackageType>DotnetTool</PackageType>
