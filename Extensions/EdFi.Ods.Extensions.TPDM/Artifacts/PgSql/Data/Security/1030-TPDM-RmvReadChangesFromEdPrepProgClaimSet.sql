@@ -10,10 +10,14 @@ DECLARE claim_set_id int;
 DECLARE action_id int;
 
 BEGIN
-    -- Remove ReadChanges action from all the 'Education Preparation Program' permissions
-    SELECT ActionId INTO action_id FROM dbo.Actions WHERE ActionName = 'ReadChanges';
-    SELECT ClaimSetId INTO claim_set_id FROM dbo.ClaimSets WHERE ClaimSetName = 'Education Preparation Program';
+    IF EXISTS (SELECT 1 FROM dbo.Actions WHERE ActionName = 'ReadChanges') AND EXISTS (SELECT 1 FROM dbo.ClaimSets WHERE ClaimSetName = 'Education Preparation Program') THEN
+        -- Remove ReadChanges action from all the 'Education Preparation Program' permissions
+        SELECT ActionId INTO action_id FROM dbo.Actions WHERE ActionName = 'ReadChanges';
+        SELECT ClaimSetId INTO claim_set_id FROM dbo.ClaimSets WHERE ClaimSetName = 'Education Preparation Program';
 
-    DELETE FROM dbo.ClaimSetResourceClaimActions
-    WHERE ActionId = action_id AND ClaimSetId = claim_set_id;
+        IF EXISTS (SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = action_id AND ClaimSetId = claim_set_id) THEN
+            DELETE FROM dbo.ClaimSetResourceClaimActions
+            WHERE ActionId = action_id AND ClaimSetId = claim_set_id;
+        END IF;
+    END IF;
 END $$;
