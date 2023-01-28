@@ -7200,7 +7200,7 @@
         "schema": "sample",
         "name": "FK_ParentCTEProgram_Parent"
       },
-      "cardinality": "OneToOne",
+      "cardinality": "OneToZeroOrOne",
       "primaryEntityFullName": {
         "schema": "edfi",
         "name": "Parent"
