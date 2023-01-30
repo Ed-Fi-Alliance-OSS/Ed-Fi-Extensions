@@ -61,7 +61,7 @@ jobs:
       run: |
           $ErrorActionPreference = 'Stop'
           . $env:GITHUB_WORKSPACE/Ed-Fi-ODS-Implementation/Initialize-PowershellForDevelopment.ps1
-          Invoke-CodeGen -Engine SQLServer -ExtensionPaths  $env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Profiles.Sample
+          Invoke-CodeGen -Engine PostgreSQL -ExtensionPaths  $env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Profiles.Sample
     - name: Build
       working-directory: ./Ed-Fi-Extensions/
       run: |
