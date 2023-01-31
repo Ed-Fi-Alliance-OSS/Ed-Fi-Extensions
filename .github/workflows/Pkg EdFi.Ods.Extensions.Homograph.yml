@@ -105,7 +105,7 @@ jobs:
               Write-Warning "Microsoft.NuGet.CredentialProvider file '$fileName' not found."
               exit 0
           }
-          $packageFolder = (Join-Path ([IO.Path]::GetTempPath()) 'Microsoft.NuGet.CredentialProvider/'
+          $packageFolder = Join-Path ([IO.Path]::GetTempPath()) 'Microsoft.NuGet.CredentialProvider/'
           if ($fileName.EndsWith('.zip')) {
               Write-host "Extracting $fileName..."
               
