@@ -101,7 +101,7 @@ jobs:
           $webClient = New-Object System.Net.WebClient
           $webClient.DownloadFile($sourceUrl, $zipFilePath)
           Write-host "Download complete." 
-          if (-not (Test-Path $zipFilePath) {
+          if (-not (Test-Path $zipFilePath)) {
               Write-Warning "Microsoft.NuGet.CredentialProvider file '$fileName' not found."
               exit 0
           }
