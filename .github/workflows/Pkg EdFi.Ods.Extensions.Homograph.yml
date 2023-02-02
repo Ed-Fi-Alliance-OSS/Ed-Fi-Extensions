@@ -87,7 +87,7 @@ jobs:
         .\build.githubactions.ps1 MaximumPathLengthLimitation -Configuration ${{ env.CONFIGURATION }} -InformationalVersion ${{ env.INFORMATIONAL_VERSION}} -BuildCounter ${{ github.run_number }} -BuildIncrementer ${{env.BUILD_INCREMENTER}} -PackageName "EdFi.Suite3.Ods.Extensions.Homograph"
       shell: pwsh      
     - name: Install-credential-handler
-      working-directory: ./Ed-Fi-ODS-Implementation/
+      working-directory: ./Ed-Fi-Extensions/
       run: |
         .\build.githubactions.ps1 InstallCredentialHandler
       shell: pwsh     
