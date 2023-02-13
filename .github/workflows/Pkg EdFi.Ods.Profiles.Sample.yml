@@ -9,6 +9,8 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]      
   workflow_dispatch:
 
 env:
@@ -56,7 +58,25 @@ jobs:
       working-directory: ./Ed-Fi-Extensions/
       shell: pwsh
       run: |
-        .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS"          
+        .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS"   
+    - name: Cache Nuget packages       
+      uses: actions/cache@627f0f41f6904a5b1efbaed9f96d9eb58e92e920 #v3.2.4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/EdFi.Ods.Profiles.Sample.csproj') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-                
+    - name: Run CodeGen
+      run: |
+          $ErrorActionPreference = 'Stop'
+          . $env:GITHUB_WORKSPACE/Ed-Fi-ODS-Implementation/Initialize-PowershellForDevelopment.ps1
+          Invoke-CodeGen -Engine PostgreSQL -ExtensionPaths  $env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Profiles.Sample
+      shell: pwsh
+    - name: Restore
+      working-directory: ./Ed-Fi-Extensions/
+      run: |
+        .\build.githubactions.ps1 restore -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Profiles.Sample/EdFi.Ods.Profiles.Sample.csproj"
+      shell: pwsh      
     - name: Build
       working-directory: ./Ed-Fi-Extensions/
       run: |
