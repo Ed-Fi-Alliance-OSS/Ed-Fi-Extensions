@@ -70,7 +70,7 @@ jobs:
       uses: actions/cache@627f0f41f6904a5b1efbaed9f96d9eb58e92e920 #v3.2.4
       with:
         path: ~/.nuget/packages
-        key: ${{ runner.os }}-nuget-${{ hashFiles('**/EdFi.Ods.Extensions.TPDM.csproj') }}
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj*') }}
         restore-keys: |
           ${{ runner.os }}-nuget-         
     - name: Run CodeGen
