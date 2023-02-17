@@ -66,13 +66,17 @@ jobs:
       shell: pwsh
       run: |
         .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS"
-    - name: Cache Nuget packages       
+    - name: Restore NuGet packages
+      shell: pwsh
+      run: |    
+         dotnet restore "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.Homograph/EdFi.Ods.Extensions.Homograph.csproj"  --verbosity:normal
+      env:
+        CACHE_NAME: cache-nuget-${{ hashFiles('**/project.lock.json') }}
       uses: actions/cache@627f0f41f6904a5b1efbaed9f96d9eb58e92e920 #v3.2.4
       with:
         path: ~/.nuget/packages
-        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj*') }}
-        restore-keys: |
-          ${{ runner.os }}-nuget-                
+        key: ${{ env.CACHE_NAME }}
+        restore-keys: cache-nuget-                   
     - name: Run CodeGen
       run: |
           $ErrorActionPreference = 'Stop'
