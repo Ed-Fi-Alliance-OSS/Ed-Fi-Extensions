@@ -126,7 +126,7 @@ function DotnetClean {
 }
 
 function Restore {
-    Invoke-Execute { dotnet restore  $Solution -v q }
+    Invoke-Execute { dotnet restore  $Solution --verbosity:normal }
 }
 
 function Compile {
