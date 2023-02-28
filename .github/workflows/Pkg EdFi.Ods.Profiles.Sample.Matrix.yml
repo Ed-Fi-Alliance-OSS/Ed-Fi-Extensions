@@ -40,7 +40,6 @@ jobs:
       run: |
         $json = @('6.0.100', '6.0.200', '6.0.300') | ConvertTo-Json
         echo "version=$json" >> $GITHUB_OUTPUT
-        echo "StandardVersions=$json" >> $Env:GITHUB_ENV        
       shell: pwsh      
     - name: read version
       run: |
