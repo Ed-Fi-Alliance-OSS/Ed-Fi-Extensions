@@ -39,7 +39,7 @@ jobs:
       id: set_version
       run: |
        ## $json = @('6.0.100', '6.0.200', '6.0.300') | ConvertTo-Json
-        echo "version=[6.0.100, 6.0.200, 6.0.300]" >> $GITHUB_OUTPUT
+        echo "version=[6.0.100, 6.0.200, 6.0.300]" >> $env:GITHUB_OUTPUT
         Write-Host "dotnet-version:" ${{ steps.set_version.outputs.version }}   
       shell: pwsh
   build:
