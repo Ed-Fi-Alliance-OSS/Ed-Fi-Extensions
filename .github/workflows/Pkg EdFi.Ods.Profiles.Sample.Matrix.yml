@@ -37,7 +37,14 @@ jobs:
           path: Ed-Fi-Extensions/   
     - name: Set version
       id: set_version
-      run: echo "::set-output name=version::[6.0.100, 6.0.200, 6.0.300]"
+      run: |
+        $json = @(6.0.100, 6.0.200, 6.0.300) | ConvertTo-Json
+        echo "version=$json" >> $GITHUB_OUTPUT
+      shell: pwsh      
+    - name: read version
+      run: |
+        Write-Host "Build Succeeded" ${{ steps.set_version.outputs.version }}
+      shell: pwsh
 
   build:
     if: ${{ always() }}
