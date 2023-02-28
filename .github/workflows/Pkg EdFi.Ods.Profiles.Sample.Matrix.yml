@@ -38,8 +38,8 @@ jobs:
     - name: Set version
       id: set_version
       run: |
-        ##$json = @('6.0.100', '6.0.200', '6.0.300') | ConvertTo-Json
-        echo "version=[6.0.100, 6.0.200, 6.0.300]" >> $env:GITHUB_OUTPUT
+        $json = @(100, 200, 300) | ConvertTo-Json
+        echo "version=$json" >> $env:GITHUB_OUTPUT
         Write-Host "dotnet-version:" ${{ steps.set_version.outputs.version }}   
       shell: pwsh
   build:
@@ -53,7 +53,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@c0d4ad69d8bd405d234f1c9166d383b7a4f69ed8 # v2.1.0
       with:
-        dotnet-version: ${{ matrix.dotnet-version }}
+        dotnet-version: 6.0.${{ matrix.dotnet-version }}
     - name: Checkout Ed-Fi-Extensions
       uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
       with:
