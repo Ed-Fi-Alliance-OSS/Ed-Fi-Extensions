@@ -8,7 +8,6 @@
     <projectUrl>https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>EdFi.Ods.Extensions.TPDM.Core</description>
-    <copyright>Copyright © 2021 Ed-Fi Alliance, LLC and Contributors</copyright>
     <releaseNotes></releaseNotes>
     <license type="file">LICENSE.txt</license>
   </metadata>
