@@ -7,7 +7,7 @@
 param(
     # Command to execute, defaults to "Build".
     [string]
-    [ValidateSet("DotnetClean", "Restore", "Build", "Test", "Pack", "Publish", "CheckoutBranch","MaximumPathLengthLimitation","InstallCredentialHandler")]
+    [ValidateSet("DotnetClean", "Restore", "Build", "Test", "Pack", "Publish", "CheckoutBranch", "MaximumPathLengthLimitation", "InstallCredentialHandler", "ExtensionVersions")]
     $Command = "Build",
 
     [switch] $SelfContained,
@@ -55,19 +55,25 @@ param(
     $NuspecFilePath,
 
     [string]
-    $RelativeRepoPath
+    $RelativeRepoPath,
+
+    [string]
+    $StandardVersion,
+
+    [string]
+    $ExtensionVersion
 )
-
-$ErrorActionPreference = 'Stop'
-
-$error.Clear()
-
-& "$PSScriptRoot/../Ed-Fi-ODS-Implementation/logistics/scripts/modules/load-path-resolver.ps1"
 
 $newRevision = ([int]$BuildCounter) + ([int]$BuildIncrementer)
 $version = "$InformationalVersion.$newRevision"
 $packageOutput = "$PSScriptRoot/NugetPackages"
-$packagePath = "$packageOutput/$PackageName.$version.nupkg"
+
+if ($PackageName.Contains(".Extensions.")) { 
+    $packagePath = "$packageOutput/$PackageName.$ExtensionVersion.Standard.$StandardVersion.$version.nupkg"
+}
+else{
+    $packagePath = "$packageOutput/$PackageName.$version.nupkg"
+}
 
 if ([string]::IsNullOrWhiteSpace($Solution)){
     $Solution =$ProjectFile
@@ -142,10 +148,20 @@ function Pack {
             dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --no-restore --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123
         }
     }
-    if ($NuspecFilePath -Like "*.nuspec" -and $PackageName -ne $null){
-       nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties id=$PackageName -NoPackageAnalysis -NoDefaultExcludes
+    if ($NuspecFilePath -Like "*.nuspec" -and $null -ne $PackageName ){
+
+        if ($PackageName.Contains(".Extensions.")) { 
+            $RevisedPackageName = "$PackageName.$ExtensionVersion.Standard.$StandardVersion"
+            Write-Host "Updating package id and description to $RevisedPackageName"
+            (Get-Content -path $NuspecFilePath -Raw) | ForEach-Object {
+                $_.replace("<id>$PackageName</id>","<id>$RevisedPackageName</id>").replace("<description>$PackageName</description>","<description>$RevisedPackageName</description>")
+            } | Set-Content -Path $NuspecFilePath
+            nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties standardversion=$StandardVersion -Properties extensionversion=$ExtensionVersion -NoPackageAnalysis -NoDefaultExcludes
+            return;
+        }
+        nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -NoPackageAnalysis -NoDefaultExcludes
     }
-    if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $PackageName -ne $null){
+    if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $null -ne $PackageName){
         Invoke-Execute {
             dotnet pack $ProjectFile -c $Configuration --output $packageOutput --no-build --no-restore --verbosity normal -p:VersionPrefix=$version -p:NoWarn=NU5123 -p:PackageId=$PackageName
         }
@@ -219,11 +235,18 @@ function CheckoutBranch {
 
 function MaximumPathLengthLimitation {
 
+    $ErrorActionPreference = 'Stop'
+
+    $error.Clear()
+
+    & "$PSScriptRoot/../Ed-Fi-ODS-Implementation/logistics/scripts/modules/load-path-resolver.ps1"
+
     $pluginParentFolderPath = (Get-RepositoryResolvedPath "Plugin/")
-    $desinationPath = "$pluginParentFolderPath/$PackageName.$version.zip"
+    $extensionFolderName = $PackageName.Replace('EdFi.Suite3.Ods.','')
+    $desinationPath = "$pluginParentFolderPath/$extensionFolderName.zip"
     Copy-Item -Path $packagePath -Destination $desinationPath -Recurse -Force -PassThru
     if (Test-Path $desinationPath) {
-      Expand-Archive -Force -Path $desinationPath -DestinationPath "$pluginParentFolderPath/$PackageName.$version/"
+      Expand-Archive -Force -Path $desinationPath -DestinationPath "$pluginParentFolderPath/$extensionFolderName/"
     }
     Remove-Item -Path $desinationPath -Force
     $baseRootPathLength = (Get-RepositoryRoot "Ed-Fi-ODS-Implementation").Length - ("Ed-Fi-ODS-Implementation".Length)
@@ -254,7 +277,6 @@ function MaximumPathLengthLimitation {
 }
 
 function InstallCredentialHandler {
-         Import-Module -Force -Scope Global "$PSScriptRoot/../Ed-Fi-ODS-Implementation/logistics/scripts/modules/utility/cross-platform.psm1"
          if (Get-IsWindows -and -not Get-InstalledModule | Where-Object -Property Name -eq "7Zip4Powershell") {
               Install-Module -Force -Scope CurrentUser -Name 7Zip4Powershell
          }
@@ -279,6 +301,36 @@ function InstallCredentialHandler {
               Write-Host "Extracted to: ~\.nuget\plugins\" -ForegroundColor Green
           }
 
+}
+
+function Get-IsWindows {
+    <#
+    .SYNOPSIS
+        Checks to see if the current machine is a Windows machine.
+    .EXAMPLE
+        Get-IsWindows returns $True
+    #>
+    if ($null -eq $IsWindows) {
+        # This section will only trigger when the automatic $IsWindows variable is not detected.
+        # Every version of PS released on Linux contains this variable so it will always exist.
+        # $IsWindows does not exist pre PS 6.
+        return $true
+    }
+    return $IsWindows
+}
+
+function ExtensionVersions {
+
+    $extensionProjectDirectory = Split-Path $Solution  -Resolve
+    $extensionProjectPath = Join-Path $extensionProjectDirectory "/Versions/"
+    $versions = Get-ChildItem -Path $extensionProjectPath -Directory -Force -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name
+    if ($versions.Count -eq 1) {
+        $extensionVersions = "[`"$($versions)`"]" 
+    }
+    else {
+        $extensionVersions = $versions | ConvertTo-Json
+    }
+    return $extensionVersions
 }
 
 function Invoke-Build {
@@ -315,6 +367,10 @@ function Invoke-MaximumPathLengthLimitation {
     Invoke-Step { MaximumPathLengthLimitation }
 }
 
+function Invoke-ExtensionVersions {
+    Invoke-Step { ExtensionVersions }
+}
+
 Invoke-Main {
     switch ($Command) {
         DotnetClean { Invoke-DotnetClean }
@@ -326,6 +382,7 @@ Invoke-Main {
         CheckoutBranch { Invoke-CheckoutBranch }
         MaximumPathLengthLimitation { Invoke-MaximumPathLengthLimitation }
         InstallCredentialHandler { Invoke-InstallCredentialHandler }
+        ExtensionVersions { Invoke-ExtensionVersions }        
         default { throw "Command '$Command' is not recognized" }
     }
 }
