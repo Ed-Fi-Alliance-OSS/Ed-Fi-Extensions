@@ -145,9 +145,11 @@ function Pack {
     if ($NuspecFilePath -Like "*.nuspec" -and $null -ne $PackageName ){
 
         Write-Host "Updating package id and description to $PackageName"
-        (Get-Content -path $NuspecFilePath -Raw) | ForEach-Object {
-                $_.replace('<id>.*</id>',"<id>$PackageName</id>").replace("<description>.*</description>","<description>$PackageName</description>")
-        } | Set-Content -Path $NuspecFilePath
+
+        $xml = [xml](Get-Content $NuspecFilePath)
+        $xml.package.metadata.id = $PackageName
+        $xml.package.metadata.description = $PackageName
+        $xml.Save($NuspecFilePath)
         nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties standardversion=$StandardVersion -Properties extensionversion=$ExtensionVersion -NoPackageAnalysis -NoDefaultExcludes
         
     }
