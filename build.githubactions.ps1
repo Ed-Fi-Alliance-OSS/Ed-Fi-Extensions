@@ -323,13 +323,8 @@ function ExtensionVersions {
 
     $extensionProjectDirectory = Split-Path $Solution  -Resolve
     $extensionProjectPath = Join-Path $extensionProjectDirectory "/Versions/"
-    $versions = Get-ChildItem -Path $extensionProjectPath -Directory -Force -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name
-    if ($versions.Count -eq 1) {
-        $extensionVersions = "[`"$($versions)`"]" 
-    }
-    else {
-        $extensionVersions = $versions | ConvertTo-Json
-    }
+    $versions = (Get-ChildItem -Path $extensionProjectPath -Directory -Force -ErrorAction SilentlyContinue | Select -ExpandProperty Name | %{ "'" + $_ + "'" }) -Join ','
+    $extensionVersions = "[$versions]"      
     return $extensionVersions
 }
 
