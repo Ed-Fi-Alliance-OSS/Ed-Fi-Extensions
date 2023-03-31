@@ -143,7 +143,7 @@ jobs:
     - name: Maximum Path Length Limitation Check
       working-directory: ./Ed-Fi-Extensions/
       run: |
-        .\build.githubactions.ps1 MaximumPathLengthLimitation -Configuration ${{ env.CONFIGURATION }} -InformationalVersion ${{ env.INFORMATIONAL_VERSION}} -BuildCounter ${{ github.run_number }} -BuildIncrementer ${{env.BUILD_INCREMENTER}} -PackageName "EdFi.Suite3.Ods.Extensions.Homograph" -ExtensionVersion ${{ matrix.ExtensionVersion }} -StandardVersion ${{ matrix.StandardVersion }}
+        .\build.githubactions.ps1 MaximumPathLengthLimitation  -InformationalVersion ${{ env.INFORMATIONAL_VERSION}} -BuildCounter ${{ github.run_number }} -BuildIncrementer ${{env.BUILD_INCREMENTER}} -PackageName "EdFi.Suite3.Ods.Extensions.Homograph.${{ matrix.ExtensionVersion }}.Standard.${{ matrix.StandardVersion }}"
       shell: pwsh      
     - name: Install-credential-handler
       working-directory: ./Ed-Fi-Extensions/

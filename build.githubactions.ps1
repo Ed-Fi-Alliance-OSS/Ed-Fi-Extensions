@@ -235,6 +235,7 @@ function MaximumPathLengthLimitation {
 
     $pluginParentFolderPath = (Get-RepositoryResolvedPath "Plugin/")
     $extensionFolderName = $PackageName.Replace('EdFi.Suite3.Ods.','')
+    $extensionFolderName = $extensionFolderName -replace "^.*?(Extensions\.[^\.]+).*", '$1'
     $desinationPath = "$pluginParentFolderPath/$extensionFolderName.zip"
     Copy-Item -Path $packagePath -Destination $desinationPath -Recurse -Force -PassThru
     if (Test-Path $desinationPath) {
