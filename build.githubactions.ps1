@@ -67,13 +67,7 @@ param(
 $newRevision = ([int]$BuildCounter) + ([int]$BuildIncrementer)
 $version = "$InformationalVersion.$newRevision"
 $packageOutput = "$PSScriptRoot/NugetPackages"
-
-if ($PackageName.Contains(".Extensions.")) { 
-    $packagePath = "$packageOutput/$PackageName.$ExtensionVersion.Standard.$StandardVersion.$version.nupkg"
-}
-else{
-    $packagePath = "$packageOutput/$PackageName.$version.nupkg"
-}
+$packagePath = "$packageOutput/$PackageName.$version.nupkg"
 
 if ([string]::IsNullOrWhiteSpace($Solution)){
     $Solution =$ProjectFile
@@ -150,16 +144,12 @@ function Pack {
     }
     if ($NuspecFilePath -Like "*.nuspec" -and $null -ne $PackageName ){
 
-        if ($PackageName.Contains(".Extensions.")) { 
-            $RevisedPackageName = "$PackageName.$ExtensionVersion.Standard.$StandardVersion"
-            Write-Host "Updating package id and description to $RevisedPackageName"
-            (Get-Content -path $NuspecFilePath -Raw) | ForEach-Object {
-                $_.replace("<id>$PackageName</id>","<id>$RevisedPackageName</id>").replace("<description>$PackageName</description>","<description>$RevisedPackageName</description>")
-            } | Set-Content -Path $NuspecFilePath
-            nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties standardversion=$StandardVersion -Properties extensionversion=$ExtensionVersion -NoPackageAnalysis -NoDefaultExcludes
-            return;
-        }
-        nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -NoPackageAnalysis -NoDefaultExcludes
+        Write-Host "Updating package id and description to $PackageName"
+        (Get-Content -path $NuspecFilePath -Raw) | ForEach-Object {
+                $_.replace('<id>.*</id>',"<id>$PackageName</id>").replace("<description>.*</description>","<description>$PackageName</description>")
+        } | Set-Content -Path $NuspecFilePath
+        nuget pack $NuspecFilePath -OutputDirectory $packageOutput -Version $version -Properties configuration=$Configuration -Properties standardversion=$StandardVersion -Properties extensionversion=$ExtensionVersion -NoPackageAnalysis -NoDefaultExcludes
+        
     }
     if ([string]::IsNullOrWhiteSpace($NuspecFilePath) -and $null -ne $PackageName){
         Invoke-Execute {
