@@ -829,7 +829,7 @@ INSERT INTO sample.StudentContactAssociationPagesRead
     , PagesRead)
 VALUES (contact777777Usi, student605614Usi, 567.8);
 
-INSERT INTO sample.studentContactassociationstaffeducationorganizationemploy_c4af0c
+INSERT INTO sample.studentcontactassociationstaffeducationorganizationemplo_a92b1d
     (ContactUSI
     , StudentUSI
     , EducationOrganizationId
