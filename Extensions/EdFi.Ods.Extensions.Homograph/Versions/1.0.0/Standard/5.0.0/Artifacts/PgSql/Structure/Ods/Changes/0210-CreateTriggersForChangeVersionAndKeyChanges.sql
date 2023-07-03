@@ -10,8 +10,8 @@ CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON homograph.name
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 END IF;
 
-IF NOT EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'updatechangeversion' AND event_object_schema = 'homograph' AND event_object_table = 'parent') THEN
-CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON homograph.parent
+IF NOT EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'updatechangeversion' AND event_object_schema = 'homograph' AND event_object_table = 'contact') THEN
+CREATE TRIGGER UpdateChangeVersion BEFORE UPDATE ON homograph.contact
     FOR EACH ROW EXECUTE PROCEDURE changes.UpdateChangeVersion();
 END IF;
 

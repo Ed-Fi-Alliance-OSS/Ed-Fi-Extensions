@@ -17,41 +17,41 @@ ALTER TABLE homograph.Name ALTER COLUMN CreateDate SET DEFAULT current_timestamp
 ALTER TABLE homograph.Name ALTER COLUMN Id SET DEFAULT gen_random_uuid();
 ALTER TABLE homograph.Name ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table homograph.Parent --
-CREATE TABLE homograph.Parent (
-    ParentFirstName VARCHAR(75) NOT NULL,
-    ParentLastSurname VARCHAR(75) NOT NULL,
+-- Table homograph.Contact --
+CREATE TABLE homograph.Contact (
+    ContactFirstName VARCHAR(75) NOT NULL,
+    ContactLastSurname VARCHAR(75) NOT NULL,
     Discriminator VARCHAR(128) NULL,
     CreateDate TIMESTAMP NOT NULL,
     LastModifiedDate TIMESTAMP NOT NULL,
     Id UUID NOT NULL,
-    CONSTRAINT Parent_PK PRIMARY KEY (ParentFirstName, ParentLastSurname)
+    CONSTRAINT Contact_PK PRIMARY KEY (ContactFirstName, ContactLastSurname)
 ); 
-ALTER TABLE homograph.Parent ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
-ALTER TABLE homograph.Parent ALTER COLUMN Id SET DEFAULT gen_random_uuid();
-ALTER TABLE homograph.Parent ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
+ALTER TABLE homograph.Contact ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE homograph.Contact ALTER COLUMN Id SET DEFAULT gen_random_uuid();
+ALTER TABLE homograph.Contact ALTER COLUMN LastModifiedDate SET DEFAULT current_timestamp;
 
--- Table homograph.ParentAddress --
-CREATE TABLE homograph.ParentAddress (
+-- Table homograph.ContactAddress --
+CREATE TABLE homograph.ContactAddress (
     City VARCHAR(30) NOT NULL,
-    ParentFirstName VARCHAR(75) NOT NULL,
-    ParentLastSurname VARCHAR(75) NOT NULL,
+    ContactFirstName VARCHAR(75) NOT NULL,
+    ContactLastSurname VARCHAR(75) NOT NULL,
     CreateDate TIMESTAMP NOT NULL,
-    CONSTRAINT ParentAddress_PK PRIMARY KEY (City, ParentFirstName, ParentLastSurname)
+    CONSTRAINT ContactAddress_PK PRIMARY KEY (City, ContactFirstName, ContactLastSurname)
 ); 
-ALTER TABLE homograph.ParentAddress ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE homograph.ContactAddress ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
--- Table homograph.ParentStudentSchoolAssociation --
-CREATE TABLE homograph.ParentStudentSchoolAssociation (
-    ParentFirstName VARCHAR(75) NOT NULL,
-    ParentLastSurname VARCHAR(75) NOT NULL,
+-- Table homograph.ContactStudentSchoolAssociation --
+CREATE TABLE homograph.ContactStudentSchoolAssociation (
+    ContactFirstName VARCHAR(75) NOT NULL,
+    ContactLastSurname VARCHAR(75) NOT NULL,
     SchoolName VARCHAR(100) NOT NULL,
     StudentFirstName VARCHAR(75) NOT NULL,
     StudentLastSurname VARCHAR(75) NOT NULL,
     CreateDate TIMESTAMP NOT NULL,
-    CONSTRAINT ParentStudentSchoolAssociation_PK PRIMARY KEY (ParentFirstName, ParentLastSurname, SchoolName, StudentFirstName, StudentLastSurname)
+    CONSTRAINT ContactStudentSchoolAssociation_PK PRIMARY KEY (ContactFirstName, ContactLastSurname, SchoolName, StudentFirstName, StudentLastSurname)
 ); 
-ALTER TABLE homograph.ParentStudentSchoolAssociation ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
+ALTER TABLE homograph.ContactStudentSchoolAssociation ALTER COLUMN CreateDate SET DEFAULT current_timestamp;
 
 -- Table homograph.School --
 CREATE TABLE homograph.School (

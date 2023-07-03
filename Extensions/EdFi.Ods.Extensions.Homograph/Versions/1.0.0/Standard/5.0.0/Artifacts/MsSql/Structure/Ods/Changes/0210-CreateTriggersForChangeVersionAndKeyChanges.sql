@@ -16,15 +16,15 @@ BEGIN
 END	
 GO
 
-DROP TRIGGER IF EXISTS [homograph].[homograph_Parent_TR_UpdateChangeVersion]
+DROP TRIGGER IF EXISTS [homograph].[homograph_Contact_TR_UpdateChangeVersion]
 GO
 
-CREATE TRIGGER [homograph].[homograph_Parent_TR_UpdateChangeVersion] ON [homograph].[Parent] AFTER UPDATE AS
+CREATE TRIGGER [homograph].[homograph_Contact_TR_UpdateChangeVersion] ON [homograph].[Contact] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE [homograph].[Parent]
+    UPDATE [homograph].[Contact]
     SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
-    FROM [homograph].[Parent] u
+    FROM [homograph].[Contact] u
     WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO

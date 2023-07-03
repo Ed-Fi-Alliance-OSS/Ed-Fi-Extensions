@@ -25,24 +25,24 @@ CREATE TRIGGER TrackDeletes AFTER DELETE ON homograph.name
     FOR EACH ROW EXECUTE PROCEDURE tracked_changes_homograph.name_deleted();
 END IF;
 
-CREATE OR REPLACE FUNCTION tracked_changes_homograph.parent_deleted()
+CREATE OR REPLACE FUNCTION tracked_changes_homograph.contact_deleted()
     RETURNS trigger AS
 $BODY$
 BEGIN
-    INSERT INTO tracked_changes_homograph.parent(
-        oldparentfirstname, oldparentlastsurname,
+    INSERT INTO tracked_changes_homograph.contact(
+        oldcontactfirstname, oldcontactlastsurname,
         id, discriminator, changeversion)
     VALUES (
-        OLD.parentfirstname, OLD.parentlastsurname, 
+        OLD.contactfirstname, OLD.contactlastsurname, 
         OLD.id, OLD.discriminator, nextval('changes.changeversionsequence'));
 
     RETURN NULL;
 END;
 $BODY$ LANGUAGE plpgsql;
 
-IF NOT EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'trackdeletes' AND event_object_schema = 'homograph' AND event_object_table = 'parent') THEN
-CREATE TRIGGER TrackDeletes AFTER DELETE ON homograph.parent 
-    FOR EACH ROW EXECUTE PROCEDURE tracked_changes_homograph.parent_deleted();
+IF NOT EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'trackdeletes' AND event_object_schema = 'homograph' AND event_object_table = 'contact') THEN
+CREATE TRIGGER TrackDeletes AFTER DELETE ON homograph.contact 
+    FOR EACH ROW EXECUTE PROCEDURE tracked_changes_homograph.contact_deleted();
 END IF;
 
 CREATE OR REPLACE FUNCTION tracked_changes_homograph.school_deleted()

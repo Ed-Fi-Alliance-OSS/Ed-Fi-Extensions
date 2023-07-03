@@ -20,18 +20,18 @@ CREATE TABLE [tracked_changes_homograph].[Name]
        CreateDate DateTime2 NOT NULL DEFAULT (getutcdate()),
        CONSTRAINT PK_Name PRIMARY KEY CLUSTERED (ChangeVersion)
 )
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE object_id = OBJECT_ID(N'[tracked_changes_homograph].[Parent]'))
-CREATE TABLE [tracked_changes_homograph].[Parent]
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE object_id = OBJECT_ID(N'[tracked_changes_homograph].[Contact]'))
+CREATE TABLE [tracked_changes_homograph].[Contact]
 (
-       OldParentFirstName [NVARCHAR](75) NOT NULL,
-       OldParentLastSurname [NVARCHAR](75) NOT NULL,
-       NewParentFirstName [NVARCHAR](75) NULL,
-       NewParentLastSurname [NVARCHAR](75) NULL,
+       OldContactFirstName [NVARCHAR](75) NOT NULL,
+       OldContactLastSurname [NVARCHAR](75) NOT NULL,
+       NewContactFirstName [NVARCHAR](75) NULL,
+       NewContactLastSurname [NVARCHAR](75) NULL,
        Id uniqueidentifier NOT NULL,
        ChangeVersion bigint NOT NULL,
        Discriminator [NVARCHAR](128) NULL,
        CreateDate DateTime2 NOT NULL DEFAULT (getutcdate()),
-       CONSTRAINT PK_Parent PRIMARY KEY CLUSTERED (ChangeVersion)
+       CONSTRAINT PK_Contact PRIMARY KEY CLUSTERED (ChangeVersion)
 )
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE object_id = OBJECT_ID(N'[tracked_changes_homograph].[School]'))
 CREATE TABLE [tracked_changes_homograph].[School]

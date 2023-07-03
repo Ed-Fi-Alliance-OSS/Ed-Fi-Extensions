@@ -24,61 +24,61 @@ GO
 ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [homograph].[Parent] --
-CREATE TABLE [homograph].[Parent] (
-    [ParentFirstName] [NVARCHAR](75) NOT NULL,
-    [ParentLastSurname] [NVARCHAR](75) NOT NULL,
+-- Table [homograph].[Contact] --
+CREATE TABLE [homograph].[Contact] (
+    [ContactFirstName] [NVARCHAR](75) NOT NULL,
+    [ContactLastSurname] [NVARCHAR](75) NOT NULL,
     [Discriminator] [NVARCHAR](128) NULL,
     [CreateDate] [DATETIME2] NOT NULL,
     [LastModifiedDate] [DATETIME2] NOT NULL,
     [Id] [UNIQUEIDENTIFIER] NOT NULL,
-    CONSTRAINT [Parent_PK] PRIMARY KEY CLUSTERED (
-        [ParentFirstName] ASC,
-        [ParentLastSurname] ASC
+    CONSTRAINT [Contact_PK] PRIMARY KEY CLUSTERED (
+        [ContactFirstName] ASC,
+        [ContactLastSurname] ASC
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [homograph].[Parent] ADD CONSTRAINT [Parent_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [homograph].[Contact] ADD CONSTRAINT [Contact_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
-ALTER TABLE [homograph].[Parent] ADD CONSTRAINT [Parent_DF_Id] DEFAULT (newid()) FOR [Id]
+ALTER TABLE [homograph].[Contact] ADD CONSTRAINT [Contact_DF_Id] DEFAULT (newid()) FOR [Id]
 GO
-ALTER TABLE [homograph].[Parent] ADD CONSTRAINT [Parent_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
+ALTER TABLE [homograph].[Contact] ADD CONSTRAINT [Contact_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
--- Table [homograph].[ParentAddress] --
-CREATE TABLE [homograph].[ParentAddress] (
+-- Table [homograph].[ContactAddress] --
+CREATE TABLE [homograph].[ContactAddress] (
     [City] [NVARCHAR](30) NOT NULL,
-    [ParentFirstName] [NVARCHAR](75) NOT NULL,
-    [ParentLastSurname] [NVARCHAR](75) NOT NULL,
+    [ContactFirstName] [NVARCHAR](75) NOT NULL,
+    [ContactLastSurname] [NVARCHAR](75) NOT NULL,
     [CreateDate] [DATETIME2] NOT NULL,
-    CONSTRAINT [ParentAddress_PK] PRIMARY KEY CLUSTERED (
+    CONSTRAINT [ContactAddress_PK] PRIMARY KEY CLUSTERED (
         [City] ASC,
-        [ParentFirstName] ASC,
-        [ParentLastSurname] ASC
+        [ContactFirstName] ASC,
+        [ContactLastSurname] ASC
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [homograph].[ParentAddress] ADD CONSTRAINT [ParentAddress_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [homograph].[ContactAddress] ADD CONSTRAINT [ContactAddress_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
--- Table [homograph].[ParentStudentSchoolAssociation] --
-CREATE TABLE [homograph].[ParentStudentSchoolAssociation] (
-    [ParentFirstName] [NVARCHAR](75) NOT NULL,
-    [ParentLastSurname] [NVARCHAR](75) NOT NULL,
+-- Table [homograph].[ContactStudentSchoolAssociation] --
+CREATE TABLE [homograph].[ContactStudentSchoolAssociation] (
+    [ContactFirstName] [NVARCHAR](75) NOT NULL,
+    [ContactLastSurname] [NVARCHAR](75) NOT NULL,
     [SchoolName] [NVARCHAR](100) NOT NULL,
     [StudentFirstName] [NVARCHAR](75) NOT NULL,
     [StudentLastSurname] [NVARCHAR](75) NOT NULL,
     [CreateDate] [DATETIME2] NOT NULL,
-    CONSTRAINT [ParentStudentSchoolAssociation_PK] PRIMARY KEY CLUSTERED (
-        [ParentFirstName] ASC,
-        [ParentLastSurname] ASC,
+    CONSTRAINT [ContactStudentSchoolAssociation_PK] PRIMARY KEY CLUSTERED (
+        [ContactFirstName] ASC,
+        [ContactLastSurname] ASC,
         [SchoolName] ASC,
         [StudentFirstName] ASC,
         [StudentLastSurname] ASC
     ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [homograph].[ParentStudentSchoolAssociation] ADD CONSTRAINT [ParentStudentSchoolAssociation_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+ALTER TABLE [homograph].[ContactStudentSchoolAssociation] ADD CONSTRAINT [ContactStudentSchoolAssociation_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
 GO
 
 -- Table [homograph].[School] --

@@ -11,8 +11,8 @@ BEGIN TRANSACTION
 COMMIT
 
 BEGIN TRANSACTION
-    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'homograph.Parent') AND name = N'UX_Parent_Id')
-    CREATE UNIQUE NONCLUSTERED INDEX UX_Parent_Id ON [homograph].[Parent]
+    IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'homograph.Contact') AND name = N'UX_Contact_Id')
+    CREATE UNIQUE NONCLUSTERED INDEX UX_Contact_Id ON [homograph].[Contact]
     (Id) WITH (PAD_INDEX = ON, FILLFACTOR = 75, STATISTICS_NORECOMPUTE = OFF) ON [PRIMARY]
     GO
 COMMIT

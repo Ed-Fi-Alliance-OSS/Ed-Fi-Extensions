@@ -5,7 +5,7 @@
 
 CREATE INDEX IF NOT EXISTS UX_dcd1d5_ChangeVersion ON homograph.Name(ChangeVersion);
 
-CREATE INDEX IF NOT EXISTS UX_5f7953_ChangeVersion ON homograph.Parent(ChangeVersion);
+CREATE INDEX IF NOT EXISTS UX_5f7953_ChangeVersion ON homograph.Contact(ChangeVersion);
 
 CREATE INDEX IF NOT EXISTS UX_6cd2e3_ChangeVersion ON homograph.School(ChangeVersion);
 
