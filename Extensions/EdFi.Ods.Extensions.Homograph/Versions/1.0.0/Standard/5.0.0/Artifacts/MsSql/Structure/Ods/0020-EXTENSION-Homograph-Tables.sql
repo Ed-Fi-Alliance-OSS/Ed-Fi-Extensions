@@ -3,27 +3,6 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 
--- Table [homograph].[Name] --
-CREATE TABLE [homograph].[Name] (
-    [FirstName] [NVARCHAR](75) NOT NULL,
-    [LastSurname] [NVARCHAR](75) NOT NULL,
-    [Discriminator] [NVARCHAR](128) NULL,
-    [CreateDate] [DATETIME2] NOT NULL,
-    [LastModifiedDate] [DATETIME2] NOT NULL,
-    [Id] [UNIQUEIDENTIFIER] NOT NULL,
-    CONSTRAINT [Name_PK] PRIMARY KEY CLUSTERED (
-        [FirstName] ASC,
-        [LastSurname] ASC
-    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
-GO
-ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_Id] DEFAULT (newid()) FOR [Id]
-GO
-ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
-GO
-
 -- Table [homograph].[Contact] --
 CREATE TABLE [homograph].[Contact] (
     [ContactFirstName] [NVARCHAR](75) NOT NULL,
@@ -79,6 +58,27 @@ CREATE TABLE [homograph].[ContactStudentSchoolAssociation] (
 ) ON [PRIMARY]
 GO
 ALTER TABLE [homograph].[ContactStudentSchoolAssociation] ADD CONSTRAINT [ContactStudentSchoolAssociation_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+GO
+
+-- Table [homograph].[Name] --
+CREATE TABLE [homograph].[Name] (
+    [FirstName] [NVARCHAR](75) NOT NULL,
+    [LastSurname] [NVARCHAR](75) NOT NULL,
+    [Discriminator] [NVARCHAR](128) NULL,
+    [CreateDate] [DATETIME2] NOT NULL,
+    [LastModifiedDate] [DATETIME2] NOT NULL,
+    [Id] [UNIQUEIDENTIFIER] NOT NULL,
+    CONSTRAINT [Name_PK] PRIMARY KEY CLUSTERED (
+        [FirstName] ASC,
+        [LastSurname] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_CreateDate] DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_Id] DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [homograph].[Name] ADD CONSTRAINT [Name_DF_LastModifiedDate] DEFAULT (getdate()) FOR [LastModifiedDate]
 GO
 
 -- Table [homograph].[School] --

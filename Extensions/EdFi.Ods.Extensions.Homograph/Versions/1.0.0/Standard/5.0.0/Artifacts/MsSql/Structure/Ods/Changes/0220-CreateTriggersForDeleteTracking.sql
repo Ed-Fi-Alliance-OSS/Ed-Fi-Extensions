@@ -3,26 +3,6 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 
-DROP TRIGGER IF EXISTS [homograph].[homograph_Name_TR_DeleteTracking]
-GO
-
-CREATE TRIGGER [homograph].[homograph_Name_TR_DeleteTracking] ON [homograph].[Name] AFTER DELETE AS
-BEGIN
-    IF @@rowcount = 0 
-        RETURN
-
-    SET NOCOUNT ON
-
-    INSERT INTO [tracked_changes_homograph].[Name](OldFirstName, OldLastSurname, Id, Discriminator, ChangeVersion)
-    SELECT d.FirstName, d.LastSurname, d.Id, d.Discriminator, (NEXT VALUE FOR [changes].[ChangeVersionSequence])
-    FROM    deleted d
-END
-GO
-
-ALTER TABLE [homograph].[Name] ENABLE TRIGGER [homograph_Name_TR_DeleteTracking]
-GO
-
-
 DROP TRIGGER IF EXISTS [homograph].[homograph_Contact_TR_DeleteTracking]
 GO
 
@@ -40,6 +20,26 @@ END
 GO
 
 ALTER TABLE [homograph].[Contact] ENABLE TRIGGER [homograph_Contact_TR_DeleteTracking]
+GO
+
+
+DROP TRIGGER IF EXISTS [homograph].[homograph_Name_TR_DeleteTracking]
+GO
+
+CREATE TRIGGER [homograph].[homograph_Name_TR_DeleteTracking] ON [homograph].[Name] AFTER DELETE AS
+BEGIN
+    IF @@rowcount = 0 
+        RETURN
+
+    SET NOCOUNT ON
+
+    INSERT INTO [tracked_changes_homograph].[Name](OldFirstName, OldLastSurname, Id, Discriminator, ChangeVersion)
+    SELECT d.FirstName, d.LastSurname, d.Id, d.Discriminator, (NEXT VALUE FOR [changes].[ChangeVersionSequence])
+    FROM    deleted d
+END
+GO
+
+ALTER TABLE [homograph].[Name] ENABLE TRIGGER [homograph_Name_TR_DeleteTracking]
 GO
 
 

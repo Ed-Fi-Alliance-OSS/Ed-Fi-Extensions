@@ -3,14 +3,6 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 
--- Extended Properties [homograph].[Name] --
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The set of elements that comprise a person''s legal name.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name', @level2type=N'COLUMN', @level2name=N'FirstName'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name borne in common by members of a family.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name', @level2type=N'COLUMN', @level2name=N'LastSurname'
-GO
-
 -- Extended Properties [homograph].[Contact] --
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'This entity represents an individual for whom instruction, services, and/or care are provided in an early childhood, elementary, or secondary educational program under the jurisdiction of a school, education agency or other institution or program. A student is a person who has been enrolled in a school or other educational institution.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Contact'
 GO
@@ -30,7 +22,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name borne
 GO
 
 -- Extended Properties [homograph].[ContactStudentSchoolAssociation] --
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The students association with the Contact.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'ContactStudentSchoolAssociation'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The students association with the contact.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'ContactStudentSchoolAssociation'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'ContactStudentSchoolAssociation', @level2type=N'COLUMN', @level2name=N'ContactFirstName'
 GO
@@ -41,6 +33,14 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'ContactStudentSchoolAssociation', @level2type=N'COLUMN', @level2name=N'StudentFirstName'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name borne in common by members of a family.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'ContactStudentSchoolAssociation', @level2type=N'COLUMN', @level2name=N'StudentLastSurname'
+GO
+
+-- Extended Properties [homograph].[Name] --
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The set of elements that comprise a person''s legal name.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name', @level2type=N'COLUMN', @level2name=N'FirstName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name borne in common by members of a family.', @level0type=N'SCHEMA', @level0name=N'homograph', @level1type=N'TABLE', @level1name=N'Name', @level2type=N'COLUMN', @level2name=N'LastSurname'
 GO
 
 -- Extended Properties [homograph].[School] --

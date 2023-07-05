@@ -10,21 +10,6 @@ IF NOT EXISTS (SELECT 1 FROM information_schema.schemata WHERE schema_name = 'tr
 CREATE SCHEMA tracked_changes_homograph;
 END IF;
 
-IF NOT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'tracked_changes_homograph' AND table_name = 'name') THEN
-CREATE TABLE tracked_changes_homograph.name
-(
-       oldfirstname VARCHAR(75) NOT NULL,
-       oldlastsurname VARCHAR(75) NOT NULL,
-       newfirstname VARCHAR(75) NULL,
-       newlastsurname VARCHAR(75) NULL,
-       id uuid NOT NULL,
-       changeversion bigint NOT NULL,
-       discriminator varchar(128) NULL,
-       createdate timestamp NOT NULL DEFAULT (now()),
-       CONSTRAINT name_pk PRIMARY KEY (ChangeVersion)
-);
-END IF;
-
 IF NOT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'tracked_changes_homograph' AND table_name = 'contact') THEN
 CREATE TABLE tracked_changes_homograph.contact
 (
@@ -37,6 +22,21 @@ CREATE TABLE tracked_changes_homograph.contact
        discriminator varchar(128) NULL,
        createdate timestamp NOT NULL DEFAULT (now()),
        CONSTRAINT contact_pk PRIMARY KEY (ChangeVersion)
+);
+END IF;
+
+IF NOT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'tracked_changes_homograph' AND table_name = 'name') THEN
+CREATE TABLE tracked_changes_homograph.name
+(
+       oldfirstname VARCHAR(75) NOT NULL,
+       oldlastsurname VARCHAR(75) NOT NULL,
+       newfirstname VARCHAR(75) NULL,
+       newlastsurname VARCHAR(75) NULL,
+       id uuid NOT NULL,
+       changeversion bigint NOT NULL,
+       discriminator varchar(128) NULL,
+       createdate timestamp NOT NULL DEFAULT (now()),
+       CONSTRAINT name_pk PRIMARY KEY (ChangeVersion)
 );
 END IF;
 
