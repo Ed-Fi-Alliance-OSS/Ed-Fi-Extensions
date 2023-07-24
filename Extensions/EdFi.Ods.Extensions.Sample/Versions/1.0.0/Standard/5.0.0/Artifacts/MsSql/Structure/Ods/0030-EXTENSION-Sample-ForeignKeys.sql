@@ -12,8 +12,16 @@ ALTER TABLE [sample].[BusRoute] WITH CHECK ADD CONSTRAINT [FK_BusRoute_Disabilit
 REFERENCES [edfi].[DisabilityDescriptor] ([DisabilityDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_BusRoute_DisabilityDescriptor]
+ON [sample].[BusRoute] ([DisabilityDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[BusRoute] WITH CHECK ADD CONSTRAINT [FK_BusRoute_StaffEducationOrganizationAssignmentAssociation] FOREIGN KEY ([BeginDate], [EducationOrganizationId], [StaffClassificationDescriptorId], [StaffUSI])
 REFERENCES [edfi].[StaffEducationOrganizationAssignmentAssociation] ([BeginDate], [EducationOrganizationId], [StaffClassificationDescriptorId], [StaffUSI])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_BusRoute_StaffEducationOrganizationAssignmentAssociation]
+ON [sample].[BusRoute] ([BeginDate] ASC, [EducationOrganizationId] ASC, [StaffClassificationDescriptorId] ASC, [StaffUSI] ASC)
 GO
 
 ALTER TABLE [sample].[BusRouteBusYear] WITH CHECK ADD CONSTRAINT [FK_BusRouteBusYear_BusRoute] FOREIGN KEY ([BusId], [BusRouteNumber])
@@ -28,6 +36,10 @@ GO
 
 ALTER TABLE [sample].[BusRouteProgram] WITH CHECK ADD CONSTRAINT [FK_BusRouteProgram_Program] FOREIGN KEY ([EducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId])
 REFERENCES [edfi].[Program] ([EducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_BusRouteProgram_Program]
+ON [sample].[BusRouteProgram] ([EducationOrganizationId] ASC, [ProgramName] ASC, [ProgramTypeDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[BusRouteServiceAreaPostalCode] WITH CHECK ADD CONSTRAINT [FK_BusRouteServiceAreaPostalCode_BusRoute] FOREIGN KEY ([BusId], [BusRouteNumber])
@@ -49,6 +61,10 @@ ALTER TABLE [sample].[BusRouteTelephone] WITH CHECK ADD CONSTRAINT [FK_BusRouteT
 REFERENCES [edfi].[TelephoneNumberTypeDescriptor] ([TelephoneNumberTypeDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_BusRouteTelephone_TelephoneNumberTypeDescriptor]
+ON [sample].[BusRouteTelephone] ([TelephoneNumberTypeDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[ContactAddressExtension] WITH CHECK ADD CONSTRAINT [FK_ContactAddressExtension_ContactAddress] FOREIGN KEY ([ContactUSI], [AddressTypeDescriptorId], [City], [PostalCode], [StateAbbreviationDescriptorId], [StreetNumberName])
 REFERENCES [edfi].[ContactAddress] ([ContactUSI], [AddressTypeDescriptorId], [City], [PostalCode], [StateAbbreviationDescriptorId], [StreetNumberName])
 ON DELETE CASCADE
@@ -68,6 +84,10 @@ ALTER TABLE [sample].[ContactAddressTerm] WITH CHECK ADD CONSTRAINT [FK_ContactA
 REFERENCES [edfi].[TermDescriptor] ([TermDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_ContactAddressTerm_TermDescriptor]
+ON [sample].[ContactAddressTerm] ([TermDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[ContactAuthor] WITH CHECK ADD CONSTRAINT [FK_ContactAuthor_Contact] FOREIGN KEY ([ContactUSI])
 REFERENCES [edfi].[Contact] ([ContactUSI])
 ON DELETE CASCADE
@@ -80,6 +100,10 @@ GO
 
 ALTER TABLE [sample].[ContactCTEProgram] WITH CHECK ADD CONSTRAINT [FK_ContactCTEProgram_CareerPathwayDescriptor] FOREIGN KEY ([CareerPathwayDescriptorId])
 REFERENCES [edfi].[CareerPathwayDescriptor] ([CareerPathwayDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_ContactCTEProgram_CareerPathwayDescriptor]
+ON [sample].[ContactCTEProgram] ([CareerPathwayDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[ContactCTEProgram] WITH CHECK ADD CONSTRAINT [FK_ContactCTEProgram_Contact] FOREIGN KEY ([ContactUSI])
@@ -96,6 +120,10 @@ ALTER TABLE [sample].[ContactEducationContent] WITH CHECK ADD CONSTRAINT [FK_Con
 REFERENCES [edfi].[EducationContent] ([ContentIdentifier])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_ContactEducationContent_EducationContent]
+ON [sample].[ContactEducationContent] ([ContentIdentifier] ASC)
+GO
+
 ALTER TABLE [sample].[ContactExtension] WITH CHECK ADD CONSTRAINT [FK_ContactExtension_Contact] FOREIGN KEY ([ContactUSI])
 REFERENCES [edfi].[Contact] ([ContactUSI])
 ON DELETE CASCADE
@@ -103,6 +131,10 @@ GO
 
 ALTER TABLE [sample].[ContactExtension] WITH CHECK ADD CONSTRAINT [FK_ContactExtension_CredentialFieldDescriptor] FOREIGN KEY ([CredentialFieldDescriptorId])
 REFERENCES [edfi].[CredentialFieldDescriptor] ([CredentialFieldDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_ContactExtension_CredentialFieldDescriptor]
+ON [sample].[ContactExtension] ([CredentialFieldDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[ContactFavoriteBookTitle] WITH CHECK ADD CONSTRAINT [FK_ContactFavoriteBookTitle_Contact] FOREIGN KEY ([ContactUSI])
@@ -117,6 +149,10 @@ GO
 
 ALTER TABLE [sample].[ContactStudentProgramAssociation] WITH CHECK ADD CONSTRAINT [FK_ContactStudentProgramAssociation_StudentProgramAssociation] FOREIGN KEY ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
 REFERENCES [edfi].[StudentProgramAssociation] ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_ContactStudentProgramAssociation_StudentProgramAssociation]
+ON [sample].[ContactStudentProgramAssociation] ([BeginDate] ASC, [EducationOrganizationId] ASC, [ProgramEducationOrganizationId] ASC, [ProgramName] ASC, [ProgramTypeDescriptorId] ASC, [StudentUSI] ASC)
 GO
 
 ALTER TABLE [sample].[ContactTeacherConference] WITH CHECK ADD CONSTRAINT [FK_ContactTeacherConference_Contact] FOREIGN KEY ([ContactUSI])
@@ -138,6 +174,10 @@ ALTER TABLE [sample].[SchoolCTEProgram] WITH CHECK ADD CONSTRAINT [FK_SchoolCTEP
 REFERENCES [edfi].[CareerPathwayDescriptor] ([CareerPathwayDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_SchoolCTEProgram_CareerPathwayDescriptor]
+ON [sample].[SchoolCTEProgram] ([CareerPathwayDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[SchoolCTEProgram] WITH CHECK ADD CONSTRAINT [FK_SchoolCTEProgram_School] FOREIGN KEY ([SchoolId])
 REFERENCES [edfi].[School] ([SchoolId])
 ON DELETE CASCADE
@@ -145,6 +185,10 @@ GO
 
 ALTER TABLE [sample].[SchoolDirectlyOwnedBus] WITH CHECK ADD CONSTRAINT [FK_SchoolDirectlyOwnedBus_Bus] FOREIGN KEY ([DirectlyOwnedBusId])
 REFERENCES [sample].[Bus] ([BusId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_SchoolDirectlyOwnedBus_Bus]
+ON [sample].[SchoolDirectlyOwnedBus] ([DirectlyOwnedBusId] ASC)
 GO
 
 ALTER TABLE [sample].[SchoolDirectlyOwnedBus] WITH CHECK ADD CONSTRAINT [FK_SchoolDirectlyOwnedBus_School] FOREIGN KEY ([SchoolId])
@@ -186,6 +230,10 @@ ALTER TABLE [sample].[StudentArtProgramAssociationArtMedium] WITH CHECK ADD CONS
 REFERENCES [sample].[ArtMediumDescriptor] ([ArtMediumDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentArtProgramAssociationArtMedium_ArtMediumDescriptor]
+ON [sample].[StudentArtProgramAssociationArtMedium] ([ArtMediumDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[StudentArtProgramAssociationArtMedium] WITH CHECK ADD CONSTRAINT [FK_StudentArtProgramAssociationArtMedium_StudentArtProgramAssociation] FOREIGN KEY ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
 REFERENCES [sample].[StudentArtProgramAssociation] ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
 ON DELETE CASCADE
@@ -198,6 +246,10 @@ GO
 
 ALTER TABLE [sample].[StudentArtProgramAssociationService] WITH CHECK ADD CONSTRAINT [FK_StudentArtProgramAssociationService_ServiceDescriptor] FOREIGN KEY ([ServiceDescriptorId])
 REFERENCES [edfi].[ServiceDescriptor] ([ServiceDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentArtProgramAssociationService_ServiceDescriptor]
+ON [sample].[StudentArtProgramAssociationService] ([ServiceDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[StudentArtProgramAssociationService] WITH CHECK ADD CONSTRAINT [FK_StudentArtProgramAssociationService_StudentArtProgramAssociation] FOREIGN KEY ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
@@ -214,6 +266,10 @@ ALTER TABLE [sample].[StudentContactAssociationDiscipline] WITH CHECK ADD CONSTR
 REFERENCES [edfi].[DisciplineDescriptor] ([DisciplineDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentContactAssociationDiscipline_DisciplineDescriptor]
+ON [sample].[StudentContactAssociationDiscipline] ([DisciplineDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[StudentContactAssociationDiscipline] WITH CHECK ADD CONSTRAINT [FK_StudentContactAssociationDiscipline_StudentContactAssociation] FOREIGN KEY ([ContactUSI], [StudentUSI])
 REFERENCES [edfi].[StudentContactAssociation] ([ContactUSI], [StudentUSI])
 ON DELETE CASCADE
@@ -221,6 +277,10 @@ GO
 
 ALTER TABLE [sample].[StudentContactAssociationExtension] WITH CHECK ADD CONSTRAINT [FK_StudentContactAssociationExtension_InterventionStudy] FOREIGN KEY ([EducationOrganizationId], [InterventionStudyIdentificationCode])
 REFERENCES [edfi].[InterventionStudy] ([EducationOrganizationId], [InterventionStudyIdentificationCode])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentContactAssociationExtension_InterventionStudy]
+ON [sample].[StudentContactAssociationExtension] ([EducationOrganizationId] ASC, [InterventionStudyIdentificationCode] ASC)
 GO
 
 ALTER TABLE [sample].[StudentContactAssociationExtension] WITH CHECK ADD CONSTRAINT [FK_StudentContactAssociationExtension_StudentContactAssociation] FOREIGN KEY ([ContactUSI], [StudentUSI])
@@ -247,6 +307,10 @@ ALTER TABLE [sample].[StudentContactAssociationStaffEducationOrganizationEmploym
 REFERENCES [edfi].[StaffEducationOrganizationEmploymentAssociation] ([EducationOrganizationId], [EmploymentStatusDescriptorId], [HireDate], [StaffUSI])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentContactAssociationStaffEducationOrganizationEmploymentAssociation_StaffEducationOrganizationEmploymentAssociation]
+ON [sample].[StudentContactAssociationStaffEducationOrganizationEmploymentAssociation] ([EducationOrganizationId] ASC, [EmploymentStatusDescriptorId] ASC, [HireDate] ASC, [StaffUSI] ASC)
+GO
+
 ALTER TABLE [sample].[StudentContactAssociationStaffEducationOrganizationEmploymentAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentContactAssociationStaffEducationOrganizationEmploymentAssociation_StudentContactAssociation] FOREIGN KEY ([ContactUSI], [StudentUSI])
 REFERENCES [edfi].[StudentContactAssociation] ([ContactUSI], [StudentUSI])
 ON DELETE CASCADE
@@ -259,6 +323,10 @@ GO
 
 ALTER TABLE [sample].[StudentContactAssociationTelephone] WITH CHECK ADD CONSTRAINT [FK_StudentContactAssociationTelephone_TelephoneNumberTypeDescriptor] FOREIGN KEY ([TelephoneNumberTypeDescriptorId])
 REFERENCES [edfi].[TelephoneNumberTypeDescriptor] ([TelephoneNumberTypeDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentContactAssociationTelephone_TelephoneNumberTypeDescriptor]
+ON [sample].[StudentContactAssociationTelephone] ([TelephoneNumberTypeDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[StudentCTEProgramAssociationExtension] WITH CHECK ADD CONSTRAINT [FK_StudentCTEProgramAssociationExtension_StudentCTEProgramAssociation] FOREIGN KEY ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
@@ -285,6 +353,10 @@ ALTER TABLE [sample].[StudentEducationOrganizationAssociationAddressTerm] WITH C
 REFERENCES [edfi].[TermDescriptor] ([TermDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentEducationOrganizationAssociationAddressTerm_TermDescriptor]
+ON [sample].[StudentEducationOrganizationAssociationAddressTerm] ([TermDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[StudentEducationOrganizationAssociationStudentCharacteristicStudentNeed] WITH CHECK ADD CONSTRAINT [FK_StudentEducationOrganizationAssociationStudentCharacteristicStudentNeed_StudentEducationOrganizationAssociationStudentCharact] FOREIGN KEY ([EducationOrganizationId], [StudentUSI], [StudentCharacteristicDescriptorId])
 REFERENCES [edfi].[StudentEducationOrganizationAssociationStudentCharacteristic] ([EducationOrganizationId], [StudentUSI], [StudentCharacteristicDescriptorId])
 ON DELETE CASCADE
@@ -292,6 +364,10 @@ GO
 
 ALTER TABLE [sample].[StudentFavoriteBook] WITH CHECK ADD CONSTRAINT [FK_StudentFavoriteBook_FavoriteBookCategoryDescriptor] FOREIGN KEY ([FavoriteBookCategoryDescriptorId])
 REFERENCES [sample].[FavoriteBookCategoryDescriptor] ([FavoriteBookCategoryDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentFavoriteBook_FavoriteBookCategoryDescriptor]
+ON [sample].[StudentFavoriteBook] ([FavoriteBookCategoryDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[StudentFavoriteBook] WITH CHECK ADD CONSTRAINT [FK_StudentFavoriteBook_Student] FOREIGN KEY ([StudentUSI])
@@ -303,6 +379,10 @@ ALTER TABLE [sample].[StudentFavoriteBookArtMedium] WITH CHECK ADD CONSTRAINT [F
 REFERENCES [sample].[ArtMediumDescriptor] ([ArtMediumDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentFavoriteBookArtMedium_ArtMediumDescriptor]
+ON [sample].[StudentFavoriteBookArtMedium] ([ArtMediumDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[StudentFavoriteBookArtMedium] WITH CHECK ADD CONSTRAINT [FK_StudentFavoriteBookArtMedium_StudentFavoriteBook] FOREIGN KEY ([StudentUSI], [FavoriteBookCategoryDescriptorId])
 REFERENCES [sample].[StudentFavoriteBook] ([StudentUSI], [FavoriteBookCategoryDescriptorId])
 ON DELETE CASCADE
@@ -312,16 +392,32 @@ ALTER TABLE [sample].[StudentGraduationPlanAssociation] WITH CHECK ADD CONSTRAIN
 REFERENCES [edfi].[GraduationPlan] ([EducationOrganizationId], [GraduationPlanTypeDescriptorId], [GraduationSchoolYear])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociation_GraduationPlan]
+ON [sample].[StudentGraduationPlanAssociation] ([EducationOrganizationId] ASC, [GraduationPlanTypeDescriptorId] ASC, [GraduationSchoolYear] ASC)
+GO
+
 ALTER TABLE [sample].[StudentGraduationPlanAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociation_Staff] FOREIGN KEY ([StaffUSI])
 REFERENCES [edfi].[Staff] ([StaffUSI])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociation_Staff]
+ON [sample].[StudentGraduationPlanAssociation] ([StaffUSI] ASC)
 GO
 
 ALTER TABLE [sample].[StudentGraduationPlanAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociation_Student] FOREIGN KEY ([StudentUSI])
 REFERENCES [edfi].[Student] ([StudentUSI])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociation_Student]
+ON [sample].[StudentGraduationPlanAssociation] ([StudentUSI] ASC)
+GO
+
 ALTER TABLE [sample].[StudentGraduationPlanAssociationAcademicSubject] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociationAcademicSubject_AcademicSubjectDescriptor] FOREIGN KEY ([AcademicSubjectDescriptorId])
 REFERENCES [edfi].[AcademicSubjectDescriptor] ([AcademicSubjectDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociationAcademicSubject_AcademicSubjectDescriptor]
+ON [sample].[StudentGraduationPlanAssociationAcademicSubject] ([AcademicSubjectDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[StudentGraduationPlanAssociationAcademicSubject] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociationAcademicSubject_StudentGraduationPlanAssociation] FOREIGN KEY ([EducationOrganizationId], [GraduationPlanTypeDescriptorId], [GraduationSchoolYear], [StudentUSI])
@@ -336,6 +432,10 @@ GO
 
 ALTER TABLE [sample].[StudentGraduationPlanAssociationCTEProgram] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociationCTEProgram_CareerPathwayDescriptor] FOREIGN KEY ([CareerPathwayDescriptorId])
 REFERENCES [edfi].[CareerPathwayDescriptor] ([CareerPathwayDescriptorId])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociationCTEProgram_CareerPathwayDescriptor]
+ON [sample].[StudentGraduationPlanAssociationCTEProgram] ([CareerPathwayDescriptorId] ASC)
 GO
 
 ALTER TABLE [sample].[StudentGraduationPlanAssociationCTEProgram] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociationCTEProgram_StudentGraduationPlanAssociation] FOREIGN KEY ([EducationOrganizationId], [GraduationPlanTypeDescriptorId], [GraduationSchoolYear], [StudentUSI])
@@ -362,6 +462,10 @@ ALTER TABLE [sample].[StudentGraduationPlanAssociationStudentContactAssociation]
 REFERENCES [edfi].[StudentContactAssociation] ([ContactUSI], [StudentUSI])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentGraduationPlanAssociationStudentContactAssociation_StudentContactAssociation]
+ON [sample].[StudentGraduationPlanAssociationStudentContactAssociation] ([ContactUSI] ASC, [StudentUSI] ASC)
+GO
+
 ALTER TABLE [sample].[StudentGraduationPlanAssociationStudentContactAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentGraduationPlanAssociationStudentContactAssociation_StudentGraduationPlanAssociation] FOREIGN KEY ([EducationOrganizationId], [GraduationPlanTypeDescriptorId], [GraduationSchoolYear], [StudentUSI])
 REFERENCES [sample].[StudentGraduationPlanAssociation] ([EducationOrganizationId], [GraduationPlanTypeDescriptorId], [GraduationSchoolYear], [StudentUSI])
 ON DELETE CASCADE
@@ -386,6 +490,10 @@ ALTER TABLE [sample].[StudentSchoolAssociationExtension] WITH CHECK ADD CONSTRAI
 REFERENCES [sample].[MembershipTypeDescriptor] ([MembershipTypeDescriptorId])
 GO
 
+CREATE NONCLUSTERED INDEX [FK_StudentSchoolAssociationExtension_MembershipTypeDescriptor]
+ON [sample].[StudentSchoolAssociationExtension] ([MembershipTypeDescriptorId] ASC)
+GO
+
 ALTER TABLE [sample].[StudentSchoolAssociationExtension] WITH CHECK ADD CONSTRAINT [FK_StudentSchoolAssociationExtension_StudentSchoolAssociation] FOREIGN KEY ([EntryDate], [SchoolId], [StudentUSI])
 REFERENCES [edfi].[StudentSchoolAssociation] ([EntryDate], [SchoolId], [StudentUSI])
 ON DELETE CASCADE
@@ -394,6 +502,10 @@ GO
 
 ALTER TABLE [sample].[StudentSectionAssociationRelatedGeneralStudentProgramAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentSectionAssociationRelatedGeneralStudentProgramAssociation_GeneralStudentProgramAssociation] FOREIGN KEY ([RelatedBeginDate], [RelatedEducationOrganizationId], [RelatedProgramEducationOrganizationId], [RelatedProgramName], [RelatedProgramTypeDescriptorId], [StudentUSI])
 REFERENCES [edfi].[GeneralStudentProgramAssociation] ([BeginDate], [EducationOrganizationId], [ProgramEducationOrganizationId], [ProgramName], [ProgramTypeDescriptorId], [StudentUSI])
+GO
+
+CREATE NONCLUSTERED INDEX [FK_StudentSectionAssociationRelatedGeneralStudentProgramAssociation_GeneralStudentProgramAssociation]
+ON [sample].[StudentSectionAssociationRelatedGeneralStudentProgramAssociation] ([RelatedBeginDate] ASC, [RelatedEducationOrganizationId] ASC, [RelatedProgramEducationOrganizationId] ASC, [RelatedProgramName] ASC, [RelatedProgramTypeDescriptorId] ASC, [StudentUSI] ASC)
 GO
 
 ALTER TABLE [sample].[StudentSectionAssociationRelatedGeneralStudentProgramAssociation] WITH CHECK ADD CONSTRAINT [FK_StudentSectionAssociationRelatedGeneralStudentProgramAssociation_StudentSectionAssociation] FOREIGN KEY ([BeginDate], [LocalCourseCode], [SchoolId], [SchoolYear], [SectionIdentifier], [SessionName], [StudentUSI])

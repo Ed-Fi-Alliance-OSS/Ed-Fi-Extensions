@@ -12,9 +12,15 @@ ALTER TABLE sample.BusRoute ADD CONSTRAINT FK_65385a_DisabilityDescriptor FOREIG
 REFERENCES edfi.DisabilityDescriptor (DisabilityDescriptorId)
 ;
 
+CREATE INDEX FK_65385a_DisabilityDescriptor
+ON sample.BusRoute (DisabilityDescriptorId ASC);
+
 ALTER TABLE sample.BusRoute ADD CONSTRAINT FK_65385a_StaffEducationOrganizationAssignmentAssociation FOREIGN KEY (BeginDate, EducationOrganizationId, StaffClassificationDescriptorId, StaffUSI)
 REFERENCES edfi.StaffEducationOrganizationAssignmentAssociation (BeginDate, EducationOrganizationId, StaffClassificationDescriptorId, StaffUSI)
 ;
+
+CREATE INDEX FK_65385a_StaffEducationOrganizationAssignmentAssociation
+ON sample.BusRoute (BeginDate ASC, EducationOrganizationId ASC, StaffClassificationDescriptorId ASC, StaffUSI ASC);
 
 ALTER TABLE sample.BusRouteBusYear ADD CONSTRAINT FK_61b709_BusRoute FOREIGN KEY (BusId, BusRouteNumber)
 REFERENCES sample.BusRoute (BusId, BusRouteNumber)
@@ -29,6 +35,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.BusRouteProgram ADD CONSTRAINT FK_bcf259_Program FOREIGN KEY (EducationOrganizationId, ProgramName, ProgramTypeDescriptorId)
 REFERENCES edfi.Program (EducationOrganizationId, ProgramName, ProgramTypeDescriptorId)
 ;
+
+CREATE INDEX FK_bcf259_Program
+ON sample.BusRouteProgram (EducationOrganizationId ASC, ProgramName ASC, ProgramTypeDescriptorId ASC);
 
 ALTER TABLE sample.BusRouteServiceAreaPostalCode ADD CONSTRAINT FK_71fc1e_BusRoute FOREIGN KEY (BusId, BusRouteNumber)
 REFERENCES sample.BusRoute (BusId, BusRouteNumber)
@@ -49,6 +58,9 @@ ALTER TABLE sample.BusRouteTelephone ADD CONSTRAINT FK_d9d35b_TelephoneNumberTyp
 REFERENCES edfi.TelephoneNumberTypeDescriptor (TelephoneNumberTypeDescriptorId)
 ;
 
+CREATE INDEX FK_d9d35b_TelephoneNumberTypeDescriptor
+ON sample.BusRouteTelephone (TelephoneNumberTypeDescriptorId ASC);
+
 ALTER TABLE sample.ContactAddressExtension ADD CONSTRAINT FK_f38b55_ContactAddress FOREIGN KEY (ContactUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
 REFERENCES edfi.ContactAddress (ContactUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
 ON DELETE CASCADE
@@ -68,6 +80,9 @@ ALTER TABLE sample.ContactAddressTerm ADD CONSTRAINT FK_c974f1_TermDescriptor FO
 REFERENCES edfi.TermDescriptor (TermDescriptorId)
 ;
 
+CREATE INDEX FK_c974f1_TermDescriptor
+ON sample.ContactAddressTerm (TermDescriptorId ASC);
+
 ALTER TABLE sample.ContactAuthor ADD CONSTRAINT FK_5f4d9a_Contact FOREIGN KEY (ContactUSI)
 REFERENCES edfi.Contact (ContactUSI)
 ON DELETE CASCADE
@@ -81,6 +96,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.ContactCTEProgram ADD CONSTRAINT FK_17ab0b_CareerPathwayDescriptor FOREIGN KEY (CareerPathwayDescriptorId)
 REFERENCES edfi.CareerPathwayDescriptor (CareerPathwayDescriptorId)
 ;
+
+CREATE INDEX FK_17ab0b_CareerPathwayDescriptor
+ON sample.ContactCTEProgram (CareerPathwayDescriptorId ASC);
 
 ALTER TABLE sample.ContactCTEProgram ADD CONSTRAINT FK_17ab0b_Contact FOREIGN KEY (ContactUSI)
 REFERENCES edfi.Contact (ContactUSI)
@@ -96,6 +114,9 @@ ALTER TABLE sample.ContactEducationContent ADD CONSTRAINT FK_c25b99_EducationCon
 REFERENCES edfi.EducationContent (ContentIdentifier)
 ;
 
+CREATE INDEX FK_c25b99_EducationContent
+ON sample.ContactEducationContent (ContentIdentifier ASC);
+
 ALTER TABLE sample.ContactExtension ADD CONSTRAINT FK_9fdf40_Contact FOREIGN KEY (ContactUSI)
 REFERENCES edfi.Contact (ContactUSI)
 ON DELETE CASCADE
@@ -104,6 +125,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.ContactExtension ADD CONSTRAINT FK_9fdf40_CredentialFieldDescriptor FOREIGN KEY (CredentialFieldDescriptorId)
 REFERENCES edfi.CredentialFieldDescriptor (CredentialFieldDescriptorId)
 ;
+
+CREATE INDEX FK_9fdf40_CredentialFieldDescriptor
+ON sample.ContactExtension (CredentialFieldDescriptorId ASC);
 
 ALTER TABLE sample.ContactFavoriteBookTitle ADD CONSTRAINT FK_1be879_Contact FOREIGN KEY (ContactUSI)
 REFERENCES edfi.Contact (ContactUSI)
@@ -118,6 +142,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.ContactStudentProgramAssociation ADD CONSTRAINT FK_2c63b6_StudentProgramAssociation FOREIGN KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 REFERENCES edfi.StudentProgramAssociation (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ;
+
+CREATE INDEX FK_2c63b6_StudentProgramAssociation
+ON sample.ContactStudentProgramAssociation (BeginDate ASC, EducationOrganizationId ASC, ProgramEducationOrganizationId ASC, ProgramName ASC, ProgramTypeDescriptorId ASC, StudentUSI ASC);
 
 ALTER TABLE sample.ContactTeacherConference ADD CONSTRAINT FK_ad1f57_Contact FOREIGN KEY (ContactUSI)
 REFERENCES edfi.Contact (ContactUSI)
@@ -138,6 +165,9 @@ ALTER TABLE sample.SchoolCTEProgram ADD CONSTRAINT FK_7ba98a_CareerPathwayDescri
 REFERENCES edfi.CareerPathwayDescriptor (CareerPathwayDescriptorId)
 ;
 
+CREATE INDEX FK_7ba98a_CareerPathwayDescriptor
+ON sample.SchoolCTEProgram (CareerPathwayDescriptorId ASC);
+
 ALTER TABLE sample.SchoolCTEProgram ADD CONSTRAINT FK_7ba98a_School FOREIGN KEY (SchoolId)
 REFERENCES edfi.School (SchoolId)
 ON DELETE CASCADE
@@ -146,6 +176,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.SchoolDirectlyOwnedBus ADD CONSTRAINT FK_4edefb_Bus FOREIGN KEY (DirectlyOwnedBusId)
 REFERENCES sample.Bus (BusId)
 ;
+
+CREATE INDEX FK_4edefb_Bus
+ON sample.SchoolDirectlyOwnedBus (DirectlyOwnedBusId ASC);
 
 ALTER TABLE sample.SchoolDirectlyOwnedBus ADD CONSTRAINT FK_4edefb_School FOREIGN KEY (SchoolId)
 REFERENCES edfi.School (SchoolId)
@@ -186,6 +219,9 @@ ALTER TABLE sample.StudentArtProgramAssociationArtMedium ADD CONSTRAINT FK_f6ca6
 REFERENCES sample.ArtMediumDescriptor (ArtMediumDescriptorId)
 ;
 
+CREATE INDEX FK_f6ca63_ArtMediumDescriptor
+ON sample.StudentArtProgramAssociationArtMedium (ArtMediumDescriptorId ASC);
+
 ALTER TABLE sample.StudentArtProgramAssociationArtMedium ADD CONSTRAINT FK_f6ca63_StudentArtProgramAssociation FOREIGN KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 REFERENCES sample.StudentArtProgramAssociation (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ON DELETE CASCADE
@@ -199,6 +235,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.StudentArtProgramAssociationService ADD CONSTRAINT FK_8141ae_ServiceDescriptor FOREIGN KEY (ServiceDescriptorId)
 REFERENCES edfi.ServiceDescriptor (ServiceDescriptorId)
 ;
+
+CREATE INDEX FK_8141ae_ServiceDescriptor
+ON sample.StudentArtProgramAssociationService (ServiceDescriptorId ASC);
 
 ALTER TABLE sample.StudentArtProgramAssociationService ADD CONSTRAINT FK_8141ae_StudentArtProgramAssociation FOREIGN KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 REFERENCES sample.StudentArtProgramAssociation (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
@@ -214,6 +253,9 @@ ALTER TABLE sample.StudentContactAssociationDiscipline ADD CONSTRAINT FK_3f8f4a_
 REFERENCES edfi.DisciplineDescriptor (DisciplineDescriptorId)
 ;
 
+CREATE INDEX FK_3f8f4a_DisciplineDescriptor
+ON sample.StudentContactAssociationDiscipline (DisciplineDescriptorId ASC);
+
 ALTER TABLE sample.StudentContactAssociationDiscipline ADD CONSTRAINT FK_3f8f4a_StudentContactAssociation FOREIGN KEY (ContactUSI, StudentUSI)
 REFERENCES edfi.StudentContactAssociation (ContactUSI, StudentUSI)
 ON DELETE CASCADE
@@ -222,6 +264,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.StudentContactAssociationExtension ADD CONSTRAINT FK_c098c4_InterventionStudy FOREIGN KEY (EducationOrganizationId, InterventionStudyIdentificationCode)
 REFERENCES edfi.InterventionStudy (EducationOrganizationId, InterventionStudyIdentificationCode)
 ;
+
+CREATE INDEX FK_c098c4_InterventionStudy
+ON sample.StudentContactAssociationExtension (EducationOrganizationId ASC, InterventionStudyIdentificationCode ASC);
 
 ALTER TABLE sample.StudentContactAssociationExtension ADD CONSTRAINT FK_c098c4_StudentContactAssociation FOREIGN KEY (ContactUSI, StudentUSI)
 REFERENCES edfi.StudentContactAssociation (ContactUSI, StudentUSI)
@@ -247,6 +292,9 @@ ALTER TABLE sample.StudentContactAssociationStaffEducationOrganizationEmplo_a92b
 REFERENCES edfi.StaffEducationOrganizationEmploymentAssociation (EducationOrganizationId, EmploymentStatusDescriptorId, HireDate, StaffUSI)
 ;
 
+CREATE INDEX FK_a92b1d_StaffEducationOrganizationEmploymentAssociation
+ON sample.StudentContactAssociationStaffEducationOrganizationEmplo_a92b1d (EducationOrganizationId ASC, EmploymentStatusDescriptorId ASC, HireDate ASC, StaffUSI ASC);
+
 ALTER TABLE sample.StudentContactAssociationStaffEducationOrganizationEmplo_a92b1d ADD CONSTRAINT FK_a92b1d_StudentContactAssociation FOREIGN KEY (ContactUSI, StudentUSI)
 REFERENCES edfi.StudentContactAssociation (ContactUSI, StudentUSI)
 ON DELETE CASCADE
@@ -260,6 +308,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.StudentContactAssociationTelephone ADD CONSTRAINT FK_264afd_TelephoneNumberTypeDescriptor FOREIGN KEY (TelephoneNumberTypeDescriptorId)
 REFERENCES edfi.TelephoneNumberTypeDescriptor (TelephoneNumberTypeDescriptorId)
 ;
+
+CREATE INDEX FK_264afd_TelephoneNumberTypeDescriptor
+ON sample.StudentContactAssociationTelephone (TelephoneNumberTypeDescriptorId ASC);
 
 ALTER TABLE sample.StudentCTEProgramAssociationExtension ADD CONSTRAINT FK_1020a1_StudentCTEProgramAssociation FOREIGN KEY (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 REFERENCES edfi.StudentCTEProgramAssociation (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
@@ -285,6 +336,9 @@ ALTER TABLE sample.StudentEducationOrganizationAssociationAddressTerm ADD CONSTR
 REFERENCES edfi.TermDescriptor (TermDescriptorId)
 ;
 
+CREATE INDEX FK_98438b_TermDescriptor
+ON sample.StudentEducationOrganizationAssociationAddressTerm (TermDescriptorId ASC);
+
 ALTER TABLE sample.StudentEducationOrganizationAssociationStudentCharacteri_17d152 ADD CONSTRAINT FK_17d152_StudentEducationOrganizationAssociationStudentCharacteristic FOREIGN KEY (EducationOrganizationId, StudentUSI, StudentCharacteristicDescriptorId)
 REFERENCES edfi.StudentEducationOrganizationAssociationStudentCharacteristic (EducationOrganizationId, StudentUSI, StudentCharacteristicDescriptorId)
 ON DELETE CASCADE
@@ -293,6 +347,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.StudentFavoriteBook ADD CONSTRAINT FK_172e5d_FavoriteBookCategoryDescriptor FOREIGN KEY (FavoriteBookCategoryDescriptorId)
 REFERENCES sample.FavoriteBookCategoryDescriptor (FavoriteBookCategoryDescriptorId)
 ;
+
+CREATE INDEX FK_172e5d_FavoriteBookCategoryDescriptor
+ON sample.StudentFavoriteBook (FavoriteBookCategoryDescriptorId ASC);
 
 ALTER TABLE sample.StudentFavoriteBook ADD CONSTRAINT FK_172e5d_Student FOREIGN KEY (StudentUSI)
 REFERENCES edfi.Student (StudentUSI)
@@ -303,6 +360,9 @@ ALTER TABLE sample.StudentFavoriteBookArtMedium ADD CONSTRAINT FK_458888_ArtMedi
 REFERENCES sample.ArtMediumDescriptor (ArtMediumDescriptorId)
 ;
 
+CREATE INDEX FK_458888_ArtMediumDescriptor
+ON sample.StudentFavoriteBookArtMedium (ArtMediumDescriptorId ASC);
+
 ALTER TABLE sample.StudentFavoriteBookArtMedium ADD CONSTRAINT FK_458888_StudentFavoriteBook FOREIGN KEY (StudentUSI, FavoriteBookCategoryDescriptorId)
 REFERENCES sample.StudentFavoriteBook (StudentUSI, FavoriteBookCategoryDescriptorId)
 ON DELETE CASCADE
@@ -312,17 +372,29 @@ ALTER TABLE sample.StudentGraduationPlanAssociation ADD CONSTRAINT FK_5fe843_Gra
 REFERENCES edfi.GraduationPlan (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear)
 ;
 
+CREATE INDEX FK_5fe843_GraduationPlan
+ON sample.StudentGraduationPlanAssociation (EducationOrganizationId ASC, GraduationPlanTypeDescriptorId ASC, GraduationSchoolYear ASC);
+
 ALTER TABLE sample.StudentGraduationPlanAssociation ADD CONSTRAINT FK_5fe843_Staff FOREIGN KEY (StaffUSI)
 REFERENCES edfi.Staff (StaffUSI)
 ;
+
+CREATE INDEX FK_5fe843_Staff
+ON sample.StudentGraduationPlanAssociation (StaffUSI ASC);
 
 ALTER TABLE sample.StudentGraduationPlanAssociation ADD CONSTRAINT FK_5fe843_Student FOREIGN KEY (StudentUSI)
 REFERENCES edfi.Student (StudentUSI)
 ;
 
+CREATE INDEX FK_5fe843_Student
+ON sample.StudentGraduationPlanAssociation (StudentUSI ASC);
+
 ALTER TABLE sample.StudentGraduationPlanAssociationAcademicSubject ADD CONSTRAINT FK_7ec6d6_AcademicSubjectDescriptor FOREIGN KEY (AcademicSubjectDescriptorId)
 REFERENCES edfi.AcademicSubjectDescriptor (AcademicSubjectDescriptorId)
 ;
+
+CREATE INDEX FK_7ec6d6_AcademicSubjectDescriptor
+ON sample.StudentGraduationPlanAssociationAcademicSubject (AcademicSubjectDescriptorId ASC);
 
 ALTER TABLE sample.StudentGraduationPlanAssociationAcademicSubject ADD CONSTRAINT FK_7ec6d6_StudentGraduationPlanAssociation FOREIGN KEY (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
 REFERENCES sample.StudentGraduationPlanAssociation (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
@@ -337,6 +409,9 @@ ON DELETE CASCADE
 ALTER TABLE sample.StudentGraduationPlanAssociationCTEProgram ADD CONSTRAINT FK_4d6493_CareerPathwayDescriptor FOREIGN KEY (CareerPathwayDescriptorId)
 REFERENCES edfi.CareerPathwayDescriptor (CareerPathwayDescriptorId)
 ;
+
+CREATE INDEX FK_4d6493_CareerPathwayDescriptor
+ON sample.StudentGraduationPlanAssociationCTEProgram (CareerPathwayDescriptorId ASC);
 
 ALTER TABLE sample.StudentGraduationPlanAssociationCTEProgram ADD CONSTRAINT FK_4d6493_StudentGraduationPlanAssociation FOREIGN KEY (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
 REFERENCES sample.StudentGraduationPlanAssociation (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
@@ -362,6 +437,9 @@ ALTER TABLE sample.StudentGraduationPlanAssociationStudentContactAssociation ADD
 REFERENCES edfi.StudentContactAssociation (ContactUSI, StudentUSI)
 ;
 
+CREATE INDEX FK_1475b9_StudentContactAssociation
+ON sample.StudentGraduationPlanAssociationStudentContactAssociation (ContactUSI ASC, StudentUSI ASC);
+
 ALTER TABLE sample.StudentGraduationPlanAssociationStudentContactAssociation ADD CONSTRAINT FK_1475b9_StudentGraduationPlanAssociation FOREIGN KEY (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
 REFERENCES sample.StudentGraduationPlanAssociation (EducationOrganizationId, GraduationPlanTypeDescriptorId, GraduationSchoolYear, StudentUSI)
 ON DELETE CASCADE
@@ -386,6 +464,9 @@ ALTER TABLE sample.StudentSchoolAssociationExtension ADD CONSTRAINT FK_880cb1_Me
 REFERENCES sample.MembershipTypeDescriptor (MembershipTypeDescriptorId)
 ;
 
+CREATE INDEX FK_880cb1_MembershipTypeDescriptor
+ON sample.StudentSchoolAssociationExtension (MembershipTypeDescriptorId ASC);
+
 ALTER TABLE sample.StudentSchoolAssociationExtension ADD CONSTRAINT FK_880cb1_StudentSchoolAssociation FOREIGN KEY (EntryDate, SchoolId, StudentUSI)
 REFERENCES edfi.StudentSchoolAssociation (EntryDate, SchoolId, StudentUSI)
 ON DELETE CASCADE
@@ -395,6 +476,9 @@ ON UPDATE CASCADE
 ALTER TABLE sample.StudentSectionAssociationRelatedGeneralStudentProgramAss_c72e02 ADD CONSTRAINT FK_c72e02_GeneralStudentProgramAssociation FOREIGN KEY (RelatedBeginDate, RelatedEducationOrganizationId, RelatedProgramEducationOrganizationId, RelatedProgramName, RelatedProgramTypeDescriptorId, StudentUSI)
 REFERENCES edfi.GeneralStudentProgramAssociation (BeginDate, EducationOrganizationId, ProgramEducationOrganizationId, ProgramName, ProgramTypeDescriptorId, StudentUSI)
 ;
+
+CREATE INDEX FK_c72e02_GeneralStudentProgramAssociation
+ON sample.StudentSectionAssociationRelatedGeneralStudentProgramAss_c72e02 (RelatedBeginDate ASC, RelatedEducationOrganizationId ASC, RelatedProgramEducationOrganizationId ASC, RelatedProgramName ASC, RelatedProgramTypeDescriptorId ASC, StudentUSI ASC);
 
 ALTER TABLE sample.StudentSectionAssociationRelatedGeneralStudentProgramAss_c72e02 ADD CONSTRAINT FK_c72e02_StudentSectionAssociation FOREIGN KEY (BeginDate, LocalCourseCode, SchoolId, SchoolYear, SectionIdentifier, SessionName, StudentUSI)
 REFERENCES edfi.StudentSectionAssociation (BeginDate, LocalCourseCode, SchoolId, SchoolYear, SectionIdentifier, SessionName, StudentUSI)
