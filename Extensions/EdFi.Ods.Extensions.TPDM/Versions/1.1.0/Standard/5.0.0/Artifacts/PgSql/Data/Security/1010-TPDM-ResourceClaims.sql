@@ -53,8 +53,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims(ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/tpdm', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('tpdm','http://ed-fi.org/ods/identity/claims/domains/tpdm', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -176,8 +176,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/tpdm/performanceEvaluation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('performanceEvaluation','http://ed-fi.org/ods/identity/claims/domains/tpdm/performanceEvaluation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -312,8 +312,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('performanceEvaluation','http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -341,8 +341,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluation','http://ed-fi.org/ods/identity/claims/tpdm/evaluation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -370,8 +370,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationObjective', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationObjective','http://ed-fi.org/ods/identity/claims/tpdm/evaluationObjective', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -399,8 +399,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationElement', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationElement','http://ed-fi.org/ods/identity/claims/tpdm/evaluationElement', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -428,8 +428,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/rubricDimension', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('rubricDimension','http://ed-fi.org/ods/identity/claims/tpdm/rubricDimension', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -457,8 +457,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationRating', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationRating','http://ed-fi.org/ods/identity/claims/tpdm/evaluationRating', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -486,8 +486,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationObjectiveRating', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationObjectiveRating','http://ed-fi.org/ods/identity/claims/tpdm/evaluationObjectiveRating', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -515,8 +515,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/evaluationElementRating', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationElementRating', 'http://ed-fi.org/ods/identity/claims/tpdm/evaluationElementRating', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -544,8 +544,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('performanceEvaluationRating', 'http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRating', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -682,8 +682,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/domains/tpdm/noFurtherAuthorizationRequiredData', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('noFurtherAuthorizationRequiredData', 'http://ed-fi.org/ods/identity/claims/domains/tpdm/noFurtherAuthorizationRequiredData', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -817,8 +817,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/tpdm/candidatePreparation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('candidatePreparation','http://ed-fi.org/ods/identity/claims/domains/tpdm/candidatePreparation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -850,8 +850,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/candidateEducatorPreparationProgramAssociation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('candidateEducatorPreparationProgramAssociation', 'http://ed-fi.org/ods/identity/claims/tpdm/candidateEducatorPreparationProgramAssociation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -883,8 +883,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/tpdm/students', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('students','http://ed-fi.org/ods/identity/claims/domains/tpdm/students', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -916,8 +916,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/financialAid', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('financialAid','http://ed-fi.org/ods/identity/claims/tpdm/financialAid', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -951,8 +951,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/educatorPreparationProgram', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('educatorPreparationProgram','http://ed-fi.org/ods/identity/claims/tpdm/educatorPreparationProgram', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1138,8 +1138,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('systemDescriptors', 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1171,8 +1171,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/tpdm/descriptors', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('descriptors','http://ed-fi.org/ods/identity/claims/domains/tpdm/descriptors', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1204,8 +1204,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/accreditationStatusDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('accreditationStatusDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/accreditationStatusDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1233,8 +1233,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/aidTypeDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('aidTypeDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/aidTypeDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1262,8 +1262,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/certificationRouteDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('certificationRouteDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/certificationRouteDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1291,8 +1291,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/coteachingStyleObservedDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('coteachingStyleObservedDescriptor', 'http://ed-fi.org/ods/identity/claims/tpdm/coteachingStyleObservedDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1320,8 +1320,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/credentialStatusDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('credentialStatusDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/credentialStatusDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1349,8 +1349,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/educatorRoleDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('educatorRoleDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/educatorRoleDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1378,8 +1378,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/englishLanguageExamDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('englishLanguageExamDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/englishLanguageExamDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1407,8 +1407,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/ePPProgramPathwayDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('ePPProgramPathwayDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/ePPProgramPathwayDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1436,8 +1436,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationElementRatingLevelDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationElementRatingLevelDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/evaluationElementRatingLevelDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1465,8 +1465,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationPeriodDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationPeriodDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/evaluationPeriodDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1494,8 +1494,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationRatingLevelDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationRatingLevelDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/evaluationRatingLevelDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1523,8 +1523,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationRatingStatusDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationRatingStatusDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/evaluationRatingStatusDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1552,8 +1552,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/evaluationTypeDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('evaluationTypeDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/evaluationTypeDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1581,8 +1581,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/genderDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('genderDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/genderDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1610,8 +1610,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/objectiveRatingLevelDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('objectiveRatingLevelDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/objectiveRatingLevelDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1640,8 +1640,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRatingLevelDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('performanceEvaluationRatingLevelDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationRatingLevelDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1669,8 +1669,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationTypeDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('performanceEvaluationTypeDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/performanceEvaluationTypeDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1698,8 +1698,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/rubricRatingLevelDescriptor', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('rubricRatingLevelDescriptor','http://ed-fi.org/ods/identity/claims/tpdm/rubricRatingLevelDescriptor', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1734,8 +1734,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/educationOrganizations', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('educationOrganizations','http://ed-fi.org/ods/identity/claims/domains/educationOrganizations', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1766,8 +1766,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/people', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('people','http://ed-fi.org/ods/identity/claims/domains/people', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1799,8 +1799,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/candidate', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ( 'candidate','http://ed-fi.org/ods/identity/claims/tpdm/candidate', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1835,8 +1835,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/surveyDomain', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('surveyDomain','http://ed-fi.org/ods/identity/claims/domains/surveyDomain', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1868,8 +1868,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ( 'http://ed-fi.org/ods/identity/claims/tpdm/surveyResponsePersonTargetAssociation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('surveyResponsePersonTargetAssociation', 'http://ed-fi.org/ods/identity/claims/tpdm/surveyResponsePersonTargetAssociation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -1897,8 +1897,8 @@ BEGIN
     IF claim_id IS NULL THEN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
-        INSERT INTO dbo.ResourceClaims( ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/tpdm/surveySectionResponsePersonTargetAssociation', parent_resource_claim_id)
+        INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+        VALUES ('surveySectionResponsePersonTargetAssociation', 'http://ed-fi.org/ods/identity/claims/tpdm/surveySectionResponsePersonTargetAssociation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE

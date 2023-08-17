@@ -63,7 +63,7 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims(ClaimName, ParentResourceClaimId, Application_ApplicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
             VALUES ('http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData', @parentResourceClaimId, @applicationId)
 
             SET @claimId = SCOPE_IDENTITY()
@@ -102,7 +102,7 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims(ClaimName, ParentResourceClaimId, Application_ApplicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
             VALUES ('http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', @parentResourceClaimId, @applicationId)
 
             SET @claimId = SCOPE_IDENTITY()
@@ -271,7 +271,7 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims(ClaimName, ParentResourceClaimId, Application_ApplicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
             VALUES ('http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation', @parentResourceClaimId, @applicationId)
 
             SET @claimId = SCOPE_IDENTITY()
