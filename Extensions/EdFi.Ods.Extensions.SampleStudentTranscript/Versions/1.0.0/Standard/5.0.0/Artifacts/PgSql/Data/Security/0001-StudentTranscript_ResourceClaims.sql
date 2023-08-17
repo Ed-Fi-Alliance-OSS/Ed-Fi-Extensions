@@ -4,95 +4,52 @@
 -- See the LICENSE and NOTICES files in the project root for more information.
 
 do $$
-declare appId int;
 declare systemDescriptorsResourceClaimId int;
 declare authStrategyId int;
 declare postSecondaryOrganizationResourceClaimId int;
 
 begin
 
-SELECT ApplicationId into appId
-FROM dbo.Applications
-WHERE ApplicationName = 'Ed-Fi ODS API';
-
 SELECT ResourceClaimId into systemDescriptorsResourceClaimId
 FROM dbo.ResourceClaims
-WHERE ResourceName = 'systemDescriptors';
+WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors';
 
 INSERT INTO dbo.ResourceClaims (
-    DisplayName
-    ,ResourceName
-    ,ClaimName
-    ,ParentResourceClaimId
-    ,Application_ApplicationId
+    ClaimName
+    ,ParentResourceClaimId    
     )
 VALUES (
-    'institutionControlDescriptor'
-    , 'institutionControlDescriptor'
-    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor'
+   'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor'
     , systemDescriptorsResourceClaimId
-    , appId
     );
 
 INSERT INTO dbo.ResourceClaims (
-    DisplayName
-    ,ResourceName
-    ,ClaimName
-    ,ParentResourceClaimId
-    ,Application_ApplicationId
-    )
+    ClaimName
+    ,ParentResourceClaimId)
 VALUES (
-    'institutionLevelDescriptor'
-    , 'institutionLevelDescriptor'
-    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor'
-    , systemDescriptorsResourceClaimId
-    , appId
-    );
+    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor'
+    , systemDescriptorsResourceClaimId );
 
 INSERT INTO dbo.ResourceClaims (
-    DisplayName
-    ,ResourceName
-    ,ClaimName
-    ,ParentResourceClaimId
-    ,Application_ApplicationId
-    )
+    ClaimName
+    ,ParentResourceClaimId)
 VALUES (
-    'specialEducationGraduationStatusDescriptor'
-    , 'specialEducationGraduationStatusDescriptor'
-    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
-    , systemDescriptorsResourceClaimId
-    , appId
-    );
+    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
+    , systemDescriptorsResourceClaimId );
 
 INSERT INTO dbo.ResourceClaims (
-    DisplayName
-    ,ResourceName
-    ,ClaimName
-    ,ParentResourceClaimId
-    ,Application_ApplicationId
-    )
+     ClaimName
+    ,ParentResourceClaimId )
 VALUES (
-    'submissionCertificationDescriptor'
-    , 'submissionCertificationDescriptor'
-    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor'
-    , systemDescriptorsResourceClaimId
-    , appId
-    );
+    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor'
+    , systemDescriptorsResourceClaimId  );
 
 INSERT INTO dbo.ResourceClaims (
-    DisplayName
-    ,ResourceName
-    ,ClaimName
-    ,ParentResourceClaimId
-    ,Application_ApplicationId
-    )
+     ClaimName
+    ,ParentResourceClaimId )
 VALUES (
-    'postSecondaryOrganization'
-    , 'postSecondaryOrganization'
-    , 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
-    , null
-    , appId
-    );
+    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+    , null);
 
 --Setup Authorization Strategy
 SELECT AuthorizationStrategyId INTO authStrategyId
@@ -101,7 +58,7 @@ WHERE AuthorizationStrategyName = 'NoFurtherAuthorizationRequired';
 
 SELECT ResourceClaimId INTO postSecondaryOrganizationResourceClaimId
 FROM dbo.ResourceClaims
-WHERE ResourceName = 'postSecondaryOrganization';
+WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization';
 
 INSERT INTO dbo.ResourceClaimActions (
     ResourceClaimId
@@ -137,7 +94,7 @@ SELECT ClaimSetId
 FROM dbo.ClaimSets c
     ,dbo.ResourceClaims r
     ,dbo.Actions a
-WHERE r.ResourceName = 'postSecondaryOrganization'
+WHERE r.ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
     AND (
         c.ClaimSetName = 'SIS Vendor'
         OR c.ClaimSetName = 'Ed-Fi Sandbox'
