@@ -44,5 +44,5 @@ WHERE NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId =
 INSERT INTO dbo.ClaimSetResourceClaimActions (ActionId,ClaimSetId,ResourceClaimId)
 SELECT (SELECT ActionId FROM Actions WHERE ActionName = 'read'), @claimSetId, ResourceClaimId
 FROM ResourceClaims RC
-WHERE RC.ResourceName = 'systemDescriptors'
+WHERE RC.ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors'
 AND NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = (SELECT ActionId FROM dbo.Actions WHERE ActionName = 'Read') AND ClaimSetId = @claimSetId AND ResourceClaimId = RC.ResourceClaimID);	
