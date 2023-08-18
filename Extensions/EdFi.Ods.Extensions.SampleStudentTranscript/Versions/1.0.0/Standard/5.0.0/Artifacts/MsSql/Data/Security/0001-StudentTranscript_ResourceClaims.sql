@@ -8,35 +8,35 @@ DECLARE @SystemDescriptorsId INT
 
 SELECT @SystemDescriptorsId = resourceclaimid
 FROM   [dbo].[resourceclaims]
-WHERE  ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors'
+WHERE  ResourceName = 'systemDescriptors'
 
 INSERT INTO [dbo].[resourceclaims]
-            ([claimname],
+            ([ResourceName], [ClaimName],
              [parentresourceclaimid])
-VALUES      ( 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor',
+VALUES      ( 'institutionControlDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor',
 @SystemDescriptorsId )
 
 INSERT INTO [dbo].[resourceclaims]
-            ([claimname],
+            ([ResourceName], [ClaimName],
              [parentresourceclaimid])
-VALUES      ( 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor',
+VALUES      ('institutionLevelDescriptor', 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor',
               @SystemDescriptorsId )
 
 INSERT INTO [dbo].[resourceclaims]
-            ([claimname],
+            ([ResourceName], [ClaimName],
              [parentresourceclaimid])
-VALUES      ( 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
+VALUES      ( 'specialEducationGraduationStatusDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
 ,@SystemDescriptorsId )
 
 INSERT INTO [dbo].[resourceclaims]
-            ([claimname],
+            ([ResourceName], [ClaimName],
              [parentresourceclaimid])
-VALUES      ( 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor',
+VALUES      ( 'submissionCertificationDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor',
 @SystemDescriptorsId)
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName] ,[ParentResourceClaimId]  )
-VALUES ( 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+    [ResourceName], [ClaimName] ,[ParentResourceClaimId]  )
+VALUES ('postSecondaryOrganization', 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
     ,NULL    )
 
 --Setup Authorization Strategy
@@ -50,7 +50,7 @@ WHERE AuthorizationStrategyName = 'NoFurtherAuthorizationRequired'
 
 SELECT @ResourceClaimId = resourceclaimid
 FROM ResourceClaims
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+WHERE ResourceName = 'postSecondaryOrganization'
 
 INSERT INTO [dbo].[ResourceClaimActions] (
     [ResourceClaimId]
@@ -87,7 +87,7 @@ SELECT [ClaimSetId]
 FROM Actions a
     ,ClaimSets c
     ,ResourceClaims r
-WHERE r.ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+WHERE r.ResourceName = 'postSecondaryOrganization'
     AND (
         c.ClaimSetName = 'SIS Vendor'
         OR c.ClaimSetName = 'Ed-Fi Sandbox'

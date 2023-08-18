@@ -44,6 +44,6 @@ BEGIN
     INSERT INTO dbo.ClaimSetResourceClaimActions (ActionId, ClaimSetId, ResourceClaimId)
     SELECT (SELECT ActionId FROM dbo.Actions WHERE ActionName = 'Read'), claim_set_id, ResourceClaimId
     FROM dbo.ResourceClaims RC
-    WHERE RC.ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors'
+    WHERE RC.ResourceName = 'systemDescriptors'
 	AND NOT EXISTS(SELECT 1 FROM dbo.ClaimSetResourceClaimActions WHERE ActionId = (SELECT ActionId FROM dbo.Actions WHERE ActionName = 'Read') AND ClaimSetId = claim_set_id AND ResourceClaimId = RC.ResourceClaimID);	
 	END $$;

@@ -8,72 +8,72 @@ DECLARE @AuthorizationStrategyId INT;
 DECLARE @systemDescriptorsResourceClaimId INT
 SELECT @systemDescriptorsResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors'
+WHERE ResourceName = 'systemDescriptors'
 
 DECLARE @relationshipBasedDataResourceClaimId INT
 SELECT @relationshipBasedDataResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData'
+WHERE ResourceName = 'relationshipBasedData'
 
 DECLARE @educationOrganizationsResourceClaimId INT
 SELECT @educationOrganizationsResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/educationOrganizations'
+WHERE ResourceName = 'educationOrganizations'
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId]
     )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/artMediumDescriptor'
+    'artMediumDescriptor','http://ed-fi.org/ods/identity/claims/sample/artMediumDescriptor'
     , @systemDescriptorsResourceClaimId
     )
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId]
     )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/favoriteBookCategoryDescriptor'
+    'favoriteBookCategoryDescriptor','http://ed-fi.org/ods/identity/claims/sample/favoriteBookCategoryDescriptor'
     , @systemDescriptorsResourceClaimId
     )
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId] )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/membershipTypeDescriptor'
+    'membershipTypeDescriptor','http://ed-fi.org/ods/identity/claims/sample/membershipTypeDescriptor'
     , @systemDescriptorsResourceClaimId
 
     )
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId]
     )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/bus'
+    'bus','http://ed-fi.org/ods/identity/claims/sample/bus'
     , @educationOrganizationsResourceClaimId )
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId] )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/busRoute'
+    'busRoute','http://ed-fi.org/ods/identity/claims/sample/busRoute'
     , @educationOrganizationsResourceClaimId )
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId] )
 VALUES (
-   'http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation'
+   'studentArtProgramAssociation','http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation'
     , @relationshipBasedDataResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims] (
-    [ClaimName]
+    [ResourceName], [ClaimName]
     ,[ParentResourceClaimId]  )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation'
+    'studentGraduationPlanAssociation','http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation'
     , @relationshipBasedDataResourceClaimId   )
 	
 SELECT @AuthorizationStrategyId  = (SELECT AuthorizationStrategyId FROM [dbo].[AuthorizationStrategies] WHERE AuthorizationStrategyName = 'NoFurtherAuthorizationRequired');	
@@ -87,7 +87,7 @@ SELECT @AuthorizationStrategyId  = (SELECT AuthorizationStrategyId FROM [dbo].[A
     (SELECT ActionId
     FROM [dbo].[Actions]
     WHERE ActionName IN ('Create', 'Read', 'Update', 'Delete')) AS ac
-    WHERE ClaimName IN ('http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', 'http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation');
+    WHERE ResourceName IN ('studentArtProgramAssociation', 'studentGraduationPlanAssociation');
 
 
     INSERT INTO dbo.ResourceClaimActionAuthorizationStrategies(ResourceClaimActionId, AuthorizationStrategyId)
@@ -95,4 +95,4 @@ SELECT @AuthorizationStrategyId  = (SELECT AuthorizationStrategyId FROM [dbo].[A
     INNER JOIN dbo.ResourceClaims  RC   ON RC.ResourceClaimId = RCA.ResourceClaimId
     INNER JOIN dbo.Actions  A  ON A.ActionId = RCA.ActionId
     WHERE A.ActionName IN ('Create', 'Read', 'Update', 'Delete')
-    AND  RC.ClaimName IN ('http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', 'http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation')
+    AND  RC.ResourceName IN ('studentArtProgramAssociation', 'studentGraduationPlanAssociation');

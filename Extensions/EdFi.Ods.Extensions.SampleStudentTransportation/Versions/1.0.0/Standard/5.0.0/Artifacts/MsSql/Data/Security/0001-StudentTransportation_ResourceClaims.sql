@@ -7,9 +7,9 @@
 DECLARE @ParentResourceClaimId INT
 SELECT @ParentResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData'
+WHERE ResourceName = 'relationshipBasedData'
  
-INSERT INTO [dbo].[ResourceClaims] ( [ClaimName] ,[ParentResourceClaimId]  )
-VALUES ('http://ed-fi.org/ods/identity/claims/sample-student-transportation/studentTransportation'
+INSERT INTO [dbo].[ResourceClaims] ([ResourceName], [ClaimName] ,[ParentResourceClaimId]  )
+VALUES ('studentTransportation','http://ed-fi.org/ods/identity/claims/sample-student-transportation/studentTransportation'
         ,@ParentResourceClaimId
         )

@@ -12,43 +12,43 @@ begin
 
 SELECT ResourceClaimId into systemDescriptorsResourceClaimId
 FROM dbo.ResourceClaims
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors';
+WHERE ResourceName = 'systemDescriptors';
 
 INSERT INTO dbo.ResourceClaims (
-    ClaimName
+    ResourceName, ClaimName
     ,ParentResourceClaimId    
     )
 VALUES (
-   'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor'
+   'institutionControlDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionControlDescriptor'
     , systemDescriptorsResourceClaimId
     );
 
 INSERT INTO dbo.ResourceClaims (
-    ClaimName
+    ResourceName, ClaimName
     ,ParentResourceClaimId)
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor'
+    'institutionLevelDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/institutionLevelDescriptor'
     , systemDescriptorsResourceClaimId );
 
 INSERT INTO dbo.ResourceClaims (
-    ClaimName
+    ResourceName, ClaimName
     ,ParentResourceClaimId)
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
+    'specialEducationGraduationStatusDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/specialEducationGraduationStatusDescriptor'
     , systemDescriptorsResourceClaimId );
 
 INSERT INTO dbo.ResourceClaims (
-     ClaimName
+     ResourceName, ClaimName
     ,ParentResourceClaimId )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor'
+    'submissionCertificationDescriptor','http://ed-fi.org/ods/identity/claims/sample-student-transcript/submissionCertificationDescriptor'
     , systemDescriptorsResourceClaimId  );
 
 INSERT INTO dbo.ResourceClaims (
-     ClaimName
+     ResourceName, ClaimName
     ,ParentResourceClaimId )
 VALUES (
-    'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+    'postSecondaryOrganization','http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
     , null);
 
 --Setup Authorization Strategy
@@ -58,7 +58,7 @@ WHERE AuthorizationStrategyName = 'NoFurtherAuthorizationRequired';
 
 SELECT ResourceClaimId INTO postSecondaryOrganizationResourceClaimId
 FROM dbo.ResourceClaims
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization';
+WHERE ResourceName = 'postSecondaryOrganization';
 
 INSERT INTO dbo.ResourceClaimActions (
     ResourceClaimId
@@ -94,7 +94,7 @@ SELECT ClaimSetId
 FROM dbo.ClaimSets c
     ,dbo.ResourceClaims r
     ,dbo.Actions a
-WHERE r.ClaimName = 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization'
+WHERE r.ResourceName = 'postSecondaryOrganization'
     AND (
         c.ClaimSetName = 'SIS Vendor'
         OR c.ClaimSetName = 'Ed-Fi Sandbox'

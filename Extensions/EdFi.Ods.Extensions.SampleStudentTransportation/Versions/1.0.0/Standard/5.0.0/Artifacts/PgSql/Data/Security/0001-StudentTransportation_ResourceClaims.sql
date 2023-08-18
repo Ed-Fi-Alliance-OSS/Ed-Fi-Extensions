@@ -11,13 +11,13 @@ begin
 
 SELECT ResourceClaimId into relationshipBasedDataResourceClaimId
 FROM dbo.ResourceClaims
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData';
+WHERE ResourceName = 'relationshipBasedData';
 
 INSERT INTO dbo.ResourceClaims (
-    ClaimName
+    ResourceName, ClaimName
     ,ParentResourceClaimId )
 VALUES (
-   'http://ed-fi.org/ods/identity/claims/sample-student-transportation/studentTransportation'
+   'studentTransportation','http://ed-fi.org/ods/identity/claims/sample-student-transportation/studentTransportation'
     , relationshipBasedDataResourceClaimId  );
 
 end $$

@@ -93,7 +93,7 @@ BEGIN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
         INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
-        VALUES ('postSecondaryOrganization', 'postSecondaryOrganization', 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization', parent_resource_claim_id)
+        VALUES ('postSecondaryOrganization', 'http://ed-fi.org/ods/identity/claims/sample-student-transcript/postSecondaryOrganization', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE

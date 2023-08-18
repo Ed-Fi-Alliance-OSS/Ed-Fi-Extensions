@@ -58,7 +58,7 @@ BEGIN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
         INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData', parent_resource_claim_id)
+        VALUES ('relationshipBasedData','http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -91,7 +91,7 @@ BEGIN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
         INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', parent_resource_claim_id)
+        VALUES ('studentArtProgramAssociation','http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE
@@ -245,7 +245,7 @@ BEGIN
         RAISE NOTICE 'Creating new claim: %', claim_name;
 
         INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
-        VALUES ('http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation', parent_resource_claim_id)
+        VALUES ('studentGraduationPlanAssociation','http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation', parent_resource_claim_id)
         RETURNING ResourceClaimId
         INTO claim_id;
     ELSE

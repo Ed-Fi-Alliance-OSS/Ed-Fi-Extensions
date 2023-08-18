@@ -7,49 +7,49 @@
 DECLARE @systemDescriptorsResourceClaimId INT
 SELECT @systemDescriptorsResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/systemDescriptors'
+WHERE ResourceName = 'systemDescriptors'
 
 DECLARE @relationshipBasedDataResourceClaimId INT
 SELECT @relationshipBasedDataResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData'
+WHERE ResourceName = 'relationshipBasedData'
 
 DECLARE @educationOrganizationsResourceClaimId INT
 SELECT @educationOrganizationsResourceClaimId = ResourceClaimId
 FROM [dbo].[ResourceClaims]
-WHERE ClaimName = 'http://ed-fi.org/ods/identity/claims/domains/educationOrganizations'
+WHERE ResourceName = 'educationOrganizations'
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ('http://ed-fi.org/ods/identity/claims/homograph/name', @educationOrganizationsResourceClaimId)
+    ('name','http://ed-fi.org/ods/identity/claims/homograph/name', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/school', @educationOrganizationsResourceClaimId)
+    ('school', 'http://ed-fi.org/ods/identity/claims/homograph/school', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/contact', @educationOrganizationsResourceClaimId)
+    ('contact', 'http://ed-fi.org/ods/identity/claims/homograph/contact', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/student', @educationOrganizationsResourceClaimId)
+    ('student', 'http://ed-fi.org/ods/identity/claims/homograph/student', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/staff', @educationOrganizationsResourceClaimId)
+    ('staff', 'http://ed-fi.org/ods/identity/claims/homograph/staff', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/schoolYearType', @educationOrganizationsResourceClaimId)
+    ('schoolYearType', 'http://ed-fi.org/ods/identity/claims/homograph/schoolYearType', @educationOrganizationsResourceClaimId)
 
 INSERT INTO [dbo].[ResourceClaims]
-    ( [ClaimName], [ParentResourceClaimId])
+    ([ResourceName], [ClaimName], [ParentResourceClaimId])
 VALUES
-    ( 'http://ed-fi.org/ods/identity/claims/homograph/studentSchoolAssociation', @educationOrganizationsResourceClaimId)
+    ('studentSchoolAssociation', 'http://ed-fi.org/ods/identity/claims/homograph/studentSchoolAssociation', @educationOrganizationsResourceClaimId)
