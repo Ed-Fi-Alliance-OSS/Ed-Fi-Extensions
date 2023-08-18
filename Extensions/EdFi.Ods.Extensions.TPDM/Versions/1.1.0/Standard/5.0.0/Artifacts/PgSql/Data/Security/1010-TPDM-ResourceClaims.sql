@@ -213,7 +213,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -234,7 +234,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -255,7 +255,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -276,7 +276,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -583,7 +583,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -604,7 +604,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -626,7 +626,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -647,7 +647,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -719,7 +719,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -740,7 +740,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -761,7 +761,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -782,7 +782,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required';
+    WHERE   a.DisplayName = 'No Further Authorization Required';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''No Further Authorization Required''';
@@ -988,7 +988,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -1009,7 +1009,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -1030,7 +1030,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';
@@ -1052,7 +1052,7 @@ BEGIN
 
     SELECT a.AuthorizationStrategyId INTO authorization_strategy_id
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only';
+    WHERE   a.DisplayName = 'Relationships with Education Organizations only';
 
     IF authorization_strategy_id IS NULL THEN
         RAISE EXCEPTION USING MESSAGE = 'AuthorizationStrategy does not exist: ''Relationships with Education Organizations only''';

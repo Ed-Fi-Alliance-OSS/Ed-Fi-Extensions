@@ -227,7 +227,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -250,7 +250,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -273,7 +273,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -297,7 +297,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -661,7 +661,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -684,7 +684,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -707,7 +707,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -731,7 +731,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -813,7 +813,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -836,7 +836,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -859,7 +859,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -883,7 +883,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'No Further Authorization Required'
+    WHERE a.DisplayName = 'No Further Authorization Required'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -1123,7 +1123,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -1146,7 +1146,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -1169,7 +1169,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
@@ -1192,7 +1192,7 @@ BEGIN
 
     SELECT @authorizationStrategyId = a.AuthorizationStrategyId
     FROM    dbo.AuthorizationStrategies a
-    WHERE   a.ResourceName = 'Relationships with Education Organizations only'
+    WHERE a.DisplayName = 'Relationships with Education Organizations only'
 
     IF @authorizationStrategyId IS NULL
     BEGIN
