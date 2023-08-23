@@ -57,10 +57,8 @@ INSERT INTO dbo.ResourceClaims (
     )
 VALUES (
     'membershipTypeDescriptor'
-
     , 'http://ed-fi.org/ods/identity/claims/sample/membershipTypeDescriptor'
     , systemDescriptorsResourceClaimId
-
     );
 	
 INSERT INTO dbo.ResourceClaims (

@@ -42,9 +42,9 @@ INSERT INTO [dbo].[ResourceClaims] (
     [ResourceName], [ClaimName]
     ,[ParentResourceClaimId] )
 VALUES (
-    'membershipTypeDescriptor','http://ed-fi.org/ods/identity/claims/sample/membershipTypeDescriptor'
+    'membershipTypeDescriptor'
+    ,'http://ed-fi.org/ods/identity/claims/sample/membershipTypeDescriptor'
     , @systemDescriptorsResourceClaimId
-
     )
 
 INSERT INTO [dbo].[ResourceClaims] (
