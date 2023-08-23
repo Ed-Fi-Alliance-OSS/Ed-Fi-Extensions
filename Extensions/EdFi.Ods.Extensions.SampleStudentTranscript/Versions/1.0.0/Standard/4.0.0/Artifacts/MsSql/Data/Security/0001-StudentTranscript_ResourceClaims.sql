@@ -8,7 +8,7 @@ DECLARE @SystemDescriptorsId INT
 
 SELECT @SystemDescriptorsId = resourceclaimid
 FROM   [dbo].[resourceclaims]
-WHERE  displayname = 'systemDescriptors'
+WHERE  resourcename = 'systemDescriptors'
 
 INSERT INTO [dbo].[resourceclaims]
             ([resourcename],
