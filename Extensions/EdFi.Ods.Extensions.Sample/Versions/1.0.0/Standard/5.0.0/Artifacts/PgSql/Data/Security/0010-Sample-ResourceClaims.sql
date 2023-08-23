@@ -1,5 +1,5 @@
 do $$
-declare appId int;
+
 declare systemDescriptorsResourceClaimId int;
 declare relationshipBasedDataResourceClaimId int;
 declare educationOrganizationsResourceClaimId int;
@@ -7,9 +7,9 @@ declare authStrategyId int;
 
 begin
 
-SELECT ApplicationId into appId
-FROM dbo.Applications
-WHERE ApplicationName = 'Ed-Fi ODS API';
+
+
+
 
 SELECT ResourceClaimId into systemDescriptorsResourceClaimId
 FROM dbo.ResourceClaims

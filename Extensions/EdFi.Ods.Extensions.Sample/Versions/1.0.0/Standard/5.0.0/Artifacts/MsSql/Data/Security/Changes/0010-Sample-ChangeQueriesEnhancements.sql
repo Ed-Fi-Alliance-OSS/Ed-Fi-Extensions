@@ -63,8 +63,8 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
-            VALUES ('relationshipBasedData','http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData', @parentResourceClaimId, @applicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+            VALUES ('relationshipBasedData','http://ed-fi.org/ods/identity/claims/domains/relationshipBasedData', @parentResourceClaimId)
 
             SET @claimId = SCOPE_IDENTITY()
         END
@@ -102,8 +102,8 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
-            VALUES ('studentArtProgramAssociation','http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', @parentResourceClaimId, @applicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+            VALUES ('studentArtProgramAssociation','http://ed-fi.org/ods/identity/claims/sample/studentArtProgramAssociation', @parentResourceClaimId)
 
             SET @claimId = SCOPE_IDENTITY()
         END
@@ -271,8 +271,8 @@ BEGIN
         BEGIN
             PRINT 'Creating new claim: ' + @claimName
 
-            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId, Application_ApplicationId)
-            VALUES ('studentGraduationPlanAssociation','http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation', @parentResourceClaimId, @applicationId)
+            INSERT INTO dbo.ResourceClaims( ResourceName, ClaimName, ParentResourceClaimId)
+            VALUES ('studentGraduationPlanAssociation','http://ed-fi.org/ods/identity/claims/sample/studentGraduationPlanAssociation', @parentResourceClaimId)
 
             SET @claimId = SCOPE_IDENTITY()
         END
