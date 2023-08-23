@@ -69,10 +69,8 @@ INSERT INTO dbo.ResourceClaims (
     )
 VALUES (
     'bus'
-
     , 'http://ed-fi.org/ods/identity/claims/sample/bus'
     , educationOrganizationsResourceClaimId
-
     );
 	
 INSERT INTO dbo.ResourceClaims (
