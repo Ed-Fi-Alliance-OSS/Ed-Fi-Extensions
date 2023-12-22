@@ -5,7 +5,6 @@
 
 name: CodeQL Security Scan Schedule 
 
-
 on:
   schedule:
     - cron: '0 0 * * *'
