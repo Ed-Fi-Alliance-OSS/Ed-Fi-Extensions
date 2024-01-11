@@ -19,6 +19,7 @@ jobs:
     uses: Ed-Fi-Alliance-OSS/Ed-Fi-ODS/.github/workflows/Find Standard and Extension Versions.yml@ODS-6137
     with:
       calling_branch: ${{ github.head_ref || github.ref_name }}
+      extension_path: 'Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.csproj'
       
   analyze:
     if: ${{ always() }}
