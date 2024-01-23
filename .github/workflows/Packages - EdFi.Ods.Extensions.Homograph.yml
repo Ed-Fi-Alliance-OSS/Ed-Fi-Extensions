@@ -6,6 +6,8 @@
 name: Packages - EdFi.Ods.Extensions.Homograph
 
 on:
+  pull_request:
+    branches: [main,main-*,ODS-*]
   push:
     branches:
       - main
