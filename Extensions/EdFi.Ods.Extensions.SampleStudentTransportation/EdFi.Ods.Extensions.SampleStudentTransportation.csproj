@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>EdFi.Ods.Extensions.SampleStudentTransportation</AssemblyName>
     <RootNamespace>EdFi.Ods.Extensions.SampleStudentTransportation</RootNamespace>
     <RestorePackages>true</RestorePackages>
@@ -24,11 +24,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
-	<Content Include="Artifacts\**\PgSql\*.sql">
-	  <AutoGen>True</AutoGen>
-	  <DesignTime>True</DesignTime>
-	</Content>
-		<EmbeddedResource Include="Artifacts\**\Schemas\*.xsd">
+    <Content Include="Artifacts\**\PgSql\*.sql">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <EmbeddedResource Include="Artifacts\**\Schemas\*.xsd">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <SubType>Designer</SubType>
