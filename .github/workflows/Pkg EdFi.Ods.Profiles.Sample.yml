@@ -10,8 +10,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-  pull_request:
-    branches: [main, 'ODS-*']
+
 env:
   INFORMATIONAL_VERSION: "7.2"
   BUILD_INCREMENTER: "-64"
