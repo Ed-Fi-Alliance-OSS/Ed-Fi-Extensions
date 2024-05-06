@@ -364,7 +364,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -471,7 +471,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -899,7 +899,7 @@
           "propertyName": "ServiceAreaPostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -1069,7 +1069,7 @@
           "propertyName": "TelephoneNumber",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 24,
             "precision": 0,
             "scale": 0,
@@ -1338,7 +1338,7 @@
           "propertyName": "Author",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 100,
             "precision": 0,
             "scale": 0,
@@ -1461,7 +1461,7 @@
           "propertyName": "CIPCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 120,
             "precision": 0,
             "scale": 0,
@@ -2082,7 +2082,7 @@
           "propertyName": "CIPCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 120,
             "precision": 0,
             "scale": 0,
@@ -2654,7 +2654,7 @@
           "propertyName": "IdentificationCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -3302,7 +3302,7 @@
           "propertyName": "PriorContactRestrictions",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 250,
             "precision": 0,
             "scale": 0,
@@ -3689,7 +3689,7 @@
           "propertyName": "TelephoneNumber",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 24,
             "precision": 0,
             "scale": 0,
@@ -4654,7 +4654,7 @@
           "propertyName": "CIPCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 120,
             "precision": 0,
             "scale": 0,
@@ -4771,7 +4771,7 @@
           "propertyName": "Description",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 1024,
             "precision": 0,
             "scale": 0,
@@ -4836,7 +4836,7 @@
           "propertyName": "DesignatedBy",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5610,7 +5610,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5655,7 +5655,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5714,7 +5714,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5759,7 +5759,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5835,7 +5835,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5893,7 +5893,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5948,7 +5948,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -5993,7 +5993,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -6052,7 +6052,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -6097,7 +6097,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -6156,7 +6156,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -6201,7 +6201,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -6372,7 +6372,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6407,7 +6407,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -6483,7 +6483,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6518,7 +6518,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -6608,7 +6608,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6643,7 +6643,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -6719,7 +6719,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6754,7 +6754,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -6844,7 +6844,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6879,7 +6879,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -6955,7 +6955,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -6990,7 +6990,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -7388,7 +7388,7 @@
           "propertyName": "ContentIdentifier",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 225,
             "precision": 0,
             "scale": 0,
@@ -7412,7 +7412,7 @@
           "propertyName": "ContentIdentifier",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 225,
             "precision": 0,
             "scale": 0,
@@ -7741,7 +7741,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -7851,7 +7851,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -8168,7 +8168,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8191,7 +8191,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8223,7 +8223,7 @@
           "propertyName": "BusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -8247,7 +8247,7 @@
           "propertyName": "DirectlyOwnedBusId",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -8290,7 +8290,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8313,7 +8313,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8350,7 +8350,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8373,7 +8373,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -8695,7 +8695,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -8805,7 +8805,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -8988,7 +8988,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9098,7 +9098,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9222,7 +9222,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9332,7 +9332,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9516,7 +9516,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9626,7 +9626,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9750,7 +9750,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -9860,7 +9860,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -10103,7 +10103,7 @@
           "propertyName": "InterventionStudyIdentificationCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -10144,7 +10144,7 @@
           "propertyName": "InterventionStudyIdentificationCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -11021,7 +11021,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -11131,7 +11131,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -11271,7 +11271,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11306,7 +11306,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -11399,7 +11399,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11434,7 +11434,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -11541,7 +11541,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11576,7 +11576,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -11669,7 +11669,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11704,7 +11704,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -11811,7 +11811,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11846,7 +11846,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -11939,7 +11939,7 @@
           "propertyName": "PostalCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 17,
             "precision": 0,
             "scale": 0,
@@ -11974,7 +11974,7 @@
           "propertyName": "StreetNumberName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 150,
             "precision": 0,
             "scale": 0,
@@ -12089,7 +12089,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -12147,7 +12147,7 @@
           "propertyName": "FavoriteProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -14658,7 +14658,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -14716,7 +14716,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -14816,7 +14816,7 @@
           "propertyName": "ProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -14926,7 +14926,7 @@
           "propertyName": "RelatedProgramName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -15016,7 +15016,7 @@
           "propertyName": "LocalCourseCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -15039,7 +15039,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -15068,7 +15068,7 @@
           "propertyName": "SectionIdentifier",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 255,
             "precision": 0,
             "scale": 0,
@@ -15086,7 +15086,7 @@
           "propertyName": "SessionName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -15145,7 +15145,7 @@
           "propertyName": "LocalCourseCode",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
@@ -15168,7 +15168,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The identifier assigned to a school.",
+          "description": "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -15197,7 +15197,7 @@
           "propertyName": "SectionIdentifier",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 255,
             "precision": 0,
             "scale": 0,
@@ -15215,7 +15215,7 @@
           "propertyName": "SessionName",
           "propertyType": {
             "dbType": "String",
-            "minLength": 1,
+            "minLength": 0,
             "maxLength": 60,
             "precision": 0,
             "scale": 0,
