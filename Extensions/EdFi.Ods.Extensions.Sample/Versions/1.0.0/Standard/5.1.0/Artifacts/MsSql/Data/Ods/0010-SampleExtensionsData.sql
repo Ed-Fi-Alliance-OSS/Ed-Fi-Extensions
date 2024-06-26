@@ -543,7 +543,7 @@ INSERT INTO sample.SchoolCTEProgramService
     , CIPCode
     , PrimaryIndicator
     , ServiceBeginDate
-	, ServiceEndDate)
+    , ServiceEndDate)
 VALUES (@grandBendElementarySchoolId, @cteProgramServiceDescriptorId, '13.0301', 0, '2018-08-20', '2018-09-20')
 
 INSERT INTO sample.SchoolDirectlyOwnedBus
@@ -595,7 +595,7 @@ INSERT INTO sample.ContactCTEProgramService
     , CIPCode
     , PrimaryIndicator
     , ServiceBeginDate
-	, ServiceEndDate)
+    , ServiceEndDate)
 VALUES (@contact777777Usi, @cteProgramServiceDescriptorId, '13.0301', 0, '2018-08-20', '2018-09-20')
 
 INSERT INTO sample.ContactEducationContent
@@ -794,7 +794,7 @@ INSERT INTO sample.StudentGraduationPlanAssociationCTEProgramService
     , CIPCode
     , PrimaryIndicator
     , ServiceBeginDate
-	, ServiceEndDate)
+    , ServiceEndDate)
 VALUES (@graduationPlanEducationOrganizationId, @graduationPlanTypeDescriptorId, @graduationPlanGraduationSchoolYear, @student604854Usi, @cteProgramServiceDescriptorId, '13.0301', 1, '2018-08-20', '2018-09-20')
 
 INSERT INTO sample.StudentGraduationPlanAssociationDescription
