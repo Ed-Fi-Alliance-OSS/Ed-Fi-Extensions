@@ -33,20 +33,20 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b  # v3.0.2
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@896079047b4bb059ba6f150a5d87d47dde99e6e5  # codeql-bundle-20221211
+        uses: github/codeql-action/init@df32e399139a3050671466d7d9b3cbacc1cfd034 # codeql-bundle-v2.15.2
         with:
           languages: 'csharp'
       - name: Support longpaths
         run: git config --system core.longpaths true
       - name: Checkout Ed-Fi-Extensions
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-Extensions
             path: Ed-Fi-Extensions/
       - name: Checkout Ed-Fi-ODS-Implementation
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation
             path: Ed-Fi-ODS-Implementation/
@@ -56,7 +56,7 @@ jobs:
         run: |
           .\build.githubactions.ps1 CheckoutBranch -RelativeRepoPath "../Ed-Fi-ODS-Implementation"
       - name: Checkout Ed-Fi-ODS          
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
             repository: Ed-Fi-Alliance-OSS/Ed-Fi-ODS
             path: Ed-Fi-ODS/
@@ -105,4 +105,4 @@ jobs:
              .\build.githubactions.ps1 build -Configuration ${{ env.CONFIGURATION }}  -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Extensions.TPDM/EdFi.Ods.Extensions.TPDM.csproj"
              .\build.githubactions.ps1 build -Configuration ${{ env.CONFIGURATION }}  -ProjectFile "$env:GITHUB_WORKSPACE/Ed-Fi-Extensions/Extensions/EdFi.Ods.Profiles.Sample/EdFi.Ods.Profiles.Sample.csproj"                                       
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@896079047b4bb059ba6f150a5d87d47dde99e6e5  # codeql-bundle-20221211
+        uses: github/codeql-action/analyze@df32e399139a3050671466d7d9b3cbacc1cfd034 # codeql-bundle-v2.15.2
