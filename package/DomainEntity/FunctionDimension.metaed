@@ -1,0 +1,14 @@
+Domain Entity FunctionDimension [3154]
+    documentation "The NCES function accounting dimension representing an expenditure. The function describes the activity for which a service or material object is acquired. The functions of a school district are generally classified into five broad areas, including instruction, support services, operation of non-instructional services, facilities acquisition and construction, and debt service."
+    shared string Code [3155]
+        documentation "The code representation of the account function dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3156]
+        documentation "The fiscal year for which the account function dimension is valid."
+        is part of identity
+    shared string CodeName [3157]
+        documentation "A description of the account function dimension."
+        is optional
+    descriptor ReportingTag [3158]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

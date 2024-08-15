@@ -1,0 +1,3 @@
+Shared String Code [3223]
+    documentation "The code representation of a chart of account dimension."
+    max length 16

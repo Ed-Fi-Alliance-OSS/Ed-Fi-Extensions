@@ -1,0 +1,8 @@
+Choice StudentCompetencyObjectiveSectionOrProgramChoice [2505]
+    documentation "This choice type allows a student competency objective to be associated with either a section or a program."
+    association StudentSectionAssociation [1749]
+        documentation "Relates the student and section associated with the competency objective."
+        is optional collection
+    association GeneralStudentProgramAssociation [1747]
+        documentation "Relates the student and program associated with the competency objective."
+        is optional collection

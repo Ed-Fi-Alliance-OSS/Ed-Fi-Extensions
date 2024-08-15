@@ -1,0 +1,3 @@
+Shared String AchievementTitle [4]
+    documentation "The title assigned to the achievement."
+    max length 60

@@ -1,0 +1,8 @@
+Common EducationOrganizationIdentificationCode [504]
+    documentation "A unique number or alphanumeric code that is assigned to an education organization by a school, school system, state, or other agency or entity."
+    shared string IdentificationCode [816]
+        documentation "A unique number or alphanumeric code that is assigned to an education organization by a school, school system, state, or other agency or entity."
+        is required
+    descriptor EducationOrganizationIdentificationSystem [815]
+        documentation "The school system, state, or agency assigning the identification code."
+        is part of identity

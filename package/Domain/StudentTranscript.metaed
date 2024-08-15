@@ -1,0 +1,8 @@
+Subdomain StudentTranscript of StudentAcademicRecord
+    documentation "A student transcript contains information about course-level grades and credits. A student transcript consists of aStudentAcademicRecord associated with each Session which has a CourseTranscript for each course taken."
+    domain entity Course
+    domain entity CourseTranscript
+    domain entity EducationOrganization
+    domain entity Student
+    domain entity StudentAcademicRecord
+    position 1

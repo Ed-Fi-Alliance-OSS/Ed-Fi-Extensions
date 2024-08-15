@@ -1,0 +1,3 @@
+Shared String Rating [90]
+    documentation "An accountability rating level, designation, or assessment."
+    max length 35

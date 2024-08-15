@@ -1,0 +1,14 @@
+Common AssessmentScore [485]
+    documentation "Definition of the scores to be expected from this assessment."
+    descriptor AssessmentReportingMethod [2541]
+        documentation "The method that the administrator of the assessment uses to report the performance and achievement of all students. It may be a qualitative method such as performance level descriptors or a quantitative method such as a numerical grade or cut score. More than one type of reporting method may be used."
+        is part of identity
+    shared string Result named MinimumScore [744]
+        documentation "The minimum score possible on the assessment."
+        is optional
+    shared string Result named MaximumScore [743]
+        documentation "The maximum score possible on the assessment."
+        is optional
+    descriptor ResultDatatypeType [745]
+        documentation "The datatype of the result. The results can be expressed as a number, percentile, range, level, etc."
+        is optional

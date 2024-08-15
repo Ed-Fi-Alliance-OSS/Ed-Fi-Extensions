@@ -1,0 +1,4 @@
+Shared Decimal MaxPoints [3123]
+    documentation "The maximum number of points  that can be earned for the submission."
+    total digits 9
+    decimal places 2

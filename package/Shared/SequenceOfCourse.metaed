@@ -1,0 +1,4 @@
+Shared Integer SequenceOfCourse [101]
+    documentation "When a Section is part of a sequence of parts for a course, the number if the sequence. If the course has only one part, the value of this Section attribute should be 1."
+    min value 1
+	max value 8

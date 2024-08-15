@@ -1,0 +1,9 @@
+Interchange MasterSchedule [2520]
+    documentation "This interchange loads education course offerings and their schedule.
+    The interchange can be used to exchange data regarding the course offerings, sections, and bell schedule for a school."
+    use case documentation "1. Exchange the school's course catalog to be offered during a session.
+    2. Exchange of the specific sections to be offered in each class period.
+    3. Exchange of bell schedule specifying the meeting times for the class period on various days of the school year."
+    domain entity CourseOffering [2520-001]
+    domain entity Section [2520-002]
+    domain entity BellSchedule [2520-003]

@@ -1,0 +1,14 @@
+Common ClassRanking [492]
+    documentation "The academic rank information of a student in relation to his or her graduating class."
+    integer ClassRank [763]
+        documentation "The academic rank of a student in relation to his or her graduating class (e.g., 1st, 2nd, 3rd)."
+        is required
+    integer TotalNumberInClass [766]
+        documentation "The total number of students in the student's graduating class."
+        is required
+    integer PercentageRanking [765]
+        documentation "The academic percentage rank of a student in relation to his or her graduating class (e.g., 95%, 80%, 50%)."
+        is optional
+    date ClassRankingDate [764]
+        documentation "Date class ranking was determined."
+        is optional

@@ -1,0 +1,31 @@
+Domain Entity CourseOffering [551]
+    documentation "This entity represents an entry in the course catalog of available courses offered by the school during a session."
+    shared string LocalCourseCode [1314]
+        documentation "The local code assigned by the School that identifies the course offering provided for the instruction of students."
+        is part of identity
+    shared string CourseTitle named LocalCourseTitle [1315]
+        documentation "The descriptive name given to a course of study offered in the school, if different from the course title."
+        is optional
+    shared integer Duration named InstructionalTimePlanned [1313]
+        documentation "The planned total number of clock minutes of instruction for this course offering. Generally, this should be at least as many minutes as is required for completion by the related state- or district-defined course."
+        is optional
+    descriptor CurriculumUsed [1312]
+        documentation "The type of curriculum used in an early learning classroom or group."
+        is optional collection
+    domain entity School [1316]
+        documentation "The school that offers the course."
+        is part of identity
+        merge School with Session.School
+    domain entity Session [1317]
+        documentation "The session in which the course is offered at the school."
+        is part of identity
+    domain entity Course [1311]
+        documentation "The course being offered by the school."
+        is required
+    descriptor CourseLevelCharacteristic [2842]
+        documentation "The type of specific program or designation with which the course offering is associated (e.g., AP, IB, Dual Credit, CTE). This collection should only be populated if it differs from the course level characteristics identified at the course level."
+        is optional collection
+    descriptor GradeLevel [2843]
+        documentation "The grade levels in which the course is offered. This collection should only be populated if it differs from the offered grade levels identified at the course level."
+        is optional collection
+        role name Offered

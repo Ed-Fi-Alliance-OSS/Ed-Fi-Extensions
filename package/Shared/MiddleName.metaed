@@ -1,0 +1,3 @@
+Shared String MiddleName [70]
+    documentation "A secondary name given to an individual at birth, baptism, or during another naming ceremony."
+    max length 75

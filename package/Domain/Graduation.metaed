@@ -1,0 +1,14 @@
+Domain Graduation
+    documentation
+"The Graduation domain model represents student outcomes.
+* A GraduationPlan entity represents either a generic graduation plan for all or many students or an individualized graduation plan. The GraduationPlan supports several levels of detail, including overall credit requirements, credits by subject area, or down to specific courses to be taken.
+* A PostSecondaryEvent entity represents significant postsecondary education information, such as college applications, remedial course enrollment, acceptances, and detailed postsecondary institution information.
+* A Diploma element represents graduation certificate information with associated honors and other recognitions as part of the StudentAcademicRecord."
+    domain entity EducationOrganization
+    domain entity GraduationPlan
+    domain entity PostSecondaryEvent
+    domain entity PostSecondaryInstitution
+    domain entity School
+    domain entity Student
+    domain entity StudentAcademicRecord
+    association StudentSchoolAssociation

@@ -1,0 +1,2 @@
+Descriptor GradeType [177]
+    documentation "The type of grade in a report card or transcript (e.g., Final, Exam, Grading Period)."

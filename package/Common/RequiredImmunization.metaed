@@ -1,0 +1,15 @@
+Common RequiredImmunization
+    documentation "Stores student's mandatory vaccination or immunization history."
+    descriptor ImmunizationType
+        documentation "An indication of the type of immunization that the student has received."
+        is part of identity
+    date ImmunizationDate
+        documentation "The year, month and day of the related required immunization."
+        is optional collection
+    string MedicalExemption
+        documentation "The medical condition identified by a physician that contraindicates the vaccine."
+        is optional
+        max length 1024
+    date MedicalExemptionDate
+        documentation "The year, month, and day of the medical exemption by a physician."
+        is optional

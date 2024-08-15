@@ -1,0 +1,8 @@
+Association StudentTitleIPartAProgramAssociation based on GeneralStudentProgramAssociation [616]
+    documentation "This association represents the Title I Part A program(s) that a student participates in or from which the student receives services. The association is a subclass of the GeneralStudentProgramAssociation specifically designed for Title I Part A programs."
+    descriptor TitleIPartAParticipant [1162]
+        documentation "An indication of the type of Title I program, if any, in which the student is participating and by which the student is served."
+        is required
+    common TitleIPartAProgramService [2809]
+        documentation "Indicates the service(s) being provided to the student by the Title I Part A program."
+        is optional collection

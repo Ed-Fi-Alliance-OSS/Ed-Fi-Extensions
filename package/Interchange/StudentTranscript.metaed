@@ -1,0 +1,8 @@
+Interchange StudentTranscript [2535]
+    documentation
+"This interchange defines transcript information for a course and student academic records for a given session. Course transcripts link to the student academic record for the session in which the course was taken."
+    use case documentation
+"1. Exchange a student's full or partial academic record.
+2. Exchange a transcript for a course or set of courses."
+    domain entity StudentAcademicRecord [2535-001]
+    domain entity CourseTranscript [2535-002]

@@ -1,0 +1,15 @@
+Domain Enrollment
+    documentation
+"The Enrollment domain represents students' enrollments in schools, as specifically designated by the StudentSchoolAssociation. The model supports the two cases of where a student is limited to be enrolled only in one school at a time or cases where a state may have policies supporting multiple school enrollments. The semantics assume that a separate StudentSchoolAssociation is provided for each grade level for each student; in other words, a student is withdrawn in the previous grade level and enrolled in the next grade level when promoted.
+For associations between a student and a school or LEA that is *not* enrollment(e.g., school of accountability), the StudentEducationOrganizationAssociation is defined."
+    domain entity AccountabilityRating
+    domain entity EducationOrganization
+    domain entity GraduationPlan
+    domain entity CrisisEvent
+    domain entity LocalEducationAgency
+    domain entity School
+    domain entity Student
+    association StudentEducationOrganizationResponsibilityAssociation
+    association StudentEducationOrganizationAssociation
+    association StudentSchoolAssociation
+    domain entity StudentTransportation

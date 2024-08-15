@@ -1,0 +1,3 @@
+Shared Integer OrderOfPriority [81]
+    documentation "The order of priority assigned to telephone numbers to define which number to attempt first, second, etc."
+    min value 1

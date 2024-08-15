@@ -1,0 +1,3 @@
+Shared String AchievementCategorySystem [3]
+    documentation "The system that defines the categories by which an achievement is attributed to the learner."
+    max length 60

@@ -1,0 +1,12 @@
+Interchange StudentGrade [2531]
+    documentation
+"This interchange defines grades for a grading period or group of grading periods. Grades are defined for groups of grading periods in the case where the grade is cumulative over a semester or academic year (also referred to as ""final grades"")."
+    use case documentation
+"1. Exchange a student's full or partial academic record or transcript.
+2. Exchange interim, grading period, semester, or final report card data.
+3. Exchange grades.
+4. Exchange students' graduation information."
+    domain entity ReportCard [2531-001]
+    domain entity Grade [2531-002]
+    domain entity CompetencyObjective [2531-003]
+    domain entity StudentCompetencyObjective [2531-005]

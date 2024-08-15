@@ -1,0 +1,29 @@
+Inline Common Achievement [479]
+    documentation "The achievement earned by the individual upon fulfilling specified criteria."
+    shared string AchievementTitle [707]
+        documentation "The title assigned to the achievement."
+        is optional
+    descriptor AchievementCategory [705]
+        documentation "The category of achievement attributed to the individual."
+        is optional
+    shared string AchievementCategorySystem [706]
+        documentation "The system that defines the categories by which an achievement is attributed to the individual."
+        is optional
+    shared string IssuerName [712]
+        documentation "The name of the agent, entity, or institution issuing the element."
+        is optional
+    shared string URI named IssuerOriginURL [713]
+        documentation "The Uniform Resource Locator (URL) from which the award was issued."
+        is optional
+    shared string Criteria [708]
+        documentation "The criteria for competency-based completion of the achievement/award."
+        is optional
+    shared string URI named CriteriaURL [709]
+        documentation "The Uniform Resource Locator (URL) for the unique address of a web page describing the competency-based completion criteria for the achievement/award."
+        is optional
+    shared string Statement named EvidenceStatement [710]
+        documentation "A statement or reference describing the evidence that the individual met the criteria for attainment of the achievement/award."
+        is optional
+    shared string URI named ImageURL [711]
+        documentation "The Uniform Resource Locator (URL) for the unique address of an image representing an award or badge associated with the achievement/award."
+        is optional

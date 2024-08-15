@@ -1,0 +1,14 @@
+Interchange AssessmentMetadata [2516]
+    documentation "The Assessment Metadata interchange describes metadata about assessments, including the definitions of the assessment and the assessment items making up the assessment. This interchange is related to the companion Student Assessment interchange, which is used to exchange students' test results."
+    extended documentation "This interchange schema supports the exchange of metadata for the following types of assessments:
+    * Single-level assessment, reporting an overall score (e.g., as in an SAT test where a single score is reported for each test).
+    * Two-level item assessment, reporting an overall score and a score for each assessment item (e.g., a classroom test reports the total score and individual student results for each question).
+    * Two-level objective assessment, reporting an overall score and a score for each learning objective (e.g., a standardized test reports the total score and also individual student results for each LearningStandard).
+    * Three-level assessment, reporting an overall score, a score for sections that test specific learning objectives, and a score for each assessment item (e.g., a benchmark assessment may report a total raw score, a score per objective, and individual results for each question which are tied to learning standards)."
+    use case documentation "1. Exchange metadata for standardized state or local assessment(s).
+    2. Exchange metadata for classroom or benchmark assessment(s)."
+    domain entity Assessment [2516-002]
+    domain entity ObjectiveAssessment [2516-003]
+    domain entity AssessmentItem [2516-004]
+    domain entity identity LearningStandard [2516-006]
+    domain entity AssessmentScoreRangeLearningStandard [2516-007]

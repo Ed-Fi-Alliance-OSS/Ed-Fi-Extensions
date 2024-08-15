@@ -1,0 +1,81 @@
+Domain Entity StudentAssessment [587]
+    documentation "This entity represents the analysis or scoring of a student's response on an assessment. The analysis results in a value that represents a student's performance on a set of items on a test."
+    shared string IdentificationCode named StudentAssessmentIdentifier [2706]
+        documentation "A unique number or alphanumeric code assigned to an assessment administered to a student."
+        is part of identity
+    datetime AdministrationDate [1727]
+        documentation "The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones."
+        is optional
+    datetime AdministrationEndDate [1728]
+        documentation "The date and time an assessment administration ended."
+        is optional
+    shared string IdentificationCode named SerialNumber [1738]
+        documentation "The unique number for the assessment form or answer document."
+        is optional
+    descriptor Language [1730]
+        documentation "The language in which an assessment is written and/or administered."
+        is optional
+        role name Administration
+    descriptor AdministrationEnvironment [1729]
+        documentation "The environment in which the test was administered."
+        is optional
+    descriptor Accommodation [1726]
+        documentation "The specific type of special variation used in how an examination is presented, how it is administered, or how the test taker is allowed to respond. This generally refers to changes that do not substantially alter what the examination measures. The proper use of accommodations does not substantially change academic level or performance criteria."
+        is optional collection
+    descriptor RetestIndicator [1736]
+        documentation "Indicator if the test was a retake."
+        is optional
+    descriptor ReasonNotTested [1735]
+        documentation "The primary reason student is not tested."
+        is optional
+    common ScoreResult [3250]
+        documentation "A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc."
+        is optional collection
+    descriptor GradeLevel [1742]
+        documentation "The grade level of a student when assessed."
+        is optional
+        role name WhenAssessed
+    common PerformanceLevel [1734]
+        documentation "The performance level(s) achieved for the student assessment."
+        is optional collection
+    descriptor EventCircumstance [1732]
+        documentation "An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc."
+        is optional
+    shared string Description [1733]
+        documentation "Describes special events that occur before during or after the assessment session that may impact use of results."
+        is optional
+        role name Event
+    domain entity Student [1741]
+        documentation "Reference to the student associated with the assessment."
+        is part of identity
+    domain entity Assessment [1731]
+        documentation "Reference to the assessment taken by the student."
+        is part of identity
+    common StudentAssessmentItem [1739]
+        documentation "The student's response to an assessment item and the item-level scores such as correct, incorrect, or met standard."
+        is optional collection
+        merge StudentAssessmentItem.AssessmentItem.Assessment with Assessment
+    common StudentObjectiveAssessment [1740]
+        documentation "The student's score and/or performance levels earned for an objective assessment."
+        is optional collection
+		merge StudentObjectiveAssessment.ObjectiveAssessment.Assessment with Assessment
+    enumeration SchoolYear [2538]
+        documentation "The school year for which the assessment was administered to a student. Among other uses, handles cases in which a student takes a prior-year exam in a subsequent school year during an exam re-test."
+        is optional
+    descriptor PlatformType [2922]
+        documentation "The platform with which the assessment was delivered to the student during the assessment session."
+        is optional
+    common AssessmentPeriod [3251]
+        documentation "The period or window in which an assessment is supposed to be administered."
+        is optional
+    integer AssessedMinutes [3252]
+        documentation "Reported time student was assessed in minutes."
+        is optional
+    domain entity School [3253]
+        documentation "The school reference reported as the school the enrollment at the time of the assessment using the assigned SchoolId."
+        is optional
+        role name Reported
+    shared string SchoolIdentifier [3254]
+        documentation "A reported school identifier for the school the enrollment at the time of the assessment used when the assigned SchoolId is not known by the assessment vendor."
+        is optional
+        role name Reported

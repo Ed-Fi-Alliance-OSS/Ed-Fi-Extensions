@@ -1,0 +1,20 @@
+Common StudentObjectiveAssessment [534]
+    documentation "The student's score and/or performance levels earned for an objective assessment."
+    common ScoreResult [912]
+        documentation "A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc."
+        is optional collection
+    common PerformanceLevel [888]
+        documentation "The performance level(s) achieved for the objective assessment."
+        is optional collection
+    domain entity ObjectiveAssessment [946]
+        documentation "Reference to the test objective that is being measured by the objective-level assessment."
+        is part of identity
+    integer AssessedMinutes [3238]
+        documentation "Reported time student was assessed in minutes."
+        is optional
+    datetime AdministrationDate [3239]
+        documentation "The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones."
+        is optional
+    datetime AdministrationEndDate [3240]
+        documentation "The date and time an assessment administration ended."
+        is optional

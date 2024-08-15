@@ -1,0 +1,15 @@
+Domain Entity ClassPeriod [546]
+    documentation "This entity represents the designation of a regularly scheduled series of class meetings at designated times and days of the week."
+    allow primary key updates
+    domain entity School [1274]
+        documentation "Relates the class period to the school."
+        is part of identity
+    shared string ClassPeriodName [1273]
+        documentation "An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules)."
+        is part of identity
+    common MeetingTime [2841]
+        documentation "The meeting time(s) for a class period."
+        is optional collection
+    bool OfficialAttendancePeriod [874]
+        documentation "Indicator of whether this class period is used for official daily attendance. Alternatively, official daily attendance may be tied to a section."
+        is optional

@@ -1,0 +1,19 @@
+Domain Intervention
+    documentation
+"The Intervention domain describes educational interventions and, more generally, supplemental education content aimed at altering behavior or improving the understanding of a concept. Interventions span from in-classroom teaching methods to formal out-of-class intervention programs.
+* InterventionPrescription describes an activity intended to address a specific problem or diagnosis. It identifies the kinds of students targeted and how the intervention should be delivered.
+* Intervention is a specific implementation of an instructional approach, outlined in an InterventionPrescription, with one or more students in a Cohort. Interventions may be one-time actions or recurring actions overtime. Interventions typically have assigned Staff. AttendanceEvents may be captured for Interventions.
+* EducationContent metadata may be linked to InterventionPrescriptionsand/or Interventions. The EducationContent includes descriptive information about the content conforming to the Learning Resource MetadataInitiative (LRMI).
+* StudentInterventionAssociation links Students to Interventions in which they participate. The effectiveness of an Intervention for a given Student is also captured. Data about a formal InterventionStudy for an InterventionPrescription may also be associated."
+    domain entity Cohort
+    domain entity EducationContent
+    domain entity EducationOrganization
+    association EducationOrganizationInterventionPrescriptionAssociation
+    domain entity Intervention
+    domain entity InterventionPrescription
+    domain entity InterventionStudy
+    domain entity Staff
+    domain entity Student
+    association StudentCohortAssociation
+    association StudentInterventionAssociation
+    domain entity StudentInterventionAttendanceEvent

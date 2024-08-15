@@ -1,0 +1,32 @@
+Inline Common License [2564]
+    documentation "The legal document showing proof of permission or authorization."
+    shared string LicenseIdentifier [2568]
+        documentation "The unique identifier issued by the licensing organization."
+        is part of identity
+    shared string LicensingOrganization [2572]
+        documentation "The organization issuing the license."
+        is part of identity
+    date LicenseEffectiveDate [2566]
+        documentation "The month, day, and year on which a license is active or becomes effective."
+        is required
+    date LicenseExpirationDate [2567]
+        documentation "The month, day, and year on which a license will expire."
+        is optional
+    date LicenseIssueDate [2569]
+        documentation "The month, day, and year on which an active license was issued."
+        is optional
+    descriptor LicenseStatus [2570]
+        documentation "An indication of the status of the license."
+        is optional
+    descriptor LicenseType [2571]
+        documentation "An indication of the category of the license."
+        is required
+    shared integer Capacity named AuthorizedFacilityCapacity [2565]
+        documentation "The maximum number that can be contained or accommodated which a provider is authorized or licensed to serve."
+        is optional 
+    shared integer AgeAuthorizedToServe named OldestAgeAuthorizedToServe [2573]
+        documentation "The oldest age of children a provider is authorized or licensed to serve."
+        is optional
+    shared integer AgeAuthorizedToServe named YoungestAgeAuthorizedToServe [2574]
+        documentation "The youngest age of children a provider is authorized or licensed to serve."
+        is optional

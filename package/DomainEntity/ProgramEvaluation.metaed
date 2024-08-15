@@ -1,0 +1,29 @@
+Domain Entity ProgramEvaluation
+    documentation "An evaluation instrument applied to evaluate a student in the context of a program. Student evaluations are typically applied by a staff member based upon a rubric."
+    domain entity Program 
+        documentation "The program associated with the student program evaluation."
+        is part of identity
+        role name Program
+    shared string ProgramEvaluationTitle 
+        documentation "An assigned unique identifier for the student program evaluation."
+        is part of identity
+    descriptor ProgramEvaluationType
+        documentation "The type of program evaluation conducted."
+        is part of identity
+    descriptor ProgramEvaluationPeriod 
+        documentation "The name of the period for the program evaluation."
+        is part of identity
+    shared string ProgramEvaluationDescription 
+        documentation "The long description of the program evaluation."
+        is optional
+    common ProgramEvaluationLevel 
+        documentation "The descriptive level(s) of ratings (cut scores) for the program evaluation."
+        is optional collection
+    shared decimal NumericRating
+        documentation "The maximum summary numerical rating or score for the program evaluation."
+        is optional
+        role name EvaluationMax
+    shared decimal NumericRating
+        documentation "The minimum summary numerical rating or score for the program evaluation. If omitted, assumed to be 0.0"
+        is optional
+        role name EvaluationMin

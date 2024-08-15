@@ -1,0 +1,3 @@
+Shared String ApartmentRoomSuiteNumber [7]
+    documentation "The apartment, room, or suite number of an address."
+    max length 50

@@ -1,0 +1,2 @@
+Descriptor TravelDirection
+        documentation "Indicates the direction of travel for the student transportation route (e.g., to school, from school)."

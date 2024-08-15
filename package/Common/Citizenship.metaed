@@ -1,0 +1,11 @@
+Inline Common Citizenship [490]
+    documentation "Contains information relative to U.S. citizenship status and its associated probationary documentation."
+    descriptor CitizenshipStatus [761]
+        documentation "An indicator of whether or not the person is a U.S. citizen."
+        is required
+    descriptor Visa [2717]
+        documentation "An indicator of a non-US citizen's Visa type."
+        is optional collection
+    common IdentificationDocument [2718]
+        documentation "Describe the documentation of citizenship."
+        is optional collection

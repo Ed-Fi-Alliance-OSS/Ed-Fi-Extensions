@@ -1,0 +1,14 @@
+Common GradePointAverage [2868]
+    documentation "The grade point average for an individual computed as the grade points earned divided by the number of credits attempted."
+    descriptor GradePointAverageType [2937]
+        documentation "The system used for calculating the grade point average for an individual."
+        is part of identity
+    bool IsCumulative [2870]
+        documentation "Indicator of whether or not the Grade Point Average value is cumulative."
+        is optional
+    shared decimal GPA named GradePointAverageValue [2871]
+        documentation "The value of the grade points earned divided by the number of credits attempted."
+        is required
+    shared decimal GPA named MaxGradePointAverageValue [2938]
+        documentation "The maximum value for the grade point average."
+        is optional

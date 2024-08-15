@@ -1,0 +1,17 @@
+Common DisplacedStudent
+    documentation "Information about student who was enrolled, or eligible for enrollment, but has temporarily or permanently enrolled in another school or district because of a crisis-related disruption in educational services."
+    domain entity CrisisEvent
+        documentation "A reference to the crisis event related to the displaced student."
+        is part of identity
+    descriptor DisplacedStudentStatus
+        documentation "Indicates whether a student has been displaced as a result of a crisis event."
+        is required
+    date DisplacedStudentStartDate
+        documentation "The date on which a student is officially identified as displaced due to a crisis event."
+        is optional
+    date DisplacedStudentEndDate
+        documentation "The date marking the end of the period during which a student is considered displaced due to a crisis event."
+        is optional
+    bool CrisisHomelessnessIndicator
+        documentation "Any student considered homeless (defined by the McKinney-Vento Homeless Education Assistance Act as lacking a fixed, regular, and adequate nighttime residence) as a result of the crisis event."
+        is optional

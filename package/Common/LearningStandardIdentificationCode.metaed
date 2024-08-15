@@ -1,0 +1,8 @@
+Common LearningStandardIdentificationCode [512]
+    documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a learning Standard."
+    shared string IdentificationCode [855]
+        documentation "A unique number or alphanumeric code assigned to a Learning Standard."
+        is part of identity
+    shared string ContentStandardName [854]
+        documentation "The name of the content standard, for example Common Core."
+        is part of identity

@@ -1,0 +1,24 @@
+Domain Staff
+    documentation
+"The Staff domain represents a wide variety of staff information:
+* Staff captures information about experience and credentials.
+* StaffSchoolAssociation captures additional information and associations relating to instructional duties.
+* StaffEducationOrganizationEmploymentAssociation represents employment information.
+* StaffEducationOrganizationAssignmentAssociation represents position assignments and roles. The employment and assignment associations are separated to accommodate a number of different types of situations. Staff may have multiple employment and assignment associations. Staff may be employed with one organization, like an LEA, whereas their assignments are at other organizations, specifically schools. If an assignment is directly tied to employment (i.e., the staff member's pay would differ based upon the assignments), then an association is used from theStaffEducationOrganizationAssignmentAssociation to the StaffEducationOrganizationEmploymentAssociation.
+* LeaveEvent tracks staff leave history.
+* OpenStaffPosition indicates the employment postings for an education organization and captures the result of that posting."
+    domain entity Credential
+    domain entity EducationOrganization
+    domain entity EducationServiceCenter
+    domain entity LocalEducationAgency
+    domain entity OpenStaffPosition
+    domain entity School
+    domain entity Staff
+    association StaffEducationOrganizationAssignmentAssociation
+    association StaffEducationOrganizationEmploymentAssociation
+    domain entity StateEducationAgency
+    association StaffSchoolAssociation
+    association StaffEducationOrganizationContactAssociation
+    domain entity StaffAbsenceEvent
+    domain entity StaffLeave
+    domain entity Person

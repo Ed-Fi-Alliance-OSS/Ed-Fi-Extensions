@@ -1,0 +1,17 @@
+Common Disability [502]
+    documentation "This type represents an impairment of body structure or function, a limitation in activities, or a restriction in participation, as ordered by severity of impairment."
+    descriptor Disability [809]
+        documentation "A disability category that describes a individual's impairment."
+        is part of identity
+    shared string DisabilityDiagnosis [810]
+        documentation "A description of the disability diagnosis."
+        is optional
+    integer OrderOfDisability [811]
+        documentation "The order by severity of individual's disabilities: 1- Primary, 2 -  Secondary, 3 - Tertiary, etc."
+        is optional
+    descriptor DisabilityDeterminationSourceType [2414]
+        documentation "The source that provided the disability determination."
+        is optional
+    descriptor DisabilityDesignation [294]
+        documentation "Whether the disability is IDEA, Section 504, or other disability designation."
+        is optional collection

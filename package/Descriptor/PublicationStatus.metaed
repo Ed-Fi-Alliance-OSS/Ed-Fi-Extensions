@@ -1,0 +1,2 @@
+Descriptor PublicationStatus [213]
+    documentation "The publication status of the document (i.e., Adopted, Draft, Published, Deprecated, Unknown)."

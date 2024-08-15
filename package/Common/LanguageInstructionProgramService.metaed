@@ -1,0 +1,14 @@
+Common LanguageInstructionProgramService [2736]
+    documentation "Indicates the service(s) being provided to the student by the language instruction program."
+    descriptor LanguageInstructionProgramService [2737]
+        documentation "Indicates the service being provided to the student by the language instruction program."
+        is part of identity
+    bool PrimaryIndicator [2738]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [2741]
+        documentation "First date the student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [2740]
+        documentation "Last date the student was in this option for the current school year."
+        is optional

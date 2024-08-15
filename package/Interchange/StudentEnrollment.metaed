@@ -1,0 +1,15 @@
+Interchange StudentEnrollment [2530]
+    documentation "The Student Enrollment interchange describes student enrollments in schools and in sections."
+    use case documentation "1. Exchange school or LEA student enrollment lists.
+    2. Exchange school enrollment accountability information.
+    3. Exchange an individual student's enrollment history.
+    4. Exchange students' class section enrollments.
+    5. Exchange students' graduation plans."
+    domain entity identity Section [2530-001]
+    association StudentSchoolAssociation [2530-002]
+    association StudentSectionAssociation [2530-003]
+    domain entity GraduationPlan [2530-004]
+    domain entity CrisisEvent [2530-005]     
+    association StudentEducationOrganizationResponsibilityAssociation [2530-006]
+    association StudentEducationOrganizationAssociation [2530-007]
+    domain entity StudentTransportation [2530-008]

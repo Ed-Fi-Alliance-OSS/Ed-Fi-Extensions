@@ -1,0 +1,3 @@
+Shared String AssessmentResponse [9]
+    documentation "A student's response to a stimulus on a test."
+    max length 255

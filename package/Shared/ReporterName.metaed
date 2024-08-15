@@ -1,0 +1,3 @@
+Shared String ReporterName [95]
+    documentation "Identifies the reporter of the incident by name."
+    max length 75

@@ -1,0 +1,17 @@
+Common EnglishLanguageProficiencyAssessment [2725]
+    documentation "Results of yearly English language assessment."
+    enumeration SchoolYear [2726]
+        documentation "The school year for which the assessment was administered."
+        is part of identity
+    descriptor Participation [2727]
+        documentation "Field indicating the participation in the yearly English language assessment."
+        is optional
+    descriptor Proficiency [2728]
+        documentation "The proficiency level for the yearly English language assessment."
+        is optional
+    descriptor Progress [2729]
+        documentation "The yearly progress or growth from last year's assessment."
+        is optional
+    descriptor Monitored [2730]
+        documentation "Student is monitored on content achievement who are no longer receiving services."
+        is optional

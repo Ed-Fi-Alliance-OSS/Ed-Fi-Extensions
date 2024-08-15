@@ -1,0 +1,3 @@
+Shared String PositionTitle [83]
+    documentation "The descriptive name of an individual's position."
+    max length 100

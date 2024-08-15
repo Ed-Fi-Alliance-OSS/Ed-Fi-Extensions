@@ -1,0 +1,20 @@
+Common OtherName [518]
+    documentation "Other names (e.g., alias, nickname, previous legal name) associated with an individual."
+    shared string PersonalTitlePrefix [887]
+        documentation "A prefix used to denote the title, degree, position, or seniority of the individual."
+        is optional
+    shared string FirstName [882]
+        documentation "A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change."
+        is required
+    shared string MiddleName [885]
+        documentation "A secondary name given to an individual at birth, baptism, or during another naming ceremony."
+        is optional
+    shared string LastSurname [884]
+        documentation "The name borne in common by members of a family."
+        is required
+    shared string GenerationCodeSuffix [883]
+        documentation "An appendage, if any, used to denote an individual's generation in his family (e.g., Jr., Sr., III)."
+        is optional
+    descriptor OtherNameType [886]
+        documentation "The types of alternate names for an individual."
+        is part of identity

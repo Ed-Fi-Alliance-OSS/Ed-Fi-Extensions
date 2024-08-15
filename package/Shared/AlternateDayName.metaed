@@ -1,0 +1,3 @@
+Shared String AlternateDayName [6]
+    documentation "used for the bell schedule, another name for day (e.g., Blue day, Red day)."
+    max length 20

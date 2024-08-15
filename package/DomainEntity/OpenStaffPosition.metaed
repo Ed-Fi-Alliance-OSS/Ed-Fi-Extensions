@@ -1,0 +1,36 @@
+Domain Entity OpenStaffPosition [572]
+    documentation "This entity represents an open staff position that the education organization is seeking to fill."
+    descriptor EmploymentStatus [1549]
+        documentation "Reflects the type of employment or contract desired for the position."
+        is required
+    descriptor StaffClassification [1555]
+        documentation "The titles of employment, official status, or rank of education staff."
+        is required
+    shared string PositionTitle [1551]
+        documentation "The descriptive name of an individual's position."
+        is optional
+    shared string RequisitionNumber [1554]
+        documentation "The number or identifier assigned to an open staff position, typically a requisition number assigned by Human Resources."
+        is part of identity
+    descriptor ProgramAssignment [1553]
+        documentation "The name of the program for which the open staff position will be assigned."
+        is optional
+    descriptor GradeLevel [1550]
+        documentation "The set of grade levels for which the position's assignment is responsible."
+        is optional collection
+        role name Instructional
+    descriptor AcademicSubject [1545]
+        documentation "The teaching field required for the open staff position."
+        is optional collection
+    date DatePosted [1546]
+        documentation "Date the open staff position was posted."
+        is required
+    date DatePostingRemoved [1547]
+        documentation "The date the posting was removed or filled."
+        is optional
+    descriptor PostingResult [1552]
+        documentation "Indication of whether the OpenStaffPosition was filled or retired without filling."
+        is optional
+    domain entity EducationOrganization [1548]
+        documentation "The education organization with the open staff position."
+        is part of identity

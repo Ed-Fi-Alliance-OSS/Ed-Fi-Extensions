@@ -1,0 +1,45 @@
+Domain Entity StudentProgramEvaluation
+    documentation "The evaluation results for a student as evaluated in the context of a program."
+    domain entity ProgramEvaluation
+        documentation "The program evaluation administered to the student."
+        is part of identity
+    domain entity Student
+        documentation "The student being evaluated on behalf of the program."
+        is part of identity
+    date EvaluationDate
+        documentation "The month, day, and year on which the evaluation was conducted."
+        is part of identity
+    domain entity EducationOrganization
+        documentation "A reference to the education organization that evaluated the student, which may be different from the education organization associated with the program."    
+        is optional
+    shared integer Duration
+        documentation "The actual or estimated number of clock minutes during which the evaluation was conducted."
+        is optional
+        role name Evaluation
+    shared decimal NumericRating
+        documentation "The numerical summary rating or score for the evaluation."
+        is optional
+        role name SummaryEvaluation
+    descriptor RatingLevel
+        documentation "The summary rating level achieved based upon the rating or score."
+        is optional
+        role name SummaryEvaluation
+    shared string Comment
+        documentation "Any comments about the summary evaluation to be captured."
+        is optional
+        role name SummaryEvaluation
+    domain entity Staff
+        documentation "Reference to the staff that evaluated the student."
+        is optional
+        role name StaffEvaluator shorten to StaffEvaluator
+    shared string ExternalEvaluator
+        documentation "The external person(s) - not staff - that conducted the evaluation."
+        is optional collection
+    common StudentEvaluationObjective
+        documentation "The student's rating and/or rating levels earned for a program evaluation objective."
+        is optional collection
+        merge StudentEvaluationObjective.ProgramEvaluationObjective.ProgramEvaluation.ProgramEvaluationPeriod with ProgramEvaluation.ProgramEvaluationPeriod
+    common StudentEvaluationElement 
+        documentation "The student's rating and/or rating levels earned for a program evaluation element."
+        is optional collection
+        merge StudentEvaluationElement.ProgramEvaluationElement.ProgramEvaluation.ProgramEvaluationPeriod with ProgramEvaluation.ProgramEvaluationPeriod

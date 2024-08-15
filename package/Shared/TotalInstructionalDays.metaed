@@ -1,0 +1,3 @@
+Shared Integer TotalInstructionalDays [112]
+    documentation "Total days available for educational instruction during the grading period."
+	min value 0

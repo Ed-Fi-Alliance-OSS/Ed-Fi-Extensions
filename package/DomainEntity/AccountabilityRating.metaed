@@ -1,0 +1,23 @@
+Domain Entity AccountabilityRating [538]
+    documentation "An accountability rating for a school or district."
+    domain entity EducationOrganization [1209]
+        documentation "Relates the accountability rating to an education organization."
+        is part of identity
+    shared string RatingTitleType named RatingTitle [1214]
+        documentation "The title of the rating."
+        is part of identity
+    shared string Rating [1210]
+        documentation "An accountability rating level, designation, or assessment."
+        is required
+    date RatingDate [1211]
+        documentation "The date the rating was awarded."
+        is optional
+    enumeration SchoolYear [1215]
+        documentation "The school year for which the accountability rating is assessed."
+        is part of identity
+    shared string RatingOrganization [1212]
+        documentation "The organization that assessed the rating."
+        is optional
+    shared string RatingProgram [1213]
+        documentation "The program associated with the accountability rating (e.g., NCLB, AEIS)."
+        is optional

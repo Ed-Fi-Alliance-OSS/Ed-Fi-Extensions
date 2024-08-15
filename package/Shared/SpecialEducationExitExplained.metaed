@@ -1,0 +1,3 @@
+Shared String SpecialEducationExitExplained
+    documentation "Explanation on why a person stops receiving special education services."
+    max length 1024

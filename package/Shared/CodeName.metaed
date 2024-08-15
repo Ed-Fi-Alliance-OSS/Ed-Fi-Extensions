@@ -1,0 +1,3 @@
+Shared String CodeName [3224]
+    documentation "Descriptive name for a chart of account dimension."
+    max length 100

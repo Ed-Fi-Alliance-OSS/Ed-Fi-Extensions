@@ -1,0 +1,4 @@
+Shared String CourseCatalogURL [2923]
+    documentation "The URL for the course catalog that defines the course identification code."
+    min length 5
+    max length 255

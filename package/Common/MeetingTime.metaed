@@ -1,0 +1,8 @@
+Common MeetingTime [516]
+    documentation "The start and end times defining a meeting time."
+    time StartTime [875]
+        documentation "An indication of the time of day the meeting time begins."
+        is part of identity
+    time EndTime [873]
+        documentation "An indication of the time of day the meeting time ends."
+        is part of identity

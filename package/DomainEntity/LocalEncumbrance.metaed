@@ -1,0 +1,15 @@
+Domain Entity LocalEncumbrance [3187]
+    documentation "The set of local education agency or charter management organization encumbrance amounts."
+    domain entity LocalAccount [3188]
+        documentation "References the local account with which the encumbrance is associated."
+        is part of identity
+    date AsOfDate [3189]
+        documentation "The date of the reported amount for the account."
+        is part of identity
+        is queryable field
+    currency Amount [3190]
+        documentation "Current balance for the account."
+        is required
+    descriptor FinancialCollection [3191]
+        documentation "The accounting period or grouping for which the amount is collected."
+        is optional

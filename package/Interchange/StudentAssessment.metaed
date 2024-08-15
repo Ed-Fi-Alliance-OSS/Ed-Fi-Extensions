@@ -1,0 +1,15 @@
+Interchange StudentAssessment [2526]
+    documentation "The Student Assessment interchange describes test scores, quiz results, and other information related to student assessments. The interchange schema can carry results for many students or a single student."
+    extended documentation "This interchange schema supports the exchange of metadata for the following types of assessments:
+    
+    * Single-level assessment, reporting an overall score (e.g., as in an SAT test where a single score is reported for each test).
+    * Two-level item assessment, reporting an overall score and a score for each assessment item (e.g., a classroom test reports the total score and individual student results for each question).
+    * Two-level objective assessment, reporting an overall score and a score for each learning objective (e.g., a standardized test reports the total score and also individual student results for each learning objective).
+    * Three-level assessment, reporting an overall score, a score for sections that test specific learning objectives, and a score for each assessment item (e.g., a benchmark assessment may report a total raw score, a score per objective, and individual results for each question which are tied to learning standards)."
+    use case documentation "1. Exchange student scores for standardized state and local assessments.
+    2. Exchange student scores for classroom and benchmark tests.
+    3. Exchange student assessment score updates (e.g., retakes, correction of errors)."
+    domain entity identity Assessment [2526-001]
+    domain entity identity AssessmentItem [2526-002]
+    domain entity identity ObjectiveAssessment [2526-003]
+    domain entity StudentAssessment [2526-004]

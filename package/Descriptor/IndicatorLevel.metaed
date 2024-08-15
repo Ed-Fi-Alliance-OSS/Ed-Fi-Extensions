@@ -1,0 +1,2 @@
+Descriptor IndicatorLevel [3062]
+    documentation "The value of the indicator or metric, as a value from a controlled vocabulary. The semantics of an empty value is ""not submitted."""

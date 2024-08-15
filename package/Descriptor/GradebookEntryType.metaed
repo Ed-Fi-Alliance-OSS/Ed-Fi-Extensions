@@ -1,0 +1,2 @@
+Descriptor GradebookEntryType [175]
+    documentation "The type of the gradebook entry; for example, homework, assignment, quiz, unit test, oral presentation, etc."

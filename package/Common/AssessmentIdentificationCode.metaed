@@ -1,0 +1,12 @@
+Common AssessmentIdentificationCode [483]
+    documentation "A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity."
+    shared string IdentificationCode [736]
+        documentation "A unique number or alphanumeric code assigned to an assessment by a school, school system, state, or other agency or entity."
+        is required
+    descriptor AssessmentIdentificationSystem [734]
+        documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an assessment."
+        is part of identity
+    shared string IdentificationCode [735]
+        documentation "The organization code or name assigning the assessment identification code."
+        is optional
+        role name AssigningOrganization

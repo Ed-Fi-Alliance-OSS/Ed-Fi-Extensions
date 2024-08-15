@@ -1,0 +1,3 @@
+Shared String GenderIdentity
+    documentation "The gender a person identifies themselves as."
+    max length 60

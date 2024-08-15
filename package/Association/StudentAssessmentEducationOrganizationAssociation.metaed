@@ -1,0 +1,12 @@
+Association StudentAssessmentEducationOrganizationAssociation [3260]
+    documentation "The association of individual StudentAssessments with EducationOrganizations indicating administration, enrollment, or attribution."
+    domain entity StudentAssessment [3261]
+        documentation "The student assessment associated with the education organization."
+    domain entity EducationOrganization [3262]
+        documentation "The education organization associated with the student assessment results."
+    descriptor EducationOrganizationAssociationType [3263]
+        documentation "The type of association being represented."
+        is part of identity
+    enumeration SchoolYear [3264]
+        documentation "The school year associated with the association.."
+        is optional

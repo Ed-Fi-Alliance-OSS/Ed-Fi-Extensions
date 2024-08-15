@@ -6,9 +6,7 @@
 name: Dependency Review Pull request
 
 on:
-  pull_request:
-    branches: [main, 'ODS-*']
-
+  workflow_dispatch:
 permissions: read-all
 
 concurrency:

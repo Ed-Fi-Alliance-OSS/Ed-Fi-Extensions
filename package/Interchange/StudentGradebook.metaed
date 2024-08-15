@@ -1,0 +1,7 @@
+Interchange StudentGradebook [2532]
+    documentation "The Student Gradebook interchange describes student gradebook entries. Gradebook entries are assignments and students' results on those assignments. The assignments themselves may be linked to learning standards or learning objectives."
+    use case documentation "1. Exchange assignments created by teachers and optionally linked to learning standards or learning objectives.
+    2. Exchange students' performance on assignments."
+    domain entity identity Section [2532-001]
+    domain entity GradebookEntry [2532-002]
+    domain entity StudentGradebookEntry [2532-003]

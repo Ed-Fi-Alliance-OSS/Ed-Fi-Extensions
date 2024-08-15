@@ -1,0 +1,13 @@
+Common StudentEvaluationObjective
+    documentation "The student's rating and/or rating levels earned for a program evaluation objective."
+    domain entity ProgramEvaluationObjective
+        documentation "The program evaluation objective associated with the student's results."
+        is part of identity
+    shared decimal NumericRating
+        documentation "The numerical rating or score for the evaluation objective."
+        is optional
+        role name EvaluationObjective
+    descriptor RatingLevel
+        documentation "The rating level achieved based upon the rating or score for the evaluation objective."
+        is optional 
+        role name EvaluationObjective

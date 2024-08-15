@@ -1,0 +1,16 @@
+Domain Entity PostSecondaryInstitution based on EducationOrganization [520]
+    documentation "An organization that provides educational programs for individuals who have completed or otherwise left educational programs in secondary school(s)."
+    integer PostSecondaryInstitutionId [895]
+        documentation "The ID of the post secondary institution. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    descriptor MediumOfInstruction [893]
+        documentation "The categories in which an institution serves the students."
+        is optional collection
+    descriptor PostSecondaryInstitutionLevel [896]
+        documentation "A classification of whether a post secondary institution's highest level of offering is a program of 4-years or higher (4 year), 2-but-less-than 4-years (2 year), or less than 2-years."
+        is optional
+    descriptor AdministrativeFundingControl [892]
+        documentation "A classification of whether a postsecondary institution is operated by publicly elected or appointed officials (public control) or by privately elected or appointed officials and derives its major source of funds from private sources (private control)."
+        is optional

@@ -1,0 +1,2 @@
+Descriptor StaffLeaveEventCategory [191]
+    documentation "A code describing the type of the leave event."

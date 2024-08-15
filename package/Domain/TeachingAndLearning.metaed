@@ -1,0 +1,29 @@
+Domain TeachingAndLearning
+    documentation
+"The Teaching and Learning domain represents the following concepts:
+* The course catalog, representing the course definitions and course offerings available at a school in each session
+* The student's class enrollments in sections and the teacher(s) assigned to that section
+* Early childhood enrollments in programs and the staff members related to that program
+
+The model is based upon multiple levels of definition, as follows:
+* A Course entity represents the definition of the course, its characteristics, and its mapping to LearningStandards. A course may be defined a state, LEA or school level.
+* The CourseOffering entity represents a course that is offered by a school during a session. The CourseOffering will have a LocalCourseCode and may have a LocalCourseTitle.
+* A school will have one or more sections for each CourseOffering. Students are enrolled in specific sections. Each Section entity will have one or more assigned staff, will typically meet in a specific location in the school, and will be assigned a ClassPeriodentity for the session. Since early learning teaching and learning is based on programs, students are enrolled by association to the Program and Staff entities as well."
+    domain entity ClassPeriod
+    domain entity Course
+    domain entity CourseOffering
+    domain entity EducationOrganization
+    domain entity LearningStandard
+    domain entity Location
+    domain entity Program
+    domain entity School
+    domain entity Section
+    domain entity Session
+    domain entity Staff
+    association StaffProgramAssociation
+    association StaffSchoolAssociation
+    association StaffSectionAssociation
+    domain entity Student
+    association StudentProgramAssociation
+    association StudentSchoolAssociation
+    association StudentSectionAssociation

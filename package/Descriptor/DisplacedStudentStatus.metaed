@@ -1,0 +1,2 @@
+Descriptor DisplacedStudentStatus
+    documentation "Indicates whether a student has been displaced as a result of a crisis event."

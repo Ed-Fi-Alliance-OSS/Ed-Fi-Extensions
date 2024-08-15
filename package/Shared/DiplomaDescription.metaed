@@ -1,0 +1,3 @@
+Shared String DiplomaDescription [41]
+    documentation "The description of diploma given to the student for accomplishments."
+    max length 80

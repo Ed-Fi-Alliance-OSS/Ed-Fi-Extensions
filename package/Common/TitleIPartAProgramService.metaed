@@ -1,0 +1,14 @@
+Common TitleIPartAProgramService [2771]
+    documentation "The student's Title I Part A program service information."
+    descriptor TitleIPartAProgramService [2772]
+        documentation "Indicates the service being provided to the student by the Title I Part A Program."
+        is part of identity
+    bool PrimaryIndicator [2773]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [2774]
+        documentation "First date the Student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [2775]
+        documentation "Last date the Student was in this option for the current school year."
+        is optional

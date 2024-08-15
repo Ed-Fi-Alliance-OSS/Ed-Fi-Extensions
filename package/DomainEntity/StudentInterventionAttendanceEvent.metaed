@@ -1,0 +1,14 @@
+Domain Entity StudentInterventionAttendanceEvent [590]
+    documentation "This event entity represents the recording of whether a student is in attendance for an intervention service."
+    inline common AttendanceEvent [1757]
+        documentation "Details of the attendance event."
+        is required
+    domain entity Student [1759]
+        documentation "Relates the student associated with the attendance event."
+        is part of identity
+    domain entity Intervention [1758]
+        documentation "Relates the intervention associated with the attendance event."
+        is part of identity
+    shared integer AttendanceEventDuration named InterventionDuration [2856]
+        documentation "The duration in minutes in which the student participated in the intervention during this instance."
+        is optional

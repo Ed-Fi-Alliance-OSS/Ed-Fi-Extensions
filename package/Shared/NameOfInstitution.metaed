@@ -1,0 +1,3 @@
+Shared String NameOfInstitution [72]
+    documentation "The full, legally accepted name of the institution."
+    max length 75

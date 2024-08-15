@@ -1,0 +1,3 @@
+Shared String ProgramEvaluationElementTitle
+    documentation "The name or title of the program evaluation element"
+    max length 50

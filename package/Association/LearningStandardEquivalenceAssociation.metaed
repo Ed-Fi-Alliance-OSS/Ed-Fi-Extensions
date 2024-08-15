@@ -1,0 +1,20 @@
+Association LearningStandardEquivalenceAssociation [2905]
+    documentation "Indicates a directional association of equivalence from a source to a target learning standard."
+    domain entity LearningStandard [2906]
+        documentation "The source learning standard, which is the subject of the association."
+        role name Source
+    domain entity LearningStandard [2907]
+        documentation "The target learning standard, which is the object of the association."
+        role name Target
+    shared string URI named Namespace [2908]
+        documentation "The namespace of the organization that has created and owns the association."
+        is part of identity
+    date EffectiveDate [2909]
+        documentation "The date that the association is considered to be applicable or effective."
+        is optional
+    descriptor LearningStandardEquivalenceStrength [2910]
+        documentation "A measure that indicates the strength or quality of the equivalence relationship."
+        is optional
+    shared string LearningStandardEquivalenceStrengthDescription [2911]
+        documentation "Captures supplemental information on the relationship. Recommended for use only when the match is partial."
+        is optional

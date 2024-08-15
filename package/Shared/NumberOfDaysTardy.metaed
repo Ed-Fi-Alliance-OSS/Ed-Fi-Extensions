@@ -1,0 +1,3 @@
+Shared Integer NumberOfDaysTardy [77]
+    documentation "The number of days an individual is tardy during a given reporting period."
+	min value 0

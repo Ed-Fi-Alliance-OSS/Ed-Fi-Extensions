@@ -1,0 +1,3 @@
+Shared String CohortDescription [21]
+    documentation "Description of the student cohort."
+    max length 1024

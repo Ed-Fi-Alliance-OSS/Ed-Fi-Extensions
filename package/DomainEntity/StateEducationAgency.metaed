@@ -1,0 +1,13 @@
+Domain Entity StateEducationAgency based on EducationOrganization [584]
+    documentation "This entity represents the agency of the state charged with the primary responsibility for coordinating and supervising public instruction, including the setting of standards for elementary and secondary instructional programs."
+    integer StateEducationAgencyId [1677]
+        documentation "The identifier assigned to a state education agency. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    common StateEducationAgencyAccountability [1675]
+        documentation "This entity maintains information about federal reporting and accountability for state education agencies."
+        is optional collection
+    common StateEducationAgencyFederalFunds [1676]
+        documentation "Contains the information about the reception and use of federal funds for reporting purposes."
+        is optional collection

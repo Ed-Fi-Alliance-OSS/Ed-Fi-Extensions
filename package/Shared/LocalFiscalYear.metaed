@@ -1,0 +1,4 @@
+Shared Integer LocalFiscalYear [3225]
+    documentation "Local fiscal year for which a chart of account dimension is valid."
+    min value 2020
+	  max value 2040

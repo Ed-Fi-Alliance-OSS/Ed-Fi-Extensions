@@ -1,0 +1,3 @@
+Shared String GenerationCodeSuffix [50]
+    documentation "An appendage, if any, used to denote an individual's generation in his family (e.g., Jr., Sr., III)."
+    max length 10

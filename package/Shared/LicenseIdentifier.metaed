@@ -1,0 +1,3 @@
+Shared String LicenseIdentifier [2558]
+    documentation "Identifier assigned by the licensing organization to the license."
+    max length 36

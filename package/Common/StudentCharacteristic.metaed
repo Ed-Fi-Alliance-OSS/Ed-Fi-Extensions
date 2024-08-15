@@ -1,0 +1,11 @@
+Common StudentCharacteristic [531]
+    documentation "Reflects important characteristics of a student. If a student has a characteristic present, that characteristic is considered true or active for that student. If a characteristic is not present, no assumption is made as to the applicability of the characteristic, but local policy may dictate otherwise."
+    descriptor StudentCharacteristic [936]
+        documentation "The characteristic designated for the student."
+        is part of identity
+    common Period [2770]
+        documentation "The time periods for which characteristic was effective."
+        is optional collection
+    shared string DesignatedBy [934]
+        documentation "The person, organization, or department that designated the characteristic."
+        is optional

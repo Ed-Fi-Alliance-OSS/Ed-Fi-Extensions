@@ -1,0 +1,43 @@
+Domain Entity InterventionPrescription [564]
+    documentation "This entity represents a formal prescription of an instructional approach focusing on the specific techniques and materials used to teach a given subject. This can be prescribed by academic research, an interventions vendor, or another entity."
+    inline common EducationContentSource [1464]
+        documentation "Resources related to or used in this intervention prescription, including any documentation around the intervention prescription itself. Since an intervention prescription is intended to be a published intervention, an intervention prescription should have at least one such resource."
+        is required
+    descriptor InterventionClass [1466]
+        documentation "The way in which an intervention is used: curriculum, supplement, or practice."
+        is required
+    descriptor Diagnosis [1463]
+        documentation "Targeted purpose of the intervention prescription."
+        is optional collection
+    descriptor PopulationServed [1468]
+        documentation "A subset of students that are the focus of the intervention prescription."
+        is optional collection
+    descriptor Sex [1460]
+        documentation "Sexes for the intervention prescription. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor GradeLevel [1459]
+        documentation "Grade levels for the prescribed intervention. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor DeliveryMethod [1461]
+        documentation "The way in which an intervention was implemented: individual, small group, whole class, or whole school."
+        is required
+    domain entity EducationOrganization [1465]
+        documentation "Relates the education organization which is sponsoring the intervention prescription."
+        is part of identity
+    shared string IdentificationCode [1467]
+        documentation "A unique number or alphanumeric code assigned to an intervention prescription."
+        is part of identity
+        role name InterventionPrescription
+    shared integer Dosage [2848]
+        documentation "The minimum duration of time in minutes that is recommended for the intervention."
+        is optional
+        role name Min
+    shared integer Dosage [2849]
+        documentation "The maximum duration of time in minutes that is recommended for the intervention."
+        is optional
+        role name Max
+    shared string URI named Namespace [3249]
+        documentation "Namespace for the intervention."
+        is optional

@@ -1,0 +1,3 @@
+Shared String Indicator [60]
+    documentation "An indicator or metric computed for the student (e.g., at risk)."
+    max length 60

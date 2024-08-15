@@ -1,0 +1,14 @@
+Domain Entity ProgramDimension [3208]
+    documentation "The NCES program accounting dimension. A program is defined by the NCES as a plan of activities and procedures designed to accomplish a predetermined objective or set of objectives. These are often categorized into broad program areas such as regular education, special education, vocational education, other PK-12 instructional, nonpublic school, adult and continuing education, community and junior college education, community services, and co-curricular or extracurricular activities."
+    shared string Code [3209]
+        documentation "The code representation of the account program dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3210]
+        documentation "The fiscal year for which the account program dimension is valid."
+        is part of identity
+    shared string CodeName [3211]
+        documentation "A description of the account program dimension."
+        is optional
+    descriptor ReportingTag [3212]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

@@ -1,0 +1,3 @@
+Shared String Whereabouts [3049]
+    documentation "The location, typically City and State, for the institution."
+    max length 75

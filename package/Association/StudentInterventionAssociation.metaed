@@ -1,0 +1,19 @@
+Association StudentInterventionAssociation [609]
+    documentation "This association indicates the students participating in an intervention."
+    domain entity Student [1080]
+        documentation "Relates the student associated with the intervention."
+    domain entity Intervention [1079]
+        documentation "An implementation of an instructional approach focusing on the specific techniques and materials used to teach a given subject."
+    domain entity Cohort [1076]
+        documentation "Relates the cohort, if the student's membership in this cohort is the reason he or she is participating in this intervention."
+        is optional
+        role name Cohort
+    common InterventionEffectiveness [1078]
+        documentation "A measure of the effects of an intervention in each outcome domain. The rating of effectiveness takes into account four factors: the quality of the research on the intervention, the statistical significance of the research findings, the size of the differences between participants in the intervention and comparison groups and the consistency in results."
+        is optional collection
+    shared string DiagnosticStatement [1077]
+        documentation "A statement provided by the assigner that provides information regarding why the student was assigned to this intervention."
+        is optional
+    shared integer Dosage [2789]
+        documentation "The duration of time in minutes for which the student was assigned to participate in the intervention."
+        is optional

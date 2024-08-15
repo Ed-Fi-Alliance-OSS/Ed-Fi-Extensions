@@ -1,0 +1,3 @@
+Shared String NameOfCounty [71]
+    documentation "The name of the county, parish, borough, or comparable unit (within a state) in which an address is located."
+    max length 30

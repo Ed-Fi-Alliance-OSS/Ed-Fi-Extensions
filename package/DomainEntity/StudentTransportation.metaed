@@ -1,0 +1,22 @@
+ Domain Entity StudentTransportation
+    documentation "This entity captures a student's specific transportation arrangement."
+    domain entity Student
+        documentation "The student associated with the transportation."        
+        is part of identity
+    domain entity EducationOrganization
+        documentation "The educational organization accountable for managing a student's transportation arrangements. Usually, this refers to a Local Education Agency (LEA), though it could also pertain to a school."        
+        is part of identity
+        role name Transportation
+    descriptor TransportationPublicExpenseEligibilityType
+        documentation "The primary type of eligibility for transporting a student at public expense."
+        is optional
+    descriptor TransportationType
+        documentation "The mode or type of transportation utilized by a student to commute to and from school"
+        is optional
+    string SpecialAccomodationRequirements
+        documentation "Specific requirements needed to accommodate a student's physical needs which may include special equipment installed in a vehicle or a special arrangement for transportation."
+        is optional
+        max length 1024
+    common StudentBusDetails
+        documentation "Stores details associated with student-bus assignment within a transportation system."
+        is optional

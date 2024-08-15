@@ -1,0 +1,3 @@
+Shared String DiagnosticStatement [40]
+    documentation "A statement provided by the teacher that provides information in addition to the grade or assessment score."
+    max length 1024

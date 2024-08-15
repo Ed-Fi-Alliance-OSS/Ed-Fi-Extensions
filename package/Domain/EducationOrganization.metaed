@@ -1,0 +1,24 @@
+Domain EducationOrganization
+    documentation
+"The Education Organization domain defines the organizational structure and hierarchy of education organizations. The entity EducationOrganization serves as an abstraction for common attributes and associations. Throughout the model, if there is an association to/from an EducationOrganization the meaning is that the association may be associated with two or more types of organizations. The model supports the following structure:
+* StateEducationAgency is an optional entity for the state department of education or equivalent.
+* EducationServiceCenter is an optional entity for a regional organization between the district and state level.
+* LocalEducationAgency represents a school district or charter management organization.
+* School represents the point of education instruction.
+* EducationOrganizationNetwork represents a self-organized membership network of peer-level schools or LEAs intended to provide shared services or collective purchasing.
+* AccountabilityRating holds education organization ratings assigned by an accountability system.
+* Community providers that are non-LEA can be represented by the CommunityProvider and CommunityOrganization entities."
+    domain entity AccountabilityRating
+    domain entity EducationOrganization
+    domain entity EducationOrganizationNetwork
+    association EducationOrganizationNetworkAssociation
+    domain entity EducationServiceCenter
+    association FeederSchoolAssociation
+    domain entity LocalEducationAgency
+    domain entity School
+    domain entity StateEducationAgency
+    domain entity CommunityOrganization
+    domain entity CommunityProvider
+    domain entity CommunityProviderLicense
+    domain entity PostSecondaryInstitution
+    domain entity OrganizationDepartment

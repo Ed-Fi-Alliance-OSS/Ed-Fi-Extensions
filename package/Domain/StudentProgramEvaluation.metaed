@@ -1,0 +1,10 @@
+Subdomain StudentProgramEvaluation of TeachingAndLearning
+    documentation "The Student Program Evaluation subdomain is aimed at capturing students' performance in programs."
+    domain entity StudentProgramEvaluation
+    domain entity EvaluationRubricDimension
+    domain entity ProgramEvaluation
+    domain entity Program
+    domain entity ProgramEvaluationObjective
+    domain entity ProgramEvaluationElement
+    common StudentEvaluationElement
+    common StudentEvaluationObjective

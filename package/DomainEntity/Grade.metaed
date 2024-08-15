@@ -1,0 +1,39 @@
+Domain Entity Grade [559]
+    documentation "This educational entity represents an overall score or assessment tied to a course over a period of time (i.e., the grading period). Student grades are usually a compilation of marks and other scores."
+    allow primary key updates
+    shared string GradeEarned named LetterGradeEarned [1418]
+        documentation "A final or interim (grading period) indicator of student performance in a class as submitted by the instructor."
+        is optional
+    shared decimal NumericGrade named NumericGradeEarned [1419]
+        documentation "A final or interim (grading period) indicator of student performance in a class as submitted by the instructor."
+        is optional
+    shared string DiagnosticStatement [1415]
+        documentation "A statement provided by the teacher that provides information in addition to the grade or assessment score."
+        is optional
+    descriptor GradeType [1416]
+        documentation "The type of grade reported (e.g., exam, final, grading period)."
+        is part of identity
+    descriptor PerformanceBaseConversion [1420]
+        documentation "A conversion of the level to a standard set of performance levels."
+        is optional
+    association StudentSectionAssociation [1421]
+        documentation "Relates the student and section associated with the grade."
+        is part of identity
+    domain entity GradingPeriod [1417]
+        documentation "Identifies the grading period for the grade."
+        is part of identity
+        role name GradingPeriod
+        merge GradingPeriod.School with StudentSectionAssociation.Section.CourseOffering.Session.School
+        merge GradingPeriod.SchoolYear with StudentSectionAssociation.Section.CourseOffering.Session.SchoolYear
+    common LearningStandardGrade [2902]
+        documentation "A collection of learning standards associated with the grade."
+        is optional collection
+    bool CurrentGradeIndicator [3241]
+        documentation "An indicator that the posted grade is an interim grade for the grading period and not the final grade."
+        is optional
+    date CurrentGradeAsOfDate [3242]
+        documentation "As-Of date for a grade posted as the current grade."
+        is optional
+    shared string GradeEarnedDescription [3265]
+        documentation "A description of the grade earned by the learner."
+        is optional

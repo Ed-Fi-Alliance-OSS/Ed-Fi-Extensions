@@ -1,0 +1,3 @@
+Shared String Reason [68]
+    documentation "Expanded reason for the staff leave."
+    max length 40

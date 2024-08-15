@@ -1,0 +1,31 @@
+Domain Entity ProgramEvaluationElement
+    documentation "The lowest level elements or criterion of a students's performance that is being evaluated, typically by a rubric."
+    domain entity ProgramEvaluation
+        documentation "The program evaluation associated with this program evaluation element."
+        is part of identity
+    domain entity ProgramEvaluationObjective
+        documentation "The program evaluation objective associated with this program evaluation element, if applicable."
+        is optional
+        merge ProgramEvaluationObjective.ProgramEvaluation.ProgramEvaluationPeriod with ProgramEvaluation.ProgramEvaluationPeriod
+    shared string ProgramEvaluationElementTitle
+        documentation "The name or title of the program evaluation element."
+        is part of identity
+    shared string ProgramEvaluationDescription named ProgramEvaluationElementDescription
+        documentation "The long description of the program evaluation element."
+        is optional
+    common ProgramEvaluationLevel 
+        documentation "The descriptive level(s) of ratings (cut scores) for the program evaluation element."
+        is optional collection
+        role name Element
+    shared decimal NumericRating
+        documentation "The maximum summary numerical rating or score for the program evaluation element."
+        is optional
+        role name ElementMax
+    shared decimal NumericRating
+        documentation "The minimum summary numerical rating or score for the program evaluation element. If omitted, assumed to be 0.0."
+        is optional
+        role name ElementMin
+    shared integer SortOrder
+        documentation "The sort order of this program evaluation element."
+        is optional
+        role name Element

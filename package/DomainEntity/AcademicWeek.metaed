@@ -1,0 +1,17 @@
+Domain Entity AcademicWeek [536]
+    documentation "This entity represents the academic weeks for a school year, optionally captured to support analyses."
+    domain entity School [2435]
+        documentation "Relates the academic week to an existing school."
+        is part of identity
+    shared string WeekIdentifier named WeekIdentifier [1204]
+        documentation "The school label for the week."
+        is part of identity
+    date BeginDate [1200]
+        documentation "The start date for the academic week."
+        is required
+    date EndDate [1202]
+        documentation "The end date for the academic week."
+        is required
+    shared integer TotalInstructionalDays named TotalInstructionalDays [1203]
+        documentation "The total instructional days during the academic week."
+        is required

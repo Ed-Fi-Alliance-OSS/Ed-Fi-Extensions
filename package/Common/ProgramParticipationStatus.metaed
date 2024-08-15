@@ -1,0 +1,14 @@
+Common ProgramParticipationStatus [3089]
+    documentation "The status of the student's program participation."
+    descriptor ParticipationStatus [3090]
+        documentation "The student's program participation status."
+        is part of identity
+    date StatusBeginDate [3091]
+        documentation "The date the student's program participation status began."
+        is part of identity
+    date StatusEndDate [3092]
+        documentation "The date the student's program participation status ended."
+        is optional
+    shared string DesignatedBy [3093]
+        documentation "The person, organization, or department that designated the participation status."
+        is optional

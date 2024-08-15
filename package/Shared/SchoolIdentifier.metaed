@@ -1,0 +1,3 @@
+Shared String SchoolIdentifier [3121]
+    documentation "The alphanumeric string that identifies the school."
+    max length 60

@@ -1,0 +1,8 @@
+Common StateEducationAgencyAccountability [528]
+    documentation "This entity maintains information about federal reporting and accountability for StateEducationAgency(s)."
+    enumeration SchoolYear [923]
+        documentation "The school year for which the accountability is reported."
+        is part of identity
+    bool CTEGraduationRateInclusion [922]
+        documentation "An indication of whether CTE concentrators are included in the state's computation of its graduation rate."
+        is optional

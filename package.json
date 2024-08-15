@@ -1,0 +1,11 @@
+{
+  "name": "ed-fi-model",
+  "description": "The Ed-Fi data model",
+  "private": true,
+  "devDependencies": {
+    "lerna": "8.0.2"
+  },
+  "workspaces": [
+    "package"
+  ]
+}

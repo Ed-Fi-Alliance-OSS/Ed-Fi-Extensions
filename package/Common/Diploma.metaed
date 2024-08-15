@@ -1,0 +1,23 @@
+Common Diploma [501]
+    documentation "This educational entity represents the conferring or certification by an educational organization that the student has successfully completed a particular course of study. It represents the electronic version of its physical document counterpart."
+    inline common Achievement [714]
+        documentation "An entity that includes information about achievement earned by a student upon fulfilling a specified criteria."
+        is required
+    date DiplomaAwardDate [804]
+        documentation "The month, day, and year on which the student met  graduation requirements and was awarded a diploma."
+        is part of identity
+    descriptor DiplomaLevel [807]
+        documentation "The level of diploma/credential that is awarded to a student in recognition of completion of the curricular requirements."
+        is optional
+    descriptor DiplomaType [808]
+        documentation "The type of diploma/credential that is awarded to a student in recognition of his/her completion of the curricular requirements."
+        is part of identity
+    bool CTECompleter [803]
+        documentation "Indicated a student who reached a state-defined threshold of vocational education and who attained a high school diploma or its recognized state equivalent or GED."
+        is optional
+    shared string DiplomaDescription [806]
+        documentation "The description of the diploma given to the student for accomplishments."
+        is optional
+    date DiplomaAwardExpiresDate [805]
+        documentation "Date on which the diploma expires."
+        is optional

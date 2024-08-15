@@ -1,0 +1,17 @@
+Common PartialCourseTranscriptAwards [3114]
+    documentation "A collection of partial credits and/or grades a student earned against the course over the session, used when awards of credit are incremental."
+    date AwardDate [3115]
+        documentation "The date the partial credits and/or grades were awarded or earned."
+        is part of identity
+    shared decimal CreditsValue named EarnedCredits [3116]
+        documentation "The number of credits a student earned for completing a given course."
+        is required
+    descriptor MethodCreditEarned [3117]
+        documentation "The method the credits were earned."
+        is optional
+    shared string GradeEarned named LetterGradeEarned [3118]
+        documentation "The indicator of student performance as submitted by the instructor."
+        is optional
+    shared string GradeEarned named NumericGradeEarned [3119]
+        documentation "The indicator of student performance as submitted by the instructor."
+        is optional

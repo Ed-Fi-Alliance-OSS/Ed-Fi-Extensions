@@ -1,0 +1,44 @@
+Domain Entity ObjectiveAssessment [571]
+    documentation "This entity represents subtests that assess specific learning objectives."
+    shared string IdentificationCode [1538]
+        documentation "A unique number or alphanumeric code assigned to an objective assessment by a school, school system, a state, or other agency or entity."
+        is part of identity
+    decimal MaxRawScore [1541]
+        documentation "The maximum raw score achievable across all assessment items that are correct and scored at the maximum."
+        is optional
+        total digits 15
+        decimal places 5
+    common AssessmentPerformanceLevel [1535]
+        documentation "Definition of the performance levels and the associated cut scores. Three styles are supported: 1. Specification of performance level by minimum and maximum score, 2. Specification of performance level by cut score, using only minimum score, 3. Specification of performance level without any mapping to scores"
+        is optional collection
+    percent PercentOfAssessment [1544]
+        documentation "The percentage of the assessment that tests this objective."
+        is optional
+    shared string Nomenclature [1542]
+        documentation "Reflects the specific nomenclature used for this level of objective assessment."
+        is optional
+    shared string Description [1537]
+        documentation "The description of the objective assessment (e.g., vocabulary, measurement, or geometry)."
+        is optional
+    domain entity AssessmentItem [1534]
+        documentation "References individual test items, if appropriate."
+        is optional collection
+        role name AssessmentItem
+        merge AssessmentItem.Assessment with Assessment
+    domain entity LearningStandard [1540]
+        documentation "Learning standard tested by this objective assessment."
+        is optional collection
+    domain entity ObjectiveAssessment [1543]
+        documentation "Provide user information to lookup and link to the parent objective assessment containing this objective assessment."
+        is optional
+        role name Parent
+        merge ParentObjectiveAssessment.Assessment with Assessment
+    domain entity Assessment [1536]
+        documentation "Provide user information to lookup and link to an existing assessment."
+        is part of identity
+    common AssessmentScore [2851]
+        documentation "Definition of the scores to be expected from this objective assessment."
+        is optional collection
+    descriptor AcademicSubject [2921]
+        documentation "The subject area of the objective assessment."
+        is optional

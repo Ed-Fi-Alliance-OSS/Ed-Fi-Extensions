@@ -1,0 +1,3 @@
+Shared String GradeEarned [53]
+    documentation "A final or interim (grading period) indicator of student performance in a class as submitted by the instructor."
+    max length 20

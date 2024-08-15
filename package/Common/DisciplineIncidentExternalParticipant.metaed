@@ -1,0 +1,11 @@
+Common DisciplineIncidentExternalParticipant [2876]
+    documentation "Information on an individual involved in the discipline incident."
+    shared string FirstName [2877]
+        documentation "A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change."
+        is part of identity
+    shared string LastSurname [2878]
+        documentation "The name borne in common by members of a family."
+        is part of identity
+    descriptor DisciplineIncidentParticipationCode [2879]
+        documentation "The role or type of participation of an individual in the discipline incident."
+        is part of identity

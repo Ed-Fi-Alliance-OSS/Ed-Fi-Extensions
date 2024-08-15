@@ -1,0 +1,4 @@
+Shared String ElectronicMailAddress [47]
+    documentation "The electronic mail (e-mail) address listed for an individual or organization."
+    min length 7
+    max length 128

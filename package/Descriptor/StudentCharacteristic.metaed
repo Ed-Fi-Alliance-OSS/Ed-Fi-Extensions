@@ -1,0 +1,2 @@
+Descriptor StudentCharacteristic [240]
+    documentation "This descriptor captures important characteristics of the student's environment or situation. Generally used for non-program-based student characteristics."

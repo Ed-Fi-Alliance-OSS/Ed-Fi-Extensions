@@ -1,0 +1,13 @@
+Common RequiredAssessment [658]
+    documentation "The assessments and associated required score and performance level."
+    domain entity Assessment [952]
+        documentation "Provide user information to lookup and link to an existing assessment."
+        is part of identity
+    common AssessmentScore [954]
+        documentation "Score required to be met or exceeded."
+        is optional collection
+        role name Required
+    common AssessmentPerformanceLevel [953]
+        documentation "Performance level required to be met or exceeded."
+        is optional
+        role name Required

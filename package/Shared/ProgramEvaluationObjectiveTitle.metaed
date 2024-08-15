@@ -1,0 +1,3 @@
+Shared String ProgramEvaluationObjectiveTitle
+    documentation "The name or title of the program evaluation objective."
+    max length 50

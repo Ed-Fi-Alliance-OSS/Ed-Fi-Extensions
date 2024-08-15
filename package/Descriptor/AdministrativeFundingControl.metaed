@@ -1,0 +1,2 @@
+Descriptor AdministrativeFundingControl [127]
+    documentation "This descriptor holds the type of education institution as classified by its funding source (e.g., public or private)."

@@ -1,0 +1,23 @@
+Common AssessmentPerformanceLevel [484]
+    documentation "Definition of the performance levels and the associated cut scores. Three styles are supported:
+    1. Specification of performance level by minimum and maximum score
+    2. Specification of performance level by cut score, using only minimum score
+    3. Specification of performance level without any mapping to scores"
+    descriptor PerformanceLevel [740]
+        documentation "The performance level(s) defined for the assessment."
+        is part of identity
+    descriptor AssessmentReportingMethod [2540]
+        documentation "The method that the instructor of the class uses to report the performance and achievement of all students. It may be a qualitative method such as individualized teacher comments or a quantitative method such as a letter or numerical grade. In some cases, more than one type of reporting method may be used."
+        is part of identity
+    shared string Result named MinimumScore [739]
+        documentation "The minimum score required to make the indicated level of performance."
+        is optional
+    shared string Result named MaximumScore [738]
+        documentation "The maximum score to make the indicated level of performance."
+        is optional
+    descriptor ResultDatatypeType [741]
+        documentation "The datatype of the result. The results can be expressed as a number, percentile, range, level, etc."
+        is optional
+    shared string PerformanceLevelIndicatorName [3128]
+        documentation "The name of the indicator being measured for a collection of performance level values."
+        is optional

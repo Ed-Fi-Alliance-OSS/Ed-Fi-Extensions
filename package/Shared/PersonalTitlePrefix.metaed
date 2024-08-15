@@ -1,0 +1,3 @@
+Shared String PersonalTitlePrefix [82]
+    documentation "A prefix used to denote the title, degree, position, or seniority of the person."
+    max length 30

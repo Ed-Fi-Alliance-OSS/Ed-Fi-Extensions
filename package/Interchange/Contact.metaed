@@ -1,0 +1,7 @@
+Interchange Contact [2521]
+    documentation "This interchange defines contacts and captures the familial relationship between the student and the contact as well as indicators for the contact for residence, and emergency contact."
+    use case documentation "1. Exchange school or LEA new or updated parent information.
+    2. Exchange parent contact or emergency contact information."
+    domain entity Contact [2521-001]
+    association StudentContactAssociation [2521-002]
+    domain entity Person [2521-003]

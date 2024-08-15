@@ -1,0 +1,8 @@
+Common CreditsByCreditCategory [2930]
+    documentation "The total credits required for graduation based on the credit category."
+    descriptor CreditCategory [2931]
+        documentation "A categorization for the course transcript credits awarded in the course transcript."
+        is part of identity
+    inline common Credits [2932]
+        documentation "The value of credits or units of value awarded for the completion of a course."
+        is required

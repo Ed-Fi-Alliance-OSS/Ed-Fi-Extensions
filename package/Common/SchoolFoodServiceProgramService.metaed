@@ -1,0 +1,14 @@
+Common SchoolFoodServiceProgramService [2760]
+    documentation "Indicates the service(s) being provided to the student by the school food service program."
+    descriptor SchoolFoodServiceProgramService [2761]
+        documentation "Indicates the service being provided to the student by the school food service program."
+        is part of identity
+    bool PrimaryIndicator [2762]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [2763]
+        documentation "First date the student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [2764]
+        documentation "Last date the student was in this option for the current school year."
+        is optional

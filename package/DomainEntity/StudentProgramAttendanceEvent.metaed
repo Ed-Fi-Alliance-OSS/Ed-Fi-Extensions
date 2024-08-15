@@ -1,0 +1,18 @@
+Domain Entity StudentProgramAttendanceEvent [592]
+    documentation "This event entity represents the recording of whether a student is in attendance to receive or participate in program services."
+    inline common AttendanceEvent [1767]
+        documentation "Details of the attendance event."
+        is required
+    domain entity Student [1770]
+        documentation "Relates the student associated with the attendance event."
+        is part of identity
+    domain entity EducationOrganization [1768]
+        documentation "The education organization where the student is participating in or receiving the program services."
+        is part of identity
+    domain entity Program [1769]
+        documentation "Relates the program associated with the attendance event."
+        is part of identity
+        role name Program
+    shared integer AttendanceEventDuration named ProgramAttendanceDuration [2857]
+        documentation "The duration in minutes of the program attendance event."
+        is optional

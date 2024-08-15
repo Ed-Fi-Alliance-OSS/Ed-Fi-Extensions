@@ -1,0 +1,14 @@
+Domain Entity FundDimension [3159]
+    documentation "The NCES fund accounting dimension. A fund is a fiscal and accounting entity with a self-balancing set of accounts recording cash and other financial resources, together with all related liabilities and residual equities or balances, and changes therein, which are segregated for the purpose of carrying on specific activities or attaining certain objectives in accordance with special regulations, restrictions, or limitations."
+    shared string Code [3160]
+        documentation "The code representation of the account fund dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3161]
+        documentation "The fiscal year for which the account fund dimension is valid."
+        is part of identity
+    shared string CodeName [3162]
+        documentation "A description of the account fund dimension."
+        is optional
+    descriptor ReportingTag [3163]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

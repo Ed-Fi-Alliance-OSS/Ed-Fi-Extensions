@@ -1,0 +1,17 @@
+Common InterventionEffectiveness [510]
+    documentation "Measurement of the effectiveness of the intervention per diagnosis."
+    descriptor Diagnosis [847]
+        documentation "Targeted purpose of the intervention (e.g., attendance issue, dropout risk) for which the effectiveness is measured."
+        is part of identity
+    descriptor PopulationServed [851]
+        documentation "Population for which effectiveness is measured."
+        is part of identity
+    descriptor GradeLevel [848]
+        documentation "Grade level for which effectiveness is measured."
+        is part of identity
+    integer ImprovementIndex [849]
+        documentation "Along a percentile distribution of students, the improvement index represents the change in an average student's percentile rank that is considered to be due to the intervention."
+        is optional
+    descriptor InterventionEffectivenessRating [850]
+        documentation "An intervention demonstrates effectiveness if the research has shown that the program caused an improvement in outcomes. Values: positive effects, potentially positive effects, mixed effects, potentially negative effects, negative effects, and no discernible effects."
+        is required

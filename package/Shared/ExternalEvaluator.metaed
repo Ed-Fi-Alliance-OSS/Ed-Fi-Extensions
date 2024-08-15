@@ -1,0 +1,3 @@
+Shared String ExternalEvaluator
+    documentation "The external person(s) - not staff - that conducted the evaluation."
+    max length 150

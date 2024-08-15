@@ -1,0 +1,26 @@
+Domain Survey
+    documentation "This domain defines a model that can be used for surveys and survey respones from identified or anonymous respondents. This domain contains:
+    * Survey, SurveySection, and SurveyQuestion that describe the survey.
+    * Survey responses that follow a parallel structure of SurveyResponse, SurveySectionResponse, and SurveyQuestionResponse.
+    * Associations to tie Survey and SurveyResponse domain entities to Course, Section, Program, Target EducationOrganization, and Target Staff."
+    domain entity Contact
+    domain entity Course
+    domain entity EducationOrganization
+    domain entity Program
+    domain entity Section
+    domain entity Session
+    domain entity Staff
+    domain entity Student
+    domain entity Survey
+    domain entity SurveyQuestion
+    domain entity SurveyQuestionResponse
+    domain entity SurveyResponse
+    domain entity SurveySection
+    domain entity SurveySectionResponse
+    association SurveyCourseAssociation
+    association SurveySectionAssociation
+    association SurveyProgramAssociation
+    association SurveyResponseEducationOrganizationTargetAssociation
+    association SurveyResponseStaffTargetAssociation
+    association SurveySectionResponseEducationOrganizationTargetAssociation
+    association SurveySectionResponseStaffTargetAssociation

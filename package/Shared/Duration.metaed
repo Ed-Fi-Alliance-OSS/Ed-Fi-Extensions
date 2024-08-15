@@ -1,0 +1,3 @@
+Shared Integer Duration [46]
+    documentation "The actual or estimated number of clock minutes for a given class."
+    min value 1

@@ -1,0 +1,41 @@
+Domain Entity School based on EducationOrganization [579]
+    documentation "This entity represents an educational organization that includes staff and students who participate in classes and educational activity groups."
+    integer SchoolId [1614]
+        documentation "The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    descriptor GradeLevel [1605]
+        documentation "The grade levels served at the school."
+        is required collection
+    descriptor SchoolCategory [1613]
+        documentation "The one or more categories of school."
+        is optional collection
+    descriptor SchoolType [1615]
+        documentation "The type of education institution as classified by its primary focus."
+        is optional
+    descriptor CharterStatus [1602]
+        documentation "A school or agency providing free public elementary or secondary education to eligible students under a specific charter granted by the state legislature or other appropriate authority and designated by such authority to be a charter school."
+        is optional
+    descriptor TitleIPartASchoolDesignation [1618]
+        documentation "Denotes the Title I Part A designation for the school."
+        is optional
+    descriptor MagnetSpecialProgramEmphasisSchool [1610]
+        documentation "A school that has been designed: 1) to attract students of different racial/ethnic backgrounds for the purpose of reducing, preventing, or eliminating racial isolation; and/or 2) to provide an academic or social focus on a particular theme (e.g., science/math, performing arts, gifted/talented, or foreign language)."
+        is optional
+    descriptor AdministrativeFundingControl [1601]
+        documentation "The type of education institution as classified by its funding source, for example public or private."
+        is optional
+    descriptor InternetAccess [1608]
+        documentation "The type of Internet access available."
+        is optional
+    domain entity LocalEducationAgency [1609]
+        documentation "LEA of which the School is an organizational component."
+        is optional
+    descriptor CharterApprovalAgencyType [2423]
+        documentation "The type of agency that approved the establishment or continuation of a charter school."
+        is optional
+    enumeration SchoolYear [2424]
+        documentation "The school year in which a charter school was initially approved."
+        is optional
+        role name CharterApproval

@@ -1,0 +1,17 @@
+Common Telephone [535]
+    documentation "The 10-digit telephone number, including the area code, of an individual or organization."
+    shared string TelephoneNumber [949]
+        documentation "The telephone number including the area code, and extension, if applicable."
+        is part of identity
+    descriptor TelephoneNumberType [950]
+        documentation "The type of communication number listed for an individual or organization."
+        is part of identity
+    shared integer OrderOfPriority [948]
+        documentation "The order of priority assigned to telephone numbers to define which number to attempt first, second, etc."
+        is optional
+    bool TextMessageCapabilityIndicator [951]
+        documentation "An indication that the telephone number is technically capable of sending and receiving Short Message Service (SMS) text messages."
+        is optional
+    bool DoNotPublishIndicator [2553]
+        documentation "An indication that the telephone number should not be published."
+        is optional

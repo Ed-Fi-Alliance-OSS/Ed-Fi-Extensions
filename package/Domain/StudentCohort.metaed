@@ -1,0 +1,17 @@
+Domain StudentCohort
+    documentation
+"The Student Cohort domain represents a wide variety of collections of students that are distinct from class rosters or program participants. This could include students that are tagged for interventions or students tagged for the purposes of tracking or analysis, such as a school principal's ""watch list."" The StudentCohortAssociation captures the assignment of students to cohorts.
+
+Cohorts may be associated with programs and may have staff associated with the cohort who is providing services, oversight, or sponsorship. Cohorts are associated with Intervention entities via the StudentInterventionAssociation."
+    domain entity Cohort
+    domain entity EducationOrganization
+    domain entity Intervention
+    domain entity Program
+    domain entity Section
+    domain entity Staff
+    association StaffCohortAssociation
+    association StaffSectionAssociation
+    domain entity Student
+    association StudentCohortAssociation
+    association StudentInterventionAssociation
+    association StudentSectionAssociation

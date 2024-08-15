@@ -1,0 +1,44 @@
+Domain Entity DisciplineAction [553]
+    documentation "This event entity represents actions taken by an education organization after a disruptive event that is recorded as a discipline incident."
+    shared string DisciplineActionIdentifier [1337]
+        documentation "Identifier assigned by the education organization to the discipline action."
+        is part of identity
+    descriptor Discipline [1336]
+        documentation "Type of action, such as removal from the classroom, used to discipline the student involved as a perpetrator in a discipline incident."
+        is required collection
+    date DisciplineDate [1340]
+        documentation "The date of the discipline action."
+        is part of identity
+    shared decimal DisciplineActionLength [1338]
+        documentation "The length of time in school days for the discipline action (e.g. removal, detention), if applicable."
+        is optional
+    shared decimal DisciplineActionLength named ActualDisciplineActionLength [1334]
+        documentation "Indicates the actual length in school days of a student's disciplinary assignment."
+        is optional
+    descriptor DisciplineActionLengthDifferenceReason [1339]
+        documentation "Indicates the reason for the difference, if any, between the official and actual lengths of a student's disciplinary assignment."
+        is optional
+    bool RelatedToZeroTolerancePolicy [1342]
+        documentation "An indication of whether or not this disciplinary action taken against a student was imposed as a consequence of state or local zero tolerance policies."
+        is optional
+    domain entity Student [1345]
+        documentation "The student disciplined by the discipline action."
+        is part of identity
+    domain entity Staff [1344]
+        documentation "The staff responsible for enforcing the discipline action."
+        is optional collection
+    domain entity School [1343]
+        documentation "School responsible for student's discipline."
+        is required
+        role name Responsibility
+    domain entity School [1335]
+        documentation "School where student is transferred for discipline."
+        is optional
+        role name Assignment
+    bool IEPPlacementMeetingIndicator [2708]
+        documentation "An indication as to whether an offense and/or disciplinary action resulted in a meeting of a student's Individualized Education Program (IEP) team to determine appropriate placement."
+        is optional
+    association StudentDisciplineIncidentBehaviorAssociation [3074]
+        documentation "A reference to the behavior(s) by the student that led or contributed to this specific action."
+        is optional collection
+        merge StudentDisciplineIncidentBehaviorAssociation.Student with Student

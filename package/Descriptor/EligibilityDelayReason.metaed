@@ -1,0 +1,2 @@
+Descriptor EligibilityDelayReason
+    documentation "The reason why the eligibility determination was completed beyond the required timeframe."

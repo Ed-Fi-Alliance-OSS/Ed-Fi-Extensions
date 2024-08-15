@@ -1,0 +1,50 @@
+Association StudentSpecialEducationProgramAssociation based on GeneralStudentProgramAssociation [615]
+    documentation "This association represents the special education program(s) that a student participates in or receives services from. The association is a subclass of the GeneralStudentProgramAssociation specifically designed for special education programs."
+    bool IdeaEligibility [1138]
+        documentation "Indicator of the eligibility of the student to receive special education services according to the Individuals with Disabilities Education Act (IDEA)."
+        is optional
+    descriptor SpecialEducationSetting [1152]
+        documentation "The major instructional setting (more than 50 percent of a student's special education program)."
+        is optional
+    common ServiceProvider [1150]
+        documentation "The staff providing special education services to the student."
+        is optional collection
+    shared decimal HoursPerWeek named SpecialEducationHoursPerWeek [1151]
+        documentation "The number of hours per week for special education instruction and therapy."
+        is optional
+    shared decimal HoursPerWeek named SchoolHoursPerWeek [1147]
+        documentation "Indicate the total number of hours of instructional time per week for the school that the student attends."
+        is optional
+    bool MultiplyDisabled [1144]
+        documentation "Indicates whether the student receiving special education and related services has been designated as multiply disabled by the admission, review, and dismissal committee as aligned with federal requirements."
+        is optional
+    bool MedicallyFragile [1143]
+        documentation "Indicates whether the student receiving special education and related services is: 1) in the age range of birth to 22 years, and 2) has a serious, ongoing illness or a chronic condition that has lasted or is anticipated to last at least 12 or more months or has required at least one month of hospitalization, and that requires daily, ongoing medical treatments and monitoring by appropriately trained personnel which may include parents or other family members, and 3) requires the routine use of medical device or of assistive technology to compensate for the loss of usefulness of a body function needed to participate in activities of daily living, and 4) lives with ongoing threat to his or her continued well-being. Aligns with federal requirements."
+        is optional
+    date LastEvaluationDate [1142]
+        documentation "The date of the last special education evaluation."
+        is optional
+    date IEPReviewDate [1141]
+        documentation "The date of the last IEP review."
+        is optional
+    date IEPBeginDate [1139]
+        documentation "The effective date of the most recent IEP."
+        is optional
+    date IEPEndDate [1140]
+        documentation "The end date of the most recent IEP."
+        is optional
+    common Disability [2807]
+        documentation "The disability condition(s) that best describes an individual's impairment, as related to special education services received."
+        is optional collection
+    common SpecialEducationProgramService [2808]
+        documentation "Indicates the service(s) being provided to the student by the special education program."
+        is optional collection
+    date SpecialEducationExitDate
+        documentation "The  month, day and year on which a person stops receiving special education services."
+        is optional
+    descriptor SpecialEducationExitReason
+        documentation "The reason why a person stops receiving special education services."
+        is optional
+    shared string SpecialEducationExitExplained
+        documentation "Explanation on why a person stops receiving special education services."
+        is optional 

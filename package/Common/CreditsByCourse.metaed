@@ -1,0 +1,16 @@
+Common CreditsByCourse [498]
+    documentation "The total credits required to graduation by taking a specific course, or by taking one or more from a set of courses."
+    shared string CourseSetName [795]
+        documentation "Identifying name given to a collection of courses."
+        is part of identity
+    domain entity Course [794]
+        documentation "The course reference that identifies the organization of subject matter and related learning experiences provided for the instruction of students."
+        is required collection
+        role name Course
+    inline common Credits [793]
+        documentation "The value of credits or units of value awarded for the completion of a course."
+        is required
+    descriptor GradeLevel [797]
+        documentation "The grade level when the student is planned to take the course."
+        is optional
+        role name WhenTaken

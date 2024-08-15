@@ -1,0 +1,26 @@
+Domain Entity GradingPeriod [561]
+    documentation "This entity represents the time span for which grades are reported."
+    domain entity School [2425]
+        documentation "Provide user information to lookup and link to an existing school record."
+        is part of identity
+    descriptor GradingPeriod [1433]
+        documentation "The state's name of the period for which grades are reported."
+        is part of identity
+    shared string GradingPeriodName
+        documentation "The school's descriptive name of the grading period."
+        is part of identity
+    integer PeriodSequence [1434]
+        documentation "The sequential order of this period relative to other periods."
+        is optional
+    enumeration SchoolYear
+        documentation "The identifier for the grading period school year."
+        is part of identity
+    date BeginDate [1430]
+        documentation "Month, day, and year of the first day of the grading period."
+        is required
+    date EndDate [1432]
+        documentation "Month, day, and year of the last day of the grading period."
+        is required
+    shared integer TotalInstructionalDays [1435]
+        documentation "Total days available for educational instruction during the grading period."
+        is required

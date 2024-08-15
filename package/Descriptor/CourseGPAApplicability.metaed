@@ -1,0 +1,2 @@
+Descriptor CourseGPAApplicability [151]
+    documentation "An indicator of whether or not this course being described is included in the computation of the student's Grade Point Average, and if so, if it is weighted differently than regular courses."

@@ -1,0 +1,14 @@
+Inline Common EmploymentPeriod [506]
+    documentation "The set of elements defining and characterizing an individual's period of employment including start and end dates and the type and reason for separation."
+    date HireDate [821]
+        documentation "The month, day, and year on which an individual was hired for a position."
+        is part of identity
+    date EndDate [820]
+        documentation "The month, day, and year on which a contract between an individual and a governing authority ends or is terminated under the provisions of the contract (or the date on which the agreement is made invalid)."
+        is optional
+    descriptor Separation [822]
+        documentation "Type of employment separation."
+        is optional
+    descriptor SeparationReason [823]
+        documentation "Reason for terminating the employment."
+        is optional

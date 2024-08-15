@@ -1,0 +1,14 @@
+Common HomelessProgramService [2731]
+    documentation "Indicates the service(s) being provided to the student by the homeless program."
+    descriptor HomelessProgramService [2732]
+        documentation "Indicates the service being provided to the student by the homeless program."
+        is part of identity
+    bool PrimaryIndicator [2733]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [2734]
+        documentation "First date the student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [2735]
+        documentation "Last date the student was in this option for the current school year."
+        is optional

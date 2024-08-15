@@ -1,0 +1,19 @@
+Domain Assessment
+    documentation
+"This domain defines a model that can be used for a wide variety of assessments, including early childhood assessment, state standardized assessments, college entrance exams, benchmark assessments, and/or course assessments. This domain contains:
+* Learning Standards that drive the curriculum and the assessments
+* Assessment Metadata that describe the assessment
+* Student Assessment Results that follow a parallel structure of StudentAssessment, StudentObjectiveAssessment, and StudentAssessmentItem"
+    domain entity Assessment
+    domain entity AssessmentItem
+    domain entity LearningStandard
+    domain entity ObjectiveAssessment
+    domain entity Program
+    domain entity Section
+    domain entity Student
+    domain entity StudentAssessment
+    domain entity AssessmentScoreRangeLearningStandard
+    domain entity LearningStandardEquivalenceAssociation
+    association StudentAssessmentEducationOrganizationAssociation
+    common StudentAssessmentItem
+    common StudentObjectiveAssessment

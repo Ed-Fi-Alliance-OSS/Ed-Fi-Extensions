@@ -1,0 +1,3 @@
+Shared String DisciplineActionIdentifier [43]
+    documentation "Identifier assigned by the education organization to the discipline action."
+    max length 36

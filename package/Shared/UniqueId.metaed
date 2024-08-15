@@ -1,0 +1,3 @@
+Shared String UniqueId [113]
+    documentation "A unique alphanumeric code assigned to a person by a system managing unique identifiers."
+    max length 32

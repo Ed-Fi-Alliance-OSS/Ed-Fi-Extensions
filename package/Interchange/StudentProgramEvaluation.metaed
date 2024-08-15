@@ -1,0 +1,11 @@
+Interchange StudentProgramEvaluation
+    documentation "This interchange loads students' participation in program evaluations."
+    use case documentation "1. Showcases the success of educational programs to stakeholders by illustrating their impact on student outcomes.
+    2. Enables educators and administrators to pinpoint areas for improvement and implement changes to enhance student support.
+    3. Enhances student engagement and satisfaction by providing valuable insights that enable educators to make targeted improvements, thereby enhancing the overall student experience and increasing engagement and satisfaction levels."
+    domain entity StudentProgramEvaluation
+    domain entity EvaluationRubricDimension
+    domain entity ProgramEvaluation
+    domain entity Program
+    domain entity ProgramEvaluationObjective
+    domain entity ProgramEvaluationElement

@@ -1,0 +1,6 @@
+Association SurveyCourseAssociation [3053]
+  documentation "The course associated with the survey."
+  domain entity Survey [3055]
+    documentation "Reference to survey."
+  domain entity Course [3056]
+    documentation "The course associated with the survey."

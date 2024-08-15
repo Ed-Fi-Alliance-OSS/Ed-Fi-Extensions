@@ -1,0 +1,11 @@
+Common LocalEducationAgencyAccountability [514]
+    documentation "This entity maintains information about federal reporting and accountability for Local Education Agencies."
+    enumeration SchoolYear [861]
+        documentation "The school year for which the accountability is reported."
+        is part of identity
+    descriptor GunFreeSchoolsActReportingStatus [859]
+        documentation "An indication of whether the school or Local Education Agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921."
+        is optional
+    descriptor SchoolChoiceImplementStatus [860]
+        documentation "An indication of whether the LEA was able to implement the provisions for public school choice under Title I, Part A, Section 1116 of ESEA as amended."
+        is optional

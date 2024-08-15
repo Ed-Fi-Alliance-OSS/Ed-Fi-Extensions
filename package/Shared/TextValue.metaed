@@ -1,0 +1,3 @@
+Shared String TextValue [3048]
+    documentation "For radio buttons, checkboxes, dropdowns, matrix of drop downs - the list of choices."
+    max length 255

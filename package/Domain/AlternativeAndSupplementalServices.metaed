@@ -1,0 +1,43 @@
+Domain AlternativeAndSupplementalServices
+    documentation
+"This domain defines the model for a wide range of programs, including education programs, alternative programs, extracurricular programs, supplemental programs, and early learning programs.
+* A Program entity defines programs with services offered by an education organization.
+* A StudentProgramAssociation links Program entities to participating students.
+* A StaffProgramAssociation links Program entities to assigned staff."
+    domain entity EducationOrganization
+    domain entity Program
+    association StudentSpecialEducationProgramEligibilityAssociation
+    domain entity School
+    domain entity Section
+    domain entity Staff
+    association StaffProgramAssociation
+    domain entity Student
+    association StudentCTEProgramAssociation
+    association StudentHomelessProgramAssociation
+    association StudentLanguageInstructionProgramAssociation
+    association StudentMigrantEducationProgramAssociation
+    association StudentNeglectedOrDelinquentProgramAssociation
+    association StudentProgramAssociation
+    domain entity StudentProgramAttendanceEvent
+    domain entity StudentSchoolAttendanceEvent
+    association StudentSchoolFoodServiceProgramAssociation  
+    association StudentSectionAssociation
+    domain entity StudentSectionAttendanceEvent
+    association StudentSpecialEducationProgramAssociation    
+    association StudentTitleIPartAProgramAssociation
+    footer documentation
+"# Alternative and Supplemental Services Subdomains
+
+---
+
+Four additional subdomains have been pre-defined in the Ed-Fi UDM
+for specific and relatively common instances of
+Alternative and Supplemental Services:
+
+* Career and Technical Education
+
+* Migrant Education
+
+* Special Education
+
+* Title I Part A Services"

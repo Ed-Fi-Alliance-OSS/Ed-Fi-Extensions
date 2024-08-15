@@ -1,0 +1,2 @@
+Descriptor EnrollmentType 
+    documentation "The type of enrollment reflected by the StudentSchoolAssociation."

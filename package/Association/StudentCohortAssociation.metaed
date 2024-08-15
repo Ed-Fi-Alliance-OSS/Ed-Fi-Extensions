@@ -1,0 +1,15 @@
+ Association StudentCohortAssociation [605]
+    documentation "This association represents the cohort(s) for which a student is designated."
+    domain entity Student [1059]
+        documentation "The student associated with the cohort."
+    domain entity Cohort [1056]
+        documentation "Reference to the cohort associated with the student."
+    date BeginDate [1055]
+        documentation "The month, day, and year on which the student was first identified as part of the cohort."
+        is part of identity
+    date EndDate [1057]
+        documentation "The month, day, and year on which the student was removed as part of the cohort."
+        is optional
+    domain entity Section [1058]
+        documentation "The cohort representing the subdivision of students within one or more sections. For example, a group of students may be given additional instruction and tracked as a cohort."
+        is optional collection

@@ -1,0 +1,3 @@
+Shared String CongressionalDistrict [2863]
+    documentation "The congressional district in which an address is located."
+    max length 30

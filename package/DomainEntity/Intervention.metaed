@@ -1,0 +1,59 @@
+Domain Entity Intervention [563]
+    documentation "An implementation of an instructional approach focusing on the specific techniques and materials used to teach a given subject."
+    inline common EducationContentSource [1449]
+        documentation "Resources related to or used in this intervention, including any documentation around the Intervention itself. Since an intervention is intended to be a published intervention, an intervention should have at least one such resource."
+        is required
+    descriptor InterventionClass [1452]
+        documentation "The way in which an intervention is used: curriculum, supplement, or practice."
+        is required
+    descriptor Diagnosis [1448]
+        documentation "Targeted purpose of the intervention."
+        is optional collection
+    descriptor PopulationServed [1456]
+        documentation "A subset of students that are the focus of the intervention."
+        is optional collection
+    descriptor Sex [1444]
+        documentation "Sexes for the intervention. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor GradeLevel [1443]
+        documentation "Grade levels for the intervention. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor DeliveryMethod [1446]
+        documentation "The way in which an intervention was implemented."
+        is required
+    domain entity InterventionPrescription [1454]
+        documentation "The reference to the intervention prescription being followed in this intervention implementation."
+        is optional collection
+        role name InterventionPrescription
+    date BeginDate [1445]
+        documentation "The start date for the intervention implementation."
+        is required
+    date EndDate [1451]
+        documentation "The end date for the intervention implementation."
+        is optional
+    common MeetingTime [1455]
+        documentation "The times at which this intervention is scheduled to meet."
+        is optional collection
+    domain entity Staff [1458]
+        documentation "Relates the staff member associated with the Intervention."
+        is optional collection
+    domain entity EducationOrganization [1450]
+        documentation "Relates the education organization which is sponsoring the intervention implementation."
+        is part of identity
+    shared string IdentificationCode [1453]
+        documentation "A unique number or alphanumeric code assigned to an intervention."
+        is part of identity
+        role name Intervention
+    shared integer Dosage [2846]
+        documentation "The minimum duration of time in minutes that may be assigned for the intervention."
+        is optional
+        role name Min
+    shared integer Dosage [2847]
+        documentation "The maximum duration of time in minutes that may be assigned for the intervention."
+        is optional
+        role name Max
+    shared string URI named Namespace [3248]
+        documentation "Namespace for the intervention."
+        is optional

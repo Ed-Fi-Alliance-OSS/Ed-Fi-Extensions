@@ -1,0 +1,19 @@
+Domain Entity CrisisEvent
+    documentation "A natural or man-made event that causes the disruption of school-level activities and the temporary or permanent displacement of students."
+    string CrisisEventName
+        documentation "The name of the crisis event that occurred. If there is no generally accepted name for this crisis event, the suggested format: Location + Crisis type + Year."
+        is part of identity
+        max length 100 
+    descriptor CrisisType
+        documentation "The type or category of crisis."        
+        is required
+    shared string Description
+        documentation "Provides a textual description of the crisis event affecting the student. It may include details such as the nature of the crisis (e.g., natural disaster, conflict, medical emergency), its severity, location, and any other relevant information describing the crisis situation."
+        is optional
+        role name Crisis
+    date CrisisStartDate
+        documentation "The year, month and day on which the crisis affected the student. This date may not be the same as the date the crisis occurred if evacuation orders are implemented in anticipation of a crisis."
+        is optional
+    date CrisisEndDate
+        documentation "The date on which the crisis ceased to affect the student."
+        is optional    

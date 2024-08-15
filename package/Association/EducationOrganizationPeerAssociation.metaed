@@ -1,0 +1,7 @@
+Association EducationOrganizationPeerAssociation [597]
+    documentation "The association from an education organization to its peers."
+    domain entity EducationOrganization [1008]
+        documentation "The associated peer organization(s) for the education organization."
+    domain entity EducationOrganization [1009]
+        documentation "The associated peer organization(s) for the education organization."
+        role name Peer

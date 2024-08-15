@@ -1,0 +1,10 @@
+Interchange StudentAttendance [2527]
+    documentation "The Student Attendance interchange describes student attendance events. It can be used to exchange daily attendance or section-level attendance. It may be used in cases where only absences are reported (attendance is assumed if no absence is reported), or where both attendance and absences are reported."
+    use case documentation "1. Exchange a school's or LEA's section (class), school (daily), intervention, or program attendance data.
+    2. Exchange a school's or LEA's section attendance taken data.
+    3. Exchange attendance data for a particular student (e.g., for a transfer student)."
+    domain entity StudentInterventionAttendanceEvent [2527-001]
+    domain entity StudentProgramAttendanceEvent [2527-002]
+    domain entity StudentSchoolAttendanceEvent [2527-003]
+    domain entity StudentSectionAttendanceEvent [2527-004]
+    domain entity SectionAttendanceTakenEvent [2527-005]

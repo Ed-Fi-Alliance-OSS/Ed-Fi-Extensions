@@ -1,0 +1,4 @@
+Shared Decimal Learning [65]
+    documentation "Student's learning method preference (ex. auditory, visual, and ""kinesthetic or tactile"") expressed as a normalized percentage."
+    total digits 5
+    decimal places 4

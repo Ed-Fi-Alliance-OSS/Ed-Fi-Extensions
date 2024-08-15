@@ -1,0 +1,24 @@
+Domain Finance
+    documentation
+"Core to the Finance model is the the chart of accounts entity that forms the backbone for classifying expenditures of all types. Each Account Identifier element is comprised of a compound structure of multiple types of classifications, or dimensions, each with a hierarchical code structure. Example dimensions include:
+* The Fund from which monies are being expended.
+* The Program that is spending the funds.
+* The Function for which the funds are being spent."
+    domain entity LocalAccount
+    domain entity LocalActual
+    domain entity LocalBudget
+    domain entity LocalContractedStaff
+    domain entity LocalEncumbrance
+    domain entity LocalPayroll
+    domain entity EducationOrganization
+    domain entity Staff
+    domain entity ChartOfAccount
+    domain entity BalanceSheetDimension
+    domain entity FunctionDimension
+    domain entity FundDimension
+    domain entity ObjectDimension
+    domain entity OperationalUnitDimension
+    domain entity ProgramDimension
+    domain entity ProjectDimension
+    domain entity SourceDimension
+    common ReportingTag

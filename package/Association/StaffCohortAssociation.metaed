@@ -1,0 +1,16 @@
+Association StaffCohortAssociation [599]
+    documentation "This association indicates the staff associated with a cohort of students."
+    domain entity Staff [1018]
+        documentation "The staff associated with the cohort of students."
+    domain entity Cohort [1016]
+        documentation "Reference to the cohort associated with the staff."
+    date BeginDate [1015]
+        documentation "Start date for the association of staff to this cohort."
+        is part of identity
+    date EndDate [1017]
+        documentation "End date for the association of staff to this cohort."
+        is optional
+    bool StudentRecordAccess [1019]
+        documentation "Indicator of whether the staff has access to the student records of the cohort per district interpretation of FERPA and other privacy laws, regulations, and policies."
+        is optional
+

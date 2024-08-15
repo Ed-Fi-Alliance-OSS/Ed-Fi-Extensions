@@ -1,0 +1,3 @@
+Shared String ContentStandardVersion [26]
+    documentation "The version of the content standard (i.e. ""Fall 2014"", ""v1.3"", ""Monroe County"", etc)."
+    max length 50

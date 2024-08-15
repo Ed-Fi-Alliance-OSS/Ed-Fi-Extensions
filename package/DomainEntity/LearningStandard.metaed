@@ -1,0 +1,50 @@
+Domain Entity LearningStandard [567]
+    documentation "A statement that describes a specific competency or academic standard."
+    shared string LearningStandardId [1499]
+        documentation "The identifier for the specific learning standard (e.g., 111.15.3.1.A)."
+        is part of identity
+        is queryable field
+    common LearningStandardIdentificationCode [1500]
+        documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a learning standard."
+        is optional collection
+        is queryable field
+    shared string Description [1497]
+        documentation "The text of the statement. The textual content that either describes a specific competency such as ""Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions."" or describes a less granular group of competencies within the taxonomy of the standards document, e.g. ""Understand and apply the Pythagorean Theorem,"" or ""Geometry""."
+        is required
+    shared string IdentificationCode named LearningStandardItemCode [1501]
+        documentation "A code designated by the promulgating body to identify the statement, e.g. 1.N.3 (usually not globally unique)."
+        is optional
+    common ContentStandard [1495]
+        documentation "The content standard from which the learning standard was derived."
+        is required
+        is queryable field
+    shared string URI [1505]
+        documentation "An unambiguous reference to the statement using a network-resolvable URI."
+        is optional
+    descriptor GradeLevel [1498]
+        documentation "The grade levels for the specific learning standard."
+        is required collection
+        is queryable field
+    descriptor AcademicSubject [1494]
+        documentation "Subject area for the learning standard."
+        is required collection
+        is queryable field
+    shared string CourseTitle [1496]
+        documentation "The official course title with which this learning standard is associated."
+        is optional
+    shared string Criteria named SuccessCriteria [1504]
+        documentation "One or more statements that describes the criteria used by teachers and students to check for attainment of a learning standard. This criteria gives clear indications as to the degree to which learning is moving through the Zone or Proximal Development toward independent achievement of the learning standard."
+        is optional
+    domain entity LearningStandard [1502]
+        documentation "Provide user information to lookup and link to an existing learning standard which serves as a method to group other learning standards."
+        is optional
+        role name Parent
+    shared string URI named Namespace [2440]
+        documentation "The namespace of the organization or entity who governs the standard. It is recommended the namespaces observe a URI format and begin with a domain name under the governing organization or entity control."
+        is required
+    descriptor LearningStandardCategory [2850]
+        documentation "An additional classification of the type of a specific learning standard."
+        is optional
+    descriptor LearningStandardScope
+        documentation "Signals the scope of usage the standard. Does not necessarily relate the standard to the governing body."
+        is optional

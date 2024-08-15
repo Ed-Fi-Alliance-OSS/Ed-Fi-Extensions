@@ -1,0 +1,17 @@
+Common Recognition [523]
+    documentation "Recognition given to the individual for accomplishments in a co-curricular, or extra-curricular activity."
+    inline common Achievement [717]
+        documentation "An entity that includes information about achievement earned by an individual upon fulfilling a specified criteria."
+        is required
+    descriptor RecognitionType [908]
+        documentation "The nature of recognition given to the individual for accomplishments in a co-curricular, or extra-curricular activity."
+        is part of identity
+    shared string RecognitionDescription [907]
+        documentation "A description of the type of recognition earned by or awarded to the individual."
+        is optional
+    date RecognitionAwardDate [905]
+        documentation "The date the recognition was awarded or earned."
+        is optional
+    date RecognitionAwardExpiresDate [906]
+        documentation "Date on which the recognition expires."
+        is optional

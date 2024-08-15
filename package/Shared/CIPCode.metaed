@@ -1,0 +1,3 @@
+Shared String CIPCode [16]
+    documentation "Number and description of the CIP Code associated with the student's CTE program."
+    max length 120

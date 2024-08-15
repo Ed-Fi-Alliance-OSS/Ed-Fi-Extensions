@@ -1,0 +1,2 @@
+Descriptor EligibilityEvaluationType
+    documentation "Indicates if this is an initial evaluation or a reevaluation."

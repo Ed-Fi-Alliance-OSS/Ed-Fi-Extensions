@@ -1,0 +1,5 @@
+Shared Decimal DisciplineActionLength [2536]
+    documentation "The length, in school days, of the disciplinary action."
+    total digits 5
+    decimal places 2
+    min value 0

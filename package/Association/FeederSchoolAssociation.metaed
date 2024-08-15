@@ -1,0 +1,17 @@
+Association FeederSchoolAssociation [598]
+    documentation "The association from feeder school to the receiving school."
+    domain entity School [1013]
+        documentation "Reference to the feeder school."
+        role name Feeder
+    domain entity School [1014]
+        documentation "Reference to the receiving school."
+    date BeginDate [1010]
+        documentation "The month, day, and year of the first day of the feeder school association."
+        is part of identity
+    date EndDate [1011]
+        documentation "The month, day, and year of the last day of the feeder school association."
+        is optional
+    shared string Description [1012]
+        documentation "Describes the relationship from the feeder school to the receiving school, for example by program emphasis, such as special education, language immersion, science, or performing art."
+        is optional
+        role name FeederRelationship

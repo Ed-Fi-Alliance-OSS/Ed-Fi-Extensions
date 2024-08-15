@@ -1,0 +1,21 @@
+Domain Entity CompetencyObjective [548]
+    documentation "This entity holds additional competencies for student achievement that are not associated with specific learning objectives (e.g., paying attention in class)."
+    shared string IdentificationCode named CompetencyObjectiveId [1281]
+        documentation "The Identifier for the competency objective."
+        is optional
+    shared string Objective [1284]
+        documentation "The designated title of the competency objective."
+        is part of identity
+    shared string Description [1282]
+        documentation "The description of the student competency objective."
+        is optional
+    descriptor GradeLevel [1285]
+        documentation "The grade level for which the competency objective is targeted."
+        is part of identity
+        role name Objective
+    domain entity EducationOrganization [1283]
+        documentation "The education organization that defines the curriculum and courses offered - often the LEA or school."
+        is part of identity
+    shared string Criteria named SuccessCriteria [1286]
+        documentation "One or more statements that describes the criteria used by teachers and students to check for attainment of a competency objective. This criteria gives clear indications as to the degree to which learning is moving through the Zone or Proximal Development toward independent achievement of the competency objective."
+        is optional

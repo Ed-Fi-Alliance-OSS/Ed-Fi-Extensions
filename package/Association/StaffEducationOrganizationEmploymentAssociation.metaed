@@ -1,0 +1,30 @@
+Association StaffEducationOrganizationEmploymentAssociation [601]
+    documentation "This association indicates the education organization an employee, contractor, volunteer, or other service provider is formally associated with typically indicated by which organization the staff member has a services contract with or receives compensation from."
+    domain entity Staff [1035]
+        documentation "The staff employed by the education organization."
+    domain entity EducationOrganization [1029]
+        documentation "The education organization with which the staff is employed."
+    descriptor EmploymentStatus [1031]
+        documentation "Reflects the type of employment or contract."
+        is part of identity
+    inline common EmploymentPeriod [1030]
+        documentation "The set of elements defining and characterizing a person's period of employment including start and end dates and the type and reason for separation."
+        is required
+    shared string Department [1028]
+        documentation "The department or suborganization the employee/contractor is associated with in the education organization."
+        is optional
+    shared decimal FullTimeEquivalency [1032]
+        documentation "The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting."
+        is optional
+    date OfferDate [1034]
+        documentation "Date at which the staff member was made an official offer for this employment."
+        is optional
+    currency HourlyWage [1033]
+        documentation "Hourly wage associated with the employment position being reported."
+        is optional
+    currency AnnualWage
+        documentation "Annual wage associated with the employment position being reported."
+        is optional
+    domain entity Credential [2646]
+        documentation "Reference to the credential that is the basis for this employment."
+        is optional

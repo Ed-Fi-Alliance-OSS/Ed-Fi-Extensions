@@ -1,0 +1,2 @@
+Descriptor TransportationPublicExpenseEligibilityType
+    documentation "The primary type of eligibility for transporting a student at public expense."

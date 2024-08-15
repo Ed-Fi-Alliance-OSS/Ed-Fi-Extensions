@@ -1,0 +1,14 @@
+Association StudentHomelessProgramAssociation based on GeneralStudentProgramAssociation [2785]
+    documentation "This association represents the McKinney-Vento Homeless Program program(s) that a student participates in or from which the student receives services. The association is a subclass of the GeneralStudentProgramAssociation specifically designed for homeless programs."
+    descriptor HomelessPrimaryNighttimeResidence [2549]
+        documentation "The primary nighttime residence of the student at the time the student is identified as homeless."
+        is optional
+    bool AwaitingFosterCare [2786]
+        documentation "State defined definition for awaiting foster care."
+        is optional
+    bool HomelessUnaccompaniedYouth [2787]
+        documentation "A homeless unaccompanied youth is a youth who is not in the physical custody of a parent or guardian and who fits the McKinney-Vento definition of homeless. Students must be both unaccompanied and homeless to be included as an unaccompanied homeless youth."
+        is optional
+    common HomelessProgramService [2788]
+        documentation "Indicates the service(s) being provided to the student by the homeless program."
+        is optional collection

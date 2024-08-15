@@ -1,0 +1,21 @@
+Inline Common AttendanceEvent [486]
+    documentation "This event entity represents the recording of whether a student is in attendance for a class or in attendance to receive or participate in program services."
+    date EventDate [749]
+        documentation "Date for this attendance event."
+        is part of identity
+    descriptor AttendanceEventCategory [746]
+        documentation "A code describing the attendance event, for example:
+        Present
+        Unexcused absence
+        Excused absence
+        Tardy."
+        is part of identity
+    shared string AttendanceEventReason [747]
+        documentation "The reported reason for a student's absence."
+        is optional
+    descriptor EducationalEnvironment [748]
+        documentation "The setting in which a child receives education and related services. This attribute is only used if it differs from the EducationalEnvironment of the Section. This is only used in the AttendanceEvent if different from the associated Section."
+        is optional
+    shared decimal EventDuration [2715]
+        documentation "The amount of time for the event as recognized by the school: 1 day = 1, 1/2 day = 0.5, 1/3 day = 0.33."
+        is optional

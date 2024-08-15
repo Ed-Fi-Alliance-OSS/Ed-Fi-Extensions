@@ -1,0 +1,17 @@
+Subdomain StudentAssessment of Assessment
+    documentation
+"Assessment represents a specific administration of an assessment. The Assessment entity contains the minimum amount of metadata required for an assessment.
+* If the Assessment is associated with one or more sections, an association is made to the section(s).
+* ObjectiveAssessment is the optional identification of portions of the assessment that test specific learning objectives. If required, there can be multiple levels of hierarchical ObjectiveAssessments.
+* The AssessmentItem supports the optional identification of the individual questions or items on a test to be scored. Typically, the identification of AssessmentItems is done in conjunction with their mapping to LearningStandards.
+* If the assessment references the common core or other state standards for LearningStandards, then the assessment metadata would reference the preloaded standards. If the assessment references its own set of LearningStandards, then that data would be loaded as assessment metadata. An ObjectiveAssessment may test one or more LearningStandards.
+
+The student's assessment results follow a similar structure to the assessment metadata.
+* StudentAssessment holds the overall assessment score and other information about a specific student's results for a specific assessment.The StudentAssessment is associated with a specific student.
+* StudentObjectiveAssessment optionally holds the student's score for individually scored results for a specific LearningStandards. If the assessment metadata includes ObjectiveAssessments, then there would be corresponding StudentObjectiveAssessments for each student.
+* StudentAssessmentItem optionally holds the student's score for individual AssessmentItems. If the assessment metadata includesAssessmentItems, then there would be corresponding StudentAssessmentItems for each student."
+    domain entity Student
+    domain entity StudentAssessment
+    domain entity StudentAssessmentItem
+    domain entity StudentObjectiveAssessment
+    position 3

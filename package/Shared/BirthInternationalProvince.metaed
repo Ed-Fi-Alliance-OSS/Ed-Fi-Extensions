@@ -1,0 +1,3 @@
+Shared String BirthInternationalProvince [62]
+    documentation "For students born outside of the U.S., the Province or jurisdiction in which an individual is born."
+    max length 150

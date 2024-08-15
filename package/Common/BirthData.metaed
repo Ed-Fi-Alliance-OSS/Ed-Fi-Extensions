@@ -1,0 +1,29 @@
+Inline Common BirthData [488]
+    documentation "The set of elements that capture relevant data regarding a person's birth, including birth date and place of birth."
+    date BirthDate [753]
+        documentation "The month, day, and year on which an individual was born."
+        is required
+    shared string City named BirthCity [755]
+        documentation "The city the student was born in."
+        is optional
+    descriptor StateAbbreviation [754]
+        documentation "The abbreviation for the name of the state (within the United States) or extra-state jurisdiction in which an individual was born."
+        is optional
+        role name Birth
+    shared string BirthInternationalProvince [757]
+        documentation "For students born outside of the U.S., the Province or jurisdiction in which an individual is born."
+        is optional
+    descriptor Country [752]
+        documentation "The country in which an individual is born. It is strongly recommended that entries use only ISO 3166 2-letter country codes."
+        is optional
+        role name Birth
+    date DateEnteredUS [756]
+        documentation "For students born outside of the U.S., the date the student entered the U.S."
+        is optional
+    bool MultipleBirthStatus [758]
+        documentation "Indicator of whether the student was born with other siblings (i.e., twins, triplets, etc.)"
+        is optional
+    descriptor Sex [2716]
+        documentation "A person's sex at birth."
+        is optional
+        role name Birth

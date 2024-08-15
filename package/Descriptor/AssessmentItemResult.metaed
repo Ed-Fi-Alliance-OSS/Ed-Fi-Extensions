@@ -1,0 +1,6 @@
+Descriptor AssessmentItemResult [131]
+    documentation "The analyzed result of a student's response to an assessment item.. For example:
+    Correct
+    Incorrect
+    Met standard
+    ..."

@@ -1,0 +1,9 @@
+Common AdditionalImmunization
+    documentation  "Stores student's vaccination or immunization history beyond those mandated."
+    string ImmunizationName
+        documentation "The name of the immunization that the student has received."
+        is part of identity
+        max length 100
+    date ImmunizationDate
+        documentation "The year, month and day of the related additional immunization."
+        is optional collection

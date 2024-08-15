@@ -1,0 +1,2 @@
+Descriptor Language [189]
+    documentation "This descriptor defines the language(s) that are spoken or written. It is strongly recommended that entries use only ISO 639-2 language codes: for CodeValue, use the 3 character code; for ShortDescription and Description use the full language name."

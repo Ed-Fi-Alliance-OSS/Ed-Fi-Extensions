@@ -1,0 +1,87 @@
+Domain Entity CourseTranscript [552]
+    documentation "This entity is the final record of a student's performance in their courses at the end of a semester or school year."
+    descriptor CourseAttemptResult [1319]
+        documentation "The result from the student's attempt to take the course."
+        is part of identity
+    inline common Credits [1318]
+        documentation "The number of credits a student attempted and could earn for successfully completing a given course."
+        is optional
+        role name Attempted
+    inline common Credits [1324]
+        documentation "The number of credits a student earned for completing a given course."
+        is optional
+        role name Earned
+    common AdditionalCredits [1323]
+        documentation "The number of additional credits a student attempted and could earn for successfully completing a given course."
+        is optional collection
+        role name Earned
+    descriptor GradeLevel [1328]
+        documentation "Student's grade level at time of course."
+        is optional
+        role name WhenTaken
+    descriptor MethodCreditEarned [1331]
+        documentation "The method the credits were earned."
+        is optional
+    shared string GradeEarned named FinalLetterGradeEarned [1326]
+        documentation "The final indicator of student performance in a class as submitted by the instructor."
+        is optional
+    shared decimal NumericGrade named FinalNumericGradeEarned [1327]
+        documentation "The final indicator of student performance in a class as submitted by the instructor."
+        is optional
+    descriptor CourseRepeatCode [1321]
+        documentation "Indicates that an academic course has been repeated by a student and how that repeat is to be computed in the student's academic grade average."
+        is optional
+    domain entity Course [1320]
+        documentation "The course recorded in the course transcript entry."
+        is part of identity
+        role name Course
+    domain entity StudentAcademicRecord [1333]
+        documentation "Link to the student's academic record for a semester/school year."
+        is part of identity
+        merge StudentAcademicRecord.SchoolYear with Section.CourseOffering.Session.SchoolYear 
+    domain entity Section
+        documentation "The section(s) associated with the course transcript."
+        is optional collection
+        merge Section.CourseOffering.Session.SchoolYear with StudentAcademicRecord.SchoolYear
+    domain entity Staff
+        documentation "The staff member that is the responsible teacher for instructing or monitoring instruction for student attempting the course."
+        is optional
+        role name ResponsibleTeacher
+    domain entity Program
+        documentation "The program(s) that the student participated in the context of the course."
+        is optional collection
+        role name Course
+    shared string CourseTitle [1322]
+        documentation "The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, language arts)."
+        is optional
+    shared string CourseTitle named AlternativeCourseTitle [1330]
+        documentation "The descriptive name given to a course of study offered in the school, if different from the CourseTitle."
+        is optional
+    domain entity EducationOrganization [2615]
+        documentation "The external institution where the student completed the course (e.g., the original education organization for a transferred course transcript, or the provider for an online course)."
+        is optional
+        role name External
+    shared string NameOfInstitution [3099]
+        documentation "Name of the external institution where the student completed the course; to be used only when the reference external education organization is not available."
+        is optional
+        role name ExternalEducationOrganization
+    common CourseIdentificationCode [2925]
+        documentation "The code that identifies the course, course offering, the code from an external educational organization, or other alternate course code."
+        is optional collection
+        role name Alternative
+    shared string IdentificationCode [2926]
+        documentation "The organization code or name assigning the course identification code."
+        is optional
+        role name AssigningOrganization
+    shared string CourseCatalogURL [2927]
+        documentation "The URL for the course catalog that defines the course identification code."
+        is optional
+    descriptor CreditCategory [2929]
+        documentation "A categorization for the course transcript credits awarded in the course transcript."
+        is optional collection
+    descriptor AcademicSubject [2934]
+        documentation "The subject area for the course transcript credits awarded in the course transcript."
+        is optional collection
+    common PartialCourseTranscriptAwards [3120]
+        documentation "A collection of partial credits and/or grades a student earned against the course over the session, used when awards of credit are incremental."
+        is optional collection

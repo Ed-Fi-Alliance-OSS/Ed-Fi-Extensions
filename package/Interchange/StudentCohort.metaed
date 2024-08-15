@@ -1,0 +1,10 @@
+Interchange StudentCohort [2528]
+    documentation "Cohorts are used to designate groups of students outside of class rosters, enrollment lists, or program participation.
+    The Student Cohort interchange describes student cohort information. It can be used to exchange information regarding any named group of students, or cohort, for tracking, analysis, or intervention."
+    use case documentation "1. Exchange students identified for special tracking (e.g., a principal watch list).
+    2. Exchange students identified for interventions.
+    3. Exchange staff members associated with a cohort who are providing support, services, or sponsorship.
+    4. Exchange staff members that are allowed to see specific student records (e.g., therapists and specialists)."
+    domain entity Cohort [2528-001]
+    association StudentCohortAssociation [2528-002]
+    association StaffCohortAssociation [2528-003]

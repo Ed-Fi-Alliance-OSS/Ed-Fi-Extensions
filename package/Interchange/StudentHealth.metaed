@@ -1,0 +1,6 @@
+Interchange StudentHealth
+    documentation "The Student Health interchange carries information on student health such immunization, allergies, health conditions, etc."
+    use case documentation "Exchange student health information."
+    domain entity StudentHealth
+    domain entity Student
+    domain entity EducationOrganization

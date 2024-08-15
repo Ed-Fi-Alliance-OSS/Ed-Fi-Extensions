@@ -1,0 +1,27 @@
+Domain Entity Program [576]
+    documentation "This entity represents any program designed to work in conjunction with, or as a supplement to, the main academic program. Programs may provide instruction, training, services, or benefits through federal, state, or local agencies. Programs may also include organized extracurricular activities for students."
+    domain entity EducationOrganization [1573]
+        documentation "Relates the program to an education organization."
+        is part of identity
+        is queryable field
+    shared string ProgramId [1577]
+        documentation "A unique number or alphanumeric code assigned to a program by a school, school system, a state, or other agency or entity."
+        is optional
+        is queryable field
+    shared string ProgramName [1578]
+        documentation "The formal name of the program of instruction, training, services, or benefits available through federal, state, or local agencies."
+        is part of identity
+        is queryable field
+    descriptor ProgramType [1580]
+        documentation "The type of program."
+        is part of identity
+        is queryable field
+    descriptor ProgramCharacteristic [1576]
+        documentation "Reflects important characteristics of the program, such as categories or particular indications."
+        is optional collection
+    descriptor ProgramSponsor [1579]
+        documentation "Ultimate and intermediate providers of funds for a particular educational or service program or activity, or for an individual's participation in the program or activity (e.g., Federal, State, ESC, District, School, Private Organization)."
+        is optional collection
+    domain entity LearningStandard [1575]
+        documentation "Learning standard followed by this program."
+        is optional collection

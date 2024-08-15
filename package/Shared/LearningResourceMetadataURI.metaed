@@ -1,0 +1,4 @@
+Shared String LearningResourceMetadataURI [66]
+    documentation "The public web site address (URL), file, or ftp locator."
+    min length 5
+    max length 255

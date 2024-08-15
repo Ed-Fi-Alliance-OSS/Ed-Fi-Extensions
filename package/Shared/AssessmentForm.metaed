@@ -1,0 +1,3 @@
+Shared String AssessmentForm [8]
+    documentation "Identifies the form of the assessment, for example a regular versus makeup form, multiple choice versus contstructed response, etc."
+    max length 60

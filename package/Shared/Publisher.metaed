@@ -1,0 +1,3 @@
+Shared String Publisher [89]
+    documentation "The organization credited with publishing the resource."
+    max length 50

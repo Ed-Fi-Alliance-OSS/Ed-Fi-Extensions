@@ -1,0 +1,2 @@
+Descriptor TelephoneNumberType [245]
+    documentation "The type of communication number listed for an individual."

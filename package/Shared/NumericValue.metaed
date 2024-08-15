@@ -1,0 +1,4 @@
+Shared Integer NumericValue [3060]
+    documentation "The numeric choice available for the question (i.e. 0-100 or 0-10)."
+    min value 0
+    max value 100

@@ -1,0 +1,24 @@
+Domain Entity AssessmentScoreRangeLearningStandard [3081]
+    documentation "Score ranges of an assessment associated with one or more learning standards."
+    domain entity Assessment [3082]
+        documentation "Reference to the assessment with which the score range is associated."
+        is part of identity
+    domain entity LearningStandard [3083]
+        documentation "Learning standard associated with the score range."
+        is required collection
+    shared string IdentificationCode named ScoreRangeId [3084]
+        documentation "A unique number or alphanumeric code assigned to the score range associated with one or more learning standards."
+        is part of identity
+    descriptor AssessmentReportingMethod [3085]
+        documentation "The assessment reporting method defined (e.g., scale score, RIT scale score) associated with the referenced learning standard(s)."
+        is optional
+    shared string Result named MinimumScore [3086]
+        documentation "The minimum score in the score range."
+        is required
+    shared string Result named MaximumScore [3087]
+        documentation "The maximum score in the score range."
+        is required
+    domain entity ObjectiveAssessment [3088]
+        documentation "Reference to the objective assessment with which the score range is associated."
+        is optional
+        merge ObjectiveAssessment.Assessment with Assessment

@@ -1,0 +1,17 @@
+Domain StudentAttendance
+    documentation
+"The Student Attendance domain represents both daily and classperiod (section) attendance. This model supports two approaches for collecting attendance data:
+* One attendance event for each student-section (or each student-day), reporting both attendance and absences
+* ""Exception only"" reporting, providing attendance events only for absences and tardies"
+    domain entity Program
+    domain entity School
+    domain entity Section
+    domain entity SectionAttendanceTakenEvent
+    domain entity Session
+    domain entity Staff
+    domain entity Student
+    association StudentProgramAssociation
+    domain entity StudentProgramAttendanceEvent
+    domain entity StudentSchoolAttendanceEvent
+    association StudentSectionAssociation
+    domain entity StudentSectionAttendanceEvent

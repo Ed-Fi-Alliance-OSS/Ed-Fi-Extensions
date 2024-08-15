@@ -1,0 +1,3 @@
+Shared String LocalCourseCode [69]
+    documentation "The local code assigned by the LEA that identifies the organization of subject matter and related learning experiences provided for the instruction of students."
+    max length 60

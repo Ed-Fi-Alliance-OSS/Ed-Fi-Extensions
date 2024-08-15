@@ -1,0 +1,70 @@
+Domain Entity Course [550]
+    documentation "This educational entity represents the organization of subject matter and related learning experiences provided for the instruction of students on a regular or systematic basis."
+    shared string IdentificationCode named CourseCode [1294]
+        documentation "A unique alphanumeric code assigned to a course."
+        is part of identity
+        is queryable field
+    shared string CourseTitle [1300]
+        documentation "The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, and language arts)."
+        is required
+        is queryable field
+    shared integer NumberOfParts [1309]
+        documentation "The number of parts identified for a course."
+        is required
+    common CourseIdentificationCode [1298]
+        documentation "The code that identifies the organization of subject matter and related learning experiences provided for the instruction of students."
+        is required collection
+        is queryable field
+    descriptor CourseLevelCharacteristic [1299]
+        documentation "The type of specific program or designation with which the course is associated (e.g., AP, IB, Dual Credit, CTE)."
+        is optional collection
+    descriptor GradeLevel [1303]
+        documentation "The grade levels in which the course is offered."
+        is optional collection
+        role name Offered
+    descriptor AcademicSubject [1291]
+        documentation "The intended major subject/s area of the course."
+        is optional collection
+    shared string Description [1296]
+        documentation "A description of the content standards and goals covered in the course. Reference may be made to state or national content standards."
+        is optional
+        role name Course
+    shared integer Duration named TimeRequiredForCompletion [1310]
+        documentation "The actual or estimated number of clock minutes required for class completion. This number is especially important for career and technical education classes and may represent (in minutes) the clock hour requirement of the class."
+        is optional
+    date DateCourseAdopted [1301]
+        documentation "Date the course was adopted by the education agency."
+        is optional
+    bool HighSchoolCourseRequirement [1304]
+        documentation "An indication that this course may satisfy high school graduation requirements in the course's subject area."
+        is optional
+    descriptor CourseGPAApplicability [1297]
+        documentation "An indicator of whether or not the course being described is included in the computation of the student's grade point average, and if so, if it is weighted differently from regular courses."
+        is optional
+    descriptor CourseDefinedBy [1295]
+        documentation "Specifies whether the course was defined by the SEA, LEA, School, or national organization."
+        is optional
+    inline common Credits [1308]
+        documentation "The minimum amount of credit available to a student who successfully completes the course."
+        is optional
+        role name MinimumAvailable
+    inline common Credits [1307]
+        documentation "The maximum amount of credit available to a student who successfully completes the course."
+        is optional
+        role name MaximumAvailable
+    descriptor CareerPathway [1292]
+        documentation "Indicates the career cluster or pathway the course is associated with as part of a CTE curriculum."
+        is optional
+    descriptor CompetencyLevel [1293]
+        documentation "The competency levels defined to rate the student for the course."
+        is optional collection
+    domain entity EducationOrganization [1302]
+        documentation "The education organization that defines the curriculum and courses offered - often the LEA or school."
+        is part of identity
+        is queryable field
+    domain entity LearningStandard [1306]
+        documentation "Learning standard(s) to be taught by the course."
+        is optional collection
+    shared integer MaxCompletionsForCredit [2546]
+        documentation "Designates how many times the course may be taken with credit received by the student."
+        is optional

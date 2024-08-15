@@ -1,0 +1,20 @@
+Interchange Finance [2519]
+    documentation "This interchange describes financial data related to an Education Organization."
+    use case documentation "1. Exchange budget data for an education organization.
+    2. Exchange actuals against a budget for an education organization.
+    3. Exchange an education organization's payroll data."
+    domain entity FundDimension [2519-001]
+    domain entity ProgramDimension [2519-002]
+    domain entity FunctionDimension [2519-003]
+    domain entity ObjectDimension [2519-004]
+    domain entity ProjectDimension [2519-005]
+    domain entity OperationalUnitDimension [2519-006]
+    domain entity SourceDimension [2519-007]
+    domain entity BalanceSheetDimension [2519-008]
+    domain entity ChartOfAccount [2519-009]
+    domain entity LocalAccount [2519-010]
+    domain entity LocalBudget [2519-011]
+    domain entity LocalActual [2519-012]
+    domain entity LocalEncumbrance [2519-013]
+    domain entity LocalContractedStaff [2519-014]
+    domain entity LocalPayroll [2519-015]

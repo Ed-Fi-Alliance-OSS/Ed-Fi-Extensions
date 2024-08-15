@@ -1,0 +1,23 @@
+Domain Entity StudentHealth
+    documentation "This entity stores the student health records."
+    domain entity Student
+        documentation "The student whom the health information relates to."
+        is part of identity
+    domain entity EducationOrganization
+        documentation "The educational organization accountable for a student's health information."
+        is part of identity
+    date AsOfDate
+        documentation "Date of last update of the student's health record."
+        is required
+    common RequiredImmunization
+        documentation "A record of the immunizations satisfactorily  received for those recommended to protect the student against vaccine-preventable diseases."
+        is optional collection
+    common AdditionalImmunization
+        documentation "A record of additional immunizations satisfactorily received and reported."
+        is optional collection
+    descriptor NonMedicalImmunizationExemption
+        documentation "The type of nonmedical exemption from vaccination claimed by the student's parent or guardian."
+        is optional
+    date NonMedicalImmunizationExemptionDate
+        documentation "The year, month and day of the nonmedical exemption from vaccination claimed by the student's parent or guardian."
+        is optional

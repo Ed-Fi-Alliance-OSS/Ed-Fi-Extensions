@@ -1,0 +1,4 @@
+Shared Integer AttendanceEventDuration [2862]
+    documentation "The duration in minutes of the attendance event."
+    min value 0
+    max value 1440

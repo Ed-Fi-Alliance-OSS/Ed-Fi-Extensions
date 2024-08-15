@@ -1,0 +1,6 @@
+Interchange Standards [2524]
+    documentation "The Standards Interchange describes learning objectives and learning standards taught in courses, tested by assessments, and logged as grades."
+    use case documentation "1. Exchange learning standard information to be used when defining courses, assessments and grades.
+    2. Exchange learning objective information to be used when defining courses, assessments and grades."
+    domain entity LearningStandard [2524-002]
+    association LearningStandardEquivalenceAssociation [2524-003]

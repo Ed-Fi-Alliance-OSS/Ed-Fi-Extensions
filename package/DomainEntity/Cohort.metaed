@@ -1,0 +1,24 @@
+Domain Entity Cohort [547]
+    documentation "This entity represents any type of list of designated students for tracking, analysis, or intervention."
+    shared string CohortIdentifier [1778]
+        documentation "The name or ID for the cohort."
+        is part of identity
+    shared string CohortDescription [1276]
+        documentation "The description of the cohort and its purpose."
+        is optional
+    descriptor CohortType [1278]
+        documentation "The type of cohort (e.g., academic intervention, classroom breakout)."
+        is required
+    descriptor CohortScope [1277]
+        documentation "The scope of cohort (e.g., school, district, classroom)."
+        is optional
+    descriptor AcademicSubject [1275]
+        documentation "The academic subject associated with an academic intervention."
+        is optional
+    domain entity EducationOrganization [1279]
+        documentation "The education organization associated with and owner of the cohort."
+        is part of identity
+    domain entity Program [1280]
+        documentation "The (optional) program associated with this cohort (e.g., special education)."
+        is optional collection
+        role name Program

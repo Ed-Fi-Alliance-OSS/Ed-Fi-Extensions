@@ -1,0 +1,3 @@
+Shared String FullName [3043]
+    documentation "Full name of a person."
+    max length 80

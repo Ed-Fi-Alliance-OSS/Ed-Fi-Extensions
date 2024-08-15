@@ -1,0 +1,2 @@
+Descriptor AssessmentCategory [128]
+    documentation "This descriptor holds the category of an assessment based on format and content."

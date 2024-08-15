@@ -1,0 +1,2 @@
+Descriptor PostingResult [206]
+    documentation "Indication of whether the position was filled or retired without filling."

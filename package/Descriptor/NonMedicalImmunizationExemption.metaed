@@ -1,0 +1,2 @@
+Descriptor NonMedicalImmunizationExemption
+    documentation "The type of nonmedical exemption from vaccination claimed by the student's parent or guardian."

@@ -1,0 +1,14 @@
+Domain Entity ProjectDimension [3213]
+    documentation "The NCES project accounting dimension. The project dimension reporting code permits school districts to accumulate expenditures to meet a variety of specialized reporting requirements at the local, state, and federal levels."
+    shared string Code [3214]
+        documentation "The code representation of the account project dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3215]
+        documentation "The fiscal year for which the account project dimension is valid."
+        is part of identity
+    shared string CodeName [3216]
+        documentation "A description of the account project dimension."
+        is optional
+    descriptor ReportingTag [3217]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

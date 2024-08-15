@@ -1,0 +1,5 @@
+Shared Decimal CreditsValue [33]
+    documentation "The value of credits or units of value awarded for the completion of a course."
+    total digits 9
+    decimal places 3
+    min value 0

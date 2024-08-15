@@ -1,0 +1,16 @@
+Association StudentNeglectedOrDelinquentProgramAssociation based on GeneralStudentProgramAssociation [2798]
+    documentation "This association represents the Title I Part D Neglected or Delinquent program(s) that a student participates in or from which the student receives services. The association is a subclass of the GeneralStudentProgramAssociation specifically designed for Title I Part D Neglected or Delinquent programs."
+    descriptor NeglectedOrDelinquentProgram [2799]
+        documentation "The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA)."
+        is optional
+    descriptor ProgressLevel [2800]
+        documentation "The progress measured from pre- to post- test for ELA."
+        is optional
+        role name ELA
+    descriptor ProgressLevel [2801]
+        documentation "The progress measured from pre- to post-test for Mathematics."
+        is optional
+        role name Mathematics
+    common NeglectedOrDelinquentProgramService [2802]
+        documentation "Indicates the service(s) being provided to the student by the neglected or delinquent program."
+        is optional collection

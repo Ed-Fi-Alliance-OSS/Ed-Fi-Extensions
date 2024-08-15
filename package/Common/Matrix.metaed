@@ -1,0 +1,11 @@
+Common Matrix [2975]
+    documentation "Information about the matrix element in the survey"
+    shared string MatrixElement [2976]
+        documentation "For matrix questions, the text identifying each row of the matrix."
+        is part of identity
+    integer MinRawScore [2977]
+        documentation "The minimum score possible on a survey."
+        is optional
+    integer MaxRawScore [2978]
+        documentation "The maximum score possible on a survey."
+        is optional

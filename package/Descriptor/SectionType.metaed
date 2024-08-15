@@ -1,0 +1,2 @@
+Descriptor SectionType
+    documentation "Specifies whether the section is for attendance only, credit only, or both."

@@ -1,0 +1,25 @@
+Common IdentificationDocument [491]
+    documentation "Represents the valid document that a person uses for identification."
+    shared string DocumentTitle [829]
+        documentation "The title of the document given by the issuer."
+        is optional
+    descriptor PersonalInformationVerification [834]
+        documentation "The category of the document relative to its purpose."
+        is part of identity
+    date DocumentExpirationDate [828]
+        documentation "The day when the document  expires, if null then never expires."
+        is optional
+    shared string IdentificationCode [832]
+        documentation "The unique identifier on the issuer's identification system."
+        is optional
+        role name IssuerDocument
+    shared string IssuerName [833]
+        documentation "Name of the entity or institution that issued the document."
+        is optional
+    descriptor Country [831]
+        documentation "Country of origin of the document. It is strongly recommended that entries use only ISO 3166 2-letter country codes."
+        is optional
+        role name Issuer
+    descriptor IdentificationDocumentUse [830]
+        documentation "The primary function of the document used for establishing identity."
+        is part of identity

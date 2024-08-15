@@ -1,0 +1,4 @@
+Shared String City [17]
+    documentation "The name of the city in which an address is located."
+    min length 2
+    max length 30

@@ -1,0 +1,2 @@
+Descriptor AttendanceEventCategory [133]
+    documentation "This descriptor holds the category of the attendance event (e.g., tardy)."

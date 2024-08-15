@@ -1,0 +1,10 @@
+Subdomain AssessmentMetadata of Assessment
+    documentation
+"Assessment metadata is information describing the assessment instrument itself. 
+* There are two options to associate an Assessment which are mutually exclusive: by Section and by Program. For example, if an Assessment is defined to assess Common Core Standards, then the association shall be with Section, on the other hand if the Assessment is defined to assess the Developmental Domains by an Early Learning program, then the association shall be with Program."
+    domain entity Assessment
+    domain entity AssessmentItem
+    domain entity ObjectiveAssessment
+    domain entity Program
+    domain entity Section
+    position 2

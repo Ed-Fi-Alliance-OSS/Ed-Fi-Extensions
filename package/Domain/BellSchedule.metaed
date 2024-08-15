@@ -1,0 +1,13 @@
+Domain BellSchedule
+    documentation
+"The BellSchedule represents the class period scheduling in a day or over a course of days. The model is meant to accommodate a wide variety of bell schedules including block schedules, as follows:
+* Sections are assigned  one or more ""logical"" ClassPeriods, which represents the basic unit for scheduling that section.
+* A BellSchedule defines the MeetingTimes (time of the day) for each logical ClassPeriod. ClassPeriod does not have to meet every day and specific meeting days are defined in BellSchedule by its Date attribute.
+* The association between BellSchedule Date attribute indicates which days of the Session the BellSchedule was in effect. This allows the school to have a BellSchedule that is special for a specific day, such as for a testing day or a late-start day.
+* A School may have multiple BellSchedules defined, and may have different BellSchedules on the same calendar time period (e.g. for different grades)."
+    domain entity BellSchedule
+    domain entity ClassPeriod
+    domain entity EducationOrganization
+    domain entity School
+    domain entity Section
+    domain entity Session

@@ -1,0 +1,10 @@
+Domain Entity EducationServiceCenter based on EducationOrganization [558]
+    documentation "This entity represents a regional, multi-services public agency authorized by state law to develop, manage and provide services, programs, or other support options (e.g., construction, food services, and technology services) to LEAs."
+    integer EducationServiceCenterId [1406]
+        documentation "The identifier assigned to an education service center. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    domain entity StateEducationAgency [1412]
+        documentation "The SEA of which the ESC is an organizational component."
+        is optional

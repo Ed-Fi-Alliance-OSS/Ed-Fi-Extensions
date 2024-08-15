@@ -1,0 +1,28 @@
+Interchange EducationOrganization [2517]
+    documentation "The Education Organization interchange describes education organizations, their structure, and their education offerings. It is used to exchange education organization information about a state's schools, local education agencies (LEAs), education service centers (ESCs), and others.
+    In addition, the interchange (optionally) supports the definition of the education offerings provided by schools, specifically the available courses and alternative/supplemental programs offered. Courses in this context refer to ""course catalog"" information. As such, this interchange may define current as well as past courses.
+    Locations and ClassPeriods can be re-used across Schools, if they are the same, using LocationReference and ClassPeriodReference within other domain entities in the interchange."
+    extended documentation "Accountability Ratings can be assigned to a school or LEA through this interchange."
+    use case documentation "1. Exchange a state's full or partial hierarchy of education organizations.
+    2. Exchange new or updated education organization information (e.g., change of address).
+    3. Exchange available courses.
+    4. Exchange available program offerings.
+    5. Exchange accountability rating information."
+    domain entity StateEducationAgency [2517-001]
+    domain entity EducationServiceCenter [2517-002]
+    association FeederSchoolAssociation [2517-003]
+    domain entity LocalEducationAgency [2517-004]
+    domain entity School [2517-005]
+    domain entity Location [2517-006]
+    domain entity ClassPeriod [2517-007]
+    domain entity Course [2517-008]
+    domain entity Program [2517-009]
+    domain entity AccountabilityRating [2517-010]
+    association EducationOrganizationPeerAssociation [2517-011]
+    domain entity EducationOrganizationNetwork [2517-012]
+    association EducationOrganizationNetworkAssociation [2517-013]
+    domain entity CommunityOrganization [2517-014]
+    domain entity CommunityProvider [2517-015]
+    domain entity CommunityProviderLicense [2517-016]
+    domain entity PostSecondaryInstitution [2517-017]
+    domain entity OrganizationDepartment [2517-018]

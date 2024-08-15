@@ -1,0 +1,3 @@
+Shared String BuildingSiteNumber [14]
+    documentation "The number of the building on the site, if more than one building shares the same address."
+    max length 20

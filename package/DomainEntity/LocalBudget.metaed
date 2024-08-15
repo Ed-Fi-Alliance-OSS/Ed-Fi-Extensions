@@ -1,0 +1,15 @@
+Domain Entity LocalBudget [3176]
+    documentation "The set of local education agency or charter management organization budget amounts."
+    domain entity LocalAccount [3177]
+        documentation "References the local account with which the local budget is associated."
+        is part of identity
+    date AsOfDate [3178]
+        documentation "The date of the reported amount for the account."
+        is part of identity
+        is queryable field
+    currency Amount [3179]
+        documentation "Current balance for the account."
+        is required
+    descriptor FinancialCollection [3180]
+        documentation "The accounting period or grouping for which the amount is collected."
+        is optional

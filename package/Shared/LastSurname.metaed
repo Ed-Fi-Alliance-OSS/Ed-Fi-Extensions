@@ -1,0 +1,3 @@
+Shared String LastSurname [64]
+    documentation "The name borne in common by members of a family."
+    max length 75

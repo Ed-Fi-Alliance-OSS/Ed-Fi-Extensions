@@ -1,0 +1,25 @@
+Domain Entity CommunityProvider based on EducationOrganization [2577]
+    documentation "This entity represents an educational organization that includes staff and students who participate in classes and educational activity groups."
+    integer CommunityProviderId [2584]
+       documentation "The identifier assigned to a community provider. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+       renames identity property EducationOrganizationId
+       is queryable field
+       min value big
+    domain entity CommunityOrganization [2578]
+        documentation "CommunityOrganization of which the community provider is an organizational component."
+        is optional
+    descriptor ProviderProfitability [2579]
+        documentation "Indicates the profitability status of the provider."
+        is optional
+    descriptor ProviderStatus [2580]
+        documentation "Indicates the status of the provider."
+        is required
+    descriptor ProviderCategory [2581]
+        documentation "Indicates the category of the provider."
+        is required
+    bool SchoolIndicator [2582]
+        documentation "An indication of whether the community provider is a school."
+        is optional
+    bool LicenseExemptIndicator [2583]
+        documentation "An indication of whether the provider is exempt from having a license."
+        is optional

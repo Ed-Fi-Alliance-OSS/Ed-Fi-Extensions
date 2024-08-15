@@ -1,0 +1,4 @@
+Shared String WeekIdentifier [117]
+    documentation "The school label for the academic week."
+    min length 5
+    max length 80

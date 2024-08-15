@@ -1,0 +1,17 @@
+Domain Entity EducationContent [555]
+    documentation "This entity represents materials for students or teachers that can be used for teaching, learning, research, and more. Education content includes full courses, course materials, modules, intervention descriptions, textbooks, streaming videos, tests, software, and any other tools, materials, or techniques used to support access to knowledge."
+    shared string ContentIdentifier [1365]
+        documentation "A unique identifier for the education content."
+        is part of identity
+    choice LearningResourceChoice [2510]
+        documentation "The details describing a learning resource or a URI pointing to the metadata entry in a LRMI metadata repository describing the content item."
+        is required
+    currency Cost [1366]
+        documentation "An amount that has to be paid or spent to buy or obtain the education content."
+        is optional
+    descriptor CostRate [1367]
+        documentation "The rate by which the cost applies."
+        is optional
+    shared string URI named Namespace [2438]
+        documentation "Namespace for the education content."
+        is required

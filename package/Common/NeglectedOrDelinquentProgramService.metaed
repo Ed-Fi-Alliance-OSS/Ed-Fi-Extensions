@@ -1,0 +1,14 @@
+Common NeglectedOrDelinquentProgramService [2747]
+    documentation "Indicates the service(s) being provided to the student by the neglected or delinquent program."
+    descriptor NeglectedOrDelinquentProgramService [2748]
+        documentation "Indicates the service being provided to the student by the neglected or delinquent program."
+        is part of identity
+    bool PrimaryIndicator [2749]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [2750]
+        documentation "First date the student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [2751]
+        documentation "Last date the student was in this option for the current school year."
+        is optional

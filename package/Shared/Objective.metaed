@@ -1,0 +1,3 @@
+Shared String Objective [79]
+    documentation "The designated title of the learning objective."
+    max length 60

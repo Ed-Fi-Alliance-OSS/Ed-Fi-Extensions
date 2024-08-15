@@ -1,0 +1,24 @@
+Domain Entity LocalAccount [3164]
+    documentation "The set of account codes defined by an education organization for a fiscal year. It provides a formal record of the debits and credits relating to the specific account."
+    shared string EdFi.AccountIdentifier [3165]
+        documentation "Code value for the valid combination of account dimensions by LEA under which financials are reported. "
+        is part of identity
+    domain entity EdFi.EducationOrganization [3166]
+        documentation "A reference to the education organization for which the account is applicable."
+        is part of identity
+        is queryable field
+    shared integer LocalFiscalYear named FiscalYear [3167]
+        documentation "The fiscal year for the account."
+        is part of identity
+        is queryable field
+    shared string EdFi.AccountName [3168]
+        documentation "A descriptive name for the account."
+        is optional
+    domain entity ChartOfAccount [3169]
+        documentation "References the chart of account with which the local account is associated."
+        is required
+        role name ChartOfAccount
+        merge ChartOfAccount.FiscalYear with FiscalYear
+    common ReportingTag [3170]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

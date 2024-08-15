@@ -1,0 +1,4 @@
+Shared Decimal HoursAbsent [56]
+    documentation "The hours the staff was absent, if not the entire working day."
+    total digits 18
+    decimal places 2

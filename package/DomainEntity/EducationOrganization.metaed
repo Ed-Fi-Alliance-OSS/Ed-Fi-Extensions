@@ -1,0 +1,41 @@
+Abstract Entity EducationOrganization [556]
+    documentation "This entity represents any public or private institution, organization, or agency that provides instructional or support services to students or staff at any level."
+    integer EducationOrganizationId [2321]
+        documentation "The identifier assigned to an education organization."
+        is part of identity
+        is queryable field
+        min value big
+    common EducationOrganizationIdentificationCode [1383]
+        documentation "A unique number or alphanumeric code assigned to an education organization by a school, school system, a state, or other agency or entity."
+        is optional collection
+        is queryable field
+    shared string NameOfInstitution [1386]
+        documentation "The full, legally accepted name of the institution."
+        is required
+        is queryable field
+    shared string NameOfInstitution [1388]
+        documentation "A short name for the institution."
+        is optional
+        role name Short
+    descriptor EducationOrganizationCategory [1382]
+        documentation "The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control granted by the state."
+        is required collection
+        is queryable field
+    common Address [1381]
+        documentation "The set of elements that describes an address for the education entity, including the street address, city, state, ZIP code, and ZIP code + 4."
+        is optional collection
+    common InternationalAddress [1385]
+        documentation "The set of elements that describes the international physical location of the education entity."
+        is optional collection
+    common InstitutionTelephone [1384]
+        documentation "The 10-digit telephone number, including the area code, for the education entity."
+        is optional collection
+    shared string URI named WebSite [1390]
+        documentation "The public web site address (URL) for the education organization."
+        is optional
+    descriptor OperationalStatus [1387]
+        documentation "The current operational status of the education organization (e.g., active, inactive)."
+        is optional
+    common EducationOrganizationIndicator [3050]
+        documentation "An indicator or metric of an education organization."
+        is optional collection

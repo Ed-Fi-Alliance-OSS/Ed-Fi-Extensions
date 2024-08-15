@@ -1,0 +1,3 @@
+Shared String AccountName [2861]
+    documentation "A descriptive name for an account."
+    max length 100

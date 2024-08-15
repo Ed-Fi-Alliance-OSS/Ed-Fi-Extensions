@@ -1,0 +1,21 @@
+Association StaffEducationOrganizationContactAssociation [2675]
+    documentation "This association provides the contact information of the staff associated with the education organization."
+    domain entity Staff [2681]
+        documentation "The staff assigned to the education organization."
+    domain entity EducationOrganization [2682]
+        documentation "The education organization to which the staff member provides services."
+    common Address [2676]
+        documentation "The optional address for the contact associated with the education organization."
+        is optional
+    shared string ContactTitle [2677]
+        documentation "The title of the contact in the context of the education organization."
+        is part of identity
+    descriptor ContactType [2678]
+        documentation "Indicates the type for the contact information."
+        is optional
+    shared string ElectronicMailAddress [2679]
+        documentation "The email for the contact associated with the education organization."
+        is required
+    common Telephone [2680]
+        documentation "The optional telephone for the contact associated with the education organization."
+        is optional collection

@@ -1,0 +1,12 @@
+Common StaffIdentificationCode [527]
+    documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a staff member."
+    shared string IdentificationCode [920]
+        documentation "A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, or other agency or entity."
+        is required
+    descriptor StaffIdentificationSystem [921]
+        documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a staff member."
+        is part of identity
+    shared string IdentificationCode [919]
+        documentation "The organization code or name assigning the staff Identification Code."
+        is optional
+        role name AssigningOrganization

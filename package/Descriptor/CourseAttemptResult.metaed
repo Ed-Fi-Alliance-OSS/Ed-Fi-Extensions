@@ -1,0 +1,2 @@
+Descriptor CourseAttemptResult [148]
+    documentation "The result from the student's attempt to take the course."

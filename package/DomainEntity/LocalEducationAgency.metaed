@@ -1,0 +1,29 @@
+Domain Entity LocalEducationAgency based on EducationOrganization [569]
+    documentation "This entity represents an administrative unit at the local level which exists primarily to operate schools or to contract for educational services. It includes school districts, charter schools, charter management organizations, or other local administrative organizations."
+    integer LocalEducationAgencyId [1522]
+        documentation "The identifier assigned to a local education agency. It must be distinct from any other identifier assigned to educational organizations, such as a SchoolId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    descriptor LocalEducationAgencyCategory [1520]
+        documentation "The category of local education agency/district."
+        is required
+    descriptor CharterStatus [1513]
+        documentation "A school or agency providing free public elementary or secondary education to eligible students under a specific charter granted by the state legislature or other appropriate authority and designated by such authority to be a charter school."
+        is optional
+    common LocalEducationAgencyAccountability [1519]
+        documentation "This entity maintains information about federal reporting and accountability for local education agencies."
+        is optional collection
+    common LocalEducationAgencyFederalFunds [1521]
+        documentation "Contains the information about the reception and use of federal funds for reporting purposes."
+        is optional collection
+    domain entity LocalEducationAgency [1525]
+        documentation "For subdistricts; the LEA the subdistrict is a component of."
+        is optional
+        role name Parent
+    domain entity EducationServiceCenter [1516]
+        documentation "The ESC of which the LEA is an organizational component."
+        is optional
+    domain entity StateEducationAgency [1527]
+        documentation "The SEA of which the LEA is an organizational component."
+        is optional

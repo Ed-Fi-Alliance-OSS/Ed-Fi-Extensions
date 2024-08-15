@@ -1,0 +1,11 @@
+Common PossibleResponse [2889]
+    documentation "A possible response to an assessment item."
+    shared string ResponseValue [2890]
+        documentation "The response value, often an option number or code value (e.g., 1, 2, A, B, true, false)."
+        is part of identity
+    shared string ResponseDescription [2891]
+        documentation "Additional text provided to define the response value."
+        is optional
+    bool CorrectResponse [3057]
+        documentation "Indicates the response is correct."
+        is optional

@@ -1,0 +1,20 @@
+Interchange StaffAssociation [2523]
+    documentation "This interchange defines staff and teacher information. It can be used to define employment, assignment, and teaching associations, as well as staff positions and staff leave events."
+    use case documentation "1. Exchange staff demographics and contact information.
+    2. Exchange staff experience and credential information.
+    3. Exchange staff employment and assignment associations to education organizations.
+    4. Exchange teacher assignments to sections.
+    5. Exchange staff leave events.
+    6. Exchange current or historical information on filling open staff positions."
+    domain entity Staff [2523-001]
+    association StaffEducationOrganizationEmploymentAssociation [2523-002]
+    association StaffEducationOrganizationAssignmentAssociation [2523-003]
+    association StaffSchoolAssociation [2523-004]
+    association StaffSectionAssociation [2523-005]
+    domain entity StaffLeave [2523-006]
+    domain entity OpenStaffPosition [2523-007]
+    association StaffProgramAssociation [2523-008]
+    association StaffEducationOrganizationContactAssociation [2523-009]
+    domain entity StaffAbsenceEvent [2523-010]
+    domain entity Credential [2523-011]
+    domain entity Person [2523-012]

@@ -1,0 +1,3 @@
+Shared String MatrixElement [3044]
+    documentation "For matrix questions, the text identifying each row of the matrix."
+    max length 255

@@ -1,0 +1,15 @@
+Association StudentEducationOrganizationResponsibilityAssociation [608]
+    documentation "This association indicates a relationship between a student and an education organization other than an enrollment relationship, and generally indicating some kind of responsibility of the education organization for the student. Enrollment relationship semantics are covered by StudentSchoolAssociation."
+    domain entity Student [1075]
+        documentation "A reference to the student."
+    domain entity EducationOrganization [1073]
+        documentation "A reference to the education organization."
+    descriptor Responsibility [1074]
+        documentation "Indications of an education organization's responsibility for a student, such as accountability, attendance, funding, etc."
+        is part of identity
+    date BeginDate [2554]
+        documentation "Month, day, and year of the start date of an education organization's responsibility for a student."
+        is part of identity
+    date EndDate [2555]
+        documentation "Month, day, and year of the end date of an education organization's responsibility for a student."
+        is optional

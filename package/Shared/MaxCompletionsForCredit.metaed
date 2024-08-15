@@ -1,0 +1,3 @@
+Shared Integer MaxCompletionsForCredit [2545]
+    documentation "Designates how many times the course may be taken with credit received by the student."
+    min value 1

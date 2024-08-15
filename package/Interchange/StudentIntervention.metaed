@@ -1,0 +1,13 @@
+Interchange StudentIntervention [2533]
+    documentation "This interchange describes prescribed interventions available, implementations of interventions, studies of intervention effectiveness, and education content used in the course of interventions."
+    use case documentation "1. Exchange interventions prescribed for particular purposes.
+    2. Exchange intervention prescriptions available to districts or schools.
+    3. Exchange descriptions of education content (e.g., videos, handouts, games) used in interventions.
+    4. Exchange intervention implementations and student results.
+    5. Exchange information about formal studies of interventions."
+    domain entity EducationContent [2533-001]
+    domain entity InterventionPrescription [2533-002]
+    domain entity Intervention [2533-003]
+    domain entity InterventionStudy [2533-004]
+    association StudentInterventionAssociation [2533-005]
+    association EducationOrganizationInterventionPrescriptionAssociation [2533-006]

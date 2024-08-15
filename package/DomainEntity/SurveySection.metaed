@@ -1,0 +1,8 @@
+Domain Entity SurveySection [3034]
+    documentation "The section of questions for the survey."
+    domain entity Survey [3035]
+        documentation "Reference to the survey."
+        is part of identity
+    shared string SurveySectionTitle [3036]
+        documentation "The title or label for the survey section."
+        is part of identity

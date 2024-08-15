@@ -1,0 +1,95 @@
+Association StudentEducationOrganizationAssociation [3052]
+    documentation "This association represents student information as reported in the context of the student's relationship to the education organization. Enrollment relationship semantics are covered by StudentSchoolAssociation."
+    domain entity Student [2782]
+        documentation "A reference to the student."
+    domain entity EducationOrganization [2783]
+        documentation "A reference to the education organization representing the context of the student information."
+    common StudentIdentificationCode [1703]
+        documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a student."
+        is optional collection
+        is queryable field
+    descriptor Sex [1701]
+        documentation "The student's birth sex as reported to the education organization."
+        is optional
+        is queryable field
+    shared string GenderIdentity
+        documentation "The student's gender as last reported to the education organization."
+        is optional
+    common Address [1680]
+        documentation "The set of elements that describes an address, including the street address, city, state, and ZIP code."
+        is optional collection
+    common InternationalAddress [1689]
+        documentation "The set of elements that describes an international address."
+        is optional collection
+    common Telephone [1706]
+        documentation "The 10-digit telephone number, including the area code, for the person."
+        is optional collection
+    common ElectronicMail [1687]
+        documentation "The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the individual or organization belongs."
+        is optional collection
+    shared string ProfileThumbnail [1697]
+        documentation "Locator reference for the student photo. The specification for that reference is left to local definition."
+        is optional
+    bool HispanicLatinoEthnicity [1688]
+        deprecated "This element is scheduled for removal by 2029. Users of this element are advised to use Race instead."
+        documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race, as last reported to the education organization. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
+        is optional
+        is queryable field
+    descriptor Race [1699]
+        documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies as last reported to the education organization. The data model allows for multiple entries so that each individual can specify all appropriate races."
+        is optional collection
+        is queryable field
+    descriptor TribalAffiliation [2784]
+        documentation "An American Indian tribe with which the student is affiliated as last reported to the education organization."
+        is optional collection
+    common StudentCharacteristic [1702]
+        documentation "Reflects important characteristics of a student. If a student has a characteristic present, that characteristic is considered true or active for that student. If a characteristic is not present, no assumption is made as to the applicability of the characteristic, but local policy may dictate otherwise."
+        is optional collection
+    descriptor LimitedEnglishProficiency [1692]
+        documentation "An indication that the student has been identified as limited English proficient by the Language Proficiency Assessment Committee (LPAC), or English proficient."
+        is optional
+    common Language [1690]
+        documentation "The language(s) the individual uses to communicate. It is strongly recommended that entries use only ISO 639-3 language codes."
+        is optional collection
+    common Disability [1684]
+        documentation "The disability condition(s) that best describes an individual's impairment, as determined by evaluation(s) conducted by the education organization."
+        is optional collection
+    common CohortYear [1683]
+        documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to as determined by the year that student entered a specific grade."
+        is optional collection
+    common StudentIndicator [1704]
+        documentation "An indicator or metric computed for the student (e.g., at risk)."
+        is optional collection
+    shared string IdentificationCode named LoginId [1693]
+        documentation "The login ID for the user; used for security access control interface."
+        is optional
+    descriptor AncestryEthnicOrigin [3080]
+        documentation "The original peoples or cultures with which the individual identifies."
+        is optional collection
+    descriptor PrimaryLearningDeviceAwayFromSchool [3107]
+        documentation "The type of device the student uses most often to complete learning activities away from school."
+        is optional
+    descriptor PrimaryLearningDeviceAccess [3108]
+        documentation "An indication of whether the primary learning device is shared or not shared with another individual."
+        is optional
+    descriptor PrimaryLearningDeviceProvider [3109]
+        documentation "The provider of the primary learning device."
+        is optional
+    bool InternetAccessInResidence [3110]
+        documentation "An indication of whether the student is able to access the internet in their primary place of residence."
+        is optional
+    descriptor BarrierToInternetAccessInResidence [3111]
+        documentation "An indication of the barrier to having internet access in the student’s primary place of residence."
+        is optional
+    descriptor InternetAccessTypeInResidence [3112]
+        documentation "The primary type of internet service used in the student’s primary place of residence."
+        is optional
+    descriptor InternetPerformanceInResidence [3113]
+        documentation "An indication of whether the student can complete the full range of learning activities, including video streaming and assignment upload, without interruptions caused by poor internet performance in their primary place of residence."
+        is optional
+    descriptor SupporterMilitaryConnection
+        documentation "Military connection of the person/people whom the student is a dependent of."
+        is optional
+    common DisplacedStudent
+        documentation "Information about student who was enrolled, or eligible for enrollment, but has temporarily or permanently enrolled in another school or district because of a crisis-related disruption in educational services."
+        is optional collection

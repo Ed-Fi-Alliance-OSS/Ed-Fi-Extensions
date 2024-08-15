@@ -1,0 +1,2 @@
+Descriptor Country [625]
+    documentation "This descriptor defines the name and code of the country. It is strongly recommended that entries use only ISO 3166 2-letter country codes."

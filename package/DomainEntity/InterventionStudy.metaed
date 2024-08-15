@@ -1,0 +1,42 @@
+Domain Entity InterventionStudy [565]
+    documentation "An experimental or quasi-experimental study of an intervention technique."
+    inline common EducationContentSource [1474]
+        documentation "Reference to any published papers, reports, or other documents about this intervention study."
+        is optional
+    domain entity InterventionPrescription [1478]
+        documentation "Reference to the intervention prescription being studied."
+        is required
+        role name InterventionPrescription
+    common InterventionEffectiveness [1477]
+        documentation "Measurement of the effectiveness of the intervention study per diagnosis."
+        is optional collection
+    integer Participants [1480]
+        documentation "The number of participants observed in the study."
+        is required
+    descriptor DeliveryMethod [1472]
+        documentation "The way in which an intervention was implemented: individual, small group, whole class, or whole school."
+        is required
+    descriptor InterventionClass [1476]
+        documentation "The way in which an intervention is used: curriculum, supplement, or practice."
+        is required
+    descriptor GradeLevel [1470]
+        documentation "Grade levels participating in this study."
+        is optional collection
+        role name Appropriate
+    descriptor PopulationServed [1481]
+        documentation "A subset of students that are the focus of the intervention study."
+        is optional collection
+    descriptor Sex [1471]
+        documentation "Sexes participating in this study. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor StateAbbreviation [1483]
+        documentation "The abbreviation for the state (within the United States) or outlying area, the school system of which the participants of the study are considered to be a part."
+        is optional collection
+    domain entity EducationOrganization [1475]
+        documentation "Relates the education organization which is sponsoring the intervention study."
+        is part of identity
+    shared string IdentificationCode [1479]
+        documentation "A unique number or alphanumeric code assigned to an intervention study."
+        is part of identity
+        role name InterventionStudy

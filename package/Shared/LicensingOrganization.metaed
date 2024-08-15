@@ -1,0 +1,3 @@
+Shared String LicensingOrganization [2559]
+    documentation "The organization issuing the license."
+    max length 75

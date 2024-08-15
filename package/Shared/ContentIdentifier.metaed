@@ -1,0 +1,3 @@
+Shared String ContentIdentifier [24]
+    documentation "The identifier of the content standard."
+    max length 225

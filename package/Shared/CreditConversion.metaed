@@ -1,0 +1,4 @@
+Shared Decimal CreditConversion [34]
+    documentation "Conversion factor that when multiplied by the number of credits is equivalent to Carnegie units."
+    total digits 9
+    decimal places 2

@@ -1,0 +1,6 @@
+Association SurveyResponseStaffTargetAssociation [2953]
+  documentation "The association provides information about the survey being taken and who the survey is about."
+  domain entity SurveyResponse [2954]
+    documentation "Reference to survey response."
+  domain entity Staff [2955]
+    documentation "Reference to staff member."

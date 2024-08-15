@@ -1,0 +1,6 @@
+Subdomain Standards of Assessment
+documentation "Many states have standard learning standards that drive the curriculum and the assessments. The Common Core State Standards Initiative(www.corestandards.org) is a national initiative for standards in this area. For states that use the Common Core, or have their own standards, the assessment model has entities for LearningStandard, which represents the lowest level of skills which represents higher level aggregation of skills, as shown below. The Nomenclature attribute captures the appropriate naming of these levels whereas the SuccessCriteria attribute captures the criterion that teacher and students use to check for attainment of the objective.
+
+LearningStandard may also be hierarchically organized to support the use case that adopters of the Common Core often decompose a standard into lower level standards in their curriculum. The HasAssociatedPrerequisite association captures prerequisites for a LearningStandard as would be specified in a learning map."
+    domain entity LearningStandard
+    position 1

@@ -1,0 +1,3 @@
+Shared String IndicatorName [61]
+    documentation "The name of the Indicator, indicator group, or metric computed for the student (e.g., at risk) to influence more effective education or direct specific interventions."
+    max length 200

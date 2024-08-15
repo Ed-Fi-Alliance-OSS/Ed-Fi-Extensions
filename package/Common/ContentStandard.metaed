@@ -1,0 +1,31 @@
+Common ContentStandard [494]
+    documentation "An indication as to whether an assessment conforms to a standard (e.g., local standard, statewide standard, regional standard, association standard).
+    ..."
+    shared string ContentStandardTitle named Title [776]
+        documentation "The name of the content standard, for example Common Core."
+        is required
+    shared string Author [769]
+        documentation "The person or organization chiefly responsible for the intellectual content of the standard."
+        is optional collection
+    shared string ContentStandardVersion named Version [778]
+        documentation "The version identifier for the content."
+        is optional
+    shared string URI [777]
+        documentation "An unambiguous reference to the standards using a network-resolvable URI."
+        is optional
+    choice PublicationDateChoice [2508]
+        documentation "The date or year that this content was first published."
+        is optional
+    descriptor PublicationStatus [774]
+        documentation "The publication status of the document (i.e., Adopted, Draft, Published, Deprecated, Unknown)."
+        is optional
+    domain entity EducationOrganization [772]
+        documentation "Optionally relates the entity mandating the use of the content standard."
+        is optional
+        role name Mandating
+    date BeginDate [770]
+        documentation "The beginning of the period during which this learning standard document is intended for use."
+        is optional
+    date EndDate [771]
+        documentation "The end of the period during which this learning standard document is intended for use."
+        is optional

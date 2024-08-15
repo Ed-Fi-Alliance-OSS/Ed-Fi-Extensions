@@ -1,0 +1,14 @@
+Domain Discipline
+    documentation
+    "The Discipline domain is based upon the concepts of a DisciplineIncident (i.e., the violation or offense) and a DisciplineAction (i.e., the punishment).
+* A DisciplineIncident represents the actions or behaviors that constitute an ""offense"" in violation of laws, rules, policies, or norms of behavior. The DisciplineIncident is associated with the school where the incident occurred.
+* A DisciplineAction represents the punitive or other actions taken against the students. One or more DisciplineActions may be applied to one DisciplineIncident(e.g., suspension plus after-school study hall). Alternatively, one DisciplineAction could have multiple Disciplines as an attribute to accomplish the same thing."
+    domain entity DisciplineAction
+    domain entity DisciplineIncident
+    domain entity School
+    domain entity Staff
+    domain entity Student
+    association StaffDisciplineIncidentAssociation
+    association StudentDisciplineIncidentNonOffenderAssociation
+    association StudentDisciplineIncidentBehaviorAssociation
+

@@ -1,0 +1,14 @@
+Domain Entity BalanceSheetDimension [3134]
+    documentation "The NCES balance sheet accounting dimension, used to track financial transactions for each fund. These financial statements only report assets, deferred outflows of resources, liabilities, deferred inflows of resources, and equity accounts. The statements are considered snapshots of how these accounts stand as of a certain point in time."
+    shared string Code [3135]
+        documentation "The code representation of the account balance sheet dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3136]
+        documentation "The fiscal year for which the account balance sheet dimension is valid."
+        is part of identity
+    shared string CodeName [3137]
+        documentation "A description of the account balance sheet dimension."
+        is optional
+    descriptor ReportingTag [3138]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

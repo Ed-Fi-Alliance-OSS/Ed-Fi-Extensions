@@ -1,0 +1,14 @@
+Domain Entity ObjectDimension [3198]
+    documentation "The NCES object accounting dimension representing an expenditure. Per the NCES definition, this classification is used to describe the service or commodity obtained as the result of a specific expenditure, such as salaries, benefits, tuition reimbursement, and so forth."
+    shared string Code [3199]
+        documentation "The code representation of the account object dimension."
+        is part of identity
+    shared integer LocalFiscalYear named FiscalYear [3200]
+        documentation "The fiscal year for which the account object dimension is valid."
+        is part of identity
+    shared string CodeName [3201]
+        documentation "A description of the account object dimension."
+        is optional
+    descriptor ReportingTag [3202]
+        documentation "Optional tag for accountability reporting."
+        is optional collection

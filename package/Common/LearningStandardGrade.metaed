@@ -1,0 +1,17 @@
+Common LearningStandardGrade [2896]
+    documentation "Learning standard for a grade."
+    domain entity LearningStandard [2897]
+        documentation "The learning standard associated with this grade."
+        is part of identity
+    shared string GradeEarned named LetterGradeEarned [2898]
+        documentation "A final or interim (grading period) indicator of student performance for a learning standard as submitted by the instructor."
+        is optional
+    shared decimal NumericGrade named NumericGradeEarned [2899]
+        documentation "A final or interim (grading period) indicator of student performance for a learning standard as submitted by the instructor."
+        is optional
+    shared string DiagnosticStatement [2900]
+        documentation "A statement provided by the teacher that provides information in addition to the grade or assessment score."
+        is optional
+    descriptor PerformanceBaseConversion [2901]
+        documentation "A performance level that describes the student proficiency."
+        is optional

@@ -1,0 +1,3 @@
+Shared String IssuerName [63]
+    documentation "The name of the agent issuing the award."
+    max length 150

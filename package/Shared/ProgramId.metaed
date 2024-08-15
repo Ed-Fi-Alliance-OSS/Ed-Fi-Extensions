@@ -1,0 +1,3 @@
+Shared String ProgramId [87]
+    documentation "A unique number or alphanumeric code assigned to a program by a school, school system, a state, or other agency or entity."
+    max length 20

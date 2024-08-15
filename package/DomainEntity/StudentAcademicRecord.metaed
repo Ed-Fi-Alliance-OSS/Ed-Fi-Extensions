@@ -1,0 +1,53 @@
+Domain Entity StudentAcademicRecord [586]
+    documentation "This educational entity represents the cumulative record of academic achievement for a student."
+    inline common Credits [1710]
+        documentation "The cumulative number of credits an individual earns by completing courses or examinations during his or her enrollment in the current school as well as those credits transferred from schools in which the individual had been previously enrolled."
+        is optional
+        role name CumulativeEarned
+    inline common Credits [1709]
+        documentation "The total number of credits a student has earned plus the total number of credits the student has attempted but not earned from distinct courses. This includes credits attempted and earned from all schools the student has been enrolled."
+        is optional
+        role name CumulativeAttempted
+    common ClassRanking [1708]
+        documentation "The academic rank information of a student in relation to his or her graduating class."
+        is optional
+    common AcademicHonor [1707]
+        documentation "Academic distinctions earned by or awarded to the student."
+        is optional collection
+    common Recognition [1717]
+        documentation "Recognitions given to the student for accomplishments in a co-curricular or extracurricular activity."
+        is optional collection
+    date ProjectedGraduationDate [1716]
+        documentation "The month and year the student is projected to graduate."
+        is optional
+    inline common Credits [1721]
+        documentation "The number of credits an individual earned in this session."
+        is optional
+        role name SessionEarned
+    inline common Credits [1720]
+        documentation "The number of credits an individual attempted to earn in this session."
+        is optional
+        role name SessionAttempted
+    common GradePointAverage [2866]
+        documentation "The grade point average for an individual computed as the grade points earned divided by the number of credits attempted."
+        is optional collection
+    common Diploma [1713]
+        documentation "Diploma(s) earned by the student."
+        is optional collection
+    domain entity Student [1724]
+        documentation "Identifies the student who is associated with the student academic record."
+        is part of identity
+    domain entity EducationOrganization [1714]
+        documentation "The education organization that granted the credits or other achievements on the student academic record, generally a school district."
+        is part of identity
+    enumeration SchoolYear [1719]
+        documentation "The identifier for the school year."
+        is part of identity
+    descriptor Term [1725]
+        documentation "The term for the session during the school year."
+        is part of identity
+    domain entity ReportCard [1718]
+        documentation "Report cards for the student."
+        is optional collection
+        merge ReportCard.EducationOrganization with EducationOrganization
+        merge ReportCard.Student with Student

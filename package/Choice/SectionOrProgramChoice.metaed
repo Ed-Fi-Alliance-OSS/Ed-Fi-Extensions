@@ -1,0 +1,8 @@
+Choice SectionOrProgramChoice [2504]
+    documentation "This choice type allows an assessment to be associated with either one or more sections or one or more programs."
+    domain entity Section [1239]
+        documentation "The Section(s) to which the assessment is associated."
+        is required collection
+    domain entity Program [1237]
+        documentation "The programs associated with the assessment."
+        is required collection

@@ -1,0 +1,8 @@
+Domain Entity Person [2941]
+    documentation "This entity represents a human being."
+    shared string UniqueId named PersonId [2942]
+        documentation "A unique alphanumeric code assigned to a person."
+        is part of identity
+    descriptor SourceSystem [2943]
+        documentation "This descriptor defines the originating record source system for the person."
+        is part of identity

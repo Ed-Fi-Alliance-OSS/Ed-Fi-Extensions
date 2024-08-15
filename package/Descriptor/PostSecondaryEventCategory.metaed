@@ -1,0 +1,2 @@
+Descriptor PostSecondaryEventCategory [207]
+    documentation "A code describing the type of post-secondary event (e.g., college application or acceptance)."

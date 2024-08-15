@@ -1,0 +1,14 @@
+Association StudentLanguageInstructionProgramAssociation based on GeneralStudentProgramAssociation [2790]
+    documentation "This association represents the Title III Language Instruction for Limited English Proficient and Immigrant Students program(s) that a student participates in or from which the student receives services. The association is a subclass of the GeneralStudentProgramAssociation specifically designed for language instruction programs."
+    common EnglishLanguageProficiencyAssessment [2791]
+        documentation "Results of yearly English language assessment."
+        is optional collection
+    bool EnglishLearnerParticipation [2792]
+        documentation "An indication that an English learner student is served by an English language instruction educational program supported with Title III of ESEA funds."
+        is optional
+    common LanguageInstructionProgramService [2793]
+        documentation "Indicates the service(s) being provided to the student by the language instruction program."
+        is optional collection
+    shared integer Dosage [2894]
+        documentation "The duration of time in minutes for which the student was assigned to participate in the program."
+        is optional

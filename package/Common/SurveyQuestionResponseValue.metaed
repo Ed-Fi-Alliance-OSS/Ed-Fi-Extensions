@@ -1,0 +1,11 @@
+Common SurveyQuestionResponseValue [2990]
+  documentation "Individual response to a free-form, single- or multiple-selection survey question."
+  integer SurveyQuestionResponseValueIdentifier [2991]
+    documentation "Primary key for the response value; a unique, usually sequential numeric value for a collection of responses, or potentially the value of NumericResponse for a single response."
+    is part of identity
+  shared integer NumericResponse [2992]
+    documentation "A numeric response to the question."
+    is optional
+  shared string TextResponse [2993]
+    documentation "A text response to the question."
+    is optional

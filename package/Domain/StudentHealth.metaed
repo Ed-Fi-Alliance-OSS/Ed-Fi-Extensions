@@ -1,0 +1,5 @@
+Domain StudentHealth
+    documentation "The Student Health domain includes the collection of information that relates student health such as immunization, allergies and health conditions."
+    domain entity Student
+    domain entity EducationOrganization
+    domain entity StudentHealth

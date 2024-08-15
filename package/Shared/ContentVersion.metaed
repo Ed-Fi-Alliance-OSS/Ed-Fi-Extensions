@@ -1,0 +1,3 @@
+Shared String ContentVersion [27]
+    documentation "The version identifier for the content."
+    max length 10

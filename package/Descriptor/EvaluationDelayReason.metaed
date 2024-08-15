@@ -1,0 +1,2 @@
+Descriptor EvaluationDelayReason
+    documentation "Refers to the justification as to why the evaluation report was completed beyond the state-established timeframe."

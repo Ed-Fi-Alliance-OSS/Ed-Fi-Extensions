@@ -1,0 +1,2 @@
+Descriptor CostRate [145]
+    documentation "The rate by which a cost applies (e.g. $1 per student)."

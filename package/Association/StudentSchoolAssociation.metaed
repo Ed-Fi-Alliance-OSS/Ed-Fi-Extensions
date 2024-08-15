@@ -1,0 +1,87 @@
+Association StudentSchoolAssociation [613]
+    documentation "This association represents the school in which a student is enrolled. The semantics of enrollment may differ slightly by state. Non-enrollment relationships between a student and an education organization may be described using the StudentEducationOrganizationAssociation."
+    allow primary key updates
+    domain entity Student [1127]
+        documentation "Student enrolled in the school."
+    domain entity School [1125]
+        documentation "School enrolling the student."
+    bool PrimarySchool [1121]
+        documentation "Indicates if a given enrollment record should be considered the primary record for a student."
+        is optional
+    enumeration SchoolYear [1126]
+        documentation "The school year associated with the student's enrollment."
+        is optional
+    date EntryDate [1114]
+        documentation "The month, day, and year on which an individual enters and begins to receive instructional services in a school for each school year. The EntryDate value should be the date the student enrolled, or when the student's enrollment materially changed, such as with a grade promotion."
+        is part of identity
+    descriptor GradeLevel [1115]
+        documentation "The grade level or primary instructional level at which a student enters and receives services in a school or an educational institution during a given academic session."
+        is required
+        role name Entry
+    descriptor EntryGradeLevelReason [1116]
+        documentation "The primary reason as to why a staff member determined that a student should be promoted or not (or be demoted) at the end of a given school term."
+        is optional
+    descriptor EntryType [1117]
+        documentation "The process by which a student enters a school during a given academic session."
+        is optional
+    bool RepeatGradeIndicator [1122]
+        documentation "An indicator of whether the student is enrolling to repeat a grade level, either by failure or an agreement to hold the student back."
+        is optional
+    enumeration SchoolYear [1111]
+        documentation "Projected high school graduation year."
+        is optional
+        role name ClassOf
+    bool SchoolChoiceTransfer [1124]
+        deprecated "Will be removed in Data Standard v7.0"
+        documentation "An indication of whether students transferred in or out of the school did so during the school year under the provisions for public school choice in accordance with Title I, Part A, Section 1116."
+        is optional
+    date ExitWithdrawDate [1118]
+        documentation "The recorded exit or withdraw date for the student."
+        is optional
+    descriptor ExitWithdrawType [1119]
+        documentation "The circumstances under which the student exited from membership in an educational institution."
+        is optional
+    descriptor EducationPlan [1112]
+        documentation "The type of education plan(s) the student is following, if appropriate."
+        is optional collection
+    descriptor ResidencyStatus [1123]
+        documentation "An indication of the location of a persons legal residence relative to (within or outside of) the boundaries of the public school attended and its administrative unit."
+        is optional
+    domain entity GraduationPlan [1120]
+        documentation "The primary graduation plan associated with the student enrolled in the school."
+        is optional
+    domain entity GraduationPlan [2912]
+        documentation "The secondary graduation plan or plans associated with the student enrolled in the school."
+        is optional collection
+        role name Alternative
+    bool EmployedWhileEnrolled [1113]
+        documentation "An individual who is a paid employee or works in his or her own business, profession, or farm and at the same time is enrolled in secondary, postsecondary, or adult education."
+        is optional
+    domain entity Calendar [2613]
+        documentation "A reference to the student's calendar."
+        is optional
+        merge Calendar.School with School
+        merge Calendar.SchoolYear with SchoolYear
+    shared decimal FullTimeEquivalency [2873]
+        documentation "The full-time equivalent ratio for the student’s assignment to a school for services or instruction. For example, a full-time student would have an FTE value of 1 while a half-time student would have an FTE value of 0.5."
+        is optional
+    bool TermCompletionIndicator [2874]
+        documentation "Idicates whether or not a student completed the most recent school term."
+        is optional
+        domain entity School 
+        documentation "The anticipated school of enrollment for the student for the next school year, possibly reflecting a rollover to the same school, the promotion to a feeder school, or an anticipated transfer."
+        is optional
+        role name NextYear
+    descriptor GradeLevel
+        documentation "The anticipated grade level for the student for the next school year."
+        is optional
+        role name NextYear
+    bool SchoolChoice
+        documentation "An indication of whether the student enrolled in this school under the provisions for public school choice"
+        is optional
+    descriptor SchoolChoiceBasis
+        documentation "The legal basis for the school choice enrollment according to local, state or federal policy or regulation. (The descriptor provides the list of available bases specific to the state"
+        is optional
+    descriptor EnrollmentType
+        documentation "The type of enrollment reflected by the StudentSchoolAssociation."
+        is optional

@@ -1,0 +1,3 @@
+Shared String AccountIdentifier [2]
+    documentation "The alphanumeric string that identifies the account."
+    max length 50

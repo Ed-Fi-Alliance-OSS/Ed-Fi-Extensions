@@ -1,0 +1,65 @@
+Domain Entity Section [580]
+    documentation "This entity represents a setting in which organized instruction of course content is provided, in-person or otherwise, to one or more students for a given period of time. A course offering may be offered to more than one section."
+    allow primary key updates
+    shared string SectionIdentifier [1632]
+        documentation "The local identifier assigned to a section."
+        is part of identity
+        is queryable field
+    descriptor SectionType
+        documentation "Specifies whether the section is for attendance only, credit only, or both."
+        is optional    
+    shared integer SequenceOfCourse [1631]
+        documentation "When a section is part of a sequence of parts for a course, the number of the sequence. If the course has only one part, the value of this section attribute should be 1."
+        is optional
+    descriptor EducationalEnvironment [1623]
+        documentation "The setting in which a student receives education and related services."
+        is optional
+    descriptor MediumOfInstruction [1626]
+        documentation "The media through which teachers provide instruction to students and students and teachers communicate about instructional matters."
+        is optional
+    descriptor PopulationServed [1627]
+        documentation "The type of students the section is offered and tailored to."
+        is optional
+    inline common Credits [1620]
+        documentation "The amount of credit available to a student who successfully meets the objectives of the course. Available credits are measured in Carnegie units, A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. See publication: U.S. Department of Education, NCES, 2007-341, Secondary School Course Classification System: School Codes for the Exchange of Data (SCED)."
+        is optional
+        role name Available
+    descriptor SectionCharacteristic [1630]
+        documentation "Reflects important characteristics of the section, such as whether or not attendance is taken and the section is graded."
+        is optional collection
+    descriptor Language [1624]
+        documentation "The primary language of instruction. If omitted, English is assumed."
+        is optional
+        role name Instruction
+    domain entity CourseOffering [1622]
+        documentation "The course offering taught in the section."
+        is part of identity
+        is queryable field
+    domain entity School [1629]
+        documentation "The physical school location in which the section is taught."
+        is optional
+        role name Location
+    domain entity Location [1625]
+        documentation "The location, typically a classroom, where the section meets."
+        is optional
+        role name Location
+    domain entity ClassPeriod [1621]
+        documentation "The class period during which the section meets."
+        is optional collection
+        merge ClassPeriod.School with CourseOffering.Session.School
+    domain entity Program [1628]
+        documentation "Optional reference to program to which the section is associated."
+        is optional collection
+    descriptor CourseLevelCharacteristic [2852]
+        documentation "The type of specific program or designation with which the section is associated. This collection should only be populated if it differs from the course level characteristics identified at the course offering level."
+        is optional collection
+    descriptor GradeLevel [2853]
+        documentation "The grade levels in which the section is offered. This collection should only be populated if it differs from the Offered Grade Levels identified at the course offering level."
+        is optional collection
+        role name Offered
+    bool OfficialAttendancePeriod [2875]
+        documentation "Indicator of whether this section is used for official daily attendance. Alternatively, official daily attendance may be tied to a class period."
+        is optional
+    shared string SectionName [2935]
+        documentation "A locally-defined name for the section, generally created to make the section more recognizable in informal contexts and generally distinct from the section identifier."
+        is optional

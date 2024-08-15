@@ -1,0 +1,3 @@
+Shared String AttendanceEventReason [11]
+    documentation "The reason for the absence or tardy."
+    max length 255

@@ -1,0 +1,3 @@
+Shared String TagValue [3226]
+    documentation "Descriptive name for a tag value."
+    max length 100

@@ -1,0 +1,12 @@
+Domain Entity SurveySectionResponse [3037]
+    documentation "Optional information about the responses provided for a section of a survey."
+    domain entity SurveySection [3038]
+        documentation "Reference to the survey section."
+        is part of identity
+    domain entity SurveyResponse [3039]
+        documentation "Reference to the survey response."
+        is part of identity
+        merge SurveyResponse.Survey with SurveySection.Survey
+    shared decimal SectionRating [3040]
+        documentation "Numeric rating computed from the survey responses for the section."
+        is optional

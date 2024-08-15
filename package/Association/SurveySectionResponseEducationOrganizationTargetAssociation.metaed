@@ -1,0 +1,6 @@
+Association SurveySectionResponseEducationOrganizationTargetAssociation [2959]
+  documentation "This association provides information about the survey section and the education organization the survey section is about."
+  domain entity SurveySectionResponse [2960]
+    documentation "Reference to the survey section response."
+  domain entity EducationOrganization [2961]
+    documentation "Reference to the education organization."

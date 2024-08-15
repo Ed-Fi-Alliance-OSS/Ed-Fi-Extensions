@@ -1,0 +1,3 @@
+Shared String RatingTitleType [93]
+    documentation "The title of the rating (e.g., School Rating, Safety Score)."
+    max length 60

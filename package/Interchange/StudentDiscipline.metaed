@@ -1,0 +1,10 @@
+Interchange StudentDiscipline [2529]
+    documentation "This interchange defines discipline incidents and discipline actions."
+    use case documentation "1. Exchange a student's full or partial discipline history.
+    2. Exchange a student's updated discipline record.
+    3. Exchange school or LEA discipline data."
+    domain entity DisciplineIncident [2529-001]
+    domain entity DisciplineAction [2529-003]
+    association StaffDisciplineIncidentAssociation [2529-004]
+    association StudentDisciplineIncidentBehaviorAssociation [2529-005]
+    association StudentDisciplineIncidentNonOffenderAssociation [2529-006]

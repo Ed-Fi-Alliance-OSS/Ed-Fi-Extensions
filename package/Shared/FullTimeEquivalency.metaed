@@ -1,0 +1,5 @@
+Shared Decimal FullTimeEquivalency [2872]
+    documentation "The full-time equivalent ratio."
+    total digits 5
+    decimal places 4
+    min value 0

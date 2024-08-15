@@ -1,0 +1,4 @@
+Shared Integer NumericResponse [3059]
+    documentation "The numeric response to the question."
+    min value 0
+    max value 100

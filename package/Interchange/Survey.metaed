@@ -1,0 +1,17 @@
+Interchange Survey [3041]
+    documentation "The Survey interchange describes survey metadata, including the definitions of the survey, survey sections, and survey questions making up the survey and survey responses from both identified and anonymous respondents."
+    use case documentation "1. Exchange metadata for surveys.
+    2. Exchange identified or anonymous student, staff, and parent responses for surveys."
+    domain entity Survey [3041-001]
+    domain entity SurveyQuestion [3041-0002]
+    domain entity SurveyQuestionResponse [3041-003]
+    domain entity SurveyResponse [3041-004]
+    domain entity SurveySection [3041-005]
+    domain entity SurveySectionResponse [3041-006]
+    association SurveyCourseAssociation [3041-007]
+    association SurveySectionAssociation [3041-008]
+    association SurveyProgramAssociation[3041-009]
+    association SurveyResponseEducationOrganizationTargetAssociation [3041-010]
+    association SurveyResponseStaffTargetAssociation [3041-011]
+    association SurveySectionResponseEducationOrganizationTargetAssociation [3041-012]
+    association SurveySectionResponseStaffTargetAssociation [3041-013]

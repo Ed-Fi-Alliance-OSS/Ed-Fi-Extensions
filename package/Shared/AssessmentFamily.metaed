@@ -1,0 +1,3 @@
+Shared String AssessmentFamily [2543]
+    documentation "The AssessmentFamily an Assessment is a member of."
+    max length 60

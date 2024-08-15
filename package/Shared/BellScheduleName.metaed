@@ -1,0 +1,3 @@
+Shared String BellScheduleName [13]
+    documentation "The title or name of the bell schedule."
+    max length 60

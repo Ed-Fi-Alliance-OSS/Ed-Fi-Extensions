@@ -1,0 +1,11 @@
+Domain Entity CalendarDate [545]
+    documentation "The type of scheduled or unscheduled event for the day."
+    date Date [1271]
+        documentation "The month, day, and year of the calendar event."
+        is part of identity
+    descriptor CalendarEvent [1270]
+        documentation "The type of scheduled or unscheduled event for the day."
+        is required collection
+    domain entity Calendar [2614]
+        documentation "Reference to the calendar associated to the calendar event."
+        is part of identity

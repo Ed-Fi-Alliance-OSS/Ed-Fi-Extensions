@@ -1,0 +1,53 @@
+Inline Common LearningResource [2514]
+    documentation "This entity maintains information that describes content, materials, or informational resources that support learning."
+    shared string ShortDescription [1377]
+        documentation "A short description or name of the entity."
+        is required
+    shared string Description [1369]
+        documentation "An extended written representation of the education content."
+        is optional
+    shared string Author [1363]
+        documentation "The individual credited with the creation of the resource."
+        is optional collection
+    bool AdditionalAuthorsIndicator [1360]
+        documentation "Indicates whether there are additional un-named authors. In a research report, this is often marked by the abbreviation ""et al""."
+        is optional
+    shared string Publisher [1376]
+        documentation "The organization credited with publishing the resource."
+        is optional
+    duration TimeRequired [1378]
+        documentation "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience."
+        is optional
+    descriptor InteractivityStyle [1370]
+        documentation "The predominate mode of learning supported by the learning resource. Acceptable values are active, expositive, or mixed."
+        is optional
+    descriptor ContentClass [1364]
+        documentation "The predominate type or kind characterizing the learning resource."
+        is required
+    shared string URI named UseRightsURL [1379]
+        documentation "The URL where the owner specifies permissions for using the resource."
+        is optional
+    inline common EducationContentSource [1368]
+        documentation "A reference or URL pointing to education content from which this education content was derived."
+        is optional
+        role name DerivativeSource
+    choice PublicationDateChoice [2515]
+        documentation "The date or year that this content was first published."
+        is optional
+    descriptor Sex [1362]
+        documentation "Sexes for which this education content is applicable. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor GradeLevel [1361]
+        documentation "Grade levels for which this education content is applicable. If omitted, considered generally applicable."
+        is optional collection
+        role name Appropriate
+    descriptor Language [1371]
+        documentation "An indication of the languages in which the Education Content is designed."
+        is optional collection
+    shared string ContentVersion named Version [1380]
+        documentation "The version identifier for the content."
+        is optional
+    domain entity LearningStandard [1373]
+        documentation "Relates the competency, learning standard, skill and/or text complexity to which the learning resource is aligned."
+        is optional

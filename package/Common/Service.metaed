@@ -1,0 +1,14 @@
+Common Service [525]
+    documentation "The student's program service information."
+    descriptor Service [914]
+        documentation "Indicates the service being provided to the student by the program."
+        is part of identity
+    bool PrimaryIndicator [913]
+        documentation "True if service is a primary service."
+        is optional
+    date ServiceBeginDate [915]
+        documentation "First date the student was in this option for the current school year."
+        is optional
+    date ServiceEndDate [916]
+        documentation "Last date the student was in this option for the current school year."
+        is optional

@@ -1,0 +1,34 @@
+Domain Entity AssessmentItem [542]
+    documentation "This entity represents one of many single measures that make up an assessment."
+    shared string IdentificationCode [1258]
+        documentation "A unique number or alphanumeric code assigned to a space, room, site, building, individual, organization, program, or institution by a school, school system, state, or other agency or entity."
+        is part of identity
+    descriptor AssessmentItemCategory [1254]
+        documentation "Category or type of the assessment item."
+        is optional
+    decimal MaxRawScore [1260]
+        documentation "The maximum raw score achievable across all assessment items that are correct and scored at the maximum."
+        is optional
+        total digits 15
+        decimal places 5
+    shared string ItemText [2892]
+        documentation "The text of the item."
+        is optional
+    common PossibleResponse [2893]
+        documentation "A possible response to an assessment item."
+        is optional collection
+    duration ExpectedTimeAssessed [1257]
+        documentation "The duration of time allotted for the assessment item."
+        is optional
+    shared string Nomenclature [1261]
+        documentation "Reflects the specific nomenclature used for assessment item."
+        is optional
+    domain entity LearningStandard [1259]
+        documentation "Learning standard tested by this item."
+        is optional collection
+    domain entity Assessment [1255]
+        documentation "Relates the assessment item to an existing assessment."
+        is part of identity
+    shared string URI named AssessmentItemURI [2537]
+        documentation "The URI (typical a URL) pointing to the entry in an assessment item bank, which describes this content item."
+        is optional

@@ -1,0 +1,45 @@
+Domain Entity DisciplineIncident [554]
+    documentation "This event entity represents an occurrence of an infraction ranging from a minor behavioral problem that disrupts the orderly functioning of a school or classroom (such as tardiness) to a criminal act that results in the involvement of a law enforcement official (such as robbery). A single event (e.g., a fight) is one incident regardless of how many perpetrators or victims are involved. Discipline incidents are events classified as warranting discipline action."
+    shared string IncidentIdentifier [1351]
+        documentation "A locally assigned unique identifier (within the school or school district) to identify each specific DisciplineIncident or occurrence. The same identifier should be used to document the entire discipline incident even if it included multiple offenses and multiple offenders."
+        is part of identity
+    date IncidentDate [1349]
+        documentation "The month, day, and year on which the discipline incident occurred."
+        is required
+    time IncidentTime [1353]
+        documentation "An indication of the time of day the incident took place."
+        is optional
+    descriptor IncidentLocation [1352]
+        documentation "Identifies where the discipline incident occurred and whether or not it occurred on school."
+        is optional
+    shared string Description [1350]
+        documentation "The description for an incident."
+        is optional
+        role name Incident
+    descriptor ReporterDescription [1355]
+        documentation "Information on the type of individual who reported the discipline incident. When known and/or if useful, use a more specific option code (e.g., ""Counselor"" rather than ""Professional Staff"")."
+        is optional
+    shared string ReporterName [1356]
+        documentation "Identifies the reporter of the discipline incident by name."
+        is optional
+    common Behavior [1346]
+        documentation "Describes behavior by category and provides a detailed description."
+        is optional collection
+    descriptor Weapon [1359]
+        documentation "Identifies the type of weapon used during an incident. The Federal Gun-Free Schools Act requires states to report the number of students expelled for bringing firearms to school by type of firearm."
+        is optional collection
+    bool ReportedToLawEnforcement [1354]
+        documentation "Indicator of whether the incident was reported to law enforcement."
+        is optional
+    shared string CaseNumber [1347]
+        documentation "The case number assigned to the DisciplineIncident by law enforcement or other organization."
+        is optional
+    currency IncidentCost [1348]
+        documentation "The value of any quantifiable monetary loss directly resulting from the discipline incident. Examples include the value of repairs necessitated by vandalism of a school facility, or the value of personnel resources used for repairs or consumed by the incident."
+        is optional
+    domain entity School [1357]
+        documentation "Relates the discipline incident to the school where the incident occurred."
+        is part of identity
+    common DisciplineIncidentExternalParticipant [2881]
+        documentation "Information on an individual involved in the discipline incident."
+        is optional collection

@@ -1,0 +1,10 @@
+Domain Entity EducationOrganizationNetwork based on EducationOrganization [557]
+    documentation "This entity is a self-organized membership network of peer-level education organizations intended to provide shared services or collective procurement."
+    integer EducationOrganizationNetworkId [1394]
+        documentation "The identifier assigned to a network of education organizations. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big
+    descriptor NetworkPurpose [1398]
+        documentation "The purpose(s) of the network (e.g., shared services, collective procurement)."
+        is required

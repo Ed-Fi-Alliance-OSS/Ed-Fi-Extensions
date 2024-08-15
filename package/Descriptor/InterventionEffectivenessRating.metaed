@@ -1,0 +1,2 @@
+Descriptor InterventionEffectivenessRating [188]
+    documentation "An intervention demonstrates effectiveness if the research has shown that the program caused an improvement in outcomes. Rating Values: positive effects, potentially positive effects, mixed effects, potentially negative effects, negative effects, and no discernible effects."

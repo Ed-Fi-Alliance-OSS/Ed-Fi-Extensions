@@ -1,0 +1,32 @@
+Association StaffEducationOrganizationAssignmentAssociation [600]
+    documentation "This association indicates the education organization to which a staff member provides services."
+    domain entity Staff [1027]
+        documentation "The staff assigned to the education organization."
+    domain entity EducationOrganization [1021]
+        documentation "The education organization to which the staff member provides services."
+    descriptor StaffClassification [1025]
+        documentation "The titles of employment, official status, or rank of education staff."
+        is part of identity
+    shared string PositionTitle [1024]
+        documentation "The descriptive name of an individual's position."
+        is optional
+    date BeginDate [1020]
+        documentation "Month, day, and year of the start or effective date of a staff member's employment, contract, or relationship with the education organization."
+        is part of identity
+    date EndDate [1022]
+        documentation "Month, day, and year of the end or termination date of a staff member's employment, contract, or relationship with the education organization."
+        is optional
+    integer OrderOfAssignment [1023]
+        documentation "Describes whether the assignment is this the staff member's primary assignment, secondary assignment, etc."
+        is optional
+    association StaffEducationOrganizationEmploymentAssociation [1026]
+        documentation "A reference to the employment association."
+        is optional
+        role name StaffEducationOrganizationEmploymentAssociation shorten to Employment
+        merge StaffEducationOrganizationEmploymentAssociation.Staff with Staff
+    domain entity Credential [2645]
+        documentation "Reference to the credential that is the basis for this assignment."
+        is optional
+    shared decimal FullTimeEquivalency [3100]
+        documentation "The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting."
+        is optional

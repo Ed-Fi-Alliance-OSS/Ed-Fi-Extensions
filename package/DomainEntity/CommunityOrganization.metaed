@@ -1,0 +1,7 @@
+Domain Entity CommunityOrganization based on EducationOrganization [2575]
+    documentation "This entity represents an administrative unit at the state level which exists primarily to operate local community providers."
+    integer CommunityOrganizationId [2576]
+        documentation "The identifier assigned to a community organization. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication."
+        renames identity property EducationOrganizationId
+        is queryable field
+        min value big

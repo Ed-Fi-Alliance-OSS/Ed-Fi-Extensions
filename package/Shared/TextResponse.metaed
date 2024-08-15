@@ -1,0 +1,3 @@
+Shared String TextResponse [3047]
+    documentation "The text response(s) for the question."
+    max length 2048

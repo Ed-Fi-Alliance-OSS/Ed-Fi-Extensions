@@ -1,0 +1,47 @@
+Common Address [481]
+    documentation "The set of elements that describes an address, including the street address, city, state, and ZIP code."
+    shared string StreetNumberName [730]
+        documentation "The street number and street name or post office box number of an address."
+        is part of identity
+    shared string ApartmentRoomSuiteNumber [719]
+        documentation "The apartment, room, or suite number of an address."
+        is optional
+    shared string BuildingSiteNumber [721]
+        documentation "The number of the building on the site, if more than one building shares the same address."
+        is optional
+    shared string City [722]
+        documentation "The name of the city in which an address is located."
+        is part of identity
+    descriptor StateAbbreviation [729]
+        documentation "The abbreviation for the state (within the United States) or outlying area in which an address is located."
+        is part of identity
+    shared string PostalCode [728]
+        documentation "The five or nine digit zip code or overseas postal code portion of an address."
+        is part of identity
+    shared string NameOfCounty [727]
+        documentation "The name of the county, parish, borough, or comparable unit (within a state) in which an address is located."
+        is optional
+    shared string CountyFIPSCode [723]
+        documentation "The Federal Information Processing Standards (FIPS) numeric code for the county issued by the National Institute of Standards and Technology (NIST). Counties are considered to be the ""first-order subdivisions"" of each State and statistically equivalent entity, regardless of their local designations (county, parish, borough, etc.) Counties in different States will have the same code. A unique county number is created when combined with the 2-digit FIPS State Code."
+        is optional
+    shared string Coordinate named Latitude [725]
+        documentation "The geographic latitude of the physical address."
+        is optional
+    shared string Coordinate named Longitude [726]
+        documentation "The geographic longitude of the physical address."
+        is optional
+    common Period
+        documentation "The time periods for which the address is valid. For physical addresses, the periods in which the person lived at that address."
+        is optional collection
+    descriptor AddressType [718]
+        documentation "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)"
+        is part of identity
+    bool DoNotPublishIndicator [2552]
+        documentation "An indication that the address should not be published."
+        is optional
+    shared string CongressionalDistrict [2709]
+        documentation "The congressional district in which an address is located."
+        is optional
+    descriptor Locale [2710]
+        documentation "A general geographic indicator that categorizes U.S. territory (e.g., City, Suburban)."
+        is optional

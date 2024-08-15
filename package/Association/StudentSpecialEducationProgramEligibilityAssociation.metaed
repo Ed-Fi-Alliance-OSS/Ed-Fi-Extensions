@@ -1,0 +1,57 @@
+Association StudentSpecialEducationProgramEligibilityAssociation
+    documentation "Captures details regarding the evaluation process for eligibility of students for special education services under IDEA Part C or Part B."
+    domain entity EducationOrganization
+        documentation "Indicates the education organization where the student was evaluated for special education services. This could be a school or a district."
+    domain entity Student
+        documentation "Student who is evaluated by a local education agency or a school. This is often their resident district. Students could be enrolled or unenrolled, or private-schooled or home-schooled."
+    domain entity Program
+        documentation "Indicates the program that the student is being evaluated for."
+        is part of identity
+    date ConsentToEvaluationReceivedDate
+        documentation "Indicates the date on which the local education agency received written consent for the evaluation from the student's parent or guardian. This is the first day of the evaluation timeframe."
+        is part of identity
+    date OriginalECIServicesDate
+        documentation "The month, date, and year when an infant or toddler, from birth through age 2, began participating in the early childhood intervention (ECI) program."
+        is optional
+    descriptor IDEAPart
+        documentation "Indicates if the evaluation is done under Part B IDEA or Part C IDEA."
+        is required
+    date ConsentToEvaluationDate
+        documentation "The date on which the student's parent gave a consent (Parent Consent Date)."
+        is optional
+    bool EvaluationCompleteIndicator
+        documentation "Indicates the evaluation completed status."
+        is optional
+    date EligibilityEvaluationDate
+        documentation "Indicates the month, day, and year when the written individual evaluation report was completed."
+        is optional
+    descriptor EligibilityEvaluationType
+        documentation "Indicates if this is an initial evaluation or a reevaluation."
+        is optional
+    descriptor EvaluationDelayReason
+        documentation "Refers to the justification as to why the evaluation report was completed beyond the state-established timeframe. This descriptor field will have allowed reasons as descriptor values."
+        is optional
+    shared string EvaluationLateReason
+        documentation "Refers to additional information for delay in doing the evaluation."
+        is optional
+    shared integer EvaluationDelayDays
+        documentation "Indicates the number of student absences, if any, beginning the first instructional day following the date on which the local education agency (LEA) received written parental or guardian consent for the evaluation."
+        is optional
+    date EligibilityDeterminationDate
+        documentation "Indicates the month, day, and year the local education agency (LEA) held the admission, review, and dismissal committee meeting regarding the child's eligibility determination for special education and related services. An individualized education plan (IEP) would be developed and implemented for a child admitted into special education on this same date."
+        is optional
+    bool IDEAIndicator
+        documentation "Indicates whether or not the student was determined eligible as a result of an evaluation."
+        is optional
+    descriptor EligibilityDelayReason
+        documentation "The reason why the eligibility determination was completed beyond the required timeframe."
+        is optional
+    date TransitionNotificationDate
+        documentation "Indicates the month, day, and year the LEA Notification of Potentially Eligible for Special Education Services was sent by the early childhood intervention (ECI) contractor to the local education agency (LEA) to notify them that a child enrolled in ECI will shortly reach the age of eligibility for Part B services and the child is potentially eligible for services under Part B, early childhood special education (ECSE). The LEA Notification constitutes a referral to the LEA for an initial evaluation and eligibility determination of the child which the parent or guardian may opt out from the referral."
+        is optional
+    date TransitionConferenceDate
+        documentation "Indicates the month, day, and year when the transition conference was held (for a child receiving early childhood intervention (ECI) services) among the lead agency, the family, and the local education agency (LEA) where the child resides to discuss the child's potential eligibility for early childhood special education (ECSE) services."
+        is optional
+    date EligibilityConferenceDate
+        documentation "The month, day, and year when the eligibility conference is held between the parent(s)/guardian(s) and the educational organization responsible staff member(s) to review and make decision on special education related services eligibility."
+        is optional      

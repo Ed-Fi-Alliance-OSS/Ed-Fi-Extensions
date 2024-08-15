@@ -1,0 +1,24 @@
+Domain Entity SurveyQuestion [3009]
+    documentation "The questions for the survey."
+    shared string IdentificationCode named QuestionCode [3010]
+        documentation "The identifying code for the question, unique for the survey."
+        is part of identity
+    domain entity Survey [3011]
+        documentation "Reference to the survey."
+        is part of identity
+    descriptor QuestionForm [3012]
+        documentation "The form or type of question."
+        is required
+    shared string ItemText named QuestionText [3013]
+        documentation "The text of the question."
+        is required
+    common ResponseChoice [3014]
+        documentation "The optional list of possible responses to a survey question."
+        is optional collection
+    domain entity SurveySection [3015]
+        documentation "Reference to the survey section."
+        is optional
+        merge SurveySection.Survey with Survey
+    common Matrix [3016]
+        documentation "Information about the matrix element in the survey."
+        is optional collection

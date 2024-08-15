@@ -1,0 +1,20 @@
+Common StudentBusDetails
+    documentation "Stores details associated with student-bus assignment within a transportation system."
+    string BusNumber
+        documentation "The unique identifier assigned to the bus used for transporting the student."
+        is part of identity
+        max length 36
+    descriptor BusRoute
+        documentation "Identifies the specific route taken by a bus for student transportation."
+        is part of identity
+    descriptor TravelDayofWeek
+        documentation "Specifies the day(s) of the week on which student transportation occurs."
+        is optional collection
+    descriptor TravelDirection
+        documentation "Indicates the direction of travel for the student transportation route (e.g., to school, from school)."
+        is optional collection
+    decimal Mileage
+        documentation "The distance, typically measured in miles, that a student was transported along the route of the bus during a single trip."
+        is optional
+        total digits 5
+        decimal places 2

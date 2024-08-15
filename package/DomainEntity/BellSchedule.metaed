@@ -1,0 +1,30 @@
+Domain Entity BellSchedule [543]
+    documentation "This entity represents the schedule of class period meeting times."
+    shared string BellScheduleName [1262]
+        documentation "Name or title of the bell schedule."
+        is part of identity
+    descriptor GradeLevel [1264]
+        documentation "The grade levels the particular bell schedule applies to."
+        is optional collection
+    domain entity School [1266]
+        documentation "The school for which the bell schedule is defined."
+        is part of identity
+    domain entity ClassPeriod [2838]
+        documentation "The class periods that compose this bell schedule."
+        is required collection
+        merge ClassPeriod.School with School
+    date Date [1263]
+        documentation "The dates for which the bell schedule applies."
+        is optional collection
+    shared string AlternateDayName [871]
+        documentation "An alternate name for the day (e.g., Red, Blue)."
+        is optional
+    time StartTime [2839]
+        documentation "An indication of the time of day the bell schedule begins."
+        is optional
+    time EndTime [2840]
+        documentation "An indication of the time of day the bell schedule ends."
+        is optional
+    shared integer TotalInstructionalTime [2914]
+        documentation "The total instructional time in minutes per day for the bell schedule."
+        is optional

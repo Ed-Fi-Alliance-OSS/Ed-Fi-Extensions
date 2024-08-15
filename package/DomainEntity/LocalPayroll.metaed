@@ -1,0 +1,18 @@
+Domain Entity LocalPayroll [3192]
+    documentation "The set of local education agency or charter management organization payroll amounts."
+    domain entity Staff [3193]
+        documentation "References the staff with which the payroll is associated."
+        is part of identity
+    domain entity LocalAccount [3194]
+        documentation "References the local account with which the payroll is associated."
+        is part of identity
+    date AsOfDate [3195]
+        documentation "The date of the reported amount for the account."
+        is part of identity
+        is queryable field
+    currency Amount [3196]
+        documentation "Current balance for the account."
+        is required
+    descriptor FinancialCollection [3197]
+        documentation "The accounting period or grouping for which the amount is collected."
+        is optional

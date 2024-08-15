@@ -1,0 +1,9 @@
+Interchange PostSecondaryEvent [2522]
+    documentation "This interchange loads student post-secondary institution events such as application, admission, and enrollment."
+    use case documentation "1. Exchange information about a student's application to a postsecondary institution.
+    2. Exchange student admission decisions by a postsecondary institution.
+    3. Exchange a student's selection of institution when admitted to more than one.
+    4. Exchange a student's enrollment in a postsecondary institution.
+    5. Exchange student applications for financial aid from a postsecondary institution.
+    6. Exchange degree or certification awards earned by a student at a postsecondary institution."
+    domain entity PostSecondaryEvent [2522-001]

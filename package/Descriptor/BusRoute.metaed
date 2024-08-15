@@ -1,0 +1,2 @@
+Descriptor BusRoute
+        documentation "Identifies the specific route taken by a bus for student transportation."
