@@ -93,7 +93,7 @@ jobs:
         branch: ${{ github.head_ref || github.ref_name }}
      
       env:
-        GITHUB_TOKEN: ${{secrets.PAT_ATTACH_TO_RELEASE}}
+        GITHUB_TOKEN: ${{ secrets.PAT_ATTACH_TO_RELEASE }}
 
     - name: Create packages
       working-directory: ./Ed-Fi-Extensions/package/
