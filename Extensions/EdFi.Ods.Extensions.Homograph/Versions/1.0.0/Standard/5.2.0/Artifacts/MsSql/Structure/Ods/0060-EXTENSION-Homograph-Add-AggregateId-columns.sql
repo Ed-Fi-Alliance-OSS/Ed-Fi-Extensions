@@ -14,6 +14,43 @@
 ------------------------------------------------
 */
 
+CREATE SEQUENCE [homograph].[StudentSchoolAssociation_AggSeq] START WITH -2147483648 INCREMENT BY 1;
+GO
+ALTER TABLE [homograph].[StudentSchoolAssociation] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[StudentSchoolAssociation_AggSeq];
+GO
+CREATE INDEX [IX_StudentSchoolAssociation_AggregateId] ON [homograph].[StudentSchoolAssociation] (AggregateId);
+GO
+
+
+CREATE SEQUENCE [homograph].[Student_AggSeq] START WITH -2147483648 INCREMENT BY 1;
+GO
+ALTER TABLE [homograph].[Student] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[Student_AggSeq];
+GO
+CREATE INDEX [IX_Student_AggregateId] ON [homograph].[Student] (AggregateId);
+GO
+
+CREATE SEQUENCE [homograph].[Staff_AggSeq] START WITH -2147483648 INCREMENT BY 1;
+GO
+ALTER TABLE [homograph].[Staff] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[Staff_AggSeq];
+GO
+CREATE INDEX [IX_Staff_AggregateId] ON [homograph].[Staff] (AggregateId);
+GO
+
+
+CREATE SEQUENCE [homograph].[School_AggSeq] START WITH -2147483648 INCREMENT BY 1;
+GO
+ALTER TABLE [homograph].[School] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[School_AggSeq];
+GO
+CREATE INDEX [IX_School_AggregateId] ON [homograph].[School] (AggregateId);
+GO
+
+CREATE SEQUENCE [homograph].[SchoolYearType_AggSeq] START WITH -2147483648 INCREMENT BY 1;
+GO
+ALTER TABLE [homograph].[SchoolYearType] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[SchoolYearType_AggSeq];
+GO
+CREATE INDEX [IX_SchoolYearType_AggregateId] ON [homograph].[SchoolYearType] (AggregateId);
+GO
+
 CREATE SEQUENCE [homograph].[Contact_AggSeq] START WITH -2147483648 INCREMENT BY 1;
 GO
 ALTER TABLE [homograph].[Contact] ADD AggregateId int NOT NULL DEFAULT NEXT VALUE FOR [homograph].[Contact_AggSeq];
@@ -28,5 +65,4 @@ GO
 CREATE INDEX [IX_Name_AggregateId] ON [homograph].[Name] (AggregateId);
 GO
 
-CREATE SEQUENCE [homograph].[School_AggSeq] START WITH -2147483648 INCREMENT BY 1
-GO
+
