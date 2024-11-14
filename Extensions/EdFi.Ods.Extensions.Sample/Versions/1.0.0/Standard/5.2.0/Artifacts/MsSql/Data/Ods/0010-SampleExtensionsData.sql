@@ -404,6 +404,19 @@ WHERE NOT EXISTS
     AND SchoolId = ssae.SchoolId
     AND StudentUSI = ssae.StudentUSI)
 
+UPDATE edfi.StudentSchoolAssociation
+SET
+  LastModifiedDate = GETUTCDATE()
+WHERE EXISTS
+    (SELECT
+       EntryDate
+          , SchoolId
+          , StudentUSI
+     FROM sample.StudentSchoolAssociationExtension ssae
+     WHERE EntryDate = ssae.EntryDate
+       AND SchoolId = ssae.SchoolId
+       AND StudentUSI = ssae.StudentUSI)
+
 INSERT INTO sample.StudentEducationOrganizationAssociationAddressExtension
     (AddressTypeDescriptorId
     , City
