@@ -4,6 +4,12 @@
 -- See the LICENSE and NOTICES files in the project root for more information.
 
 
-CREATE INDEX IF NOT EXISTS IX_BusRoute_EducationOrganizationId ON sample.BusRoute(EducationOrganizationId) INCLUDE (Id);
+CREATE INDEX IF NOT EXISTS IX_BusRoute_EducationOrganizationId ON sample.BusRoute(EducationOrganizationId) INCLUDE (AggregateId);
 
-CREATE INDEX IF NOT EXISTS IX_StudentGraduationPlanAssociation_EducationOrganizationId ON sample.StudentGraduationPlanAssociation(EducationOrganizationId) INCLUDE (Id);
+CREATE INDEX IF NOT EXISTS IX_BusRoute_StaffUSI ON sample.BusRoute(StaffUSI) INCLUDE (AggregateId);
+
+CREATE INDEX IF NOT EXISTS IX_StudentGraduationPlanAssociation_EducationOrganizationId ON sample.StudentGraduationPlanAssociation(EducationOrganizationId) INCLUDE (AggregateId);
+
+CREATE INDEX IF NOT EXISTS IX_StudentGraduationPlanAssociation_StudentUSI ON sample.StudentGraduationPlanAssociation(StudentUSI) INCLUDE (AggregateId);
+
+CREATE INDEX IF NOT EXISTS IX_StudentGraduationPlanAssociation_StaffUSI ON sample.StudentGraduationPlanAssociation(StaffUSI) INCLUDE (AggregateId);
