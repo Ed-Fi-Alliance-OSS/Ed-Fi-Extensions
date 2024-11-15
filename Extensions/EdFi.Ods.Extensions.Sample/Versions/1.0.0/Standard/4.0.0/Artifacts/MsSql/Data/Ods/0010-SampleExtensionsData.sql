@@ -372,7 +372,7 @@ SELECT
     , 'Green Eggs and Ham'
 FROM edfi.StudentParentAssociation
 
-UPDATE edfi.StudentContactAssociation
+UPDATE edfi.StudentParentAssociation
 SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
