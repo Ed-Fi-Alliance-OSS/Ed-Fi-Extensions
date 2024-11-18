@@ -215,7 +215,7 @@ UPDATE edfi.Staff
 SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
-    (SELECT StaffUSI
+    (SELECT 1
      FROM sample.StaffExtension se
      WHERE StaffUSI = se.StaffUsi)
 
@@ -317,9 +317,9 @@ UPDATE edfi.Parent
 SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
-        (SELECT pe.ParentUSI
+        (SELECT 1
          FROM sample.ParentExtension pe
-         WHERE pe.ParentUSI = pe.ParentUSI)
+         WHERE ParentUSI = pe.ParentUSI)
 
 INSERT INTO sample.StudentParentAssociationExtension
     (ParentUSI
@@ -377,8 +377,7 @@ SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
     (SELECT
-         ParentUSI
-       , StudentUSI
+         1
      FROM sample.StudentParentAssociationExtension spa
      WHERE ParentUSI = spa.ParentUSI
        AND StudentUSI = spa.StudentUSI)
@@ -409,9 +408,7 @@ SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
         (SELECT
-           EntryDate
-              , SchoolId
-              , StudentUSI
+           1
          FROM sample.StudentSchoolAssociationExtension ssae
          WHERE EntryDate = ssae.EntryDate
            AND SchoolId = ssae.SchoolId
@@ -470,9 +467,7 @@ SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
         (SELECT
-           EntryDate
-              , SchoolId
-              , StudentUSI
+           1
          FROM sample.StudentSchoolAssociationExtension ssae
          WHERE EntryDate = ssae.EntryDate
            AND SchoolId = ssae.SchoolId
@@ -524,12 +519,7 @@ SET
   LastModifiedDate = GETUTCDATE()
 WHERE EXISTS
         (SELECT
-            BeginDate
-          , EducationOrganizationId
-          , ProgramEducationOrganizationId
-          , ProgramName
-          , ProgramTypeDescriptorId
-          , StudentUSI
+            1
          FROM sample.StudentCTEProgramAssociationExtension scteopae
          WHERE BeginDate = scteopae.BeginDate
            AND EducationOrganizationId = scteopae.EducationOrganizationId
