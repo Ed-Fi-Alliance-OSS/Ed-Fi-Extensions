@@ -745,7 +745,8 @@ VALUES ('Dory', @student604854Usi, NULL, 100)
 
 UPDATE edfi.Student
 SET
-  LastModifiedDate = GETUTCDATE()
+  LastModifiedDate = GETUTCDATE(),
+  AggregateData    = NULL  
 WHERE StudentUSI = @student604854Usi
 
 --- Create sample data for new StudentArtProgram subclass
