@@ -8,7 +8,13 @@ name: Pkg EdFi.Ods.Profiles.Sample
 on:
   push:
     branches:  [main, 'b-v*-patch*','feature-*']
+
   workflow_dispatch:
+    inputs:
+      distinct_id:
+        description: 'distinct ID for Rebuild Database Templates workflow'
+        required: false
+        default: 'distinct_id'
 
 permissions: read-all
 
@@ -35,6 +41,8 @@ jobs:
       run: | 
         echo "::error::Missing Azure Token"
         exit 1   
+    - name: echo distinct ID ${{ github.event.inputs.distinct_id }}
+      run:  echo "${{ github.event.inputs.distinct_id }}"          
     - name: Checkout Ed-Fi-Extensions
       uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
       with:
