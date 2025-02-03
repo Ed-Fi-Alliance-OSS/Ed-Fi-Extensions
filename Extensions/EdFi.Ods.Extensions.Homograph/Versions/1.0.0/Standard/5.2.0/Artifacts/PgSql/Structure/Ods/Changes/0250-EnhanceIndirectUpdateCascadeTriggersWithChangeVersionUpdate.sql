@@ -21,11 +21,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_homograph_ContactStudentSchoolAssociation_afterupdate
-AFTER UPDATE ON homograph.ContactStudentSchoolAssociation
-FOR EACH ROW
-EXECUTE FUNCTION homograph.update_Contact_lastmodifieddate();
-
 CREATE OR REPLACE FUNCTION homograph.update_Staff_lastmodifieddate()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -43,9 +38,4 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
-
-CREATE TRIGGER trg_homograph_StaffStudentSchoolAssociation_afterupdate
-AFTER UPDATE ON homograph.StaffStudentSchoolAssociation
-FOR EACH ROW
-EXECUTE FUNCTION homograph.update_Staff_lastmodifieddate();
 
