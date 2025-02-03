@@ -3,7 +3,7 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 
-CREATE TRIGGER [homograph].[homograph_ParentStudentSchoolAssociation_TR_Parent_Update]
+CREATE OR ALTER TRIGGER [homograph].[homograph_ParentStudentSchoolAssociation_TR_Parent_Update]
 ON [homograph].[ParentStudentSchoolAssociation]
 AFTER UPDATE
 AS
@@ -26,7 +26,7 @@ BEGIN
 END;
 GO
 
-CREATE TRIGGER [homograph].[homograph_StaffStudentSchoolAssociation_TR_Staff_Update]
+CREATE OR ALTER TRIGGER [homograph].[homograph_StaffStudentSchoolAssociation_TR_Staff_Update]
 ON [homograph].[StaffStudentSchoolAssociation]
 AFTER UPDATE
 AS
