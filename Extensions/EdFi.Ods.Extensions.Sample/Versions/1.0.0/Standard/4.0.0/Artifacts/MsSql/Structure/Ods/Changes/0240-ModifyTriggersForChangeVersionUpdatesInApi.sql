@@ -11,3 +11,4 @@ GO
 
 DROP TRIGGER IF EXISTS [sample].[sample_StudentGraduationPlanAssociation_TR_UpdateChangeVersion]
 GO
+
