@@ -3,8 +3,6 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 
-DROP FUNCTION IF EXISTS changes.updateChangeVersion() CASCADE;
-
 CREATE OR REPLACE FUNCTION homograph.update_Parent_lastmodifieddate()
 RETURNS TRIGGER AS $$
 BEGIN
