@@ -23,3 +23,24 @@ GO
 
 DROP TRIGGER IF EXISTS [homograph].[homograph_StudentSchoolAssociation_TR_UpdateChangeVersion]
 GO
+
+CREATE TRIGGER [homograph].[homograph_StudentSchoolAssociation_TR_UpdateChangeVersion] ON [homograph].[StudentSchoolAssociation] AFTER UPDATE AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Handle key changes
+    INSERT INTO tracked_changes_homograph.StudentSchoolAssociation(
+        OldSchoolName, OldStudentFirstName, OldStudentLastSurname, 
+        NewSchoolName, NewStudentFirstName, NewStudentLastSurname, 
+        Id, ChangeVersion)
+    SELECT
+        d.SchoolName, d.StudentFirstName, d.StudentLastSurname, 
+        i.SchoolName, i.StudentFirstName, i.StudentLastSurname, 
+        d.Id, (NEXT VALUE FOR [changes].[ChangeVersionSequence])
+    FROM deleted d INNER JOIN inserted i ON d.AggregateId = i.AggregateId
+
+    WHERE
+        d.SchoolName <> i.SchoolName OR d.StudentFirstName <> i.StudentFirstName OR d.StudentLastSurname <> i.StudentLastSurname;
+END	
+GO
+
