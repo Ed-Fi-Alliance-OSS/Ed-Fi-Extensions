@@ -18,4 +18,5 @@ IF EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'update
     EXECUTE 'DROP TRIGGER updatechangeversion ON sample.studentgraduationplanassociation';
 END IF;
 
+END
 $$;

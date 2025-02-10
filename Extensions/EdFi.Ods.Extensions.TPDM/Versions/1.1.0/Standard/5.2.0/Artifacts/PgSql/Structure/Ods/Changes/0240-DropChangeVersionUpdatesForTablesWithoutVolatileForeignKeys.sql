@@ -62,4 +62,5 @@ IF EXISTS(SELECT 1 FROM information_schema.triggers WHERE trigger_name = 'update
     EXECUTE 'DROP TRIGGER updatechangeversion ON tpdm.surveysectionresponsepersontargetassociation';
 END IF;
 
+END
 $$;
