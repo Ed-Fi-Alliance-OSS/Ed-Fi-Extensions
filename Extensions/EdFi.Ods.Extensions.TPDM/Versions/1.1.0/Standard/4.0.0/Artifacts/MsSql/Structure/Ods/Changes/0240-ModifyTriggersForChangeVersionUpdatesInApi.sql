@@ -35,7 +35,7 @@ BEGIN
     SET NOCOUNT ON;
     -- Handle cascading key changes
     UPDATE [tpdm].[EvaluationRating]
-    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
+    SET LastModifiedDate = GETUTCDATE(), ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EvaluationRating] u
     WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.AggregateId = u.AggregateId AND i.ChangeVersion = u.ChangeVersion);
 END	
