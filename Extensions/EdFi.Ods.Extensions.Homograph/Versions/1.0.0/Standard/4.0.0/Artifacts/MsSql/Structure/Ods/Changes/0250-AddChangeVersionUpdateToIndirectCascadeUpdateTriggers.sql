@@ -17,7 +17,7 @@ BEGIN
     BEGIN
         -- Update the LastModifiedDate in the root table to the current UTC time
         UPDATE rt
-        SET rt.LastModifiedDate = GETUTCDATE(), rt.ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
+        SET rt.LastModifiedDate = GETUTCDATE(), rt.ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence]), rt.AggregateData = NULL
         FROM [homograph].[Parent] rt
         INNER JOIN inserted i
             ON rt.ParentFirstName = i.ParentFirstName
@@ -40,7 +40,7 @@ BEGIN
     BEGIN
         -- Update the LastModifiedDate in the root table to the current UTC time
         UPDATE rt
-        SET rt.LastModifiedDate = GETUTCDATE(), rt.ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
+        SET rt.LastModifiedDate = GETUTCDATE(), rt.ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence]), rt.AggregateData = NULL
         FROM [homograph].[Staff] rt
         INNER JOIN inserted i
             ON rt.StaffFirstName = i.StaffFirstName

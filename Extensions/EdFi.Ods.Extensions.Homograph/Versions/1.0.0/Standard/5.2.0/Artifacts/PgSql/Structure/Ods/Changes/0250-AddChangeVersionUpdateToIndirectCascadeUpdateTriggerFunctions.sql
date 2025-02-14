@@ -13,7 +13,7 @@ BEGIN
        THEN
        -- Update the LastModifiedDate in the root table to the current UTC time
        UPDATE homograph.Contact rt
-       SET LastModifiedDate = NOW(), ChangeVersion = nextval('changes.ChangeVersionSequence')
+       SET LastModifiedDate = NOW(), ChangeVersion = nextval('changes.ChangeVersionSequence'), AggregateData = NULL
        WHERE rt.ContactFirstName = NEW.ContactFirstName
          AND rt.ContactLastSurname = NEW.ContactLastSurname;
     END IF;
@@ -31,7 +31,7 @@ BEGIN
        THEN
        -- Update the LastModifiedDate in the root table to the current UTC time
        UPDATE homograph.Staff rt
-       SET LastModifiedDate = NOW(), ChangeVersion = nextval('changes.ChangeVersionSequence')
+       SET LastModifiedDate = NOW(), ChangeVersion = nextval('changes.ChangeVersionSequence'), AggregateData = NULL
        WHERE rt.StaffFirstName = NEW.StaffFirstName
          AND rt.StaffLastSurname = NEW.StaffLastSurname;
     END IF;
