@@ -257,20 +257,20 @@ function MaximumPathLengthLimitation {
     $message = "";
 
     Get-ChildItem -Path $pluginParentFolderPath -Recurse -Force -Filter "*.sql" | Sort-Object {($_.FullName.Length)} -Descending | ForEach-Object {
-        $sqlFilePath = $_.FullName
-        $sqlFileLength = ($_.FullName.Length) -($baseRootPathLength)
-        $sqlFileLength = $sqlFileLength -as [int]
-        $sqlFileName = Split-Path $sqlFilePath -leaf
-        $maximumlength = 180
+    $sqlFilePath = $_.FullName
+    $sqlFileLength = ($_.FullName.Length) -($baseRootPathLength)
+    $sqlFileLength = $sqlFileLength -as [int]
+    $sqlFileName = Split-Path $sqlFilePath -leaf
+    $maximumlength = 180
 
-        if ($sqlFileLength -ge $maximumlength)
-        {
-            $isMaximumPathLengthFound = $true
-            $sqlFileNameValues +=  $sqlFileName + "`r`n"
-            $message += "Found plugin extension SQL file '$sqlFilePath' exceeds 180 characters full file path length,"
-            $message += "So Windows Operating system don't allow due to Maximum Path Length Limitation."
-            $message += "Please reduce length of SQL file name and retry.`r`n"
-        }
+    if ($sqlFileLength -ge $maximumlength)
+    {
+        $isMaximumPathLengthFound = $true
+        $sqlFileNameValues +=  $sqlFileName + "`r`n"
+        $message += "Found plugin extension SQL file '$sqlFilePath' exceeds 180 characters full file path length,"
+        $message += "So Windows Operating system don't allow due to Maximum Path Length Limitation."
+        $message += "Please reduce length of SQL file name and retry.`r`n"
+    }
     }
     if ($isMaximumPathLengthFound) {
         Write-Host $message -ForegroundColor Green
