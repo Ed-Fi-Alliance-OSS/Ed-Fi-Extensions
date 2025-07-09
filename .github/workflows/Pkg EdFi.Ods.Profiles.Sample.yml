@@ -113,5 +113,5 @@ jobs:
       if: success()
       uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5
       with:
-        name: EdFi.Ods.Profiles.Sample.Artifacts-${{ matrix.StandardVersion }}
+        name: EdFi.Ods.Profiles.Sample.Artifacts
         path: ${{ github.workspace }}/Ed-Fi-Extensions/NugetPackages/*.*
