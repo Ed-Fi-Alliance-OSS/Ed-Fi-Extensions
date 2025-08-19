@@ -374,7 +374,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -1340,7 +1340,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 100,
+            "maxLength": 255,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -2709,7 +2709,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": true
@@ -5628,7 +5628,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -5652,7 +5652,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -5914,7 +5914,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -5959,7 +5959,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6018,7 +6018,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6063,7 +6063,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6252,7 +6252,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6297,7 +6297,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6356,7 +6356,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6401,7 +6401,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6460,7 +6460,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -6505,7 +6505,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -8527,7 +8527,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -8551,7 +8551,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -10995,7 +10995,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -11036,7 +11036,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": true
@@ -15978,7 +15978,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
@@ -16107,7 +16107,7 @@
           "propertyType": {
             "dbType": "String",
             "minLength": 0,
-            "maxLength": 60,
+            "maxLength": 120,
             "precision": 0,
             "scale": 0,
             "isNullable": false
