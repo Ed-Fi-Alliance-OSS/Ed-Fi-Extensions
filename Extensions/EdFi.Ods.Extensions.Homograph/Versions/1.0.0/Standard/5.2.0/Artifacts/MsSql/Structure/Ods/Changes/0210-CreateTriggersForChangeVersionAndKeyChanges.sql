@@ -9,17 +9,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_Contact_TR_UpdateChangeVersion] ON [homograph].[Contact] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[Contact]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[Contact] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -29,17 +22,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_Name_TR_UpdateChangeVersion] ON [homograph].[Name] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[Name]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[Name] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -49,17 +35,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_School_TR_UpdateChangeVersion] ON [homograph].[School] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[School]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[School] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -69,17 +48,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_SchoolYearType_TR_UpdateChangeVersion] ON [homograph].[SchoolYearType] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[SchoolYearType]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[SchoolYearType] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -89,17 +61,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_Staff_TR_UpdateChangeVersion] ON [homograph].[Staff] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[Staff]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[Staff] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -109,17 +74,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_Student_TR_UpdateChangeVersion] ON [homograph].[Student] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[Student]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[Student] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -129,17 +87,10 @@ GO
 CREATE TRIGGER [homograph].[homograph_StudentSchoolAssociation_TR_UpdateChangeVersion] ON [homograph].[StudentSchoolAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [homograph].[StudentSchoolAssociation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [homograph].[StudentSchoolAssociation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 
     -- Handle key changes
     INSERT INTO tracked_changes_homograph.StudentSchoolAssociation(

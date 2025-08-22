@@ -9,17 +9,10 @@ GO
 CREATE TRIGGER [sample].[sample_Bus_TR_UpdateChangeVersion] ON [sample].[Bus] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [sample].[Bus]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [sample].[Bus] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -29,17 +22,10 @@ GO
 CREATE TRIGGER [sample].[sample_BusRoute_TR_UpdateChangeVersion] ON [sample].[BusRoute] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [sample].[BusRoute]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [sample].[BusRoute] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -49,17 +35,10 @@ GO
 CREATE TRIGGER [sample].[sample_StudentGraduationPlanAssociation_TR_UpdateChangeVersion] ON [sample].[StudentGraduationPlanAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [sample].[StudentGraduationPlanAssociation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [sample].[StudentGraduationPlanAssociation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 

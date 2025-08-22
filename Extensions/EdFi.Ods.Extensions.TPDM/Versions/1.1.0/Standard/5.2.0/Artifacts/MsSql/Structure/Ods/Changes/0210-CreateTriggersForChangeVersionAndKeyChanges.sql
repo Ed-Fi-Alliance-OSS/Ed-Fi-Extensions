@@ -9,17 +9,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_Candidate_TR_UpdateChangeVersion] ON [tpdm].[Candidate] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[Candidate]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[Candidate] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -29,17 +22,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_CandidateEducatorPreparationProgramAssociation_TR_UpdateChangeVersion] ON [tpdm].[CandidateEducatorPreparationProgramAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[CandidateEducatorPreparationProgramAssociation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[CandidateEducatorPreparationProgramAssociation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -49,17 +35,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_EducatorPreparationProgram_TR_UpdateChangeVersion] ON [tpdm].[EducatorPreparationProgram] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[EducatorPreparationProgram]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EducatorPreparationProgram] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -69,17 +48,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_Evaluation_TR_UpdateChangeVersion] ON [tpdm].[Evaluation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[Evaluation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[Evaluation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -89,17 +61,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_EvaluationElement_TR_UpdateChangeVersion] ON [tpdm].[EvaluationElement] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[EvaluationElement]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EvaluationElement] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -109,17 +74,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_EvaluationElementRating_TR_UpdateChangeVersion] ON [tpdm].[EvaluationElementRating] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[EvaluationElementRating]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EvaluationElementRating] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -129,17 +87,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_EvaluationObjective_TR_UpdateChangeVersion] ON [tpdm].[EvaluationObjective] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[EvaluationObjective]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EvaluationObjective] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -149,17 +100,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_EvaluationObjectiveRating_TR_UpdateChangeVersion] ON [tpdm].[EvaluationObjectiveRating] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[EvaluationObjectiveRating]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[EvaluationObjectiveRating] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -189,17 +133,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_FinancialAid_TR_UpdateChangeVersion] ON [tpdm].[FinancialAid] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[FinancialAid]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[FinancialAid] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -209,17 +146,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_PerformanceEvaluation_TR_UpdateChangeVersion] ON [tpdm].[PerformanceEvaluation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[PerformanceEvaluation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[PerformanceEvaluation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -229,17 +159,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_PerformanceEvaluationRating_TR_UpdateChangeVersion] ON [tpdm].[PerformanceEvaluationRating] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[PerformanceEvaluationRating]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[PerformanceEvaluationRating] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -249,17 +172,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_RubricDimension_TR_UpdateChangeVersion] ON [tpdm].[RubricDimension] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[RubricDimension]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[RubricDimension] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -269,17 +185,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_SurveyResponsePersonTargetAssociation_TR_UpdateChangeVersion] ON [tpdm].[SurveyResponsePersonTargetAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[SurveyResponsePersonTargetAssociation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[SurveyResponsePersonTargetAssociation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
@@ -289,17 +198,10 @@ GO
 CREATE TRIGGER [tpdm].[tpdm_SurveySectionResponsePersonTargetAssociation_TR_UpdateChangeVersion] ON [tpdm].[SurveySectionResponsePersonTargetAssociation] AFTER UPDATE AS
 BEGIN
     SET NOCOUNT ON;
-    UPDATE u
-    SET 
-        ChangeVersion = NEXT VALUE FOR [changes].[ChangeVersionSequence],
-        LastModifiedDate = 
-            CASE 
-                WHEN i.LastModifiedDate = d.LastModifiedDate THEN GETUTCDATE()
-                ELSE i.LastModifiedDate
-            END
+    UPDATE [tpdm].[SurveySectionResponsePersonTargetAssociation]
+    SET ChangeVersion = (NEXT VALUE FOR [changes].[ChangeVersionSequence])
     FROM [tpdm].[SurveySectionResponsePersonTargetAssociation] u
-    INNER JOIN inserted i ON i.Id = u.Id
-    INNER JOIN deleted d ON d.Id = u.Id;
+    WHERE EXISTS (SELECT 1 FROM inserted i WHERE i.id = u.id);
 END	
 GO
 
