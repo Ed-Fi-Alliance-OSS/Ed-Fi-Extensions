@@ -375,6 +375,25 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="EXTENSION-StudentAcademicRecordExtension">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+      <xs:appinfo>
+        <ann:TypeGroup>Domain Entity</ann:TypeGroup>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="StudentAcademicRecord">
+        <xs:sequence>
+          <xs:element name="SomeText" type="EXTENSION-SomeText" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Some text field</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="EXTENSION-StudentExtension">
     <xs:annotation>
       <xs:documentation></xs:documentation>
@@ -1681,6 +1700,17 @@
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:maxLength value="250" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EXTENSION-SomeText">
+    <xs:annotation>
+      <xs:documentation>Some text field</xs:documentation>
+      <xs:appinfo>
+        <ann:TypeGroup>Simple</ann:TypeGroup>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="EXTENSION-Style">
