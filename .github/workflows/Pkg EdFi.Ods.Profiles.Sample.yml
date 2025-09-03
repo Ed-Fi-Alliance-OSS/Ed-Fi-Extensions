@@ -10,6 +10,13 @@ on:
     branches: [main, 'b-v*-patch*','feature-*']
     
   workflow_dispatch:
+    inputs:
+      distinct_id:
+        description: 'distinct ID for Rebuild Database Templates workflow'
+        required: false
+        default: 'distinct_id'
+
+permissions: read-all
 
 env:
   INFORMATIONAL_VERSION: "7.1"
