@@ -212,11 +212,6 @@ REFERENCES edfi.Staff (StaffUSI)
 ON DELETE CASCADE
 ;
 
-ALTER TABLE sample.StudentAcademicRecordExtension ADD CONSTRAINT FK_ee832f_StudentAcademicRecord FOREIGN KEY (EducationOrganizationId, SchoolYear, StudentUSI, TermDescriptorId)
-REFERENCES edfi.StudentAcademicRecord (EducationOrganizationId, SchoolYear, StudentUSI, TermDescriptorId)
-ON DELETE CASCADE
-;
-
 ALTER TABLE sample.StudentAquaticPet ADD CONSTRAINT FK_094617_Student FOREIGN KEY (StudentUSI)
 REFERENCES edfi.Student (StudentUSI)
 ON DELETE CASCADE
@@ -353,6 +348,28 @@ REFERENCES edfi.StudentCTEProgramAssociation (BeginDate, EducationOrganizationId
 ON DELETE CASCADE
 ;
 
+ALTER TABLE sample.StudentEducationOrganizationAssociationAddressExtension ADD CONSTRAINT FK_c905b3_StudentEducationOrganizationAssociationAddress FOREIGN KEY (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+REFERENCES edfi.StudentEducationOrganizationAssociationAddress (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+ON DELETE CASCADE
+;
+
+ALTER TABLE sample.StudentEducationOrganizationAssociationAddressSchoolDistrict ADD CONSTRAINT FK_450d64_StudentEducationOrganizationAssociationAddress FOREIGN KEY (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+REFERENCES edfi.StudentEducationOrganizationAssociationAddress (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+ON DELETE CASCADE
+;
+
+ALTER TABLE sample.StudentEducationOrganizationAssociationAddressTerm ADD CONSTRAINT FK_98438b_StudentEducationOrganizationAssociationAddress FOREIGN KEY (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+REFERENCES edfi.StudentEducationOrganizationAssociationAddress (EducationOrganizationId, StudentUSI, AddressTypeDescriptorId, City, PostalCode, StateAbbreviationDescriptorId, StreetNumberName)
+ON DELETE CASCADE
+;
+
+ALTER TABLE sample.StudentEducationOrganizationAssociationAddressTerm ADD CONSTRAINT FK_98438b_TermDescriptor FOREIGN KEY (TermDescriptorId)
+REFERENCES edfi.TermDescriptor (TermDescriptorId)
+;
+
+CREATE INDEX FK_98438b_TermDescriptor
+ON sample.StudentEducationOrganizationAssociationAddressTerm (TermDescriptorId ASC);
+
 ALTER TABLE sample.StudentEducationOrganizationAssociationExtension ADD CONSTRAINT FK_2c2930_Program FOREIGN KEY (EducationOrganizationId, FavoriteProgramName, FavoriteProgramTypeDescriptorId)
 REFERENCES edfi.Program (EducationOrganizationId, ProgramName, ProgramTypeDescriptorId)
 ;
@@ -362,6 +379,11 @@ ON sample.StudentEducationOrganizationAssociationExtension (EducationOrganizatio
 
 ALTER TABLE sample.StudentEducationOrganizationAssociationExtension ADD CONSTRAINT FK_2c2930_StudentEducationOrganizationAssociation FOREIGN KEY (EducationOrganizationId, StudentUSI)
 REFERENCES edfi.StudentEducationOrganizationAssociation (EducationOrganizationId, StudentUSI)
+ON DELETE CASCADE
+;
+
+ALTER TABLE sample.StudentEducationOrganizationAssociationStudentCharacteri_17d152 ADD CONSTRAINT FK_17d152_StudentEducationOrganizationAssociationStudentCharacteristic FOREIGN KEY (EducationOrganizationId, StudentUSI, StudentCharacteristicDescriptorId)
+REFERENCES edfi.StudentEducationOrganizationAssociationStudentCharacteristic (EducationOrganizationId, StudentUSI, StudentCharacteristicDescriptorId)
 ON DELETE CASCADE
 ;
 
