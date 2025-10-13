@@ -411,7 +411,7 @@ WHERE EXISTS
      , StudentUSI
      , NULL
      , '0'
- FROM edfi.StudentEducationOrganizationAssociationAddress seoaa
+ FROM edfi.StudentDirectoryAddress seoaa
  WHERE NOT EXISTS
      (SELECT EntryDate, SchoolId, StudentUSI
      FROM sample.StudentSchoolAssociationExtension ssae
