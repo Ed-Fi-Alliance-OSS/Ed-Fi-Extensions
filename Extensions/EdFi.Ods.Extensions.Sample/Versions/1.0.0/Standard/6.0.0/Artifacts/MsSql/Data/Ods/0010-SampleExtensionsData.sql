@@ -418,7 +418,7 @@ WHERE EXISTS
        AND SchoolId = ssae.SchoolId
        AND StudentUSI = ssae.StudentUSI)
 
- INSERT INTO sample.StudentEducationOrganizationAssociationAddressSchoolDistrict
+ INSERT INTO sample.StudentDirectoryAddressSchoolDistrict
      (AddressTypeDescriptorId
      , City
      , EducationOrganizationId
