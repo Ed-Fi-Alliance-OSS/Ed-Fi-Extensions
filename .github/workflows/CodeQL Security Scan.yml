@@ -8,7 +8,8 @@ name: CodeQL Security Scan Schedule
 on:
   schedule:
     - cron: '0 0 * * *'
-
+  pull_request:
+    branches: [main, 'ODS-*']
 permissions: read-all
 
 env:
