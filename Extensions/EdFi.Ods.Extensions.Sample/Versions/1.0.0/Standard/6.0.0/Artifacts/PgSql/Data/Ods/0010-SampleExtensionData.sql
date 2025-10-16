@@ -391,6 +391,34 @@ WHERE EXISTS
            AND SchoolId = ssae.SchoolId
            AND StudentUSI = ssae.StudentUSI);
 
+  INSERT INTO sample.StudentDirectoryAddressExtension
+     (AddressTypeDescriptorId
+     , City
+     , EducationOrganizationId
+     , PostalCode
+     , StateAbbreviationDescriptorId
+     , StreetNumberName
+     , StudentUSI
+     , Complex
+     , OnBusRoute)
+ SELECT
+     AddressTypeDescriptorId
+     , City
+     , EducationOrganizationId
+     , PostalCode
+     , StateAbbreviationDescriptorId
+     , StreetNumberName
+     , StudentUSI
+     , NULL
+     , 0
+ FROM edfi.StudentDirectoryAddress
+ WHERE NOT EXISTS
+     (SELECT EntryDate, SchoolId, StudentUSI
+     FROM sample.StudentSchoolAssociationExtension ssae
+     WHERE EntryDate = ssae.EntryDate
+     AND SchoolId = ssae.SchoolId
+     AND StudentUSI = ssae.StudentUSI)          
+
  INSERT INTO sample.StudentDirectoryAddressSchoolDistrict
      (AddressTypeDescriptorId
      , City
@@ -409,7 +437,7 @@ WHERE EXISTS
      , StreetNumberName
      , StudentUSI
      , 'Test District'
- FROM edfi.StudentDirectoryAddress seoaa
+ FROM sample.StudentDirectoryAddressExtension seoaa
  WHERE NOT EXISTS
      (SELECT EntryDate, SchoolId, StudentUSI
      FROM sample.StudentSchoolAssociationExtension ssae
