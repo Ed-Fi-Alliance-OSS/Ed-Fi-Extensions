@@ -464,12 +464,6 @@ WHERE EXISTS
      , StudentUSI
      , 'Test District'
  FROM sample.StudentDirectoryAddressExtension
- WHERE NOT EXISTS
-     (SELECT EntryDate, SchoolId, StudentUSI
-     FROM sample.StudentSchoolAssociationExtension ssae
-     WHERE EntryDate = ssae.EntryDate
-     AND SchoolId = ssae.SchoolId
-     AND StudentUSI = ssae.StudentUSI)     
 
 UPDATE edfi.StudentEducationOrganizationAssociation
 SET
