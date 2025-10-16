@@ -406,11 +406,11 @@ WHERE EXISTS
      , City
      , EducationOrganizationId
      , PostalCode
-     , StateAbbreviationDescriptorId
+     , NULL
      , StreetNumberName
      , StudentUSI
      , NULL
-     , 0
+     , '0'
  FROM edfi.StudentDirectoryAddress
  WHERE NOT EXISTS
      (SELECT EntryDate, SchoolId, StudentUSI
