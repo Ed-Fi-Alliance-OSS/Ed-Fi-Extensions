@@ -468,7 +468,7 @@ GO
 
 -- Table [sample].[StudentAcademicRecordExtension] --
 CREATE TABLE [sample].[StudentAcademicRecordExtension] (
-    [EducationOrganizationId] [INT] NOT NULL,
+    [EducationOrganizationId] [BIGINT] NOT NULL,
     [SchoolYear] [SMALLINT] NOT NULL,
     [StudentUSI] [INT] NOT NULL,
     [TermDescriptorId] [INT] NOT NULL,
