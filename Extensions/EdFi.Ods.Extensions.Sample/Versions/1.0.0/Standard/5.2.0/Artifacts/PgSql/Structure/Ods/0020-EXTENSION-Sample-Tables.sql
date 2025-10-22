@@ -304,6 +304,16 @@ CREATE TABLE sample.StaffPet (
 );
 ALTER TABLE sample.StaffPet ALTER COLUMN CreateDate SET DEFAULT current_timestamp AT TIME ZONE 'UTC';
 
+-- Table sample.StaffPetPreference --
+CREATE TABLE sample.StaffPetPreference (
+    StaffUSI INT NOT NULL,
+    MaximumWeight INT NOT NULL,
+    MinimumWeight INT NOT NULL,
+    CreateDate TIMESTAMP NOT NULL,
+    CONSTRAINT StaffPetPreference_PK PRIMARY KEY (StaffUSI)
+);
+ALTER TABLE sample.StaffPetPreference ALTER COLUMN CreateDate SET DEFAULT current_timestamp AT TIME ZONE 'UTC';
+
 -- Table sample.StudentAcademicRecordExtension --
 CREATE TABLE sample.StudentAcademicRecordExtension (
     EducationOrganizationId BIGINT NOT NULL,
@@ -315,16 +325,6 @@ CREATE TABLE sample.StudentAcademicRecordExtension (
     CONSTRAINT StudentAcademicRecordExtension_PK PRIMARY KEY (EducationOrganizationId, SchoolYear, StudentUSI, TermDescriptorId)
 );
 ALTER TABLE sample.StudentAcademicRecordExtension ALTER COLUMN CreateDate SET DEFAULT current_timestamp AT TIME ZONE 'UTC';
-
--- Table sample.StaffPetPreference --
-CREATE TABLE sample.StaffPetPreference (
-    StaffUSI INT NOT NULL,
-    MaximumWeight INT NOT NULL,
-    MinimumWeight INT NOT NULL,
-    CreateDate TIMESTAMP NOT NULL,
-    CONSTRAINT StaffPetPreference_PK PRIMARY KEY (StaffUSI)
-);
-ALTER TABLE sample.StaffPetPreference ALTER COLUMN CreateDate SET DEFAULT current_timestamp AT TIME ZONE 'UTC';
 
 -- Table sample.StudentAquaticPet --
 CREATE TABLE sample.StudentAquaticPet (

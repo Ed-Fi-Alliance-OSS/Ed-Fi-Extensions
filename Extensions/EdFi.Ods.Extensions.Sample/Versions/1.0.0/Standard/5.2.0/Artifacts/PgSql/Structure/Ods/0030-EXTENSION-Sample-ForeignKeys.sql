@@ -217,7 +217,6 @@ REFERENCES edfi.StudentAcademicRecord (EducationOrganizationId, SchoolYear, Stud
 ON DELETE CASCADE
 ;
 
-
 ALTER TABLE sample.StudentAquaticPet ADD CONSTRAINT FK_094617_Student FOREIGN KEY (StudentUSI)
 REFERENCES edfi.Student (StudentUSI)
 ON DELETE CASCADE
