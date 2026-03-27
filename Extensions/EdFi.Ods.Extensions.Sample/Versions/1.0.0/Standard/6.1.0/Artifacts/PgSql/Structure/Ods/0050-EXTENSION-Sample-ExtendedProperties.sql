@@ -69,7 +69,7 @@ COMMENT ON COLUMN sample.BusRouteTelephone.TextMessageCapabilityIndicator IS 'An
 -- Extended Properties [sample].[ContactAddressExtension] --
 COMMENT ON TABLE sample.ContactAddressExtension IS 'Additional details on the contact''s address.';
 COMMENT ON COLUMN sample.ContactAddressExtension.ContactUSI IS 'A unique alphanumeric code assigned to a contact.';
-COMMENT ON COLUMN sample.ContactAddressExtension.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.ContactAddressExtension.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.ContactAddressExtension.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.ContactAddressExtension.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.ContactAddressExtension.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';
@@ -80,7 +80,7 @@ COMMENT ON COLUMN sample.ContactAddressExtension.OnBusRoute IS 'An indicator if 
 -- Extended Properties [sample].[ContactAddressSchoolDistrict] --
 COMMENT ON TABLE sample.ContactAddressSchoolDistrict IS 'The school district in which the address is located.';
 COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.ContactUSI IS 'A unique alphanumeric code assigned to a contact.';
-COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';
@@ -90,7 +90,7 @@ COMMENT ON COLUMN sample.ContactAddressSchoolDistrict.SchoolDistrict IS 'The sch
 -- Extended Properties [sample].[ContactAddressTerm] --
 COMMENT ON TABLE sample.ContactAddressTerm IS 'Terms applicable to this address.';
 COMMENT ON COLUMN sample.ContactAddressTerm.ContactUSI IS 'A unique alphanumeric code assigned to a contact.';
-COMMENT ON COLUMN sample.ContactAddressTerm.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.ContactAddressTerm.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.ContactAddressTerm.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.ContactAddressTerm.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.ContactAddressTerm.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';
@@ -387,7 +387,7 @@ COMMENT ON COLUMN sample.StudentDemographicStudentCharacteristicStudentNeed.Prim
 COMMENT ON TABLE sample.StudentDirectoryAddressExtension IS 'The set of elements that describes an address, including the street address, city, state, and ZIP code.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.EducationOrganizationId IS 'The identifier assigned to an education organization.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.StudentUSI IS 'A unique alphanumeric code assigned to a student.';
-COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';
@@ -399,7 +399,7 @@ COMMENT ON COLUMN sample.StudentDirectoryAddressExtension.OnBusRoute IS 'An indi
 COMMENT ON TABLE sample.StudentDirectoryAddressSchoolDistrict IS 'The school district in which the address is located.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.EducationOrganizationId IS 'The identifier assigned to an education organization.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.StudentUSI IS 'A unique alphanumeric code assigned to a student.';
-COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';
@@ -410,7 +410,7 @@ COMMENT ON COLUMN sample.StudentDirectoryAddressSchoolDistrict.SchoolDistrict IS
 COMMENT ON TABLE sample.StudentDirectoryAddressTerm IS 'Terms applicable to this address.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.EducationOrganizationId IS 'The identifier assigned to an education organization.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.StudentUSI IS 'A unique alphanumeric code assigned to a student.';
-COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)';
+COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.AddressTypeDescriptorId IS 'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)';
 COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.City IS 'The name of the city in which an address is located.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.PostalCode IS 'The five or nine digit zip code or overseas postal code portion of an address.';
 COMMENT ON COLUMN sample.StudentDirectoryAddressTerm.StateAbbreviationDescriptorId IS 'The abbreviation for the state (within the United States) or outlying area in which an address is located.';

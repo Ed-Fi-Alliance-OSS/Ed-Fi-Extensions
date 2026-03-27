@@ -6718,7 +6718,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -6829,7 +6829,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -6954,7 +6954,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -7065,7 +7065,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -7190,7 +7190,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -7301,7 +7301,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -12494,7 +12494,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -12622,7 +12622,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -12764,7 +12764,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -12892,7 +12892,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -13034,7 +13034,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
@@ -13162,7 +13162,7 @@
             "scale": 0,
             "isNullable": false
           },
-          "description": "The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)",
+          "description": "The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)",
           "isIdentifying": true,
           "isServerAssigned": false,
           "columnNames": {
