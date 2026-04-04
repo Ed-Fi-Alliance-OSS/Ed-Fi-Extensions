@@ -118,7 +118,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Additional det
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a contact.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressExtension', @level2type=N'COLUMN', @level2name=N'ContactUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressExtension', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressExtension', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressExtension', @level2type=N'COLUMN', @level2name=N'City'
 GO
@@ -138,7 +138,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The school dis
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a contact.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'ContactUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'City'
 GO
@@ -156,7 +156,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Terms applicab
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a contact.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressTerm', @level2type=N'COLUMN', @level2name=N'ContactUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressTerm', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressTerm', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'ContactAddressTerm', @level2type=N'COLUMN', @level2name=N'City'
 GO
@@ -680,7 +680,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a student.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressExtension', @level2type=N'COLUMN', @level2name=N'StudentUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressExtension', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressExtension', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressExtension', @level2type=N'COLUMN', @level2name=N'City'
 GO
@@ -702,7 +702,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a student.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'StudentUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressSchoolDistrict', @level2type=N'COLUMN', @level2name=N'City'
 GO
@@ -722,7 +722,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The identifier
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'A unique alphanumeric code assigned to a student.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressTerm', @level2type=N'COLUMN', @level2name=N'StudentUSI'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization.    For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressTerm', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of address listed for an individual or organization. (For example:  Physical Address, Mailing Address, Home Address, etc.)', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressTerm', @level2type=N'COLUMN', @level2name=N'AddressTypeDescriptorId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The name of the city in which an address is located.', @level0type=N'SCHEMA', @level0name=N'sample', @level1type=N'TABLE', @level1name=N'StudentDirectoryAddressTerm', @level2type=N'COLUMN', @level2name=N'City'
 GO
